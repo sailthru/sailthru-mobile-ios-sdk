@@ -15,7 +15,7 @@
 
 #import "CorePushInbox.h"
 
-#define COREPUSH_VERSION @"1.41"
+#define COREPUSH_VERSION @"1.42"
 
 @interface CorePush : NSObject
 
