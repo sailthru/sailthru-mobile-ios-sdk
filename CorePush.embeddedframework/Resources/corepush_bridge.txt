@@ -1,0 +1,1 @@
+../CorePush.framework/Resources/corepush_bridge.txt
