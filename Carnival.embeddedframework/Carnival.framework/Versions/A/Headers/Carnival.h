@@ -40,15 +40,12 @@
 + (void)startEngine:(NSString *)appKey andNotificationTypes:(UIRemoteNotificationType)types;
 
 
-
-
 /**
  Asyncronously sets the tags for Carnival for this Device.  
  @param tags An array of tags for this device. A nil value or an empty NSArray will clear the tags for this Device.
  @discussion Calling this method will overwrite any previously set tags for this Device.
  */
 + (void)setTagsInBackground:(NSArray *)tags withResponse:(void(^)(NSArray *tags, NSError *error))block;
-
 
 
 /** 
@@ -64,7 +61,6 @@
  @param block The block returned from the asyncronous call containing either an NSArray of tags, or an NSError if there was one.
  */
 + (void)addTag:(NSString *)tag inBackgroundWithResponse:(void(^)(NSArray *tags, NSError *error))block;
-
 
 
 /**
@@ -84,8 +80,8 @@
 /**
  Starts tracking location for this user, to allow for GEO based filtering from Core Push
  */
-
 + (void)enableLocationTracking:(BOOL)enable;
+
 
 /* 
  Gives access to the location manager
