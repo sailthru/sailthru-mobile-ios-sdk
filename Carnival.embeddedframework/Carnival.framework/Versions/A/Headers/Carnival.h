@@ -15,7 +15,7 @@
 
 #import "CorePushInbox.h"
 
-#define CARNIVAL_VERSION @"1.42"
+#define CARNIVAL_VERSION @"1.43"
 
 @interface Carnival : NSObject
 
