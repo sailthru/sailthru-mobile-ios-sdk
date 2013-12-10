@@ -13,8 +13,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-#import "CorePushInbox.h"
-
 #define CARNIVAL_VERSION @"1.43"
 
 @interface Carnival : NSObject
