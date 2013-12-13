@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-#define CARNIVAL_VERSION @"1.43"
+#define CARNIVAL_VERSION @"1.44"
 
 @interface Carnival : NSObject
 
