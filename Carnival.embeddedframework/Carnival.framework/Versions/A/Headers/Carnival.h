@@ -5,7 +5,7 @@
 //  Created by Adam Jones on 22/02/12.
 //  Copyright (c) 2012 Carnival Labs . All rights reserved.
 //
-//  For documentation see http://docs.corepush.com
+//  For documentation see http://docs.carnivalmobile.com
 //
 //  Built 29 August 2012
 
@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-#define CARNIVAL_VERSION @"1.44"
+#define CARNIVAL_VERSION @"2.0"
 
 @interface Carnival : NSObject
 
@@ -21,9 +21,9 @@
 /**
  *  Sets the Carnival appKey credentials for this app.
  *
- *  @param appKey The appKey you recieved when setting up your app at http://www.corepush.com
+ *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com
  *  @discussion An exception will be raised if you do not set your appKey before you call any other methods.
- *  Make sure your app bundle identifier is the same as whatever it is set to on http://www.corepush.com .
+ *  Make sure your app bundle identifier is the same as whatever it is set to on http://app.carnivalmobile.com .
  *
  *  Note: on iOS versions below 5 this method does nothing.
  */
@@ -33,11 +33,11 @@
 /**
  *  Sets the Carnival appKey credentials for this app, and the UIRemoteNotificationType at the same time.
  *
- *  @param appKey The appKey you recieved when setting up your app at http://www.corepush.com
+ *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com
  *  @param types The UIRemoteNotificationType attributes you wish to register this app for as defined in UIApplication.h
  *  see appledocs for more information
  *  @discussion An exception will be raised if you do not set your appKey before you call any other methods.
- *  Make sure your app bundle identifier is the same as whatever it is on http://www.corepush.com .
+ *  Make sure your app bundle identifier is the same as whatever it is on http://app.carnivalmobile.com .
  *
  *  Note: on iOS versions below 5 this method does nothing.
  */
