@@ -1,0 +1,76 @@
+<script type="text/javascript">
+
+console = new Object();
+console.log = function(log) {
+    NativeBridge.call("consoleLog", [log], null);
+};
+console.debug = console.log;
+console.info = console.log;
+console.warn = console.log;
+console.error = console.log;
+
+
+NativeBridge = {
+    callbacksCount : 1,
+    callbacks : {},
+    
+    // Automatically called by native layer when a result is available
+    resultForCallback : function resultForCallback(callbackId, resultArray) {
+        try {
+            var callback = NativeBridge.callbacks[callbackId];
+            if (!callback) {
+                return;
+            }
+            delete NativeBridge.callbacks[callbackId];
+            callback.apply(null,resultArray);
+        } catch(e) {console.log("Callback error:"+e);}
+    },
+    
+    // Use this in javascript to request native objective-c code
+    // functionName : string (I think the name is explicit :p)
+    // args : array of arguments
+    // callback : function with n-arguments that is going to be called when the native code returned
+    call : function call(functionName, args, callback) {
+        
+        var hasCallback = callback && typeof callback == "function";
+        var callbackId = hasCallback ? NativeBridge.callbacksCount++ : 0;
+        
+        if (hasCallback)
+            NativeBridge.callbacks[callbackId] = callback;
+        
+        var iframe = document.createElement("IFRAME");
+        var argString = JSON.stringify(args);
+        
+        iframe.setAttribute("src", "js-frame:" + functionName + ":" + callbackId+ ":" + encodeURIComponent(argString));
+        document.documentElement.appendChild(iframe);
+        iframe.parentNode.removeChild(iframe);
+        iframe = null;
+        
+        
+    }
+    
+};
+
+
+(function() {
+ 
+
+ var corePush = this.corePush = {
+    platform : "ios"
+ };
+
+ 
+ corePush.getTags = function(callback) {
+    NativeBridge.call("corePushGetTags", [], callback);
+ }
+ 
+ corePush.addTag = function(tag, callback) {
+    NativeBridge.call("corePushAddTag", [tag], callback);
+ }
+ 
+ 
+ 
+ })();
+
+
+</script>
