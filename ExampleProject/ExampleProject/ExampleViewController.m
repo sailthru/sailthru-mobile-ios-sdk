@@ -11,6 +11,93 @@
 
 @implementation ExampleViewController
 
+#pragma mark - init
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self)
+    {
+        // Initialization code
+        
+        [self addNotificationObservers];
+        
+    }
+    
+    return self;
+}
+
+#pragma mark - notifications
+
+- (void)addNotificationObservers
+{
+    //  There are 4 notifications that the Carnival framework posts:
+    //      - CarnivalMessageStreamWillShowStreamNotification
+    //      - CarnivalMessageStreamDidShowStreamNotification
+    //      - CarnivalMessageStreamWillDismissStreamNotification
+    //      - CarnivalMessageStreamDidDismissStreamNotification
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(carnivalMessageStreamWillShowStream:)
+                                                 name:CarnivalMessageStreamWillShowStreamNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(carnivalMessageStreamDidShowStream:)
+                                                 name:CarnivalMessageStreamDidShowStreamNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(carnivalMessageStreamWillDismissStream:)
+                                                 name:CarnivalMessageStreamWillDismissStreamNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(carnivalMessageStreamDidDismissStream:)
+                                                 name:CarnivalMessageStreamDidDismissStreamNotification
+                                               object:nil];
+}
+
+- (void)removeNotificationObservers
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:CarnivalMessageStreamWillShowStreamNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:CarnivalMessageStreamDidShowStreamNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:CarnivalMessageStreamWillDismissStreamNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:CarnivalMessageStreamDidDismissStreamNotification
+                                                  object:nil];
+}
+
+- (void)carnivalMessageStreamWillShowStream:(NSNotification *)notification
+{
+    NSLog(@"CarnivalMessageStream will show stream");
+}
+
+- (void)carnivalMessageStreamDidShowStream:(NSNotification *)notification
+{
+    NSLog(@"CarnivalMessageStream did show stream");
+}
+
+- (void)carnivalMessageStreamWillDismissStream:(NSNotification *)notification
+{
+    NSLog(@"CarnivalMessageStream will dismiss stream");
+}
+
+- (void)carnivalMessageStreamDidDismissStream:(NSNotification *)notification
+{
+    NSLog(@"CarnivalMessageStream did dismiss stream");
+}
+
 #pragma mark - pressed actions
 
 - (IBAction)getTagsButtonPressed:(UIButton *)sender
@@ -63,6 +150,13 @@
         NSLog(@"Carnival Message Stream was shown");
         
     }];
+}
+
+#pragma mark - dealloc
+
+- (void)dealloc
+{
+    [self removeNotificationObservers];
 }
 
 @end
