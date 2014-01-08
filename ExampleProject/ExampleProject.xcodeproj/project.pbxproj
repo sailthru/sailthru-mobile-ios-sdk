@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		758C73EB187DAF3F002CA9AD /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758C73E1187DAF3F002CA9AD /* Carnival.framework */; };
+		758C73EC187DAF3F002CA9AD /* corepush_bridge.txt in Resources */ = {isa = PBXBuildFile; fileRef = 758C73E3187DAF3F002CA9AD /* corepush_bridge.txt */; };
+		758C73ED187DAF3F002CA9AD /* cp_all_messages_button_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 758C73E4187DAF3F002CA9AD /* cp_all_messages_button_icon@2x.png */; };
+		758C73EE187DAF3F002CA9AD /* cp_close_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 758C73E5187DAF3F002CA9AD /* cp_close_button@2x.png */; };
+		758C73EF187DAF3F002CA9AD /* cp_close_button_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 758C73E6187DAF3F002CA9AD /* cp_close_button_white@2x.png */; };
+		758C73F0187DAF3F002CA9AD /* cp_stream_back_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 758C73E7187DAF3F002CA9AD /* cp_stream_back_button@2x.png */; };
+		758C73F1187DAF3F002CA9AD /* cp_stream_detail_nav_bar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 758C73E8187DAF3F002CA9AD /* cp_stream_detail_nav_bar_bg@2x.png */; };
+		758C73F2187DAF3F002CA9AD /* cp_test_message_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 758C73E9187DAF3F002CA9AD /* cp_test_message_thumb@2x.png */; };
+		758C73F3187DAF3F002CA9AD /* load_failure.html in Resources */ = {isa = PBXBuildFile; fileRef = 758C73EA187DAF3F002CA9AD /* load_failure.html */; };
 		758E8D89186367C900A8AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758E8D88186367C900A8AFA4 /* Foundation.framework */; };
 		758E8D8B186367C900A8AFA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758E8D8A186367C900A8AFA4 /* CoreGraphics.framework */; };
 		758E8D8D186367C900A8AFA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758E8D8C186367C900A8AFA4 /* UIKit.framework */; };
@@ -17,18 +26,18 @@
 		758E8D9F186367C900A8AFA4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758E8D9D186367C900A8AFA4 /* Main_iPad.storyboard */; };
 		758E8DA2186367C900A8AFA4 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758E8DA1186367C900A8AFA4 /* ExampleViewController.m */; };
 		758E8DA4186367C900A8AFA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758E8DA3186367C900A8AFA4 /* Images.xcassets */; };
-		75D206EC1863A6F80042200D /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D206E21863A6F80042200D /* Carnival.framework */; };
-		75D206ED1863A6F80042200D /* corepush_bridge.txt in Resources */ = {isa = PBXBuildFile; fileRef = 75D206E41863A6F80042200D /* corepush_bridge.txt */; };
-		75D206EE1863A6F80042200D /* cp_all_messages_button_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D206E51863A6F80042200D /* cp_all_messages_button_icon@2x.png */; };
-		75D206EF1863A6F80042200D /* cp_close_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D206E61863A6F80042200D /* cp_close_button@2x.png */; };
-		75D206F01863A6F80042200D /* cp_close_button_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D206E71863A6F80042200D /* cp_close_button_white@2x.png */; };
-		75D206F11863A6F80042200D /* cp_stream_back_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D206E81863A6F80042200D /* cp_stream_back_button@2x.png */; };
-		75D206F21863A6F80042200D /* cp_stream_detail_nav_bar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D206E91863A6F80042200D /* cp_stream_detail_nav_bar_bg@2x.png */; };
-		75D206F31863A6F80042200D /* cp_test_message_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D206EA1863A6F80042200D /* cp_test_message_thumb@2x.png */; };
-		75D206F41863A6F80042200D /* load_failure.html in Resources */ = {isa = PBXBuildFile; fileRef = 75D206EB1863A6F80042200D /* load_failure.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		758C73E1187DAF3F002CA9AD /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		758C73E3187DAF3F002CA9AD /* corepush_bridge.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = corepush_bridge.txt; sourceTree = "<group>"; };
+		758C73E4187DAF3F002CA9AD /* cp_all_messages_button_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_all_messages_button_icon@2x.png"; sourceTree = "<group>"; };
+		758C73E5187DAF3F002CA9AD /* cp_close_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_close_button@2x.png"; sourceTree = "<group>"; };
+		758C73E6187DAF3F002CA9AD /* cp_close_button_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_close_button_white@2x.png"; sourceTree = "<group>"; };
+		758C73E7187DAF3F002CA9AD /* cp_stream_back_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_stream_back_button@2x.png"; sourceTree = "<group>"; };
+		758C73E8187DAF3F002CA9AD /* cp_stream_detail_nav_bar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_stream_detail_nav_bar_bg@2x.png"; sourceTree = "<group>"; };
+		758C73E9187DAF3F002CA9AD /* cp_test_message_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_test_message_thumb@2x.png"; sourceTree = "<group>"; };
+		758C73EA187DAF3F002CA9AD /* load_failure.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = load_failure.html; sourceTree = "<group>"; };
 		758E8D85186367C900A8AFA4 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758E8D88186367C900A8AFA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		758E8D8A186367C900A8AFA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -44,15 +53,6 @@
 		758E8DA0186367C900A8AFA4 /* ExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleViewController.h; sourceTree = "<group>"; };
 		758E8DA1186367C900A8AFA4 /* ExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
 		758E8DA3186367C900A8AFA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		75D206E21863A6F80042200D /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
-		75D206E41863A6F80042200D /* corepush_bridge.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = corepush_bridge.txt; sourceTree = "<group>"; };
-		75D206E51863A6F80042200D /* cp_all_messages_button_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_all_messages_button_icon@2x.png"; sourceTree = "<group>"; };
-		75D206E61863A6F80042200D /* cp_close_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_close_button@2x.png"; sourceTree = "<group>"; };
-		75D206E71863A6F80042200D /* cp_close_button_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_close_button_white@2x.png"; sourceTree = "<group>"; };
-		75D206E81863A6F80042200D /* cp_stream_back_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_stream_back_button@2x.png"; sourceTree = "<group>"; };
-		75D206E91863A6F80042200D /* cp_stream_detail_nav_bar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_stream_detail_nav_bar_bg@2x.png"; sourceTree = "<group>"; };
-		75D206EA1863A6F80042200D /* cp_test_message_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_test_message_thumb@2x.png"; sourceTree = "<group>"; };
-		75D206EB1863A6F80042200D /* load_failure.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = load_failure.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			files = (
 				758E8D8B186367C900A8AFA4 /* CoreGraphics.framework in Frameworks */,
 				758E8D8D186367C900A8AFA4 /* UIKit.framework in Frameworks */,
-				75D206EC1863A6F80042200D /* Carnival.framework in Frameworks */,
+				758C73EB187DAF3F002CA9AD /* Carnival.framework in Frameworks */,
 				758E8D89186367C900A8AFA4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +70,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		758C73E0187DAF3F002CA9AD /* Carnival.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				758C73E1187DAF3F002CA9AD /* Carnival.framework */,
+				758C73E2187DAF3F002CA9AD /* Resources */,
+			);
+			path = Carnival.embeddedframework;
+			sourceTree = "<group>";
+		};
+		758C73E2187DAF3F002CA9AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				758C73E3187DAF3F002CA9AD /* corepush_bridge.txt */,
+				758C73E4187DAF3F002CA9AD /* cp_all_messages_button_icon@2x.png */,
+				758C73E5187DAF3F002CA9AD /* cp_close_button@2x.png */,
+				758C73E6187DAF3F002CA9AD /* cp_close_button_white@2x.png */,
+				758C73E7187DAF3F002CA9AD /* cp_stream_back_button@2x.png */,
+				758C73E8187DAF3F002CA9AD /* cp_stream_detail_nav_bar_bg@2x.png */,
+				758C73E9187DAF3F002CA9AD /* cp_test_message_thumb@2x.png */,
+				758C73EA187DAF3F002CA9AD /* load_failure.html */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		758E8D7C186367C900A8AFA4 = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +124,7 @@
 		758E8D8E186367C900A8AFA4 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				75D206E11863A6F80042200D /* Carnival.embeddedframework */,
+				758C73E0187DAF3F002CA9AD /* Carnival.embeddedframework */,
 				758E8D97186367C900A8AFA4 /* ExampleAppDelegate.h */,
 				758E8D98186367C900A8AFA4 /* ExampleAppDelegate.m */,
 				758E8DA0186367C900A8AFA4 /* ExampleViewController.h */,
@@ -122,30 +146,6 @@
 				758E8D96186367C900A8AFA4 /* ExampleProject-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		75D206E11863A6F80042200D /* Carnival.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				75D206E21863A6F80042200D /* Carnival.framework */,
-				75D206E31863A6F80042200D /* Resources */,
-			);
-			path = Carnival.embeddedframework;
-			sourceTree = "<group>";
-		};
-		75D206E31863A6F80042200D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				75D206E41863A6F80042200D /* corepush_bridge.txt */,
-				75D206E51863A6F80042200D /* cp_all_messages_button_icon@2x.png */,
-				75D206E61863A6F80042200D /* cp_close_button@2x.png */,
-				75D206E71863A6F80042200D /* cp_close_button_white@2x.png */,
-				75D206E81863A6F80042200D /* cp_stream_back_button@2x.png */,
-				75D206E91863A6F80042200D /* cp_stream_detail_nav_bar_bg@2x.png */,
-				75D206EA1863A6F80042200D /* cp_test_message_thumb@2x.png */,
-				75D206EB1863A6F80042200D /* load_failure.html */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,17 +201,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				758E8D9F186367C900A8AFA4 /* Main_iPad.storyboard in Resources */,
-				75D206F31863A6F80042200D /* cp_test_message_thumb@2x.png in Resources */,
-				75D206F11863A6F80042200D /* cp_stream_back_button@2x.png in Resources */,
-				75D206F41863A6F80042200D /* load_failure.html in Resources */,
+				758C73F2187DAF3F002CA9AD /* cp_test_message_thumb@2x.png in Resources */,
+				758C73F0187DAF3F002CA9AD /* cp_stream_back_button@2x.png in Resources */,
+				758C73F3187DAF3F002CA9AD /* load_failure.html in Resources */,
 				758E8D9C186367C900A8AFA4 /* Main_iPhone.storyboard in Resources */,
-				75D206EE1863A6F80042200D /* cp_all_messages_button_icon@2x.png in Resources */,
-				75D206EF1863A6F80042200D /* cp_close_button@2x.png in Resources */,
-				75D206F01863A6F80042200D /* cp_close_button_white@2x.png in Resources */,
-				75D206ED1863A6F80042200D /* corepush_bridge.txt in Resources */,
+				758C73ED187DAF3F002CA9AD /* cp_all_messages_button_icon@2x.png in Resources */,
+				758C73EE187DAF3F002CA9AD /* cp_close_button@2x.png in Resources */,
+				758C73EF187DAF3F002CA9AD /* cp_close_button_white@2x.png in Resources */,
+				758C73EC187DAF3F002CA9AD /* corepush_bridge.txt in Resources */,
 				758E8DA4186367C900A8AFA4 /* Images.xcassets in Resources */,
 				758E8D93186367C900A8AFA4 /* InfoPlist.strings in Resources */,
-				75D206F21863A6F80042200D /* cp_stream_detail_nav_bar_bg@2x.png in Resources */,
+				758C73F1187DAF3F002CA9AD /* cp_stream_detail_nav_bar_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
