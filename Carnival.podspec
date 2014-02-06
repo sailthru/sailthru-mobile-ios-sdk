@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   	s.xcconfig 			= {
   		'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Carnival/**"'
   	} 
-  	s.resources 		= 'Carnival.embeddedframework/Carnival.framework/Versions/A/Resources' 
+  	s.resources 		= 'Carnival.embeddedframework/Carnival.framework/Versions/A/Resources/*' 
   	s.public_header_files = 'Carnival.embeddedframework/Carnival.framework/Versions/A/Headers/*.h'
   	s.vendored_frameworks = 'Carnival.embeddedframework/Carnival.framework'
   	s.preserve_paths 	= 'Carnival.embeddedframework/Carnival.framework' 
