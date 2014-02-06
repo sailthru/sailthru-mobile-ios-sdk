@@ -10,8 +10,7 @@ Pod::Spec.new do |s|
 		:git => 'https://sam_carnival@bitbucket.org/carnivallabs/carnival-ios-sdk.git',
 		:tag => s.version.to_s
 	} 
-  	s.xcconfig 			= { 
-  		'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Carnival.embeddedframework/Resources"' ,
+  	s.xcconfig 			= {
   		'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Carnival/**"'
   	} 
   	s.resources 		= 'Carnival.embeddedframework/Carnival.framework/Versions/A/Resources' 
