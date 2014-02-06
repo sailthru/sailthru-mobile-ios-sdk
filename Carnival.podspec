@@ -11,14 +11,16 @@ Pod::Spec.new do |s|
 		:tag => s.version.to_s
 	} 
   	s.xcconfig 			= { 
-  		'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Carnival/Resources"' ,
-  		'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Carnival.embeddedframework"',
-  		'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libz' 
+  		'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Carnival.embeddedframework/Resources"' ,
+  		'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Carnival/**"'
   	} 
   	s.resources 		= 'Carnival.embeddedframework/Carnival.framework/Versions/A/Resources' 
-  	s.source_files 		= 'Carnival.embeddedframework/Carnival.framework/Versions/A/Headers/*.h' 
-  	s.preserve_paths 	= '**/*.framework', '**/Resources' 
-  	s.frameworks 		= 'UIKit', 'Foundation', 'CoreLocation', 'CoreGraphics'
+  	s.public_header_files = 'Carnival.embeddedframework/Carnival.framework/Versions/A/Headers/*.h'
+  	s.vendored_frameworks = 'Carnival.embeddedframework/Carnival.framework'
+  	s.preserve_paths 	= 'Carnival.embeddedframework/Carnival.framework' 
+  	s.frameworks 		= 'UIKit', 'Foundation', 'CoreLocation', 'CoreGraphics', 'AdSupport'
   	s.license = {:type => 'commercial', :text =>'Please refer to http://docs.corepush.com'}
+  	s.requires_arc = true
+  	s.library = 'z'
 
 end
