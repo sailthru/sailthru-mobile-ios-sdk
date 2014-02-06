@@ -14,7 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
 
-#define CARNIVAL_VERSION @"2.1"
+#define CARNIVAL_VERSION @"2.2"
 
 @interface Carnival : NSObject
 
