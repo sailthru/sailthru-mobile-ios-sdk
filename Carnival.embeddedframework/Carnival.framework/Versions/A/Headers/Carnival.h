@@ -14,10 +14,11 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
 
-#define CARNIVAL_VERSION @"2.2"
+#define CARNIVAL_VERSION @"2.4"
 
 @interface Carnival : NSObject
 
+/** @name Setting up Carnival */
 
 /**
  *  Sets the Carnival appKey credentials for this app.
@@ -26,7 +27,7 @@
  *  @discussion An exception will be raised if you do not set your appKey before you call any other methods.
  *  Make sure your app bundle identifier is the same as whatever it is set to on http://app.carnivalmobile.com .
  *
- *  Note: on iOS versions below 5 this method does nothing.
+ *  @warning On iOS versions below 5 this method does nothing.
  */
 + (void)startEngine:(NSString *)appKey;
 
@@ -40,10 +41,11 @@
  *  @discussion An exception will be raised if you do not set your appKey before you call any other methods.
  *  Make sure your app bundle identifier is the same as whatever it is on http://app.carnivalmobile.com .
  *
- *  Note: on iOS versions below 5 this method does nothing.
+ *  @warning On iOS versions below 5 this method does nothing.
  */
 + (void)startEngine:(NSString *)appKey andNotificationTypes:(UIRemoteNotificationType)types;
 
+/** @name Tags */
 
 /**
  *  Asyncronously sets the tags for Carnival for this Device.
@@ -51,7 +53,7 @@
  *  @param tags An array of tags for this device. A nil value or an empty NSArray will clear the tags for this Device.
  *  @discussion Calling this method will overwrite any previously set tags for this Device.
  *
- *  Note: on iOS versions below 5 this method does nothing.
+ *  @warning On iOS versions below 5 this method does nothing.
  */
 + (void)setTagsInBackground:(NSArray *)tags withResponse:(void(^)(NSArray *tags, NSError *error))block;
 
@@ -62,7 +64,7 @@
  *  @param tags An array of tags for this device. A nil value or an empty NSArray will clear the tags for this Device.
  *  @discussion Calling this method will overwrite any previously set tags for this Device.
  *
- *  Note: on iOS versions below 5 this method does nothing.
+ *  @warning On iOS versions below 5 this method does nothing.
  */
 + (void)setTagsInBackground:(NSArray *)tags;
 
@@ -72,7 +74,7 @@
  *
  *  @param block The block returned from the asyncronous call containing either an NSArray of tags, or an NSError if there was one.
  *
- *  Note: on iOS versions below 5 this method does nothing.
+ *  @warning On iOS versions below 5 this method does nothing.
  */
 + (void)addTag:(NSString *)tag inBackgroundWithResponse:(void(^)(NSArray *tags, NSError *error))block;
 
@@ -82,24 +84,26 @@
  *
  *  @param block The block returned from the asyncronous call containing either an NSArray of tags, or an NSError if there was one.
  *
- *  Note: on iOS versions below 5 this method does nothing.
+ *  @warning On iOS versions below 5 this method does nothing.
  */
 + (void)getTagsInBackgroundWithResponse:(void(^)(NSArray *tags, NSError *error))block;
 
+/** @name Badges */
 
 /**
  *  Should clear the application badge automatically when the application launches.
  *  Defaults to NO on iOS versions below 5, YES on iOS versions above 5.
  *
- *  Note: on iOS versions below 5 this method does nothing
+ *  @warning On iOS versions below 5 this method does nothing
  */
 + (void)setShouldClearBadgeOnLaunch:(BOOL)shouldClearBadgeOnLaunch;
 
+/** @name Location tracking */
 
 /**
  *  Starts tracking location for this user, to allow for GEO based filtering from Carnival
  *
- *  Note: on iOS versions below 5 this method does nothing.
+ *  @warning On iOS versions below 5 this method does nothing.
  */
 + (void)enableLocationTracking:(BOOL)enable;
 
@@ -107,7 +111,7 @@
 /**
  *  Gives access to the location manager
  *
- * Note: on iOS versions below 5 this method always returns nil.
+ *  @warning On iOS versions below 5 this method always returns nil.
  */
 + (CLLocationManager *)locationManager;
 
