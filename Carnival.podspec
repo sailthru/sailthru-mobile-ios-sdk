@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
 	s.name 				= 'Carnival'
-	s.version 			= '2.2'
-	s.summary 			= 'Carnival iOS SDK for integrating with Carnival.com push service'
+	s.version 			= '2.4'
+	s.summary 			= 'Carnival iOS SDK for integrating with http://carnivalmobile.com messaging and analytics service'
 	s.author			= {
-		'Carnival Labs Ltd' => 'sam@carnivallabs.com'
+		'Carnival Labs Ltd' => 'info@carnivallabs.com'
 	}
 	s.homepage 			= 'http://docs.carnivalmobile.com'
 	s.source 			= { 
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   	s.vendored_frameworks = 'Carnival.embeddedframework/Carnival.framework'
   	s.preserve_paths 	= 'Carnival.embeddedframework/Carnival.framework' 
   	s.frameworks 		= 'UIKit', 'Foundation', 'CoreLocation', 'CoreGraphics', 'AdSupport'
-  	s.license = {:type => 'commercial', :text =>'Please refer to http://docs.carnivalmobile.com'}
+  	s.license = {:type => 'commercial', :text =>'Please refer to our privacy policy and terms of service at http://carnivalmobile.com'}
   	s.requires_arc = true
   	s.library = 'z'
 
