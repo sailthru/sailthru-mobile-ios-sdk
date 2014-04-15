@@ -72,13 +72,15 @@
 /**
  *  Asyncronously adds the tag to Carnival for this Device.  If the tag is already registered with Carnival, this method does not add the tag again.
  *
+ *  @deprecated use the addTags: method instead
+ *
  *  @param block The block returned from the asyncronous call containing either an NSArray of tags, or an NSError if there was one.
  *
  *  @warning On iOS versions below 5 this method does nothing.
  *
  *  @warning This method behaves like getTagsInBackgroundWithResponse when the added tag is nil or not an NSString.
  */
-+ (void)addTag:(NSString *)tag inBackgroundWithResponse:(void(^)(NSArray *tags, NSError *error))block __attribute((deprecated("use the addTags: method instead")));
++ (void)addTag:(NSString *)tag inBackgroundWithResponse:(void (^)(NSArray *tags, NSError *error))block __attribute((deprecated("use the addTags: method instead")));
 
 
 /**
