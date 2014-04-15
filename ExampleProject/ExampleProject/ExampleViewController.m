@@ -116,7 +116,7 @@
     // Asyncronously adds the tag for this device
     // If the tag is already registered with Carnival, this method does not add the tag again.
     
-    [Carnival addTag:@"CARNIVAL_ADD_TAG_EXAMPLE_TAG" inBackgroundWithResponse:^(NSArray *tags, NSError *error) {
+    [Carnival addTags:@[@"CARNIVAL_ADD_TAG_EXAMPLE_TAG"] inBackgroundWithResponse:^(NSArray *tags, NSError *error) {
        
         NSLog(@"addTag:inBackgroundWithResponse: returned tags: %@",tags);
         
