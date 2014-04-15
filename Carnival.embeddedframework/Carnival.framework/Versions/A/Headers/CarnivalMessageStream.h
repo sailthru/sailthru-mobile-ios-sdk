@@ -56,7 +56,7 @@ extern NSString * const CarnivalMessageStreamUnreadMessageCountDidChangeNotifica
  *  @warning On iOS versions below 5, this method does nothing.
  */
 
-+ (void)messagesCount:(void (^)(NSUInteger count, NSError *error))handler __attribute((deprecated("use messagesCounts: method instead")));
++ (void)messagesCount:(void (^)(NSUInteger count, NSError *error))handler __attribute((deprecated("use the messagesCounts: method instead")));
 
 /**
  *  Asynchronously returns the total number of messages and the number of unread messages in the message stream
