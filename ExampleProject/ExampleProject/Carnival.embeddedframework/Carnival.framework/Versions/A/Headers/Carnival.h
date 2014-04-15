@@ -14,7 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
 
-#define CARNIVAL_VERSION @"2.4"
+#define CARNIVAL_VERSION @"2.4.2"
 
 @interface Carnival : NSObject
 
@@ -75,6 +75,8 @@
  *  @param block The block returned from the asyncronous call containing either an NSArray of tags, or an NSError if there was one.
  *
  *  @warning On iOS versions below 5 this method does nothing.
+ *
+ *  @warning This method behaves like getTagsInBackgroundWithResponse when the added tag is nil or not an NSString
  */
 + (void)addTag:(NSString *)tag inBackgroundWithResponse:(void(^)(NSArray *tags, NSError *error))block;
 
@@ -85,6 +87,8 @@
  *  @param block The block returned from the asyncronous call containing either an NSArray of tags, or an NSError if there was one.
  *
  *  @warning On iOS versions below 5 this method does nothing.
+ *
+ *  @warning This method does nothing when the response block is NULL
  */
 + (void)getTagsInBackgroundWithResponse:(void(^)(NSArray *tags, NSError *error))block;
 
