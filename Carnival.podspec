@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
 	s.name 				= 'Carnival'
-	s.version 			= '2.4'
+	s.version 			= '2.4.2'
 	s.summary 			= 'Carnival iOS SDK for integrating with http://carnivalmobile.com messaging and analytics service'
 	s.author			= {
 		'Carnival Labs Ltd' => 'info@carnivallabs.com'
 	}
 	s.homepage 			= 'http://docs.carnivalmobile.com'
 	s.source 			= { 
-		:git => 'https://sam_carnival@bitbucket.org/carnivallabs/carnival-ios-sdk.git',
+		:git => 'https://github.com/carnivalmobile/carnival-ios-sdk.git',
 		:tag => s.version.to_s
 	} 
   	s.xcconfig 			= {
