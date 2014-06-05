@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
 	}
 	s.homepage 			= 'http://docs.carnivalmobile.com'
 	s.source 			= { 
-		:git => 'https://github.com/carnivalmobile/carnival-ios-sdk.git',
+		:git => 'git@github.com:carnivalmobile/carnival-ios-sdk.git',
 		:tag => s.version.to_s
 	} 
   	s.xcconfig 			= {
