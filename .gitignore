@@ -13,8 +13,8 @@ dsa_priv.pem
 *.perspective
 *.perspectivev3
 *.pbxuser
-NZHerald-iPhone.xcodeproj/xcuserdata/*
-NZHerald-iPhone.xcodeproj/project.xcworkspace/xcuserdata/*
+ExampleProject/ExampleProject.xcodeproj/xcuserdata/*
+ExampleProject/ExampleProject.xcodeproj/project.xcworkspace/*
 *.xcuserdatad
 # Generated files
 VersionX-revision.h
