@@ -14,63 +14,108 @@ extern NSString * const CarnivalMessageStreamDidShowStreamNotification;
 extern NSString * const CarnivalMessageStreamWillDismissStreamNotification;
 extern NSString * const CarnivalMessageStreamDidDismissStreamNotification;
 
+extern NSString * const CarnivalMessageStreamWillShowMessageDetailNotification;
+extern NSString * const CarnivalMessageStreamDidShowMessageDetailNotification;
+extern NSString * const CarnivalMessageStreamWillDismissMessageDetailNotification;
+extern NSString * const CarnivalMessageStreamDidDismissMessageDetailNotification;
+
 extern NSString * const CarnivalMessageStreamUnreadMessageCountDidChangeNotification;
 
+@protocol CarnivalMessageStreamDelegate <NSObject>
+
+@optional
+
+/**
+ *  Tells the delegate that the CarnivalMessageStream will be shown.
+ *
+ *  @param messageStreamViewController The CarnivalMessageStream UIViewController that will be shown.
+ */
+
+- (void)willShowMessageStream:(UIViewController *)messageStreamViewController;
+
+/**
+ *  Tells the delegate that the CarnivalMessageStream was shown.
+ *
+ *  @param messageStreamViewController The CarnivalMessageStream UIViewController that was shown.
+ */
+
+- (void)didShowMessageStream:(UIViewController *)messageStreamViewController;
+
+/**
+ *  Tells the delegate that the CarnivalMessageStream will show the detail for a particular message.
+ *
+ *  @param messageDetailViewController The UIViewController for the detail of a particular message that will be shown.
+ */
+
+- (void)willShowMessageDetail:(UIViewController *)messageDetailViewController;
+
+/**
+ *  Tells the delegate that the CarnivalMessageStream showed the detail for a particular message.
+ *
+ *  @param messageDetailViewController The UIViewController for the detail of a particular message that was shown.
+ */
+
+- (void)didShowMessageDetail:(UIViewController *)messageDetailViewController;
+
+@required
+
+/**
+ *  Tells the delegate that the CarnivalMessageStream needs to be shown.
+ *
+ *  The CarnivalMessageStream needs to be shown when the user interacts with an in-app message or push notification.
+ *
+ *  @param streamNavigationController The CarnivalMessageStream to be displayed, wrapped in a UINavigationController.
+ *  @param applicationState The UIApplicationState at the point when this delegate was triggered. This may be different from the current UIApplicationState. This paramater can be used to display the stream differently if the app is currently in the background.
+ */
+
+- (void)carnivalMessageStreamNeedsDisplay:(UINavigationController *)streamNavigationController fromApplicationState:(UIApplicationState)applicationState;
+
+@end
+
 @interface CarnivalMessageStream : NSObject
-
-/** @name Showing/dismissing the Carnival Message Stream */
-
-/**
- *  Shows the message stream using the specified duration and completion handler
- *
- *  @param duration The total duration of the animations, measured in seconds. If you specify a negative value or 0, the changes are made without animating them.
- *  @param completion A block object to be executed when the animation sequence ends. This block has no return value and takes a single Boolean argument that indicates whether or not the animations actually finished before the completion handler was called. If the duration of the animation is 0, this block is performed at the beginning of the next run loop cycle. This parameter may be NULL.
- *
- *  @warning On iOS versions below 5, this method does nothing.
- */
-
-+ (void)showMessageStreamWithDuration:(CGFloat)duration completion:(void (^)(BOOL finished))completion;
-
-/**
- *  Dismisses the message stream using the specified duration and completion handler
- *
- *  @param duration The total duration of the animations, measured in seconds. If you specify a negative value or 0, the changes are made without animating them.
- *  @param completion A block object to be executed when the animation sequence ends. This block has no return value and takes a single Boolean argument that indicates whether or not the animations actually finished before the completion handler was called. If the duration of the animation is 0, this block is performed at the beginning of the next run loop cycle. This parameter may be NULL.
- *
- *  @warning On iOS versions below 5, this method does nothing.
- */
-
-+ (void)dismissMessageStreamWithDuration:(CGFloat)duration completion:(void (^)(BOOL finished))completion;
 
 /** @name Message statistics */
 
 /**
- *  Asynchronously returns the total number of messages in the message stream
+ *  Asynchronously returns the total number of messages in the message stream.
  *
- *  @deprecated use the messagesCounts: method instead  
+ *  @deprecated use the messagesCounts: method instead.
  *
  *  @param handler A block object which returns either the total number of messages in the message stream when there is no error.  The error will be non-nil if there was a problem retrieving the message count.
  *
- *  @warning This method does nothing if the handler block is NULL
- *
- *  @warning On iOS versions below 5, this method does nothing.
+ *  @warning This method does nothing if the handler block is NULL.
  */
 
-+ (void)messagesCount:(void (^)(NSUInteger count, NSError *error))handler __attribute((deprecated("use messagesCounts: method instead")));
++ (void)messagesCount:(void (^)(NSUInteger count, NSError *error))handler __attribute((deprecated("use the messagesCounts: method instead")));
 
 /**
- *  Asynchronously returns the total number of messages and the number of unread messages in the message stream
+ *  Asynchronously returns the total number of messages and the number of unread messages in the message stream.
  *
- *  Note: If you are wanting to be notified when the unread messages count updates, observe the CarnivalMessageStreamUnreadMessageCountDidChangeNotification notification
+ *  Note: If you are wanting to be notified when the unread messages count updates, observe the CarnivalMessageStreamUnreadMessageCountDidChangeNotification notification.
  *
  *  @param handler A block object which returns either the total number of messages in the message stream and the number of unread messages when there is no error.  The error will be non-nil if there was a problem retrieving the message count.
  *
- *
- *  @warning This method does nothing if the handler block is NULL
- *
- *  @warning On iOS versions below 5, this method does nothing.
+ *  @warning This method does nothing if the handler block is NULL.
  */
 
 + (void)messagesCounts:(void (^)(NSUInteger totalMessagesCount, NSUInteger unreadMessagesCount, NSError *error))handler;
+
+/**
+ *  Returns the CarnivalMessageStream ViewController wrapped in a UINavigationController.
+ *
+ *  @warning The CarnivalMessageStream single object holds a strong reference to this navigation controller.
+ *
+ *  @return A UINavigationController with the CarnivalMessageStream as it's rootViewController.
+ */
+
++ (UINavigationController *)streamNavigationController;
+
+/**
+ *  Sets the delegate for the CarnivalMessageStream.
+ *
+ *  @param delegate the object you wish to be the delegate of the CarnivalMessageStream.
+ */
+
++ (void)setDelegate:(id<CarnivalMessageStreamDelegate>)delegate;
 
 @end

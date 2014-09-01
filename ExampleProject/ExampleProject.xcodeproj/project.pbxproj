@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751243FE1950EB1100C5373C /* (null) in Resources */ = {isa = PBXBuildFile; };
+		758D6AEE19AE8D6C00F09C8D /* UIBarButtonItem+CPBarButtonItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 758D6AED19AE8D6C00F09C8D /* UIBarButtonItem+CPBarButtonItems.m */; };
+		758D6AF319AE915600F09C8D /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758D6AF019AE915600F09C8D /* Carnival.framework */; };
+		758D6AF419AE915600F09C8D /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 758D6AF219AE915600F09C8D /* CarnivalResources.bundle */; };
+		758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758D6AF519AE91E000F09C8D /* AVFoundation.framework */; };
+		758D6AF819AE91E800F09C8D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758D6AF719AE91E800F09C8D /* MediaPlayer.framework */; };
 		758E8D89186367C900A8AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758E8D88186367C900A8AFA4 /* Foundation.framework */; };
-		758E8D8B186367C900A8AFA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758E8D8A186367C900A8AFA4 /* CoreGraphics.framework */; };
 		758E8D8D186367C900A8AFA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758E8D8C186367C900A8AFA4 /* UIKit.framework */; };
 		758E8D93186367C900A8AFA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 758E8D91186367C900A8AFA4 /* InfoPlist.strings */; };
 		758E8D95186367C900A8AFA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 758E8D94186367C900A8AFA4 /* main.m */; };
@@ -17,22 +22,18 @@
 		758E8D9F186367C900A8AFA4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758E8D9D186367C900A8AFA4 /* Main_iPad.storyboard */; };
 		758E8DA2186367C900A8AFA4 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758E8DA1186367C900A8AFA4 /* ExampleViewController.m */; };
 		758E8DA4186367C900A8AFA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758E8DA3186367C900A8AFA4 /* Images.xcassets */; };
-		75CF2D2F18FCA1C200DDEA2B /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CF2D2518FCA1C200DDEA2B /* Carnival.framework */; };
-		75CF2D3018FCA1C200DDEA2B /* corepush_bridge.txt in Resources */ = {isa = PBXBuildFile; fileRef = 75CF2D2718FCA1C200DDEA2B /* corepush_bridge.txt */; };
-		75CF2D3118FCA1C200DDEA2B /* cp_all_messages_button_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75CF2D2818FCA1C200DDEA2B /* cp_all_messages_button_icon@2x.png */; };
-		75CF2D3218FCA1C200DDEA2B /* cp_close_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75CF2D2918FCA1C200DDEA2B /* cp_close_button@2x.png */; };
-		75CF2D3318FCA1C200DDEA2B /* cp_close_button_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75CF2D2A18FCA1C200DDEA2B /* cp_close_button_white@2x.png */; };
-		75CF2D3418FCA1C200DDEA2B /* cp_message_close_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75CF2D2B18FCA1C200DDEA2B /* cp_message_close_button@2x.png */; };
-		75CF2D3518FCA1C200DDEA2B /* cp_stream_back_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75CF2D2C18FCA1C200DDEA2B /* cp_stream_back_button@2x.png */; };
-		75CF2D3618FCA1C200DDEA2B /* cp_stream_detail_nav_bar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75CF2D2D18FCA1C200DDEA2B /* cp_stream_detail_nav_bar_bg@2x.png */; };
-		75CF2D3718FCA1C200DDEA2B /* load_failure.html in Resources */ = {isa = PBXBuildFile; fileRef = 75CF2D2E18FCA1C200DDEA2B /* load_failure.html */; };
 		75E0E39918D29DE400B82748 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E0E39818D29DE400B82748 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		758D6AEC19AE8D6C00F09C8D /* UIBarButtonItem+CPBarButtonItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CPBarButtonItems.h"; sourceTree = "<group>"; };
+		758D6AED19AE8D6C00F09C8D /* UIBarButtonItem+CPBarButtonItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CPBarButtonItems.m"; sourceTree = "<group>"; };
+		758D6AF019AE915600F09C8D /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		758D6AF219AE915600F09C8D /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
+		758D6AF519AE91E000F09C8D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		758D6AF719AE91E800F09C8D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		758E8D85186367C900A8AFA4 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758E8D88186367C900A8AFA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		758E8D8A186367C900A8AFA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		758E8D8C186367C900A8AFA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		758E8D90186367C900A8AFA4 /* ExampleProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleProject-Info.plist"; sourceTree = "<group>"; };
 		758E8D92186367C900A8AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -45,15 +46,6 @@
 		758E8DA0186367C900A8AFA4 /* ExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleViewController.h; sourceTree = "<group>"; };
 		758E8DA1186367C900A8AFA4 /* ExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
 		758E8DA3186367C900A8AFA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		75CF2D2518FCA1C200DDEA2B /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
-		75CF2D2718FCA1C200DDEA2B /* corepush_bridge.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = corepush_bridge.txt; sourceTree = "<group>"; };
-		75CF2D2818FCA1C200DDEA2B /* cp_all_messages_button_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_all_messages_button_icon@2x.png"; sourceTree = "<group>"; };
-		75CF2D2918FCA1C200DDEA2B /* cp_close_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_close_button@2x.png"; sourceTree = "<group>"; };
-		75CF2D2A18FCA1C200DDEA2B /* cp_close_button_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_close_button_white@2x.png"; sourceTree = "<group>"; };
-		75CF2D2B18FCA1C200DDEA2B /* cp_message_close_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_message_close_button@2x.png"; sourceTree = "<group>"; };
-		75CF2D2C18FCA1C200DDEA2B /* cp_stream_back_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_stream_back_button@2x.png"; sourceTree = "<group>"; };
-		75CF2D2D18FCA1C200DDEA2B /* cp_stream_detail_nav_bar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cp_stream_detail_nav_bar_bg@2x.png"; sourceTree = "<group>"; };
-		75CF2D2E18FCA1C200DDEA2B /* load_failure.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = load_failure.html; sourceTree = "<group>"; };
 		75E0E39818D29DE400B82748 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -62,9 +54,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75CF2D2F18FCA1C200DDEA2B /* Carnival.framework in Frameworks */,
+				758D6AF819AE91E800F09C8D /* MediaPlayer.framework in Frameworks */,
+				758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */,
+				758D6AF319AE915600F09C8D /* Carnival.framework in Frameworks */,
 				75E0E39918D29DE400B82748 /* AdSupport.framework in Frameworks */,
-				758E8D8B186367C900A8AFA4 /* CoreGraphics.framework in Frameworks */,
 				758E8D8D186367C900A8AFA4 /* UIKit.framework in Frameworks */,
 				758E8D89186367C900A8AFA4 /* Foundation.framework in Frameworks */,
 			);
@@ -73,6 +66,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		758D6AEF19AE915600F09C8D /* Carnival.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				758D6AF019AE915600F09C8D /* Carnival.framework */,
+				758D6AF119AE915600F09C8D /* Resources */,
+			);
+			path = Carnival.embeddedframework;
+			sourceTree = "<group>";
+		};
+		758D6AF119AE915600F09C8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				758D6AF219AE915600F09C8D /* CarnivalResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		758E8D7C186367C900A8AFA4 = {
 			isa = PBXGroup;
 			children = (
@@ -93,9 +103,10 @@
 		758E8D87186367C900A8AFA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				758D6AF719AE91E800F09C8D /* MediaPlayer.framework */,
+				758D6AF519AE91E000F09C8D /* AVFoundation.framework */,
 				75E0E39818D29DE400B82748 /* AdSupport.framework */,
 				758E8D88186367C900A8AFA4 /* Foundation.framework */,
-				758E8D8A186367C900A8AFA4 /* CoreGraphics.framework */,
 				758E8D8C186367C900A8AFA4 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -104,7 +115,9 @@
 		758E8D8E186367C900A8AFA4 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				75CF2D2418FCA1C200DDEA2B /* Carnival.embeddedframework */,
+				758D6AEF19AE915600F09C8D /* Carnival.embeddedframework */,
+				758D6AEC19AE8D6C00F09C8D /* UIBarButtonItem+CPBarButtonItems.h */,
+				758D6AED19AE8D6C00F09C8D /* UIBarButtonItem+CPBarButtonItems.m */,
 				758E8D97186367C900A8AFA4 /* ExampleAppDelegate.h */,
 				758E8D98186367C900A8AFA4 /* ExampleAppDelegate.m */,
 				758E8DA0186367C900A8AFA4 /* ExampleViewController.h */,
@@ -126,30 +139,6 @@
 				758E8D96186367C900A8AFA4 /* ExampleProject-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		75CF2D2418FCA1C200DDEA2B /* Carnival.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				75CF2D2518FCA1C200DDEA2B /* Carnival.framework */,
-				75CF2D2618FCA1C200DDEA2B /* Resources */,
-			);
-			path = Carnival.embeddedframework;
-			sourceTree = "<group>";
-		};
-		75CF2D2618FCA1C200DDEA2B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				75CF2D2718FCA1C200DDEA2B /* corepush_bridge.txt */,
-				75CF2D2818FCA1C200DDEA2B /* cp_all_messages_button_icon@2x.png */,
-				75CF2D2918FCA1C200DDEA2B /* cp_close_button@2x.png */,
-				75CF2D2A18FCA1C200DDEA2B /* cp_close_button_white@2x.png */,
-				75CF2D2B18FCA1C200DDEA2B /* cp_message_close_button@2x.png */,
-				75CF2D2C18FCA1C200DDEA2B /* cp_stream_back_button@2x.png */,
-				75CF2D2D18FCA1C200DDEA2B /* cp_stream_detail_nav_bar_bg@2x.png */,
-				75CF2D2E18FCA1C200DDEA2B /* load_failure.html */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,17 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				758E8D9F186367C900A8AFA4 /* Main_iPad.storyboard in Resources */,
-				75CF2D3618FCA1C200DDEA2B /* cp_stream_detail_nav_bar_bg@2x.png in Resources */,
 				758E8D9C186367C900A8AFA4 /* Main_iPhone.storyboard in Resources */,
-				75CF2D3718FCA1C200DDEA2B /* load_failure.html in Resources */,
-				75CF2D3118FCA1C200DDEA2B /* cp_all_messages_button_icon@2x.png in Resources */,
-				75CF2D3218FCA1C200DDEA2B /* cp_close_button@2x.png in Resources */,
-				75CF2D3318FCA1C200DDEA2B /* cp_close_button_white@2x.png in Resources */,
-				75CF2D3018FCA1C200DDEA2B /* corepush_bridge.txt in Resources */,
-				75CF2D3518FCA1C200DDEA2B /* cp_stream_back_button@2x.png in Resources */,
+				751243FE1950EB1100C5373C /* (null) in Resources */,
+				758D6AF419AE915600F09C8D /* CarnivalResources.bundle in Resources */,
 				758E8DA4186367C900A8AFA4 /* Images.xcassets in Resources */,
 				758E8D93186367C900A8AFA4 /* InfoPlist.strings in Resources */,
-				75CF2D3418FCA1C200DDEA2B /* cp_message_close_button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758D6AEE19AE8D6C00F09C8D /* UIBarButtonItem+CPBarButtonItems.m in Sources */,
 				758E8DA2186367C900A8AFA4 /* ExampleViewController.m in Sources */,
 				758E8D99186367C900A8AFA4 /* ExampleAppDelegate.m in Sources */,
 				758E8D95186367C900A8AFA4 /* main.m in Sources */,
@@ -266,10 +250,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7s,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -302,7 +283,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64 i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -310,10 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7s,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -340,24 +318,26 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64 i386 x86_64";
 			};
 			name = Release;
 		};
 		758E8DBB186367CA00A8AFA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Blair/Documents/CarnivalLabs/corepush-ios-client/ExampleProject/ExampleProject/Carnival.embeddedframework",
 					"$(PROJECT_DIR)/ExampleProject/Carnival.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleProject/ExampleProject-Prefix.pch";
 				INFOPLIST_FILE = "ExampleProject/ExampleProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -365,17 +345,19 @@
 		758E8DBC186367CA00A8AFA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Blair/Documents/CarnivalLabs/corepush-ios-client/ExampleProject/ExampleProject/Carnival.embeddedframework",
 					"$(PROJECT_DIR)/ExampleProject/Carnival.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleProject/ExampleProject-Prefix.pch";
 				INFOPLIST_FILE = "ExampleProject/ExampleProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

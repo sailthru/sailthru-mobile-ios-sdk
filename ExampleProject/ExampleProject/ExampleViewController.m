@@ -8,97 +8,91 @@
 
 #import "ExampleViewController.h"
 #import <Carnival/Carnival.h>
+#import "UIBarButtonItem+CPBarButtonItems.h"
+
+@interface ExampleViewController () <CarnivalMessageStreamDelegate, UINavigationControllerDelegate>
+
+@end
 
 @implementation ExampleViewController
 
-#pragma mark - init
+#pragma mark - view lifecycle
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (void)viewDidLoad
 {
-    self = [super initWithCoder:aDecoder];
+    [super viewDidLoad];
     
-    if (self)
+    // Set this viewcontroller as the CarnivalMessageStream's delegate
+    
+    [CarnivalMessageStream setDelegate:self];
+    
+    // Style the stream naivgation controller to have a blue navigation bar and white text
+    
+    UINavigationController *navVC = [CarnivalMessageStream streamNavigationController];
+    [navVC setDelegate:self];
+    [navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
     {
-        // Initialization code
-        
-        [self addNotificationObservers];
-        
+        [navVC.navigationBar setTintColor:[UIColor blueColor]];
     }
-    
-    return self;
+    else
+    {
+        [navVC.navigationBar setBarTintColor:[UIColor blueColor]];
+    }
 }
 
-#pragma mark - notifications
-
-- (void)addNotificationObservers
+- (void)viewWillAppear:(BOOL)animated
 {
-    //  There are 4 notifications that the Carnival framework posts:
-    //      - CarnivalMessageStreamWillShowStreamNotification
-    //      - CarnivalMessageStreamDidShowStreamNotification
-    //      - CarnivalMessageStreamWillDismissStreamNotification
-    //      - CarnivalMessageStreamDidDismissStreamNotification
+    [super viewWillAppear:animated];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(carnivalMessageStreamWillShowStream:)
-                                                 name:CarnivalMessageStreamWillShowStreamNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(carnivalMessageStreamDidShowStream:)
-                                                 name:CarnivalMessageStreamDidShowStreamNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(carnivalMessageStreamWillDismissStream:)
-                                                 name:CarnivalMessageStreamWillDismissStreamNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(carnivalMessageStreamDidDismissStream:)
-                                                 name:CarnivalMessageStreamDidDismissStreamNotification
-                                               object:nil];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
-- (void)removeNotificationObservers
+#pragma mark - CarnivalMessageStreamDelegate
+
+- (void)carnivalMessageStreamNeedsDisplay:(UINavigationController *)streamNavigationController fromApplicationState:(UIApplicationState)applicationState
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:CarnivalMessageStreamWillShowStreamNotification
-                                                  object:nil];
+    if (!self.presentedViewController)
+    {
+        // When the application is active we want to animate the Carnival Message Stream onto the screen
+        // Otherwise the application is in the background or inactive so we want to have the Carnival Message Stream there when the application is active
+        
+        BOOL animated = applicationState == UIApplicationStateActive ? YES : NO;
+        
+        [self presentViewController:streamNavigationController animated:animated completion:NULL];
+    }
+}
+
+- (void)willShowMessageStream:(UIViewController *)messageStreamViewController
+{
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
+- (void)willShowMessageDetail:(UIViewController *)messageDetailViewController
+{
+    // Note: this will only work on iOS 7+
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:CarnivalMessageStreamDidShowStreamNotification
-                                                  object:nil];
+    [messageDetailViewController.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:CarnivalMessageStreamWillDismissStreamNotification
-                                                  object:nil];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
+#pragma mark - UINavigationControllerDelegate
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    // Insert a close button as the right bar button item of all navigation items
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:CarnivalMessageStreamDidDismissStreamNotification
-                                                  object:nil];
-}
-
-- (void)carnivalMessageStreamWillShowStream:(NSNotification *)notification
-{
-    NSLog(@"CarnivalMessageStream will show stream");
-}
-
-- (void)carnivalMessageStreamDidShowStream:(NSNotification *)notification
-{
-    NSLog(@"CarnivalMessageStream did show stream");
-}
-
-- (void)carnivalMessageStreamWillDismissStream:(NSNotification *)notification
-{
-    NSLog(@"CarnivalMessageStream will dismiss stream");
-}
-
-- (void)carnivalMessageStreamDidDismissStream:(NSNotification *)notification
-{
-    NSLog(@"CarnivalMessageStream did dismiss stream");
+    viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem cp_closeButtonWithTarget:self action:@selector(closeButtonPressed:)];
 }
 
 #pragma mark - pressed actions
+
+- (void)closeButtonPressed:(UIButton *)button
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 - (IBAction)getTagsButtonPressed:(UIButton *)sender
 {
@@ -143,20 +137,11 @@
 
 - (IBAction)showMessageStreamButtonPressed:(UIButton *)sender
 {
-    // Shows the message stream using the specified duration and completion handler
+    // Retrieve the streamNavigationController and present it like you would any normal UIViewController
     
-    [CarnivalMessageStream showMessageStreamWithDuration:0.4f completion:^(BOOL finished) {
-       
-        NSLog(@"Carnival Message Stream was shown");
-        
-    }];
-}
-
-#pragma mark - dealloc
-
-- (void)dealloc
-{
-    [self removeNotificationObservers];
+    UINavigationController *navVC = [CarnivalMessageStream streamNavigationController];
+    
+    [self presentViewController:navVC animated:YES completion:NULL];
 }
 
 @end
