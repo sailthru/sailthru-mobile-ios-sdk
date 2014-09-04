@@ -8,9 +8,8 @@
 
 #import "ExampleViewController.h"
 #import <Carnival/Carnival.h>
-#import "UIBarButtonItem+CPBarButtonItems.h"
 
-@interface ExampleViewController () <CarnivalMessageStreamDelegate, UINavigationControllerDelegate>
+@interface ExampleViewController () <CarnivalMessageStreamDelegate>
 
 @end
 
@@ -29,7 +28,6 @@
     // Style the stream naivgation controller to have a blue navigation bar and white text
     
     UINavigationController *navVC = [CarnivalMessageStream streamNavigationController];
-    [navVC setDelegate:self];
     [navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
@@ -67,32 +65,24 @@
 - (void)willShowMessageStream:(UIViewController *)messageStreamViewController
 {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    // Note: this will only work on iOS 7+
+    
+    [messageStreamViewController.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
 }
 
 - (void)willShowMessageDetail:(UIViewController *)messageDetailViewController
 {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     // Note: this will only work on iOS 7+
     
     [messageDetailViewController.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-}
-
-#pragma mark - UINavigationControllerDelegate
-
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-    // Insert a close button as the right bar button item of all navigation items
-    
-    viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem cp_closeButtonWithTarget:self action:@selector(closeButtonPressed:)];
+    [messageDetailViewController.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
 }
 
 #pragma mark - pressed actions
-
-- (void)closeButtonPressed:(UIButton *)button
-{
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
 
 - (IBAction)getTagsButtonPressed:(UIButton *)sender
 {

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+// Notifications
+
 extern NSString * const CarnivalMessageStreamWillShowStreamNotification;
 extern NSString * const CarnivalMessageStreamDidShowStreamNotification;
 extern NSString * const CarnivalMessageStreamWillDismissStreamNotification;
@@ -20,6 +22,10 @@ extern NSString * const CarnivalMessageStreamWillDismissMessageDetailNotificatio
 extern NSString * const CarnivalMessageStreamDidDismissMessageDetailNotification;
 
 extern NSString * const CarnivalMessageStreamUnreadMessageCountDidChangeNotification;
+
+// Keys
+
+extern NSString * const CarnivalMessageStreamUnreadCountKey;
 
 @protocol CarnivalMessageStreamDelegate <NSObject>
 
@@ -98,7 +104,12 @@ extern NSString * const CarnivalMessageStreamUnreadMessageCountDidChangeNotifica
  *  @warning This method does nothing if the handler block is NULL.
  */
 
-+ (void)messagesCounts:(void (^)(NSUInteger totalMessagesCount, NSUInteger unreadMessagesCount, NSError *error))handler;
++ (void)messagesCounts:(void (^)(NSUInteger totalMessagesCount, NSUInteger unreadMessagesCount, NSError *error))handler __attribute((deprecated("use the fetchMessageUnreadCountInBackground method instead")));
+
+/**
+ *  Asynchronously fetches the number of unread messages in the Carnival Message Stream and when completed fires a CarnivalMessageStreamUnreadMessageCountDidChangeNotification notification with the unread count in the NSNotification's userInfo, under the CarnivalMessageStreamUnreadCountKey key.
+ */
++ (void)fetchMessageUnreadCountInBackground;
 
 /**
  *  Returns the CarnivalMessageStream ViewController wrapped in a UINavigationController.
