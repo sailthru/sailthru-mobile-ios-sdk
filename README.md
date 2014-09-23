@@ -1,6 +1,6 @@
-![Cocoapods platforms](http://img.shields.io/cocoapods/p/Carnival.svg?style=flat)
-![Cocoapods license](http://img.shields.io/cocoapods/l/Carnival.svg?style=flat)
-![Cocoapods pod version](http://img.shields.io/cocoapods/v/AFNetworking.svg?style=flat)
+[![Cocoapods platforms](http://img.shields.io/cocoapods/p/Carnival.svg?style=flat)](http://img.shields.io/cocoapods/p/Carnival.svg?style=flat)
+[![Cocoapods license](http://img.shields.io/cocoapods/l/Carnival.svg?style=flat)](http://img.shields.io/cocoapods/l/Carnival.svg?style=flat)
+[![Cocoapods pod version](http://img.shields.io/cocoapods/v/AFNetworking.svg?style=flat)](http://img.shields.io/cocoapods/v/AFNetworking.svg?style=flat)
 
 Carnival Mobile SDK for iOS
 ==========================
