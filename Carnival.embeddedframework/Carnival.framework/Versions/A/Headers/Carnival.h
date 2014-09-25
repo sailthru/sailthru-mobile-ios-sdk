@@ -14,7 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
 
-#define CARNIVAL_VERSION @"2.7"
+#define CARNIVAL_VERSION @"2.8"
 
 @interface Carnival : NSObject
 
@@ -40,6 +40,14 @@
  *  Make sure your app bundle identifier is the same as whatever it is on http://app.carnivalmobile.com .
  */
 + (void)startEngine:(NSString *)appKey andNotificationTypes:(UIRemoteNotificationType)types;
+
+/**
+ *  Sets the Carnival appKey credentials for this app and optionally registers for push notifications with the badge, alert and sound UIRemoteNotificationType's
+ *
+ *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com .
+ *  @param registerForPushNotifications when this parameter is YES the Carnival iOS SDK will automatically register for push notifications
+ */
++ (void)startEngine:(NSString *)appKey registerForPushNotifications:(BOOL)registerForPushNotifications;
 
 /** @name Tags */
 
