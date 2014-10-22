@@ -14,7 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
 
-#define CARNIVAL_VERSION @"2.8.1"
+#define CARNIVAL_VERSION @"2.9"
 
 @interface Carnival : NSObject
 
@@ -109,16 +109,12 @@
 /** @name Location tracking */
 
 /**
- *  Starts tracking location for this user, to allow for GEO based filtering from Carnival.
- */
-+ (void)enableLocationTracking:(BOOL)enable;
-
-/**
- *  Gives access to the location manager
+ *  Forward a location to the Carnival iOS SDK. This method can be used when you're already tracking location in your app and you just want to forward your existing calls to the Carnival iOS SDK.
  *
- *  @warning On iOS versions below 5 this method always returns nil.
+ *  @param location The location to forward
  */
-+ (CLLocationManager *)locationManager;
+
++ (void)updateLocation:(CLLocation *)location;
 
 /** @name Manual Push Notification setup */
 
