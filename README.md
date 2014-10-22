@@ -24,7 +24,6 @@ Required Frameworks
 
 The Carnival Mobile SDK requires the following libaries to be linked in your project.
 
-- AdSupport.framework
 - CoreLocation.framework
 - libz.dylib
 - AVFoundation.framework
