@@ -28,6 +28,8 @@
 	<string>Always usage description</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>When-in-use usage description</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Location usage description</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
