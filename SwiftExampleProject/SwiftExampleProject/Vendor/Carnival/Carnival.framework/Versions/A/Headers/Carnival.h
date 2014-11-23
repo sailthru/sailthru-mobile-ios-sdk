@@ -14,7 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
 
-#define CARNIVAL_VERSION @"2.10"
+#define CARNIVAL_VERSION @"2.11"
 
 @protocol CarnivalIdentifierDataSource <NSObject>
 
@@ -153,5 +153,14 @@
  *  @param delegate An object that conforms to the CarnivalIdentifierDataSource protocol
  */
 + (void)setIdentifierDataSource:(id<CarnivalIdentifierDataSource>)dataSource;
+
+/** @name Device details */
+
+/**
+ *  Returns the current device's ID as a NSString
+ *
+ *  @param completion A block which gets called after the current device is fetched containing the current device's ID
+ */
++ (void)deviceID:(void (^)(NSString *deviceID, NSError *error))completion;
 
 @end
