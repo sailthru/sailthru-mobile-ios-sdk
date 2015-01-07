@@ -21,11 +21,24 @@ extern NSString * const CarnivalMessageStreamDidShowMessageDetailNotification;
 extern NSString * const CarnivalMessageStreamWillDismissMessageDetailNotification;
 extern NSString * const CarnivalMessageStreamDidDismissMessageDetailNotification;
 
+extern NSString * const CarnivalMessageStreamWillShowInAppNotificationNotification;
+extern NSString * const CarnivalMessageStreamDidShowInAppNotificationNotification;
+
 extern NSString * const CarnivalMessageStreamUnreadMessageCountDidChangeNotification;
 
 // Keys
 
 extern NSString * const CarnivalMessageStreamUnreadCountKey;
+extern NSString * const CarnivalMessageTypeKey;
+
+typedef NS_ENUM(NSInteger, CarnivalMessageType) {
+    CarnivalMessageTypeText,
+    CarnivalMessageTypeImage,
+    CarnivalMessageTypeLink,
+    CarnivalMessageTypeVideo,
+    CarnivalMessageTypeFakeCall,
+    CarnivalMessageTypeOther
+};
 
 @protocol CarnivalMessageStreamDelegate <NSObject>
 
@@ -56,12 +69,44 @@ extern NSString * const CarnivalMessageStreamUnreadCountKey;
 - (void)willShowMessageDetail:(UIViewController *)messageDetailViewController;
 
 /**
+ *  Tells the delegate that the CarnivalMessageStream will show the detail for a particular message.
+ *
+ *  @param messageDetailViewController The UIViewController for the detail of a particular message that will be shown.
+ *  @param messageType The type of the message that will be shown.
+ */
+
+- (void)willShowMessageDetail:(UIViewController *)messageDetailViewController forMessageType:(CarnivalMessageType)messageType;
+
+/**
  *  Tells the delegate that the CarnivalMessageStream showed the detail for a particular message.
  *
  *  @param messageDetailViewController The UIViewController for the detail of a particular message that was shown.
  */
 
 - (void)didShowMessageDetail:(UIViewController *)messageDetailViewController;
+
+/**
+ *  Tells the delegate that the CarnivalMessageStream showed the detail for a particular message.
+ *
+ *  @param messageDetailViewController The UIViewController for the detail of a particular message that was shown.
+ *  @param messageType The type of the message that was shown.
+ */
+
+- (void)didShowMessageDetail:(UIViewController *)messageDetailViewController forMessageType:(CarnivalMessageType)messageType;
+
+/**
+ *  Tells the delegate that the CarnivalMessageStream will show an in-app notification for a particular message.
+ *
+ *  @param messageType The type of the message that will be shown.
+ */
+- (void)willShowInAppNotificationForMessageType:(CarnivalMessageType)messageType;
+
+/**
+ *  Tells the delegate that the CarnivalMessageStream showed an in-app notification for a particular message.
+ *
+ *  @param messageType The type of the message that was shown.
+ */
+- (void)didShowInAppNotificationForMessageType:(CarnivalMessageType)messageType;
 
 @required
 

@@ -21,6 +21,9 @@ extern NSString * const CarnivalMessageStreamDidShowMessageDetailNotification;
 extern NSString * const CarnivalMessageStreamWillDismissMessageDetailNotification;
 extern NSString * const CarnivalMessageStreamDidDismissMessageDetailNotification;
 
+extern NSString * const CarnivalMessageStreamWillShowInAppNotificationNotification;
+extern NSString * const CarnivalMessageStreamDidShowInAppNotificationNotification;
+
 extern NSString * const CarnivalMessageStreamUnreadMessageCountDidChangeNotification;
 
 // Keys
@@ -90,6 +93,20 @@ typedef NS_ENUM(NSInteger, CarnivalMessageType) {
  */
 
 - (void)didShowMessageDetail:(UIViewController *)messageDetailViewController forMessageType:(CarnivalMessageType)messageType;
+
+/**
+ *  Tells the delegate that the CarnivalMessageStream will show an in-app notification for a particular message.
+ *
+ *  @param messageType The type of the message that will be shown.
+ */
+- (void)willShowInAppNotificationForMessageType:(CarnivalMessageType)messageType;
+
+/**
+ *  Tells the delegate that the CarnivalMessageStream showed an in-app notification for a particular message.
+ *
+ *  @param messageType The type of the message that was shown.
+ */
+- (void)didShowInAppNotificationForMessageType:(CarnivalMessageType)messageType;
 
 @required
 
