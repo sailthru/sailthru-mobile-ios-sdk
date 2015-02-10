@@ -17,7 +17,7 @@ This project contains the Carnival library, as well as an example project that y
 Integration
 ------
 
-Detailed integration steps can be found in the official Carnival Mobile documentation: http://docs.carnivalmobile.com/ios/
+Detailed integration steps can be found in the official Carnival Mobile documentation: http://docs.carnivalmobile.com/sdk/ios/
 
 Required Frameworks
 -------
