@@ -14,7 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
 
-#define CARNIVAL_VERSION @"2.14"
+#define CARNIVAL_VERSION @"2.15"
 
 @protocol CarnivalIdentifierDataSource <NSObject>
 
@@ -150,7 +150,7 @@
 /**
  *  Sets the Identifier dataSource which gives the Carnival SDK identifier information
  *
- *  @param delegate An object that conforms to the CarnivalIdentifierDataSource protocol
+ *  @param dataSource An object that conforms to the CarnivalIdentifierDataSource protocol
  */
 + (void)setIdentifierDataSource:(id<CarnivalIdentifierDataSource>)dataSource;
 
