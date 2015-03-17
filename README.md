@@ -28,3 +28,4 @@ The Carnival Mobile SDK requires the following libaries to be linked in your pro
 - libz.dylib
 - AVFoundation.framework
 - MediaPlayer.framework
+- QuartzCore.framework
