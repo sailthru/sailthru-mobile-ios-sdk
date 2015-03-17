@@ -14,7 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
 
-#define CARNIVAL_VERSION @"2.15"
+#define CARNIVAL_VERSION @"2.15.1"
 
 @protocol CarnivalIdentifierDataSource <NSObject>
 
@@ -162,5 +162,14 @@
  *  @param completion A block which gets called after the current device is fetched containing the current device's ID
  */
 + (void)deviceID:(void (^)(NSString *deviceID, NSError *error))completion;
+
+/** @name Enabling/Disabling in-app notifications */
+
+/**
+ *  Enables or disables the showing of in-app notifications
+ *
+ *  @param enabled A boolean value indicating whether in-app notfications are enabled
+ */
++ (void)setInAppNotificationsEnabled:(BOOL)enabled;
 
 @end
