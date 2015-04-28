@@ -30,6 +30,7 @@ extern NSString * const CarnivalMessageStreamUnreadMessageCountDidChangeNotifica
 
 extern NSString * const CarnivalMessageStreamUnreadCountKey;
 extern NSString * const CarnivalMessageTypeKey;
+extern NSString * const CarnivalMessageIDKey;
 
 typedef NS_ENUM(NSInteger, CarnivalMessageType) {
     CarnivalMessageTypeText,

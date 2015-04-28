@@ -14,7 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
 
-#define CARNIVAL_VERSION @"2.15.1"
+#define CARNIVAL_VERSION @"2.16"
 
 @protocol CarnivalIdentifierDataSource <NSObject>
 
@@ -40,6 +40,8 @@
  *  @discussion An exception will be raised if you do not set your appKey before you call any other methods.
  *  Make sure your app bundle identifier is the same as whatever it is set to on http://app.carnivalmobile.com .
  *
+ *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:), 
+ *  calling it later in the app lifecycle can have unintended consequences.
  */
 + (void)startEngine:(NSString *)appKey;
 
@@ -51,6 +53,9 @@
  *  see appledocs for more information.
  *  @discussion An exception will be raised if you do not set your appKey before you call any other methods.
  *  Make sure your app bundle identifier is the same as whatever it is on http://app.carnivalmobile.com .
+ *
+ *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
+ *  calling it later in the app lifecycle can have unintended consequences.
  */
 + (void)startEngine:(NSString *)appKey andNotificationTypes:(UIRemoteNotificationType)types;
 
@@ -59,6 +64,9 @@
  *
  *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com .
  *  @param registerForPushNotifications when this parameter is YES the Carnival iOS SDK will automatically register for push notifications
+ *
+ *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
+ *  calling it later in the app lifecycle can have unintended consequences.
  */
 + (void)startEngine:(NSString *)appKey registerForPushNotifications:(BOOL)registerForPushNotifications;
 
@@ -110,6 +118,61 @@
  *  @warning This method does nothing when the response block is NULL.
  */
 + (void)getTagsInBackgroundWithResponse:(void(^)(NSArray *tags, NSError *error))block;
+
+/** @name Key/Value Attributes */
+
+/**
+ *  Asyncronously sets a string value for a given key.
+ *
+ *  @param string The string value to be set.
+ *  @param key The string value of the key.
+ *  @param block The block returned from the asyncronous call possibly containing an error.
+**/
++ (void)setString:(NSString *)string forKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
+
+/**
+ *  Asyncronously sets a float value for a given key.
+ *
+ *  @param aFloat The float value to be set.
+ *  @param key The string value of the key.
+ *  @param block The block returned from the asyncronous call possibly containing an error.
+ **/
++ (void)setFloat:(CGFloat)aFloat forKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
+
+/**
+ *  Asyncronously sets an integer value for a given key.
+ *
+ *  @param integer The integer value to be set.
+ *  @param key The string value of the key.
+ *  @param block The block returned from the asyncronous call possibly containing an error.
+ **/
++ (void)setInteger:(NSInteger)integer forKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
+
+/**
+ *  Asyncronously sets a date value for a given key.
+ *
+ *  @param date The date to be set.
+ *  @param key The string value of the key.
+ *  @param block The block returned from the asyncronous call possibly containing an error.
+ **/
++ (void)setDate:(NSDate *)date forKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
+
+/**
+ *  Asyncronously sets a boolean value for a given key.
+ *
+ *  @param boolean The boolean value to be set.
+ *  @param key The string value of the key.
+ *  @param block The block returned from the asyncronous call possibly containing an error.
+ **/
++ (void)setBool:(BOOL)boolean forKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
+
+/**
+ *  Asyncronously removes a value for a given key.
+ *
+ *  @param key The string value of the key.
+ *  @param block The block returned from the asyncronous call possibly containing an error.
+ **/
++ (void)removeAttributeWithKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
 
 /** @name Badges */
 
