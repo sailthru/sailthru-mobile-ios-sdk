@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AdSupport
 
-class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocationManagerDelegate, CarnivalIdentifierDataSource {
     var locationManager: CLLocationManager? = nil
     
     //MARK: view lifecycle
@@ -17,13 +18,9 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         
         self.setupLocationManager()
         
-        // Set this viewcontroller as the CarnivalMessageStream's delegate
-        CarnivalMessageStream.setDelegate(self)
+        Carnival.setIdentifierDataSource(self)
         
-        // Style the stream naivgation controller to have a blue navigation bar and white text
-        let navVC = CarnivalMessageStream.streamNavigationController()
-        navVC.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-        navVC.navigationBar.barTintColor = UIColor.blueColor()
+        CarnivalMessageStream.setDelegate(self)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -118,33 +115,56 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         }
     }
     
-    //MARK: CarnivalMessageStreamDelegate
-    func carnivalMessageStreamNeedsDisplay(streamNavigationController: UINavigationController!, fromApplicationState applicationState: UIApplicationState) {
-        if self.presentedViewController != nil {
-            // When the application is active we want to animate the Carnival Message Stream onto the screen
-            // Otherwise the application is in the background or inactive so we want to have the Carnival Message Stream there when the application is active
-            let animated = applicationState == UIApplicationState.Active ? true : false
-            self.presentViewController(streamNavigationController, animated: animated, completion: nil)
+    //MARK: CarnivalIdentifierDataSource
+    func carnivalUniqueIdentifier() -> String! {
+        if ASIdentifierManager.sharedManager().advertisingTrackingEnabled {
+            return ASIdentifierManager.sharedManager().advertisingIdentifier.UUIDString
         }
+        
+        return nil
     }
     
-    func willShowMessageStream(messageStreamViewController: UIViewController!) {
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+    //MARK: CarnivalMessageStreamDelegate
+    func willShowMessageOfType(messageType: CarnivalMessageType) {
+        println("willShowMessageOfType: \(messageType)")
         
-        messageStreamViewController.navigationItem.rightBarButtonItem?.tintColor = UIColor.whiteColor()
+        // You can use this method to mute audio during videos or fake phone calls
     }
     
-    func willShowMessageDetail(messageDetailViewController: UIViewController!) {
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+    func didShowMessageOfType(messageType: CarnivalMessageType) {
+        println("didShowMessageOfType: \(messageType)")
         
-        messageDetailViewController.navigationItem.rightBarButtonItem?.tintColor = UIColor.whiteColor()
-        messageDetailViewController.navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
+        // You can use this method to mute audio during videos or fake phone calls
+    }
+    
+    func willDismissMessageOfType(messageType: CarnivalMessageType) {
+        println("willDismissMessageOfType: \(messageType)")
+        
+        // You can use this method to unmute audio during videos or fake phone calls
+    }
+    
+    func didDismissMessageOfType(messageType: CarnivalMessageType) {
+        println("didDismissMessageOfType: \(messageType)")
+        
+        // You can use this method to unmute audio during videos or fake phone calls
+    }
+    
+    func willShowInAppNotificationForMessageType(messageType: CarnivalMessageType) {
+        println("willShowInAppNotificationForMessageType: \(messageType)")
+        
+        // You can use this method to do something when an in-app notification is shown
+    }
+    
+    func didShowInAppNotificationForMessageType(messageType: CarnivalMessageType) {
+        println("didShowInAppNotificationForMessageType: \(messageType)")
+        
+        // You can use this method to do something when an in-app notification is shown
     }
     
     //MARK: pressed actions
     @IBAction func getTagsButtonPressed(sender: UIButton) {
         // Asyncronously gets the tags for this device.
-        Carnival.getTagsInBackgroundWithResponse { (tags: [AnyObject]!, error: NSError!) -> Void in
+        Carnival.getTagsInBackgroundWithResponse { (tags, error) in
             println("getTagsInBackgroundWithResponse returned tags: \(tags)")
         }
     }
@@ -152,9 +172,9 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     @IBAction func addTagButtonPressed(sender: UIButton) {
         // Asyncronously adds the tag for this device
         // If the tag is already registered with Carnival, this method does not add the tag again.
-        Carnival.addTags(["CARNIVAL_ADD_TAG_EXAMPLE_TAG"], inBackgroundWithResponse: { (tags: [AnyObject]!, error: NSError!) -> Void in
+        Carnival.addTags(["CARNIVAL_ADD_TAG_EXAMPLE_TAG"]) { (tags, error) in
             println("addTag:inBackgroundWithResponse: returned tags: \(tags)")
-        })
+        }
     }
     
     @IBAction func setTagsButtonPressed(sender: UIButton) {
@@ -163,14 +183,29 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         // Asyncronously sets the tags for Carnival for this device
         // Calling this method will overwrite any previously set tags for this device.
         // Passing nil for the tags argument will clear the tags for this device
-        Carnival.setTagsInBackground(exampleTags, withResponse: { (tags: [AnyObject]!, error: NSError!) -> Void in
+        Carnival.setTagsInBackground(exampleTags) { (tags, error) in
             println("setTagsInBackground:withResponse: returned tags: \(tags)");
-        })
+        }
     }
     
     @IBAction func showMessageStreamButtonPressed(sender: UIButton) {
-        // Retrieve the streamNavigationController and present it like you would any normal UIViewController
-        let navVc = CarnivalMessageStream.streamNavigationController()
-        self.presentViewController(navVc, animated: true, completion: nil)
+        let closeItem = UIBarButtonItem.whiteCloseButton(forTarget: self, action: "closeButtonPressed:")
+        
+        // Create a CarnivalStreamViewController and present it like you would any other viewcontroller
+        let streamVC = CarnivalStreamViewController()
+        streamVC.navigationItem.rightBarButtonItem = closeItem
+        
+        // You will probably want to wrap the streamviewcontroller in a UINavigationController in order to give it a navigationBar
+        let navVC = UINavigationController(rootViewController: streamVC)
+        navVC.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        navVC.navigationBar.barTintColor = UIColor.blueColor()
+        
+        self.presentViewController(navVC, animated: true) {
+            UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+        }
+    }
+    
+    internal func closeButtonPressed(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

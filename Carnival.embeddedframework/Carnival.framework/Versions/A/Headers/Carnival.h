@@ -13,8 +13,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
+#import "CarnivalStreamViewController.h"
 
-#define CARNIVAL_VERSION @"2.16"
+#define CARNIVAL_VERSION @"3.0.0"
 
 @protocol CarnivalIdentifierDataSource <NSObject>
 
@@ -87,17 +88,6 @@
  *  @discussion Calling this method will overwrite any previously set tags for this Device.
  */
 + (void)setTagsInBackground:(NSArray *)tags;
-
-/**
- *  Asyncronously adds the tag to Carnival for this Device.  If the tag is already registered with Carnival, this method does not add the tag again.
- *
- *  @deprecated use the addTags: method instead
- *
- *  @param block The block returned from the asyncronous call containing either an NSArray of tags, or an NSError if there was one.
- *
- *  @warning This method behaves like getTagsInBackgroundWithResponse when the added tag is nil or not an NSString.
- */
-+ (void)addTag:(NSString *)tag inBackgroundWithResponse:(void (^)(NSArray *tags, NSError *error))block __attribute((deprecated("use the addTags: method instead")));
 
 /**
  *  Asyncronously adds the tags to Carnival for this Device.  If the tags are already registered with Carnival, this method does not add the tag again.

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name 				= 'Carnival'
-	s.version 			= '2.16'
+	s.version 			= '3.0.0'
 	s.summary 			= 'Carnival iOS SDK for integrating with http://carnivalmobile.com messaging and analytics service'
 	s.author			= {
 		'Carnival Labs Ltd' => 'info@carnivallabs.com'
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 		'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Carnival/**"'
 	}
 	s.platform = :ios
-	s.ios.deployment_target = '6.0' 
+	s.ios.deployment_target = '7.0' 
 	s.resources 		= 'Carnival.embeddedframework/Carnival.framework/Versions/A/Resources/CarnivalResources.bundle' 
 	s.public_header_files = 'Carnival.embeddedframework/Carnival.framework/Versions/A/Headers/*.h'
 	s.vendored_frameworks = 'Carnival.embeddedframework/Carnival.framework'

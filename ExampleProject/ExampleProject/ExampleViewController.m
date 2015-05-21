@@ -9,6 +9,7 @@
 #import "ExampleViewController.h"
 #import <Carnival/Carnival.h>
 #import <AdSupport/AdSupport.h>
+#import "CloseBarButtonItem.h"
 
 @interface ExampleViewController () <CarnivalMessageStreamDelegate, CLLocationManagerDelegate, CarnivalIdentifierDataSource>
 
@@ -30,17 +31,6 @@
     
     // Set this viewcontroller as the CarnivalMessageStream's delegate
     [CarnivalMessageStream setDelegate:self];
-    
-    // Style the stream naivgation controller to have a blue navigation bar and white text
-    UINavigationController *navVC = [CarnivalMessageStream streamNavigationController];
-    [navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
-        [navVC.navigationBar setTintColor:[UIColor blueColor]];
-    }
-    else {
-        [navVC.navigationBar setBarTintColor:[UIColor blueColor]];
-    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -147,28 +137,40 @@
 
 #pragma mark - CarnivalMessageStreamDelegate
 
-- (void)carnivalMessageStreamNeedsDisplay:(UINavigationController *)streamNavigationController fromApplicationState:(UIApplicationState)applicationState {
-    if (!self.presentedViewController) {
-        // When the application is active we want to animate the Carnival Message Stream onto the screen
-        // Otherwise the application is in the background or inactive so we want to have the Carnival Message Stream there when the application is active
-        BOOL animated = applicationState == UIApplicationStateActive ? YES : NO;
-        [self presentViewController:streamNavigationController animated:animated completion:NULL];
-    }
+- (void)willShowMessageOfType:(CarnivalMessageType)messageType {
+    NSLog(@"willShowMessageOfType: %ld",(long)messageType);
+    
+    // You can use this method to mute audio during videos or fake phone calls
 }
 
-- (void)willShowMessageStream:(UIViewController *)messageStreamViewController {
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+- (void)didShowMessageOfType:(CarnivalMessageType)messageType {
+    NSLog(@"didShowMessageOfType: %li", (long)messageType);
     
-    // Note: this will only work on iOS 7+
-    [messageStreamViewController.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
+    // You can use this method to mute audio during videos or fake phone calls
 }
 
-- (void)willShowMessageDetail:(UIViewController *)messageDetailViewController {
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+- (void)willDismissMessageOfType:(CarnivalMessageType)messageType {
+    NSLog(@"willDismissMessageOfType: %li",(long)messageType);
     
-    // Note: this will only work on iOS 7+
-    [messageDetailViewController.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
-    [messageDetailViewController.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
+    // You can use this method to unmute audio during videos or fake phone calls
+}
+
+- (void)didDismissMessageOfType:(CarnivalMessageType)messageType {
+    NSLog(@"didDismissMessageOfType: %li", (long)messageType);
+    
+    // You can use this method to unmute audio during videos or fake phone calls
+}
+
+- (void)willShowInAppNotificationForMessageType:(CarnivalMessageType)messageType {
+    NSLog(@"willShowInAppNotificationForMessageType: %li", (long)messageType);
+    
+    // You can use this method to do something when an in-app notification is shown
+}
+
+- (void)didShowInAppNotificationForMessageType:(CarnivalMessageType)messageType {
+    NSLog(@"didShowInAppNotificationForMessageType: %li", (long)messageType);
+    
+    // You can use this method to do something when an in-app notification is shown
 }
 
 #pragma mark - pressed actions
@@ -189,10 +191,7 @@
 }
 
 - (IBAction)setTagsButtonPressed:(UIButton *)sender {
-    NSArray *exampleTags = @[
-                             @"CARNIVAL_SET_TAGS_EXAMPLE_TAG_1",
-                             @"CARNIVAL_SET_TAGS_EXAMPLE_TAG_2"
-                            ];
+    NSArray *exampleTags = @[@"CARNIVAL_SET_TAGS_EXAMPLE_TAG_1", @"CARNIVAL_SET_TAGS_EXAMPLE_TAG_2"];
     
     // Asyncronously sets the tags for Carnival for this device
     // Calling this method will overwrite any previously set tags for this device.
@@ -203,9 +202,24 @@
 }
 
 - (IBAction)showMessageStreamButtonPressed:(UIButton *)sender {
-    // Retrieve the streamNavigationController and present it like you would any normal UIViewController
-    UINavigationController *navVC = [CarnivalMessageStream streamNavigationController];
-    [self presentViewController:navVC animated:YES completion:NULL];
+    // Create a CarnivalStreamViewController and present it like you would any other viewcontroller
+    CarnivalStreamViewController *streamVC = [[CarnivalStreamViewController alloc] init];
+    
+    CloseBarButtonItem *closeItem = [CloseBarButtonItem whiteCloseButtonForTarget:self action:@selector(closeButtonPressed:)];
+    [streamVC.navigationItem setRightBarButtonItem:closeItem];
+    
+    // You will probably want to wrap the streamviewcontroller in a UINavigationController in order to give it a navigationBar
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:streamVC];
+    [navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [navVC.navigationBar setBarTintColor:[UIColor blueColor]];
+    
+    [self presentViewController:navVC animated:YES completion:^{
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }];
+}
+
+- (void)closeButtonPressed:(UIButton *)button {
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end
