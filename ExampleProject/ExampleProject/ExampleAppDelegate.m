@@ -2,8 +2,10 @@
 //  AppDelegate.m
 //  ExampleProject
 //
-//  Created by Blair McArthur on 19/12/13.
-//  Copyright (c) 2013 Carnival Labs. All rights reserved.
+//  Created by Carnival Mobile
+//  Copyright (c) 2015 Carnival Mobile. All rights reserved.
+//
+//  For documentation see http://docs.carnivalmobile.com
 //
 
 #import "ExampleAppDelegate.h"

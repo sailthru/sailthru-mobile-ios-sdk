@@ -2,8 +2,10 @@
 //  CloseButtonitem.swift
 //  SwiftExampleProject
 //
-//  Created by Blair McArthur on 5/05/15.
-//  Copyright (c) 2015 Carnival Labs. All rights reserved.
+//  Created by Carnival Mobile
+//  Copyright (c) 2015 Carnival Mobile. All rights reserved.
+//
+//  For documentation see http://docs.carnivalmobile.com
 //
 
 import Foundation

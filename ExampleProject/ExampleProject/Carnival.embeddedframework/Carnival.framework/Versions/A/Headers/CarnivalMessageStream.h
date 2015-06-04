@@ -2,8 +2,10 @@
 //  CarnivalStream.h
 //  Carnival
 //
-//  Created by Kup on 18/11/13.
-//  Copyright (c) 2013 Carnival Labs . All rights reserved.
+//  Created by Carnival Mobile
+//  Copyright (c) 2015 Carnival Mobile. All rights reserved.
+//
+//  For documentation see http://docs.carnivalmobile.com
 //
 
 #import <Foundation/Foundation.h>

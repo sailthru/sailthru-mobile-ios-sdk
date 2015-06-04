@@ -2,8 +2,10 @@
 //  AppDelegate.swift
 //  SwiftExampleProject
 //
-//  Created by Blair McArthur on 10/09/14.
-//  Copyright (c) 2014 Carnival Labs. All rights reserved.
+//  Created by Carnival Mobile
+//  Copyright (c) 2015 Carnival Mobile. All rights reserved.
+//
+//  For documentation see http://docs.carnivalmobile.com
 //
 
 import UIKit

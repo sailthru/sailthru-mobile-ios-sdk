@@ -2,8 +2,10 @@
 //  CloseBarButtonItem.m
 //  CustomPresentationExamples
 //
-//  Created by Blair McArthur on 16/04/15.
+//  Created by Carnival Mobile
+//  Copyright (c) 2015 Carnival Mobile. All rights reserved.
 //
+//  For documentation see http://docs.carnivalmobile.com
 //
 
 #import "CloseBarButtonItem.h"

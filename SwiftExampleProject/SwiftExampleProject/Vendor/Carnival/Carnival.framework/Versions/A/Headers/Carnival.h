@@ -2,12 +2,11 @@
 //  Carnival.h
 //  Carnival
 //
-//  Created by Adam Jones on 22/02/12.
-//  Copyright (c) 2012 Carnival Labs . All rights reserved.
+//  Created by Carnival Mobile
+//  Copyright (c) 2015 Carnival Mobile. All rights reserved.
 //
 //  For documentation see http://docs.carnivalmobile.com
 //
-//  Built 29 August 2012
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -15,7 +14,7 @@
 #import "CarnivalMessageStream.h"
 #import "CarnivalStreamViewController.h"
 
-#define CARNIVAL_VERSION @"3.0.0"
+#define CARNIVAL_VERSION @"3.1.0"
 
 @protocol CarnivalIdentifierDataSource <NSObject>
 
@@ -224,5 +223,14 @@
  *  @param enabled A boolean value indicating whether in-app notfications are enabled
  */
 + (void)setInAppNotificationsEnabled:(BOOL)enabled;
+
+/** @name Events */
+
+/**
+ *  Logs a custom event with the given name
+ *
+ *  @param name The name of the custom event to be logged
+ */
++ (void)logEvent:(NSString *)name;
 
 @end
