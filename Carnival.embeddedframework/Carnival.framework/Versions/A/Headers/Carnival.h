@@ -14,7 +14,7 @@
 #import "CarnivalMessageStream.h"
 #import "CarnivalStreamViewController.h"
 
-#define CARNIVAL_VERSION @"3.1.0"
+#define CARNIVAL_VERSION @"3.2.0"
 
 @protocol CarnivalIdentifierDataSource <NSObject>
 
@@ -89,6 +89,19 @@
 + (void)setTagsInBackground:(NSArray *)tags;
 
 /**
+ *  Synchronously sets the tags for Carnival for this Device.
+ *
+ *  @param tags An array of tags for this device. A nil value or an empty NSArray will clear the tags for this Device.
+ *
+ *  @param error A pointer to an error which will be non-nil if there is an error. 
+ *
+ *  @discussion Calling this method will overwrite any previously set tags for this Device.
+ *
+ *  @return NSArray of newly updated tags.
+ */
++ (NSArray *)setTags:(NSArray *)tags error:(NSError **)error;
+
+/**
  *  Asyncronously adds the tags to Carnival for this Device.  If the tags are already registered with Carnival, this method does not add the tag again.
  *
  *  @param block The block returned from the asyncronous call containing either an NSArray of tags, or an NSError if there was one.
@@ -100,6 +113,19 @@
 + (void)addTags:(NSArray *)tags inBackgroundWithResponse:(void(^)(NSArray *tags, NSError *error))block;
 
 /**
+ *  Syncronously adds the tags to Carnival for this Device.  If the tags are already registered with Carnival, this method does not add the tag again.
+ *
+ *  @param error A pointer to an error which will be non-nil if there is an error.
+ *
+ *  @warning This method will only add tags that are NSString's, anything else will be ignored.
+ *
+ *  @warning This method behaves like getTagsInBackgroundWithResponse when tags argument is nil or not an NSArray.
+ * 
+ *  @return NSArray of newly updated tags.
+ */
++ (NSArray *)addTags:(NSArray *)tags error:(NSError **)error;
+
+/**
  *  Asyncronously gets the tags for Carnival for this Device.
  *
  *  @param block The block returned from the asyncronous call containing either an NSArray of tags, or an NSError if there was one.
@@ -107,6 +133,15 @@
  *  @warning This method does nothing when the response block is NULL.
  */
 + (void)getTagsInBackgroundWithResponse:(void(^)(NSArray *tags, NSError *error))block;
+
+/**
+ *  Syncronously gets the tags for Carnival for this Device.
+ *
+ *  @param error A pointer to an error which will be non-nil if there is an error.
+ *
+ *  @return NSArray of newly updated tags.
+ */
++ (NSArray *)getTags:(NSError **)error;
 
 /** @name Key/Value Attributes */
 
@@ -120,6 +155,15 @@
 + (void)setString:(NSString *)string forKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
 
 /**
+ *  Syncronously sets a string value for a given key.
+ *
+ *  @param string The string value to be set.
+ *  @param key The string value of the key.
+ *  @param error A pointer to an error which will be non-nil if there is an error.
+ **/
++ (void)setString:(NSString *)string forKey:(NSString *)key error:(NSError * __autoreleasing *)error;
+
+/**
  *  Asyncronously sets a float value for a given key.
  *
  *  @param aFloat The float value to be set.
@@ -127,6 +171,15 @@
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
 + (void)setFloat:(CGFloat)aFloat forKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
+
+/**
+ *  Syncronously sets a float value for a given key.
+ *
+ *  @param aFloat The float value to be set.
+ *  @param key The string value of the key.
+ *  @param error A pointer to an error which will be non-nil if there is an error.
+ **/
++ (void)setFloat:(CGFloat)aFloat forKey:(NSString *)key error:(NSError * __autoreleasing *)error;
 
 /**
  *  Asyncronously sets an integer value for a given key.
@@ -138,6 +191,15 @@
 + (void)setInteger:(NSInteger)integer forKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
 
 /**
+ *  Syncronously sets an integer value for a given key.
+ *
+ *  @param integer The integer value to be set.
+ *  @param key The string value of the key.
+ *  @param error A pointer to an error which will be non-nil if there is an error.
+ **/
++ (void)setInteger:(NSInteger)integer forKey:(NSString *)key error:(NSError * __autoreleasing *)error;
+
+/**
  *  Asyncronously sets a date value for a given key.
  *
  *  @param date The date to be set.
@@ -145,6 +207,15 @@
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
 + (void)setDate:(NSDate *)date forKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
+
+/**
+ *  Syncronously sets a date value for a given key.
+ *
+ *  @param date The date to be set.
+ *  @param key The string value of the key.
+ *  @param error A pointer to an error which will be non-nil if there is an error.
+ **/
++ (void)setDate:(NSDate *)date forKey:(NSString *)key error:(NSError * __autoreleasing *)error;
 
 /**
  *  Asyncronously sets a boolean value for a given key.
@@ -156,12 +227,29 @@
 + (void)setBool:(BOOL)boolean forKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
 
 /**
+ *  Syncronously sets a boolean value for a given key.
+ *
+ *  @param boolean The boolean value to be set.
+ *  @param key The string value of the key.
+ *  @param error A pointer to an error which will be non-nil if there is an error.
+ **/
++ (void)setBool:(BOOL)boolean forKey:(NSString *)key error:(NSError * __autoreleasing *)error;
+
+/**
  *  Asyncronously removes a value for a given key.
  *
  *  @param key The string value of the key.
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
 + (void)removeAttributeWithKey:(NSString *)key withResponse:(void(^)(NSError *error))block;
+
+/**
+ *  Syncronously removes a value for a given key.
+ *
+ *  @param key The string value of the key.
+ *  @param error A pointer to an error which will be non-nil if there is an error.
+ **/
++ (void)removeAttributeWithKey:(NSString *)key error:(NSError * __autoreleasing *)error;;
 
 /** @name Badges */
 
