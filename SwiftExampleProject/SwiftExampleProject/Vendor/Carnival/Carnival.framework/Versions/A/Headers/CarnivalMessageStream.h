@@ -10,6 +10,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "CarnivalMessage.h"
 
 // Notifications
 extern NSString * const CarnivalMessageStreamWillShowMessageDetailNotification;
@@ -28,16 +29,6 @@ extern NSString * const CarnivalMessageStreamUnreadMessageCountDidChangeNotifica
 extern NSString * const CarnivalMessageStreamUnreadCountKey;
 extern NSString * const CarnivalMessageTypeKey;
 extern NSString * const CarnivalMessageIDKey;
-
-typedef NS_ENUM(NSInteger, CarnivalMessageType) {
-    CarnivalMessageTypeText,
-    CarnivalMessageTypeImage,
-    CarnivalMessageTypeLink,
-    CarnivalMessageTypeVideo,
-    CarnivalMessageTypeFakeCall,
-    CarnivalMessageTypeStandardPush,
-    CarnivalMessageTypeOther
-};
 
 @protocol CarnivalMessageStreamDelegate <NSObject>
 
@@ -99,6 +90,15 @@ typedef NS_ENUM(NSInteger, CarnivalMessageType) {
  */
 - (void)didDismissInAppNotificationForMessageType:(CarnivalMessageType)messageType;
 
+/**
+ *  Asks the delegate whether to show the In App notification for a given message.
+ *
+ *  @param message The message that Carnival wishes to present an In App notification for.
+ *  
+ *  @return A boolean of whether or the notification should be presented internally by the Carnival SDK. Override and return NO if the host app would like to handle the rendering and presentation of in-app notifications. 
+ */
+- (BOOL)shouldPresentInAppNotificationForMessage:(CarnivalMessage *)message;
+
 @end
 
 @interface CarnivalMessageStream : NSObject
@@ -116,12 +116,26 @@ typedef NS_ENUM(NSInteger, CarnivalMessageType) {
 + (void)unreadCount:(void (^)(NSUInteger unreadCount, NSError *error))handler;
 
 /**
+ *  Returns an array of Carnival Messages for the device.
+ *
+ *  @param block A block which gets called with an array of CarnivalMessage objects and a possbile error. Cannot be NULL.
+ */
++ (void)messages:(void(^)(NSArray *messages, NSError *error))block;
+
+/**
  *  Sets the delegate for the CarnivalMessageStream.
  *
  *  @param delegate the object you wish to be the delegate of the CarnivalMessageStream.
  */
 
 + (void)setDelegate:(id<CarnivalMessageStreamDelegate>)delegate;
+
+/**
+ * Shows the message detail screen for a given message
+ *
+ * @param message The Message you wish to present.
+ **/
++ (void)presentMessageDetailForMessage:(CarnivalMessage *)message;
 
 /**
  *  Dismisses the message detail screen

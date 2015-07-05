@@ -14,7 +14,7 @@
 #import "CarnivalMessageStream.h"
 #import "CarnivalStreamViewController.h"
 
-#define CARNIVAL_VERSION @"3.3.0"
+#define CARNIVAL_VERSION @"3.4.0"
 
 @protocol CarnivalIdentifierDataSource <NSObject>
 
