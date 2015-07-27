@@ -11,7 +11,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "CarnivalMessage.h"
+#import "CarnivalMacros.h"
 
+
+carnival_ASSUME_NONNULL_BEGIN
 // Notifications
 extern NSString * const CarnivalMessageStreamWillShowMessageDetailNotification;
 extern NSString * const CarnivalMessageStreamDidShowMessageDetailNotification;
@@ -29,6 +32,13 @@ extern NSString * const CarnivalMessageStreamUnreadMessageCountDidChangeNotifica
 extern NSString * const CarnivalMessageStreamUnreadCountKey;
 extern NSString * const CarnivalMessageTypeKey;
 extern NSString * const CarnivalMessageIDKey;
+carnival_ASSUME_NONNULL_END
+
+typedef NS_ENUM(NSInteger, CarnivalImpressionType) {
+    CarnivalImpressionTypeInAppNotificationView,
+    CarnivalImpressionTypeStreamView,
+    CarnivalImpressionTypeDetailView
+};
 
 @protocol CarnivalMessageStreamDelegate <NSObject>
 
@@ -97,7 +107,7 @@ extern NSString * const CarnivalMessageIDKey;
  *  
  *  @return A boolean of whether or the notification should be presented internally by the Carnival SDK. Override and return NO if the host app would like to handle the rendering and presentation of in-app notifications. 
  */
-- (BOOL)shouldPresentInAppNotificationForMessage:(CarnivalMessage *)message;
+- (BOOL)shouldPresentInAppNotificationForMessage:(carnival_nonnull CarnivalMessage *)message;
 
 @end
 
@@ -112,34 +122,63 @@ extern NSString * const CarnivalMessageIDKey;
  *
  *  @warning This method does nothing if the handler block is NULL.
  */
++ (void)unreadCount:(carnival_nonnull void (^)(NSUInteger unreadCount, NSError *__carnival_nullable error))handler;
 
-+ (void)unreadCount:(void (^)(NSUInteger unreadCount, NSError *error))handler;
+/**
+ *  Asynchronously marks a given message as read.
+ *
+ *  @param handler A block object which returns an error which will be non-nil if there was a problem marking the message as read.
+ */
++ (void)markMessageAsRead:(carnival_nonnull CarnivalMessage *)message withResponse:(carnival_nullable void(^)(NSError *__carnival_nullable error))handler;
+
+/**
+ *  Asynchronously marks a given array of messages as read.
+ *
+ *  @param handler A block object which returns an error which will be non-nil if there was a problem marking the messages as read.
+ */
++ (void)markMessagesAsRead:(carnival_nonnull NSArray *)messages withResponse:(carnival_nullable void(^)(NSError *__carnival_nullable error))handler;
 
 /**
  *  Returns an array of Carnival Messages for the device.
  *
  *  @param block A block which gets called with an array of CarnivalMessage objects and a possbile error. Cannot be NULL.
  */
-+ (void)messages:(void(^)(NSArray *messages, NSError *error))block;
++ (void)messages:(carnival_nonnull void (^)(NSArray *__carnival_nullable messages, NSError *__carnival_nullable error))block;
+
+/**
+ *  Removes the message with the given messageID from the Carnival Message Stream
+ *
+ *  @param message The message to be removed.
+ *  @param handler A block object which returns an error which will be non-nil if there was a problem removing the message.
+ */
++ (void)removeMessage:(carnival_nonnull CarnivalMessage *)message withResponse:(carnival_nullable void (^)(NSError *__carnival_nullable error))handler;
 
 /**
  *  Sets the delegate for the CarnivalMessageStream.
  *
  *  @param delegate the object you wish to be the delegate of the CarnivalMessageStream.
  */
-
-+ (void)setDelegate:(id<CarnivalMessageStreamDelegate>)delegate;
++ (void)setDelegate:(carnival_nonnull id<CarnivalMessageStreamDelegate>)delegate;
 
 /**
  * Shows the message detail screen for a given message
  *
  * @param message The Message you wish to present.
  **/
-+ (void)presentMessageDetailForMessage:(CarnivalMessage *)message;
++ (void)presentMessageDetailForMessage:(carnival_nonnull CarnivalMessage *)message;
 
 /**
  *  Dismisses the message detail screen
  */
 + (void)dismissMessageDetail;
+
+/**
+ *  Creates an impression for a message for a given interaction type.
+ *
+ *  @param impressionType the CarnivalImpressionType type of the impression.
+ *
+ *  @param message the CarnivalMessage message on which you wish to create the impression.
+ */
++ (void)registerImpressionWithType:(CarnivalImpressionType)impressionType forMessage:(carnival_nonnull CarnivalMessage *)message;
 
 @end

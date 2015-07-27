@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22EF328A1B49E12300CB803B /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EF32881B49E12300CB803B /* Carnival.framework */; };
-		22EF328B1B49E12300CB803B /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22EF32891B49E12300CB803B /* CarnivalResources.bundle */; };
+		22B179071B65C38700266A25 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B179041B65C38700266A25 /* Carnival.framework */; };
+		22B179081B65C38700266A25 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22B179061B65C38700266A25 /* CarnivalResources.bundle */; };
 		753541C119C0462D00B7F2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C019C0462D00B7F2BD /* AppDelegate.swift */; };
 		753541C319C0462D00B7F2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C219C0462D00B7F2BD /* ViewController.swift */; };
 		753541C619C0462D00B7F2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753541C419C0462D00B7F2BD /* Main.storyboard */; };
@@ -22,8 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22EF32881B49E12300CB803B /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
-		22EF32891B49E12300CB803B /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
+		22B179041B65C38700266A25 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		22B179061B65C38700266A25 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
 		753541BB19C0462D00B7F2BD /* SwiftExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		753541BF19C0462D00B7F2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		753541C019C0462D00B7F2BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22EF328A1B49E12300CB803B /* Carnival.framework in Frameworks */,
+				22B179071B65C38700266A25 /* Carnival.framework in Frameworks */,
 				75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */,
 				75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */,
 				75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */,
@@ -58,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22B179051B65C38700266A25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				22B179061B65C38700266A25 /* CarnivalResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		753541B219C0462D00B7F2BD = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +146,8 @@
 		7535426B19C05B4B00B7F2BD /* Carnival */ = {
 			isa = PBXGroup;
 			children = (
-				22EF32881B49E12300CB803B /* Carnival.framework */,
-				22EF32891B49E12300CB803B /* CarnivalResources.bundle */,
+				22B179041B65C38700266A25 /* Carnival.framework */,
+				22B179051B65C38700266A25 /* Resources */,
 				7535426C19C05B4B00B7F2BD /* Carnival-Bridging-Header.h */,
 			);
 			path = Carnival;
@@ -202,7 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22EF328B1B49E12300CB803B /* CarnivalResources.bundle in Resources */,
+				22B179081B65C38700266A25 /* CarnivalResources.bundle in Resources */,
 				753541C619C0462D00B7F2BD /* Main.storyboard in Resources */,
 				753541C819C0462D00B7F2BD /* Images.xcassets in Resources */,
 			);

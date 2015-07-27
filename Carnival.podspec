@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
 	s.name 				= 'Carnival'
-	s.version 			= '3.4.0'
+	s.version 			= '3.5.0'
 	s.summary 			= 'Carnival iOS SDK for integrating with http://carnivalmobile.com messaging and analytics service'
 	s.author			= {
-		'Carnival Labs Ltd' => 'info@carnivallabs.com'
+		'Carnival Mobile' => 'support@carnivalmobile.com'
 	}
 	s.homepage 			= 'http://docs.carnivalmobile.com'
 	s.source 			= { 

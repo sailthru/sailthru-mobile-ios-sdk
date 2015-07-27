@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Register with Carnival using the startEngine method using the app key for your app which you can get from http://app.carnivalmobile.com
         // Could instead use the startEngine:andNotificationTypes: method to register for specific UIRemoteNotificationType's
         Carnival.startEngine(<#app key#>)
-        
         return true
     }
 }
