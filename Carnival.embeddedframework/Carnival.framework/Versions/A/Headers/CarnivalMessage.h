@@ -27,49 +27,47 @@ typedef NS_ENUM(NSInteger, CarnivalMessageType) {
 @interface CarnivalMessage : NSObject
 
 /**
- * createdAt - The time at which the message was created.
+ * The time at which the message was created.
  */
 @property (nonatomic, strong, carnival_nonnull) NSDate *createdAt;
 
 /**
- * messageID - The unique ID of the message.
+ * The unique ID of the message.
  */
 @property (nonatomic, strong, carnival_nonnull) NSString *messageID;
 
 /**
- * text - The body text of the message.
+ * The body text of the message.
  */
-@property (nonatomic, strong, carnival_nonnull) NSString *text;
+@property (nonatomic, strong, carnival_nullable) NSString *text;
 
 /**
- * title - The title of the message.
+ * The title of the message.
  */
 @property (nonatomic, strong, carnival_nonnull) NSString *title;
 
 /**
- * type - The type of the message.
+ * The type of the message.
  */
 @property (nonatomic, assign) CarnivalMessageType type;
 
 /**
- * imageURL - The URL of the image attached to the message. Nil if no image attached.
+ * The URL of the image attached to the message. Nil if no image attached.
  */
 @property (nonatomic, strong, carnival_nullable) NSURL *imageURL;
 
 /**
- * URL - The URL attached to the message. Nil if no URL attached.
+ * The URL attached to the message. Nil if no URL attached.
  */
 @property (nonatomic, strong, carnival_nullable) NSURL *URL;
 
-
 /**
- * videoURL - The URL of the video attached to the message. Nil if no video attached.
+ * The URL of the video attached to the message. Nil if no video attached.
  */
 @property (nonatomic, strong, carnival_nullable) NSURL *videoURL;
 
-
 /**
- * read - Whether or not the message has been marked as read.
+ * Whether or not the message has been marked as read.
  */
 @property (nonatomic, assign, readonly, getter=isRead) BOOL read;
 

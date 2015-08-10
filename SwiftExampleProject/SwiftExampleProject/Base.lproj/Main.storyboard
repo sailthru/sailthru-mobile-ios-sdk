@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psv-sZ-UDC">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <rect key="frame" x="150" y="55" width="300" height="490"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDm-CM-ueS">
                                         <rect key="frame" x="118" y="65" width="64" height="30"/>
@@ -55,11 +56,94 @@
                                             <action selector="showMessageStreamButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tLc-q3-Ibs"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Attributes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s51-iK-R5T">
+                                        <rect key="frame" x="80" y="239" width="140" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swi-nd-jiM">
+                                        <rect key="frame" x="0.0" y="270" width="300" height="97"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vX-Cz-bgy">
+                                                <rect key="frame" x="9" y="1" width="132" height="30"/>
+                                                <state key="normal" title="Set String">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="setStringButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rdR-hG-s42"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zt-Sp-fnI">
+                                                <rect key="frame" x="159" y="1" width="132" height="30"/>
+                                                <state key="normal" title="Set Integer">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="setIntegerButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kpf-jq-nLO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqg-KY-pln">
+                                                <rect key="frame" x="9" y="34" width="132" height="30"/>
+                                                <state key="normal" title="Set Date">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="setDateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yCl-xu-rr2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erF-8o-esd">
+                                                <rect key="frame" x="159" y="34" width="132" height="30"/>
+                                                <state key="normal" title="Set BOOL">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="setBooleanButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ouw-1a-vs0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Za-HW-859">
+                                                <rect key="frame" x="9" y="67" width="132" height="30"/>
+                                                <state key="normal" title="Remove String">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="removeStringButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eq6-ff-OGT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebH-I5-lHg">
+                                                <rect key="frame" x="158" y="67" width="132" height="30"/>
+                                                <state key="normal" title="Set Float">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="setFloatButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tdm-RC-TIz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="97" id="IjW-d5-vJW"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgV-R7-BF2">
+                                        <rect key="frame" x="101" y="376" width="98" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="G4x-Yl-g46"/>
+                                            <constraint firstAttribute="width" constant="98" id="TLV-fe-HiJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Set UserID">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="setUserIDButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qWF-OY-uyl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="swi-nd-jiM" firstAttribute="top" secondItem="s51-iK-R5T" secondAttribute="bottom" constant="10" id="1Hb-XG-MYE"/>
                                     <constraint firstAttribute="centerX" secondItem="HDm-CM-ueS" secondAttribute="centerX" id="1X5-xh-Oid"/>
-                                    <constraint firstAttribute="height" constant="300" id="1zK-Lx-17i"/>
+                                    <constraint firstAttribute="height" constant="490" id="1zK-Lx-17i"/>
                                     <constraint firstAttribute="centerX" secondItem="4LL-hD-odr" secondAttribute="centerX" constant="1.5" id="Bh1-bH-2xV"/>
                                     <constraint firstItem="4LL-hD-odr" firstAttribute="top" secondItem="PkZ-ck-M7g" secondAttribute="bottom" constant="15" id="KVc-yL-hSo"/>
                                     <constraint firstItem="kaR-72-KeT" firstAttribute="top" secondItem="4LL-hD-odr" secondAttribute="bottom" constant="15" id="L4r-jd-CZw"/>
@@ -67,8 +151,14 @@
                                     <constraint firstItem="4LL-hD-odr" firstAttribute="top" secondItem="PkZ-ck-M7g" secondAttribute="bottom" constant="15" id="Qrk-7t-oLl"/>
                                     <constraint firstAttribute="centerX" secondItem="kaR-72-KeT" secondAttribute="centerX" id="RLd-qO-VaY"/>
                                     <constraint firstAttribute="centerX" secondItem="PkZ-ck-M7g" secondAttribute="centerX" id="cbP-Lz-OIb"/>
+                                    <constraint firstItem="QgV-R7-BF2" firstAttribute="top" secondItem="swi-nd-jiM" secondAttribute="bottom" constant="9" id="dMC-5F-kaV"/>
+                                    <constraint firstAttribute="centerX" secondItem="QgV-R7-BF2" secondAttribute="centerX" id="f1M-Dg-iJ7"/>
+                                    <constraint firstItem="swi-nd-jiM" firstAttribute="width" secondItem="psv-sZ-UDC" secondAttribute="width" id="faA-AP-vaT"/>
+                                    <constraint firstItem="s51-iK-R5T" firstAttribute="top" secondItem="kaR-72-KeT" secondAttribute="bottom" constant="9" id="gKg-ag-143"/>
                                     <constraint firstItem="HDm-CM-ueS" firstAttribute="top" secondItem="psv-sZ-UDC" secondAttribute="top" constant="65" id="jqd-bV-QgG"/>
+                                    <constraint firstItem="swi-nd-jiM" firstAttribute="leading" secondItem="psv-sZ-UDC" secondAttribute="leading" id="uHX-8u-6uF"/>
                                     <constraint firstItem="PkZ-ck-M7g" firstAttribute="top" secondItem="HDm-CM-ueS" secondAttribute="bottom" constant="15" id="uWM-L0-R1D"/>
+                                    <constraint firstAttribute="centerX" secondItem="s51-iK-R5T" secondAttribute="centerX" id="x8L-5p-nj4"/>
                                 </constraints>
                             </view>
                         </subviews>

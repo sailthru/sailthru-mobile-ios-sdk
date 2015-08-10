@@ -10,10 +10,9 @@
 
 #import "ExampleViewController.h"
 #import <Carnival/Carnival.h>
-#import <AdSupport/AdSupport.h>
 #import "CloseBarButtonItem.h"
 
-@interface ExampleViewController () <CarnivalMessageStreamDelegate, CLLocationManagerDelegate, CarnivalIdentifierDataSource>
+@interface ExampleViewController () <CarnivalMessageStreamDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
@@ -27,9 +26,6 @@
     [super viewDidLoad];
     
     [self setupLocationManager];
-    
-    // Set this viewcontroller as the Carnival's advertising delegate
-    [Carnival setIdentifierDataSource:self];
     
     // Set this viewcontroller as the CarnivalMessageStream's delegate
     [CarnivalMessageStream setDelegate:self];
@@ -45,6 +41,10 @@
     [super viewDidAppear:animated];
     
     [self startLocationTrackingInBackground];
+    
+    [Carnival deviceID:^(NSString *deviceID, NSError *error) {
+        NSLog(@"DeviceID of current device: %@, with possible error: %@",deviceID, error);
+    }];
 }
 
 #pragma mark - setup
@@ -125,16 +125,6 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     // Send the last location object as that is the most recent one always
     [Carnival updateLocation:[locations lastObject]];
-}
-
-#pragma mark - CarnivalIdentifierDataSource
-
-- (NSString *)carnivalUniqueIdentifier {
-    if ([[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled]) {
-        return [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    }
-    
-    return nil;
 }
 
 #pragma mark - CarnivalMessageStreamDelegate
@@ -222,6 +212,52 @@
 
 - (void)closeButtonPressed:(UIButton *)button {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (IBAction)logEventButtonPressed:(UIButton *)sender {
+    [Carnival logEvent:@"example_event_name"];
+}
+
+- (IBAction)setStringButtonPressed:(UIButton *)sender {
+    [Carnival setString:@"example_string" forKey:@"example_string_key" withResponse:^(NSError *error) {
+        NSLog(@"setString returned with possible error: %@",error);
+    }];
+}
+
+- (IBAction)setFloatButtonPressed:(UIButton *)sender {
+    [Carnival setFloat:1.23f forKey:@"example_float_key" withResponse:^(NSError *error) {
+        NSLog(@"setFloat returned with possible error: %@",error);
+    }];
+}
+
+- (IBAction)setIntegerButtonPressed:(UIButton *)sender {
+    [Carnival setInteger:123 forKey:@"example_integer_key" withResponse:^(NSError *error) {
+        NSLog(@"setInteger returned with possible error: %@",error);
+    }];
+}
+
+- (IBAction)setDateButtonPressed:(UIButton *)sender {
+    [Carnival setDate:[NSDate date] forKey:@"example_date_key" withResponse:^(NSError *error) {
+        NSLog(@"setDate returned with possible error: %@",error);
+    }];
+}
+
+- (IBAction)setBooleanButtonPressed:(UIButton *)sender {
+    [Carnival setBool:YES forKey:@"example_bool_key" withResponse:^(NSError *error) {
+        NSLog(@"setBOOL returned with possible error: %@",error);
+    }];
+}
+
+- (IBAction)removeStringButtonPressed:(UIButton *)sender {
+    [Carnival removeAttributeWithKey:@"example_string_key" withResponse:^(NSError *error) {
+        NSLog(@"removeAttributeWithKey: returned with possible error: %@",error);
+    }];
+}
+
+- (IBAction)setUserIDButtonPressed:(UIButton *)sender {
+    [Carnival setUserId:@"example_user_id" withResponse:^(NSError *error) {
+        NSLog(@"setUserID returned with possible error: %@",error);
+    }];
 }
 
 @end

@@ -16,7 +16,7 @@ internal extension UIBarButtonItem {
         button.imageEdgeInsets = UIEdgeInsets(top: 11, left: 30, bottom: 11, right: -8)
         button.addTarget(target, action: action, forControlEvents: .TouchUpInside)
         button.setImage(self.closeButtonImage()!, forState: .Normal)
-        button.tintColor = UIColor.whiteColor()
+        button.tintColor = .whiteColor()
         
         return UIBarButtonItem(customView: button)
     }

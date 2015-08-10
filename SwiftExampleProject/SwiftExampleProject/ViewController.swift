@@ -11,7 +11,7 @@
 import UIKit
 import AdSupport
 
-class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocationManagerDelegate, CarnivalIdentifierDataSource {
+class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocationManagerDelegate {
     var locationManager: CLLocationManager? = nil
     
     //MARK: view lifecycle
@@ -20,21 +20,23 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         
         self.setupLocationManager()
         
-        Carnival.setIdentifierDataSource(self)
-        
         CarnivalMessageStream.setDelegate(self)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: false)
+        UIApplication.sharedApplication().setStatusBarStyle(.Default, animated: false)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         self.startLocationTrackingInBackground()
+        
+        Carnival.deviceID { deviceID, error in
+            println("deviceID for current device: \(deviceID), with possible error: \(error)")
+        }
     }
     
     //MARK: setup
@@ -55,7 +57,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         let authorizationStatus = CLLocationManager.authorizationStatus()
         
         // Always check if you are authorized to start location services
-        if authorizationStatus != CLAuthorizationStatus.Denied && authorizationStatus != CLAuthorizationStatus.Restricted {
+        if authorizationStatus != .Denied && authorizationStatus != .Restricted {
             if let manager = self.locationManager {
                 // Check if we are on iOS 8, where we have to requet permissions differently than on previous iOS versions
                 if manager.respondsToSelector("requestAlwaysAuthorization") {
@@ -90,7 +92,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         let authorizationStatus = CLLocationManager.authorizationStatus()
         
         // Always check if you are authorized to start location services
-        if authorizationStatus != CLAuthorizationStatus.Denied && authorizationStatus != CLAuthorizationStatus.Restricted {
+        if authorizationStatus != .Denied && authorizationStatus != .Restricted {
             if let manager = self.locationManager {
                 // Check if we are on iOS 8, where we have to requet permissions differently than on previous iOS versions
                 if manager.respondsToSelector("requestWhenInUseAuthorization") {
@@ -115,15 +117,6 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         if let lastLocation = locations.last as? CLLocation {
             Carnival.updateLocation(lastLocation)
         }
-    }
-    
-    //MARK: CarnivalIdentifierDataSource
-    func carnivalUniqueIdentifier() -> String! {
-        if ASIdentifierManager.sharedManager().advertisingTrackingEnabled {
-            return ASIdentifierManager.sharedManager().advertisingIdentifier.UUIDString
-        }
-        
-        return nil
     }
     
     //MARK: CarnivalMessageStreamDelegate
@@ -200,14 +193,56 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         // You will probably want to wrap the streamviewcontroller in a UINavigationController in order to give it a navigationBar
         let navVC = UINavigationController(rootViewController: streamVC)
         navVC.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-        navVC.navigationBar.barTintColor = UIColor.blueColor()
+        navVC.navigationBar.barTintColor = .blueColor()
         
         self.presentViewController(navVC, animated: true) {
             UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
         }
     }
-    
+
     internal func closeButtonPressed(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func setStringButtonPressed(sender: UIButton) {
+        Carnival.setString("example_string", forKey: "example_string_key") { error in
+            println("setString returned with possible error: \(error)")
+        }
+    }
+    
+    @IBAction func setFloatButtonPressed(sender: UIButton) {
+        Carnival.setFloat(1.23, forKey: "example_float_key") { error in
+            println("setFloat returned with possible error: \(error)")
+        }
+    }
+    
+    @IBAction func setBooleanButtonPressed(sender: UIButton) {
+        Carnival.setBool(true, forKey: "example_bool_key") { error in
+            println("setBOOL returned with possible error: \(error)")
+        }
+    }
+    
+    @IBAction func setDateButtonPressed(sender: UIButton) {
+        Carnival.setDate(NSDate(), forKey: "example_date_key") { error in
+            println("setDate returned with possible error: \(error)")
+        }
+    }
+    
+    @IBAction func setIntegerButtonPressed(sender: UIButton) {
+        Carnival.setInteger(123, forKey: "example_integer_key") { error in
+            println("setInteger returned with possible error: \(error)")
+        }
+    }
+    
+    @IBAction func removeStringButtonPressed(sender: UIButton) {
+        Carnival.removeAttributeWithKey("example_string_key") { error in
+            println("removeAttribute returned with possible error: \(error)")
+        }
+    }
+    
+    @IBAction func setUserIDButtonPressed(sender: UIButton) {
+        Carnival.setUserId("example_user_id") { error in
+            println("setUserID returned with possible error: \(error)")
+        }
     }
 }
