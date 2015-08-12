@@ -15,7 +15,7 @@
 #import "CarnivalStreamViewController.h"
 #import "CarnivalMacros.h"
 
-#define CARNIVAL_VERSION @"3.5.1"
+#define CARNIVAL_VERSION @"3.5.2"
 
 __attribute__((deprecated))
 @protocol CarnivalIdentifierDataSource <NSObject>
