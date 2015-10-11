@@ -15,7 +15,16 @@
 #import "CarnivalStreamViewController.h"
 #import "CarnivalMacros.h"
 
-#define CARNIVAL_VERSION @"3.6.0"
+#define CARNIVAL_VERSION @"3.7.0"
+
+/* Constants for Auto-Analytics Tracking */
+extern NSString * __carnival_nonnull const CarnivalAutoAnalyticsSourceGoogleAnalytics;
+extern NSString * __carnival_nonnull const CarnivalAutoAnalyticsSourceAdobeAnalytics;
+extern NSString * __carnival_nonnull const CarnivalAutoAnalyticsSourceMixpanel;
+extern NSString * __carnival_nonnull const CarnivalAutoAnalyticsSourceLocalytics;
+extern NSString * __carnival_nonnull const CarnivalAutoAnalyticsSourceFlurryAnalytics;
+extern NSString * __carnival_nonnull const CarnivalAutoAnalyticsSourceAmplitude;
+extern NSString * __carnival_nonnull const CarnivalAutoAnalyticsSourceAll;
 
 __attribute__((deprecated))
 @protocol CarnivalIdentifierDataSource <NSObject>
@@ -74,7 +83,21 @@ __attribute__((deprecated))
  */
 + (void)startEngine:(carnival_nonnull NSString *)appKey registerForPushNotifications:(BOOL)registerForPushNotifications;
 
-/** @name Tags 
+/**
+ * Sets the Carnival appKey credentials for this app and ignores certain analytics sources.
+ * Carnival Auto-Analytics Tracking will track 3rd party analytics being logged and log them to Carnival as well. Right now, only Events are supported.
+ * This is enababled by default for your convinience. If you wish to opt out, you can provide an array of sources to ignore.
+ *
+ *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com .
+ *  @param ignoreArray An array of string constants of the Auto-Analytics sources to ignore. By default, all sources will be observed.
+ *
+ *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
+ *  calling it later in the app lifecycle can have unintended consequences.
+ */
++ (void)startEngine:(carnival_nonnull NSString *)appKey ignoreAutoAnalyticsSources:(carnival_nonnull NSArray *)ignoreArray;
+
+
+/** @name Tags
  *  @warning Tags are now deprecated in favour for setting an array of strings with setStrings:forKey: methods.
  */
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4AA35BC1-64AD-4A7A-A3F0-CB29E77350CA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SwiftExampleProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0987AC6FF53B6F0F935F1F605FB86F2DC6C736A4</key>
+		<string>https://github.com/carnivalmobile/carnival-ios-sdk-source.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwiftExampleProject/SwiftExampleProject.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0987AC6FF53B6F0F935F1F605FB86F2DC6C736A4</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/carnivalmobile/carnival-ios-sdk-source.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0987AC6FF53B6F0F935F1F605FB86F2DC6C736A4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0987AC6FF53B6F0F935F1F605FB86F2DC6C736A4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>carnival-ios-sdk-source</string>
+		</dict>
+	</array>
+</dict>
+</plist>
