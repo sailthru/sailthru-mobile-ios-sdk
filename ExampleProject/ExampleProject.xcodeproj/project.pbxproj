@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2235F7D81BCB18E1009EEC65 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2235F7D51BCB18E1009EEC65 /* Carnival.framework */; };
-		2235F7D91BCB18E1009EEC65 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2235F7D71BCB18E1009EEC65 /* CarnivalResources.bundle */; };
+		222C33351C03F0D3004DD144 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222C33321C03F0D3004DD144 /* Carnival.framework */; };
+		222C33361C03F0D3004DD144 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 222C33341C03F0D3004DD144 /* CarnivalResources.bundle */; };
 		7500812F1AF735C60096760A /* CloseBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7500812E1AF735C60096760A /* CloseBarButtonItem.m */; };
 		758D6AF419AE915600F09C8D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758D6AF519AE91E000F09C8D /* AVFoundation.framework */; };
@@ -28,8 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2235F7D51BCB18E1009EEC65 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
-		2235F7D71BCB18E1009EEC65 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
+		222C33321C03F0D3004DD144 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		222C33341C03F0D3004DD144 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
 		7500812D1AF735C60096760A /* CloseBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloseBarButtonItem.h; sourceTree = "<group>"; };
 		7500812E1AF735C60096760A /* CloseBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloseBarButtonItem.m; sourceTree = "<group>"; };
 		7566D52919F9B984007D5D27 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,7 @@
 				758D6AF819AE91E800F09C8D /* MediaPlayer.framework in Frameworks */,
 				758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */,
 				758E8D8D186367C900A8AFA4 /* UIKit.framework in Frameworks */,
-				2235F7D81BCB18E1009EEC65 /* Carnival.framework in Frameworks */,
+				222C33351C03F0D3004DD144 /* Carnival.framework in Frameworks */,
 				758E8D89186367C900A8AFA4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,19 +73,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2235F7D41BCB18E1009EEC65 /* Carnival.embeddedframework */ = {
+		222C33311C03F0D3004DD144 /* Carnival.embeddedframework */ = {
 			isa = PBXGroup;
 			children = (
-				2235F7D51BCB18E1009EEC65 /* Carnival.framework */,
-				2235F7D61BCB18E1009EEC65 /* Resources */,
+				222C33321C03F0D3004DD144 /* Carnival.framework */,
+				222C33331C03F0D3004DD144 /* Resources */,
 			);
 			path = Carnival.embeddedframework;
 			sourceTree = "<group>";
 		};
-		2235F7D61BCB18E1009EEC65 /* Resources */ = {
+		222C33331C03F0D3004DD144 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2235F7D71BCB18E1009EEC65 /* CarnivalResources.bundle */,
+				222C33341C03F0D3004DD144 /* CarnivalResources.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 		758E8D8E186367C900A8AFA4 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				2235F7D41BCB18E1009EEC65 /* Carnival.embeddedframework */,
+				222C33311C03F0D3004DD144 /* Carnival.embeddedframework */,
 				7500812D1AF735C60096760A /* CloseBarButtonItem.h */,
 				7500812E1AF735C60096760A /* CloseBarButtonItem.m */,
 				758E8D97186367C900A8AFA4 /* ExampleAppDelegate.h */,
@@ -206,7 +206,7 @@
 				758E8D9F186367C900A8AFA4 /* Main_iPad.storyboard in Resources */,
 				758E8D9C186367C900A8AFA4 /* Main_iPhone.storyboard in Resources */,
 				758D6AF419AE915600F09C8D /* (null) in Resources */,
-				2235F7D91BCB18E1009EEC65 /* CarnivalResources.bundle in Resources */,
+				222C33361C03F0D3004DD144 /* CarnivalResources.bundle in Resources */,
 				758E8DA4186367C900A8AFA4 /* Images.xcassets in Resources */,
 				758E8D93186367C900A8AFA4 /* InfoPlist.strings in Resources */,
 			);
