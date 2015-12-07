@@ -35,7 +35,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         self.startLocationTrackingInBackground()
         
         Carnival.deviceID { deviceID, error in
-            println("deviceID for current device: \(deviceID), with possible error: \(error)")
+            print("deviceID for current device: \(deviceID), with possible error: \(error)")
         }
     }
     
@@ -63,7 +63,11 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
                 if manager.respondsToSelector("requestAlwaysAuthorization") {
                     // Request permission to always monitor location updates, in foreground and background
                     // Note: this method prompts the user for location permissions on iOS 8 and above
-                    manager.requestAlwaysAuthorization()
+                    if #available(iOS 8.0, *) {
+                        manager.requestAlwaysAuthorization()
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }
                 
                 if CLLocationManager.significantLocationChangeMonitoringAvailable() {
@@ -98,7 +102,11 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
                 if manager.respondsToSelector("requestWhenInUseAuthorization") {
                     // Request permission to monitor location updates when the app is in use
                     // Note: this method prompts the user for location permissions on iOS 8 and above
-                    manager.requestWhenInUseAuthorization()
+                    if #available(iOS 8.0, *) {
+                        manager.requestWhenInUseAuthorization()
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }
                 
                 // Note: this method prompts the user for location permissions on iOS 7 and below
@@ -112,46 +120,46 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     }
     
     //MARK: CLLocationManagerDelegate
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // Send the last location object as that is the most recent one always
-        if let lastLocation = locations.last as? CLLocation {
+        if let lastLocation = locations.last! as CLLocation {
             Carnival.updateLocation(lastLocation)
         }
     }
     
     //MARK: CarnivalMessageStreamDelegate
     func willShowMessageOfType(messageType: CarnivalMessageType) {
-        println("willShowMessageOfType: \(messageType)")
+        print("willShowMessageOfType: \(messageType)")
         
         // You can use this method to mute audio during videos or fake phone calls
     }
     
     func didShowMessageOfType(messageType: CarnivalMessageType) {
-        println("didShowMessageOfType: \(messageType)")
+        print("didShowMessageOfType: \(messageType)")
         
         // You can use this method to mute audio during videos or fake phone calls
     }
     
     func willDismissMessageOfType(messageType: CarnivalMessageType) {
-        println("willDismissMessageOfType: \(messageType)")
+        print("willDismissMessageOfType: \(messageType)")
         
         // You can use this method to unmute audio during videos or fake phone calls
     }
     
     func didDismissMessageOfType(messageType: CarnivalMessageType) {
-        println("didDismissMessageOfType: \(messageType)")
+        print("didDismissMessageOfType: \(messageType)")
         
         // You can use this method to unmute audio during videos or fake phone calls
     }
     
     func willShowInAppNotificationForMessageType(messageType: CarnivalMessageType) {
-        println("willShowInAppNotificationForMessageType: \(messageType)")
+        print("willShowInAppNotificationForMessageType: \(messageType)")
         
         // You can use this method to do something when an in-app notification is shown
     }
     
     func didShowInAppNotificationForMessageType(messageType: CarnivalMessageType) {
-        println("didShowInAppNotificationForMessageType: \(messageType)")
+        print("didShowInAppNotificationForMessageType: \(messageType)")
         
         // You can use this method to do something when an in-app notification is shown
     }
@@ -160,7 +168,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     @IBAction func getTagsButtonPressed(sender: UIButton) {
         // Asyncronously gets the tags for this device.
         Carnival.getTagsInBackgroundWithResponse { (tags, error) in
-            println("getTagsInBackgroundWithResponse returned tags: \(tags)")
+            print("getTagsInBackgroundWithResponse returned tags: \(tags)")
         }
     }
     
@@ -168,7 +176,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         // Asyncronously adds the tag for this device
         // If the tag is already registered with Carnival, this method does not add the tag again.
         Carnival.addTags(["CARNIVAL_ADD_TAG_EXAMPLE_TAG"]) { (tags, error) in
-            println("addTag:inBackgroundWithResponse: returned tags: \(tags)")
+            print("addTag:inBackgroundWithResponse: returned tags: \(tags)")
         }
     }
     
@@ -179,7 +187,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         // Calling this method will overwrite any previously set tags for this device.
         // Passing nil for the tags argument will clear the tags for this device
         Carnival.setTagsInBackground(exampleTags) { (tags, error) in
-            println("setTagsInBackground:withResponse: returned tags: \(tags)");
+            print("setTagsInBackground:withResponse: returned tags: \(tags)");
         }
     }
     
@@ -206,43 +214,43 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     
     @IBAction func setStringButtonPressed(sender: UIButton) {
         Carnival.setString("example_string", forKey: "example_string_key") { error in
-            println("setString returned with possible error: \(error)")
+            print("setString returned with possible error: \(error)")
         }
     }
     
     @IBAction func setFloatButtonPressed(sender: UIButton) {
         Carnival.setFloat(1.23, forKey: "example_float_key") { error in
-            println("setFloat returned with possible error: \(error)")
+            print("setFloat returned with possible error: \(error)")
         }
     }
     
     @IBAction func setBooleanButtonPressed(sender: UIButton) {
         Carnival.setBool(true, forKey: "example_bool_key") { error in
-            println("setBOOL returned with possible error: \(error)")
+            print("setBOOL returned with possible error: \(error)")
         }
     }
     
     @IBAction func setDateButtonPressed(sender: UIButton) {
         Carnival.setDate(NSDate(), forKey: "example_date_key") { error in
-            println("setDate returned with possible error: \(error)")
+            print("setDate returned with possible error: \(error)")
         }
     }
     
     @IBAction func setIntegerButtonPressed(sender: UIButton) {
         Carnival.setInteger(123, forKey: "example_integer_key") { error in
-            println("setInteger returned with possible error: \(error)")
+            print("setInteger returned with possible error: \(error)")
         }
     }
     
     @IBAction func removeStringButtonPressed(sender: UIButton) {
         Carnival.removeAttributeWithKey("example_string_key") { error in
-            println("removeAttribute returned with possible error: \(error)")
+            print("removeAttribute returned with possible error: \(error)")
         }
     }
     
     @IBAction func setUserIDButtonPressed(sender: UIButton) {
         Carnival.setUserId("example_user_id") { error in
-            println("setUserID returned with possible error: \(error)")
+            print("setUserID returned with possible error: \(error)")
         }
     }
 }
