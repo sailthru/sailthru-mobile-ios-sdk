@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name 				= 'Carnival'
-	s.version 			= '3.8.1'
+	s.version 			= '3.8.2'
 	s.summary 			= 'Carnival iOS SDK for integrating with http://carnival.io messaging and analytics service'
 	s.author			= {
 		'Carnival Mobile' => 'support@carnival.io'
