@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Register with Carnival using the startEngine method using the app key for your app which you can get from http://app.carnivalmobile.com
-        // Could instead use the startEngine:andNotificationTypes: method to register for specific UIRemoteNotificationType's
+        // Could instead use the startEngine methods to customize start up.
         Carnival.startEngine(<#app key#>)
         return true
     }

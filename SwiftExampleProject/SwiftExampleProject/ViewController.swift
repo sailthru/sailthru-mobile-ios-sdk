@@ -122,7 +122,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     //MARK: CLLocationManagerDelegate
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // Send the last location object as that is the most recent one always
-        if let lastLocation = locations.last! as CLLocation {
+        if let lastLocation = locations.last {
             Carnival.updateLocation(lastLocation)
         }
     }
