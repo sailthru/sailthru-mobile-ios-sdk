@@ -70,4 +70,10 @@ typedef NS_ENUM(NSInteger, CarnivalMessageType) {
  */
 @property (nonatomic, assign, readonly, getter=isRead) BOOL read;
 
+
+/**
+ * A dictionary of arbitary attributes set on the message.
+ */
+@property (nonatomic, strong, nullable) NSDictionary *attributes;
+
 @end

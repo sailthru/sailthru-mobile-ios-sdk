@@ -19,7 +19,7 @@
     
     #error Insert your app key that you got from http://app.carnivalmobile.com here, then remove this line
     
-    [Carnival startEngine:<#app key#>];
+    [Carnival startEngine:app key];
     
     return YES;
 }

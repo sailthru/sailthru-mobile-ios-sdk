@@ -14,7 +14,7 @@
 #import "CarnivalMessageStream.h"
 #import "CarnivalStreamViewController.h"
 
-#define CARNIVAL_VERSION @"3.9.0"
+#define CARNIVAL_VERSION @"3.10.0"
 
 /* Constants for Auto-Analytics Tracking */
 NS_ASSUME_NONNULL_BEGIN
@@ -278,7 +278,7 @@ __attribute__((deprecated))
 + (void)setFloats:(nonnull NSArray<NSNumber *> *)array forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
 
 /**
- *  Asyncronously sets an integer value for a given key.
+ *  Asyncronously sets an integer value for a given key. Only 32-bit Integers are supported.
  *
  *  @param integer The integer value to be set.
  *  @param key The string value of the key.
@@ -287,7 +287,7 @@ __attribute__((deprecated))
 + (void)setInteger:(NSInteger)integer forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
 
 /**
- *  Syncronously sets an integer value for a given key.
+ *  Syncronously sets an integer value for a given key. Only 32-bit Integers are supported.
  *
  *  @param integer The integer value to be set.
  *  @param key The string value of the key.
@@ -296,7 +296,7 @@ __attribute__((deprecated))
 + (void)setInteger:(NSInteger)integer forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
 
 /**
- *  Asyncronously sets an array of NSNumbers (which are backed by integers) for a given key.
+ *  Asyncronously sets an array of NSNumbers (which are backed by integers) for a given key. Only 32-bit Integers are supported.
  *
  *  @param array The array of NSNumbers, backed by integers, to be set.
  *  @param key The string value of the key.
@@ -305,7 +305,7 @@ __attribute__((deprecated))
 + (void)setIntegers:(nonnull NSArray<NSNumber *> *)array forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
 
 /**
- *  Syncronously sets an array of NSNumbers (which are backed by integers) for a given key.
+ *  Syncronously sets an array of NSNumbers (which are backed by integers) for a given key. Only 32-bit Integers are supported.
  *
  *  @param array The array of NSNumbers, backed by integers, to be set.
  *  @param key The string value of the key.
