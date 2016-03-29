@@ -104,9 +104,18 @@ typedef NS_ENUM(NSInteger, CarnivalImpressionType) {
  *
  *  @param message The message that Carnival wishes to present an In App notification for.
  *  
- *  @return A boolean of whether or the notification should be presented internally by the Carnival SDK. Override and return NO if the host app would like to handle the rendering and presentation of in-app notifications. 
+ *  @return A boolean of whether or not the notification should be presented internally by the Carnival SDK. Override and return NO if the host app would like to handle the rendering and presentation of in-app notifications.
  */
 - (BOOL)shouldPresentInAppNotificationForMessage:(nonnull CarnivalMessage *)message;
+
+/**
+ *  Asks the delegate whether to show the Full Screen Message Detail screen for a given message.
+ *
+ *  @param message The message that Carnival wishes to present an In App notification for.
+ *
+ *  @return A boolean of whether or not the Full Screen Message Detail screen should be presented internally by the Carnival SDK. Override and return NO if the host app would like to handle the rendering and presentation of full screen messages.
+ */
+- (BOOL)shouldPresentMessageDetailForMessage:(nonnull CarnivalMessage *)message;
 
 @end
 

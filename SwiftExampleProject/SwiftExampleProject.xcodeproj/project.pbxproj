@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2250C09F1C9620060058AF79 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2250C09C1C9620060058AF79 /* Carnival.framework */; };
-		2250C0A01C9620060058AF79 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2250C09E1C9620060058AF79 /* CarnivalResources.bundle */; };
+		2287027D1CAA2B2B0087E877 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2287027A1CAA2B2B0087E877 /* Carnival.framework */; };
+		2287027E1CAA2B2B0087E877 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2287027C1CAA2B2B0087E877 /* CarnivalResources.bundle */; };
 		753541C119C0462D00B7F2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C019C0462D00B7F2BD /* AppDelegate.swift */; };
 		753541C319C0462D00B7F2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C219C0462D00B7F2BD /* ViewController.swift */; };
 		753541C619C0462D00B7F2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753541C419C0462D00B7F2BD /* Main.storyboard */; };
@@ -22,8 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2250C09C1C9620060058AF79 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
-		2250C09E1C9620060058AF79 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
+		2287027A1CAA2B2B0087E877 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		2287027C1CAA2B2B0087E877 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
 		22B325F11C61524C00A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		753541BB19C0462D00B7F2BD /* SwiftExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		753541BF19C0462D00B7F2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2250C09F1C9620060058AF79 /* Carnival.framework in Frameworks */,
+				2287027D1CAA2B2B0087E877 /* Carnival.framework in Frameworks */,
 				75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */,
 				75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */,
 				75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */,
@@ -59,10 +59,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2250C09D1C9620060058AF79 /* Resources */ = {
+		2287027B1CAA2B2B0087E877 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2250C09E1C9620060058AF79 /* CarnivalResources.bundle */,
+				2287027C1CAA2B2B0087E877 /* CarnivalResources.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -148,8 +148,8 @@
 		7535426B19C05B4B00B7F2BD /* Carnival */ = {
 			isa = PBXGroup;
 			children = (
-				2250C09C1C9620060058AF79 /* Carnival.framework */,
-				2250C09D1C9620060058AF79 /* Resources */,
+				2287027A1CAA2B2B0087E877 /* Carnival.framework */,
+				2287027B1CAA2B2B0087E877 /* Resources */,
 				7535426C19C05B4B00B7F2BD /* Carnival-Bridging-Header.h */,
 			);
 			path = Carnival;
@@ -213,7 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2250C0A01C9620060058AF79 /* CarnivalResources.bundle in Resources */,
+				2287027E1CAA2B2B0087E877 /* CarnivalResources.bundle in Resources */,
 				753541C619C0462D00B7F2BD /* Main.storyboard in Resources */,
 				753541C819C0462D00B7F2BD /* Images.xcassets in Resources */,
 			);
