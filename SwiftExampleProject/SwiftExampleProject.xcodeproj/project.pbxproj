@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2287027D1CAA2B2B0087E877 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2287027A1CAA2B2B0087E877 /* Carnival.framework */; };
-		2287027E1CAA2B2B0087E877 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2287027C1CAA2B2B0087E877 /* CarnivalResources.bundle */; };
+		225CDAD91CAB5BD60018C674 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225CDAD61CAB5BD60018C674 /* Carnival.framework */; };
+		225CDADA1CAB5BD60018C674 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 225CDAD81CAB5BD60018C674 /* CarnivalResources.bundle */; };
 		753541C119C0462D00B7F2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C019C0462D00B7F2BD /* AppDelegate.swift */; };
 		753541C319C0462D00B7F2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C219C0462D00B7F2BD /* ViewController.swift */; };
 		753541C619C0462D00B7F2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753541C419C0462D00B7F2BD /* Main.storyboard */; };
@@ -18,12 +18,11 @@
 		75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC1FD19C061C6007F4332 /* libz.dylib */; };
 		75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC20119C06256007F4332 /* CoreGraphics.framework */; };
 		75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC1FF19C0624F007F4332 /* CoreLocation.framework */; };
-		75F3A8A41AF81DD900D8014C /* UIBarButtonItem+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3A8A31AF81DD900D8014C /* UIBarButtonItem+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2287027A1CAA2B2B0087E877 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
-		2287027C1CAA2B2B0087E877 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
+		225CDAD61CAB5BD60018C674 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		225CDAD81CAB5BD60018C674 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
 		22B325F11C61524C00A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		753541BB19C0462D00B7F2BD /* SwiftExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		753541BF19C0462D00B7F2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,7 +38,6 @@
 		75DAC1FD19C061C6007F4332 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		75DAC1FF19C0624F007F4332 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		75DAC20119C06256007F4332 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		75F3A8A31AF81DD900D8014C /* UIBarButtonItem+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2287027D1CAA2B2B0087E877 /* Carnival.framework in Frameworks */,
+				225CDAD91CAB5BD60018C674 /* Carnival.framework in Frameworks */,
 				75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */,
 				75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */,
 				75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */,
@@ -59,10 +57,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2287027B1CAA2B2B0087E877 /* Resources */ = {
+		225CDAD71CAB5BD60018C674 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2287027C1CAA2B2B0087E877 /* CarnivalResources.bundle */,
+				225CDAD81CAB5BD60018C674 /* CarnivalResources.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -90,7 +88,6 @@
 				7535426A19C05B4B00B7F2BD /* Vendor */,
 				753541C019C0462D00B7F2BD /* AppDelegate.swift */,
 				753541C219C0462D00B7F2BD /* ViewController.swift */,
-				75F3A8A31AF81DD900D8014C /* UIBarButtonItem+Additions.swift */,
 				753541C419C0462D00B7F2BD /* Main.storyboard */,
 				753541C719C0462D00B7F2BD /* Images.xcassets */,
 				7535425D19C04BC000B7F2BD /* Frameworks */,
@@ -148,8 +145,8 @@
 		7535426B19C05B4B00B7F2BD /* Carnival */ = {
 			isa = PBXGroup;
 			children = (
-				2287027A1CAA2B2B0087E877 /* Carnival.framework */,
-				2287027B1CAA2B2B0087E877 /* Resources */,
+				225CDAD61CAB5BD60018C674 /* Carnival.framework */,
+				225CDAD71CAB5BD60018C674 /* Resources */,
 				7535426C19C05B4B00B7F2BD /* Carnival-Bridging-Header.h */,
 			);
 			path = Carnival;
@@ -213,7 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2287027E1CAA2B2B0087E877 /* CarnivalResources.bundle in Resources */,
+				225CDADA1CAB5BD60018C674 /* CarnivalResources.bundle in Resources */,
 				753541C619C0462D00B7F2BD /* Main.storyboard in Resources */,
 				753541C819C0462D00B7F2BD /* Images.xcassets in Resources */,
 			);
@@ -228,7 +225,6 @@
 			files = (
 				753541C319C0462D00B7F2BD /* ViewController.swift in Sources */,
 				753541C119C0462D00B7F2BD /* AppDelegate.swift in Sources */,
-				75F3A8A41AF81DD900D8014C /* UIBarButtonItem+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225CDADF1CAB5C200018C674 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225CDADC1CAB5C200018C674 /* Carnival.framework */; };
+		225CDAE01CAB5C200018C674 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 225CDADE1CAB5C200018C674 /* CarnivalResources.bundle */; };
 		228702781CAA2B120087E877 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228702751CAA2B120087E877 /* Carnival.framework */; };
 		228702791CAA2B120087E877 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 228702771CAA2B120087E877 /* CarnivalResources.bundle */; };
 		22B325F41C6153A700A7056D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B325F31C6153A700A7056D /* Security.framework */; };
-		7500812F1AF735C60096760A /* CloseBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7500812E1AF735C60096760A /* CloseBarButtonItem.m */; };
 		758D6AF419AE915600F09C8D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758D6AF519AE91E000F09C8D /* AVFoundation.framework */; };
 		758D6AF819AE91E800F09C8D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758D6AF719AE91E800F09C8D /* MediaPlayer.framework */; };
@@ -29,11 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		225CDADC1CAB5C200018C674 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		225CDADE1CAB5C200018C674 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
 		228702751CAA2B120087E877 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
 		228702771CAA2B120087E877 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
 		22B325F31C6153A700A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		7500812D1AF735C60096760A /* CloseBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloseBarButtonItem.h; sourceTree = "<group>"; };
-		7500812E1AF735C60096760A /* CloseBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloseBarButtonItem.m; sourceTree = "<group>"; };
 		7566D52919F9B984007D5D27 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		758D6AF519AE91E000F09C8D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		758D6AF719AE91E800F09C8D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225CDADF1CAB5C200018C674 /* Carnival.framework in Frameworks */,
 				22B325F41C6153A700A7056D /* Security.framework in Frameworks */,
 				75D77B3119F077A500BD2319 /* QuartzCore.framework in Frameworks */,
 				75D77B2F19F0779600BD2319 /* CoreLocation.framework in Frameworks */,
@@ -76,19 +78,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		228702741CAA2B120087E877 /* Carnival.embeddedframework */ = {
+		225CDADB1CAB5C200018C674 /* Carnival.embeddedframework */ = {
 			isa = PBXGroup;
 			children = (
-				228702751CAA2B120087E877 /* Carnival.framework */,
-				228702761CAA2B120087E877 /* Resources */,
+				225CDADC1CAB5C200018C674 /* Carnival.framework */,
+				225CDADD1CAB5C200018C674 /* Resources */,
 			);
 			path = Carnival.embeddedframework;
 			sourceTree = "<group>";
 		};
-		228702761CAA2B120087E877 /* Resources */ = {
+		225CDADD1CAB5C200018C674 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				228702771CAA2B120087E877 /* CarnivalResources.bundle */,
+				225CDADE1CAB5C200018C674 /* CarnivalResources.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -129,9 +131,7 @@
 		758E8D8E186367C900A8AFA4 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				228702741CAA2B120087E877 /* Carnival.embeddedframework */,
-				7500812D1AF735C60096760A /* CloseBarButtonItem.h */,
-				7500812E1AF735C60096760A /* CloseBarButtonItem.m */,
+				225CDADB1CAB5C200018C674 /* Carnival.embeddedframework */,
 				758E8D97186367C900A8AFA4 /* ExampleAppDelegate.h */,
 				758E8D98186367C900A8AFA4 /* ExampleAppDelegate.m */,
 				758E8DA0186367C900A8AFA4 /* ExampleViewController.h */,
@@ -210,6 +210,7 @@
 				758E8D9F186367C900A8AFA4 /* Main_iPad.storyboard in Resources */,
 				758E8D9C186367C900A8AFA4 /* Main_iPhone.storyboard in Resources */,
 				758D6AF419AE915600F09C8D /* (null) in Resources */,
+				225CDAE01CAB5C200018C674 /* CarnivalResources.bundle in Resources */,
 				228702791CAA2B120087E877 /* CarnivalResources.bundle in Resources */,
 				758E8DA4186367C900A8AFA4 /* Images.xcassets in Resources */,
 				758E8D93186367C900A8AFA4 /* InfoPlist.strings in Resources */,
@@ -224,7 +225,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				758E8DA2186367C900A8AFA4 /* ExampleViewController.m in Sources */,
-				7500812F1AF735C60096760A /* CloseBarButtonItem.m in Sources */,
 				758E8D99186367C900A8AFA4 /* ExampleAppDelegate.m in Sources */,
 				758E8D95186367C900A8AFA4 /* main.m in Sources */,
 			);

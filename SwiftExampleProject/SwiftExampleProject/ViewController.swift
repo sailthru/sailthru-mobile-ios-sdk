@@ -191,26 +191,6 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         }
     }
     
-    @IBAction func showMessageStreamButtonPressed(sender: UIButton) {
-        let closeItem = UIBarButtonItem.whiteCloseButton(forTarget: self, action: "closeButtonPressed:")
-        
-        // Create a CarnivalStreamViewController and present it like you would any other viewcontroller
-        let streamVC = CarnivalStreamViewController()
-        streamVC.navigationItem.rightBarButtonItem = closeItem
-        
-        // You will probably want to wrap the streamviewcontroller in a UINavigationController in order to give it a navigationBar
-        let navVC = UINavigationController(rootViewController: streamVC)
-        navVC.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-        navVC.navigationBar.barTintColor = .blueColor()
-        
-        self.presentViewController(navVC, animated: true) {
-            UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
-        }
-    }
-
-    internal func closeButtonPressed(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
     
     @IBAction func setStringButtonPressed(sender: UIButton) {
         Carnival.setString("example_string", forKey: "example_string_key") { error in

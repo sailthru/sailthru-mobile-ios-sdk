@@ -10,7 +10,6 @@
 
 #import "ExampleViewController.h"
 #import <Carnival/Carnival.h>
-#import "CloseBarButtonItem.h"
 
 @interface ExampleViewController () <CarnivalMessageStreamDelegate, CLLocationManagerDelegate>
 
@@ -193,26 +192,6 @@
     }];
 }
 
-- (IBAction)showMessageStreamButtonPressed:(UIButton *)sender {
-    // Create a CarnivalStreamViewController and present it like you would any other viewcontroller
-    CarnivalStreamViewController *streamVC = [[CarnivalStreamViewController alloc] init];
-    
-    CloseBarButtonItem *closeItem = [CloseBarButtonItem whiteCloseButtonForTarget:self action:@selector(closeButtonPressed:)];
-    [streamVC.navigationItem setRightBarButtonItem:closeItem];
-    
-    // You will probably want to wrap the streamviewcontroller in a UINavigationController in order to give it a navigationBar
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:streamVC];
-    [navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    [navVC.navigationBar setBarTintColor:[UIColor blueColor]];
-    
-    [self presentViewController:navVC animated:YES completion:^{
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    }];
-}
-
-- (void)closeButtonPressed:(UIButton *)button {
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
 
 - (IBAction)logEventButtonPressed:(UIButton *)sender {
     [Carnival logEvent:@"example_event_name"];

@@ -12,9 +12,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
-#import "CarnivalStreamViewController.h"
 
-#define CARNIVAL_VERSION @"3.11.0"
+#define CARNIVAL_VERSION @"4.0.0"
 
 /* Constants for Auto-Analytics Tracking */
 NS_ASSUME_NONNULL_BEGIN
@@ -26,22 +25,6 @@ extern NSString * const CarnivalAutoAnalyticsSourceFlurryAnalytics;
 extern NSString * const CarnivalAutoAnalyticsSourceAmplitude;
 extern NSString * const CarnivalAutoAnalyticsSourceAll;
 NS_ASSUME_NONNULL_END
-
-__attribute__((deprecated))
-@protocol CarnivalIdentifierDataSource <NSObject>
-
-@required
-
-/**
- *  Override this method and return the user's unique identifier for Carnival.
- *
- *  @return The user's unique identifier for Carnival.
- *
- *  @warning This method is deprecated. Please use setUserId: instead.
- */
-- (nullable NSString *)carnivalUniqueIdentifier __attribute__((deprecated));
-
-@end
 
 @interface Carnival : NSObject
 
@@ -415,15 +398,6 @@ __attribute__((deprecated))
  *  @param notificationDict The userInfo dictionary from the remote notification you want the Carnival SDK to handle. This dictionary is normally passed back to you from the application:didReceiveRemoteNotification: method.
  */
 + (void)handleNotification:(nonnull NSDictionary *)notificationDict;
-
-/** @name Identifier */
-
-/**
- *  Sets the Identifier dataSource which gives the Carnival SDK identifier information
- *
- *  @param dataSource An object that conforms to the CarnivalIdentifierDataSource protocol
- */
-+ (void)setIdentifierDataSource:(nonnull id<CarnivalIdentifierDataSource>)dataSource __attribute__((deprecated));
 
 /** @name Device details */
 
