@@ -193,32 +193,52 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     
     
     @IBAction func setStringButtonPressed(sender: UIButton) {
-        Carnival.setString("example_string", forKey: "example_string_key") { error in
-            print("setString returned with possible error: \(error)")
+        let attributes = CarnivalAttributes()
+        
+        attributes.setString("example_string", forKey: "example_string_key")
+        
+        Carnival.setAttributes(attributes) { error in
+            print("setAttributes returned with possible error: \(error)")
         }
     }
     
     @IBAction func setFloatButtonPressed(sender: UIButton) {
-        Carnival.setFloat(1.23, forKey: "example_float_key") { error in
-            print("setFloat returned with possible error: \(error)")
+        let attributes = CarnivalAttributes()
+        
+        attributes.setFloat(1.1, forKey: "example_float_key")
+        
+        Carnival.setAttributes(attributes) { error in
+            print("setAttributes returned with possible error: \(error)")
         }
     }
     
     @IBAction func setBooleanButtonPressed(sender: UIButton) {
-        Carnival.setBool(true, forKey: "example_bool_key") { error in
-            print("setBOOL returned with possible error: \(error)")
+        let attributes = CarnivalAttributes()
+        
+        attributes.setBool(true, forKey: "example_bool_key")
+        
+        Carnival.setAttributes(attributes) { error in
+            print("setAttributes returned with possible error: \(error)")
         }
     }
     
     @IBAction func setDateButtonPressed(sender: UIButton) {
-        Carnival.setDate(NSDate(), forKey: "example_date_key") { error in
-            print("setDate returned with possible error: \(error)")
+        let attributes = CarnivalAttributes()
+        
+        attributes.setDate(NSDate(), forKey: "example_date_key")
+        
+        Carnival.setAttributes(attributes) { error in
+            print("setAttributes returned with possible error: \(error)")
         }
     }
     
     @IBAction func setIntegerButtonPressed(sender: UIButton) {
-        Carnival.setInteger(123, forKey: "example_integer_key") { error in
-            print("setInteger returned with possible error: \(error)")
+        let attributes = CarnivalAttributes()
+        
+        attributes.setInteger(123, forKey: "example_integer_key")
+        
+        Carnival.setAttributes(attributes) { error in
+            print("setAttributes returned with possible error: \(error)")
         }
     }
     

@@ -18,7 +18,7 @@
     // Could instead use the startEngine methods to customize start up.
     
     #error Insert your app key that you got from http://app.carnivalmobile.com here, then remove this line
-    
+
     [Carnival startEngine:app key];
     
     return YES;

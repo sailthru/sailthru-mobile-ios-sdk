@@ -198,32 +198,52 @@
 }
 
 - (IBAction)setStringButtonPressed:(UIButton *)sender {
-    [Carnival setString:@"example_string" forKey:@"example_string_key" withResponse:^(NSError *error) {
-        NSLog(@"setString returned with possible error: %@",error);
+    CarnivalAttributes *attributes  = [[CarnivalAttributes alloc] init];
+    
+    [attributes setString:@"example_string" forKey:@"example_string_key"];
+    
+    [Carnival setAttributes:attributes withResponse:^(NSError * _Nullable error) {
+        NSLog(@"setAttributes returned with possible error: %@",error);
     }];
 }
 
 - (IBAction)setFloatButtonPressed:(UIButton *)sender {
-    [Carnival setFloat:1.23f forKey:@"example_float_key" withResponse:^(NSError *error) {
-        NSLog(@"setFloat returned with possible error: %@",error);
+    CarnivalAttributes *attributes  = [[CarnivalAttributes alloc] init];
+    
+    [attributes setFloat:1.1 forKey:@"example_float_key"];
+    
+    [Carnival setAttributes:attributes withResponse:^(NSError * _Nullable error) {
+        NSLog(@"setAttributes returned with possible error: %@",error);
     }];
 }
 
 - (IBAction)setIntegerButtonPressed:(UIButton *)sender {
-    [Carnival setInteger:123 forKey:@"example_integer_key" withResponse:^(NSError *error) {
-        NSLog(@"setInteger returned with possible error: %@",error);
+    CarnivalAttributes *attributes  = [[CarnivalAttributes alloc] init];
+
+    [attributes setInteger:123 forKey:@"example_integer_key"];
+    
+    [Carnival setAttributes:attributes withResponse:^(NSError * _Nullable error) {
+        NSLog(@"setAttributes returned with possible error: %@",error);
     }];
 }
 
 - (IBAction)setDateButtonPressed:(UIButton *)sender {
-    [Carnival setDate:[NSDate date] forKey:@"example_date_key" withResponse:^(NSError *error) {
-        NSLog(@"setDate returned with possible error: %@",error);
+    CarnivalAttributes *attributes  = [[CarnivalAttributes alloc] init];
+    
+    [attributes setDate:[NSDate date] forKey:@"example_date_key"];
+    
+    [Carnival setAttributes:attributes withResponse:^(NSError * _Nullable error) {
+        NSLog(@"setAttributes returned with possible error: %@",error);
     }];
 }
 
 - (IBAction)setBooleanButtonPressed:(UIButton *)sender {
-    [Carnival setBool:YES forKey:@"example_bool_key" withResponse:^(NSError *error) {
-        NSLog(@"setBOOL returned with possible error: %@",error);
+    CarnivalAttributes *attributes  = [[CarnivalAttributes alloc] init];
+    
+    [attributes setBool:YES forKey:@"example_boolean_key"];
+    
+    [Carnival setAttributes:attributes withResponse:^(NSError * _Nullable error) {
+        NSLog(@"setAttributes returned with possible error: %@",error);
     }];
 }
 

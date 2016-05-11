@@ -12,8 +12,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "CarnivalMessageStream.h"
+#import "CarnivalAttributes.h"
 
-#define CARNIVAL_VERSION @"4.0.0"
+#define CARNIVAL_VERSION @"4.1.0"
 
 /* Constants for Auto-Analytics Tracking */
 NS_ASSUME_NONNULL_BEGIN
@@ -186,7 +187,7 @@ NS_ASSUME_NONNULL_END
  */
 + (nullable NSArray *)getTags:(NSError  *__nullable *__nullable)error __attribute__((deprecated));
 
-/** @name Key/Value Attributes */
+/** @name Custom Attributes */
 
 /**
  *  Asyncronously sets a string value for a given key.
@@ -195,7 +196,7 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
-+ (void)setString:(nonnull NSString *)string forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
++ (void)setString:(nonnull NSString *)string forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
 
 /**
  *  Syncronously sets a string value for a given key.
@@ -204,7 +205,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
-+ (void)setString:(nonnull NSString *)string forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
++ (void)setString:(nonnull NSString *)string forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Asyncronously sets an array of string for a given key.
@@ -213,7 +215,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
-+ (void)setStrings:(nonnull NSArray<NSString *> *)array forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
++ (void)setStrings:(nonnull NSArray<NSString *> *)array forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Syncronously sets an array of string for a given key.
@@ -222,7 +225,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
-+ (void)setStrings:(nonnull NSArray<NSString *> *)array forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
++ (void)setStrings:(nonnull NSArray<NSString *> *)array forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Asyncronously sets a float value for a given key.
@@ -231,7 +235,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
-+ (void)setFloat:(CGFloat)aFloat forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
++ (void)setFloat:(CGFloat)aFloat forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Syncronously sets a float value for a given key.
@@ -240,7 +245,7 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
-+ (void)setFloat:(CGFloat)aFloat forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
++ (void)setFloat:(CGFloat)aFloat forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
 
 /**
  *  Asyncronously sets an array of NSNumbers (which are backed by floats) for a given key.
@@ -249,7 +254,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
-+ (void)setFloats:(nonnull NSArray<NSNumber *> *)array forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
++ (void)setFloats:(nonnull NSArray<NSNumber *> *)array forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Syncronously sets an array of NSNumbers (which are backed by floats) for a given key.
@@ -258,7 +264,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
-+ (void)setFloats:(nonnull NSArray<NSNumber *> *)array forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
++ (void)setFloats:(nonnull NSArray<NSNumber *> *)array forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Asyncronously sets an integer value for a given key. Only 32-bit Integers are supported.
@@ -267,7 +274,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
-+ (void)setInteger:(NSInteger)integer forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
++ (void)setInteger:(NSInteger)integer forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Syncronously sets an integer value for a given key. Only 32-bit Integers are supported.
@@ -276,7 +284,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
-+ (void)setInteger:(NSInteger)integer forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
++ (void)setInteger:(NSInteger)integer forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Asyncronously sets an array of NSNumbers (which are backed by integers) for a given key. Only 32-bit Integers are supported.
@@ -285,7 +294,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
-+ (void)setIntegers:(nonnull NSArray<NSNumber *> *)array forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
++ (void)setIntegers:(nonnull NSArray<NSNumber *> *)array forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Syncronously sets an array of NSNumbers (which are backed by integers) for a given key. Only 32-bit Integers are supported.
@@ -294,7 +304,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
-+ (void)setIntegers:(nonnull NSArray<NSNumber *> *)array forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
++ (void)setIntegers:(nonnull NSArray<NSNumber *> *)array forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Asyncronously sets a date value for a given key.
@@ -303,7 +314,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
-+ (void)setDate:(nonnull NSDate *)date forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
++ (void)setDate:(nonnull NSDate *)date forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Syncronously sets a date value for a given key.
@@ -312,7 +324,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
-+ (void)setDate:(nonnull NSDate *)date forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
++ (void)setDate:(nonnull NSDate *)date forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Asyncronously sets an array of date values for a given key.
@@ -321,7 +334,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
-+ (void)setDates:(nonnull NSArray<NSDate *> *)array forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
++ (void)setDates:(nonnull NSArray<NSDate *> *)array forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Syncronously sets an array of date values for a given key.
@@ -330,7 +344,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
-+ (void)setDates:(nonnull NSArray<NSDate *> *)array forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
++ (void)setDates:(nonnull NSArray<NSDate *> *)array forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Asyncronously sets a boolean value for a given key.
@@ -339,7 +354,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param block The block returned from the asyncronous call possibly containing an error.
  **/
-+ (void)setBool:(BOOL)boolean forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError  *__nullable error))block;
++ (void)setBool:(BOOL)boolean forKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError  *__nullable error))block __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Syncronously sets a boolean value for a given key.
@@ -348,7 +364,8 @@ NS_ASSUME_NONNULL_END
  *  @param key The string value of the key.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
-+ (void)setBool:(BOOL)boolean forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
++ (void)setBool:(BOOL)boolean forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
+
 
 /**
  *  Asyncronously removes a value for a given key.
@@ -358,6 +375,7 @@ NS_ASSUME_NONNULL_END
  **/
 + (void)removeAttributeWithKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
 
+
 /**
  *  Syncronously removes a value for a given key.
  *
@@ -365,6 +383,22 @@ NS_ASSUME_NONNULL_END
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
 + (void)removeAttributeWithKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
+
+/**
+ *  Asyncronously sets a CarnivalAttributes object with Carnival.
+ *
+ *  @param attributes A nonnull CarnivalAttributes object with the desired attributes set.
+ *  @param block The block returned from the asyncronous call possibly containing an error.
+ */
++ (void)setAttributes:(nonnull CarnivalAttributes *)attributes withResponse:(nullable void(^)(NSError *__nullable error))block;
+
+/**
+ *  Syncronously sets a CarnivalAttributes object with Carnival.
+ *
+ *  @param attributes A nonnull CarnivalAttributes object with the desired attributes set.
+ *  @param error A pointer to an error which will be non-nil if there is an error.
+ */
++ (void)setAttributes:(nonnull CarnivalAttributes *)attributes error:(NSError  *__nullable *__nullable)error;
 
 /** @name Badges */
 
