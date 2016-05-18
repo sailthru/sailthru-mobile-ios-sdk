@@ -76,4 +76,10 @@ typedef NS_ENUM(NSInteger, CarnivalMessageType) {
  */
 @property (nonatomic, strong, nullable) NSDictionary *attributes;
 
+
+/**
+ * Whether or not a message had a push attached.
+ */
+@property (nonatomic, assign, readonly, getter=hasPushAttached) BOOL pushAttached;
+
 @end

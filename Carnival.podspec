@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name 				= 'Carnival'
-	s.version 			= '4.1.1'
+	s.version 			= '4.2.0'
 	s.summary 			= 'Carnival iOS SDK for integrating with http://carnival.io messaging and analytics service'
 	s.author			= {
 		'Carnival Mobile' => 'support@carnival.io'
@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
 		:git => 'https://github.com/carnivalmobile/carnival-ios-sdk.git',
 		:tag => s.version.to_s
 	} 
+	s.source_files = 'Carnival.embeddedframework/Carnival.framework/Versions/A/Headers/*.h'
 	s.xcconfig 			= {
 		'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Carnival/**"'
 	}
