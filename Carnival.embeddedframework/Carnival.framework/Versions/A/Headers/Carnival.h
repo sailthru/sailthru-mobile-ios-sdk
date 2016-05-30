@@ -14,7 +14,7 @@
 #import "CarnivalMessageStream.h"
 #import "CarnivalAttributes.h"
 
-#define CARNIVAL_VERSION @"4.2.0"
+#define CARNIVAL_VERSION @"5.0.0"
 
 /* Constants for Auto-Analytics Tracking */
 NS_ASSUME_NONNULL_BEGIN
@@ -69,48 +69,11 @@ NS_ASSUME_NONNULL_END
 + (void)startEngine:(nonnull NSString *)appKey registerForPushNotifications:(BOOL)registerForPushNotifications;
 
 /**
- * Sets the Carnival appKey credentials for this app and ignores certain analytics sources.
- * Carnival Auto-Analytics Tracking will track 3rd party analytics being logged and log them to Carnival as well. Right now, only Events are supported.
- * This is enababled by default for your convinience. If you wish to opt out, you can provide an array of sources to ignore.
- *
- *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com .
- *  @param ignoreArray An array of string constants of the Auto-Analytics sources to ignore. By default, all sources will be observed.
- *
- *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
- *  calling it later in the app lifecycle can have unintended consequences. No startEngine: calls (overrides included) must not be called more than once.
+ * Enables AutoAnalytics tracking for a given array of event sources. This is opt-in as of Carnival 5.0.0.
+ * 
+ * @param enableArray - An array of const strings beginning with CarnivalAutoAnalyticsSource.
  */
-+ (void)startEngine:(nonnull NSString *)appKey ignoreAutoAnalyticsSources:(nonnull NSArray *)ignoreArray;
-
-/**
- *  Sets the Carnival appKey credentials for this app, the UIUserNotificationTypes and ignores certain analytics sources.
- *  Carnival Auto-Analytics Tracking will track 3rd party analytics being logged and log them to Carnival as well. Right now, only Events are supported.
- *  This is enababled by default for your convinience. If you wish to opt out, you can provide an array of sources to ignore.
- *
- *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com .
- *  @param types The UIUserNotificationType attributes you wish to register this app for as defined in UIApplication.h
- *  see appledocs for more information.
- *  @param ignoreArray An array of string constants of the Auto-Analytics sources to ignore. By default, all sources will be observed.
- *  @discussion An exception will be raised if you do not set your appKey before you call any other methods.
- *  Make sure your app bundle identifier is the same as whatever it is on http://app.carnivalmobile.com .
- *
- *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
- *  calling it later in the app lifecycle can have unintended consequences. No startEngine: calls (overrides included) must not be called more than once.
- */
-+ (void)startEngine:(nonnull NSString *)appKey andNotificationTypes:(UIUserNotificationType)types ignoreAutoAnalyticsSources:(nonnull NSArray *)ignoreArray;
-
-/**
- *  Sets the Carnival appKey credentials for this app, optionally registers for push notifications with the badge, alert and sound UIUserNotificationType's and ignores certain analytics sources.
- *  Carnival Auto-Analytics Tracking will track 3rd party analytics being logged and log them to Carnival as well. Right now, only Events are supported.
- *  This is enababled by default for your convinience. If you wish to opt out, you can provide an array of sources to ignore.
- *
- *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com .
- *  @param registerForPushNotifications when this parameter is YES the Carnival iOS SDK will automatically register for push notifications
- *  @param ignoreArray An array of string constants of the Auto-Analytics sources to ignore. By default, all sources will be observed.
- *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
- *  calling it later in the app lifecycle can have unintended consequences. No startEngine: calls (overrides included) must not be called more than once.
- */
-+ (void)startEngine:(nonnull NSString *)appKey registerForPushNotifications:(BOOL)registerForPushNotifications ignoreAutoAnalyticsSources:(nonnull NSArray *)ignoreArray;
-
++ (void)enableAutoAnalytics:(nonnull NSArray *)enableArray;
 
 /** @name Tags
  *  @warning Tags are now deprecated in favour for setting an array of strings with setStrings:forKey: methods.
