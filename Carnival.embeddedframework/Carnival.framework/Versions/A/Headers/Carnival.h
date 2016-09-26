@@ -14,7 +14,7 @@
 #import "CarnivalMessageStream.h"
 #import "CarnivalAttributes.h"
 
-#define CARNIVAL_VERSION @"5.1.1"
+#define CARNIVAL_VERSION @"5.2.0"
 
 /* Constants for Auto-Analytics Tracking */
 NS_ASSUME_NONNULL_BEGIN
@@ -454,11 +454,19 @@ NS_ASSUME_NONNULL_END
 
 /**
  *  Enable crash tracking for recording sessions which end in a crash.
- *  Warning: This is for advance uses where in some cases, crash handlers from Test Flight or Fabric (Crashlytics) interrupt Carnival crash detection.
+ *  Warning: This is for advanced uses where in some cases, crash handlers from Test Flight or Fabric (Crashlytics) interrupt Carnival crash detection.
  *  If you are not experiencing these issues, do not use this method. 
  *
  *  @param disabled A boolean value indicating whether or not to install the crash handlers. Defaults to YES.
  */
 + (void)setCrashHandlersEnabled:(BOOL)enabled;
+
+/**
+ *  Enable automatic integration for Carnival. This must be called BEFORE startEngine, or its overloads.
+ *  Warning: This is for advanced uses where you may not want Carnival to swizzle the following UIApplicationDelegate methods:
+ *  application:didRegisterForRemoteNotificationsWithDeviceToken:, application:didReceiveRemoteNotification:, application:didReceiveRemoteNotification:fetchCompletionHandler:
+ *  @param disabled A boolean value indicating whether or not to swizzle notification related methods. Defaults to YES.
+ */
++ (void)setAutoIntegrationEnabled:(BOOL)enabled;
 
 @end
