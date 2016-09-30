@@ -14,7 +14,7 @@
 #import "CarnivalMessageStream.h"
 #import "CarnivalAttributes.h"
 
-#define CARNIVAL_VERSION @"5.2.0"
+#define CARNIVAL_VERSION @"5.2.1"
 
 /* Constants for Auto-Analytics Tracking */
 NS_ASSUME_NONNULL_BEGIN
