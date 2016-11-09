@@ -14,7 +14,13 @@
 #import "CarnivalMessageStream.h"
 #import "CarnivalAttributes.h"
 
-#define CARNIVAL_VERSION @"5.2.1"
+#define CARNIVAL_VERSION @"5.3.0"
+
+typedef NS_OPTIONS(NSUInteger, CarnivalDeviceDataType) {
+    CarnivalDeviceDataTypeAttributes     = 1 << 0,
+    CarnivalDeviceDataTypeMessageStream  = 1 << 1,
+    CarnivalDeviceDataTypeEvents         = 1 << 2
+};
 
 /* Constants for Auto-Analytics Tracking */
 NS_ASSUME_NONNULL_BEGIN
@@ -329,6 +335,14 @@ NS_ASSUME_NONNULL_END
  **/
 + (void)setBool:(BOOL)boolean forKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("use setAttributes: with a CarnivalAttributes instance instead.")));
 
+/**
+ *  Asyncronously clears any of the Attribute, Message Stream, or Event data from the device.
+ *  Use this method to clear the device attributes after user logout.
+ *
+ *  @param types A bitwise OR collection of CarnivalDeviceDataType dictating which sets of data to clear.
+ *  @param block The block returned from the asyncronous call possibly containing an error.
+ **/
++ (void)clearDeviceData:(CarnivalDeviceDataType)types withResponse:(nullable void(^)(NSError *__nullable error))block;
 
 /**
  *  Asyncronously removes a value for a given key.
