@@ -14,7 +14,7 @@
 #import "CarnivalMessageStream.h"
 #import "CarnivalAttributes.h"
 
-#define CARNIVAL_VERSION @"5.3.0"
+#define CARNIVAL_VERSION @"5.3.1"
 
 typedef NS_OPTIONS(NSUInteger, CarnivalDeviceDataType) {
     CarnivalDeviceDataTypeAttributes     = 1 << 0,

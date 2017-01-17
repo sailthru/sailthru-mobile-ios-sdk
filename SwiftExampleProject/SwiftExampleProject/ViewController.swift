@@ -23,13 +23,13 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         CarnivalMessageStream.setDelegate(self)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        UIApplication.sharedApplication().setStatusBarStyle(.Default, animated: false)
+        UIApplication.shared.setStatusBarStyle(.default, animated: false)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.startLocationTrackingInBackground()
@@ -57,17 +57,11 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         let authorizationStatus = CLLocationManager.authorizationStatus()
         
         // Always check if you are authorized to start location services
-        if authorizationStatus != .Denied && authorizationStatus != .Restricted {
+        if authorizationStatus != .denied && authorizationStatus != .restricted {
             if let manager = self.locationManager {
                 // Check if we are on iOS 8, where we have to requet permissions differently than on previous iOS versions
-                if manager.respondsToSelector("requestAlwaysAuthorization") {
-                    // Request permission to always monitor location updates, in foreground and background
-                    // Note: this method prompts the user for location permissions on iOS 8 and above
-                    if #available(iOS 8.0, *) {
-                        manager.requestAlwaysAuthorization()
-                    } else {
-                        // Fallback on earlier versions
-                    }
+                if #available(iOS 8.0, *) {
+                    manager.requestAlwaysAuthorization()
                 }
                 
                 if CLLocationManager.significantLocationChangeMonitoringAvailable() {
@@ -96,17 +90,11 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         let authorizationStatus = CLLocationManager.authorizationStatus()
         
         // Always check if you are authorized to start location services
-        if authorizationStatus != .Denied && authorizationStatus != .Restricted {
+        if authorizationStatus != .denied && authorizationStatus != .restricted {
             if let manager = self.locationManager {
                 // Check if we are on iOS 8, where we have to requet permissions differently than on previous iOS versions
-                if manager.respondsToSelector("requestWhenInUseAuthorization") {
-                    // Request permission to monitor location updates when the app is in use
-                    // Note: this method prompts the user for location permissions on iOS 8 and above
-                    if #available(iOS 8.0, *) {
-                        manager.requestWhenInUseAuthorization()
-                    } else {
-                        // Fallback on earlier versions
-                    }
+                if #available(iOS 8.0, *) {
+                    manager.requestWhenInUseAuthorization()
                 }
                 
                 // Note: this method prompts the user for location permissions on iOS 7 and below
@@ -120,59 +108,59 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     }
     
     //MARK: CLLocationManagerDelegate
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // Send the last location object as that is the most recent one always
         if let lastLocation = locations.last {
-            Carnival.updateLocation(lastLocation)
+            Carnival.update(lastLocation)
         }
     }
     
     //MARK: CarnivalMessageStreamDelegate
-    func willShowMessageOfType(messageType: CarnivalMessageType) {
+    func willShowMessage(of messageType: CarnivalMessageType) {
         print("willShowMessageOfType: \(messageType)")
         
         // You can use this method to mute audio during videos or fake phone calls
     }
     
-    func didShowMessageOfType(messageType: CarnivalMessageType) {
+    func didShowMessage(of messageType: CarnivalMessageType) {
         print("didShowMessageOfType: \(messageType)")
         
         // You can use this method to mute audio during videos or fake phone calls
     }
     
-    func willDismissMessageOfType(messageType: CarnivalMessageType) {
+    func willDismissMessage(of messageType: CarnivalMessageType) {
         print("willDismissMessageOfType: \(messageType)")
         
         // You can use this method to unmute audio during videos or fake phone calls
     }
     
-    func didDismissMessageOfType(messageType: CarnivalMessageType) {
+    func didDismissMessage(of messageType: CarnivalMessageType) {
         print("didDismissMessageOfType: \(messageType)")
         
         // You can use this method to unmute audio during videos or fake phone calls
     }
     
-    func willShowInAppNotificationForMessageType(messageType: CarnivalMessageType) {
+    func willShowInAppNotification(for messageType: CarnivalMessageType) {
         print("willShowInAppNotificationForMessageType: \(messageType)")
         
         // You can use this method to do something when an in-app notification is shown
     }
     
-    func didShowInAppNotificationForMessageType(messageType: CarnivalMessageType) {
+    func didShowInAppNotification(for messageType: CarnivalMessageType) {
         print("didShowInAppNotificationForMessageType: \(messageType)")
         
         // You can use this method to do something when an in-app notification is shown
     }
     
     //MARK: pressed actions
-    @IBAction func getTagsButtonPressed(sender: UIButton) {
+    @IBAction func getTagsButtonPressed(_ sender: UIButton) {
         // Asyncronously gets the tags for this device.
-        Carnival.getTagsInBackgroundWithResponse { (tags, error) in
+        Carnival.getTagsInBackground { (tags, error) in
             print("getTagsInBackgroundWithResponse returned tags: \(tags)")
         }
     }
     
-    @IBAction func addTagButtonPressed(sender: UIButton) {
+    @IBAction func addTagButtonPressed(_ sender: UIButton) {
         // Asyncronously adds the tag for this device
         // If the tag is already registered with Carnival, this method does not add the tag again.
         Carnival.addTags(["CARNIVAL_ADD_TAG_EXAMPLE_TAG"]) { (tags, error) in
@@ -180,7 +168,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         }
     }
     
-    @IBAction func setTagsButtonPressed(sender: UIButton) {
+    @IBAction func setTagsButtonPressed(_ sender: UIButton) {
         let exampleTags = ["CARNIVAL_SET_TAGS_EXAMPLE_TAG_1", "CARNIVAL_SET_TAGS_EXAMPLE_TAG_2"]
         
         // Asyncronously sets the tags for Carnival for this device
@@ -192,7 +180,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     }
     
     
-    @IBAction func setStringButtonPressed(sender: UIButton) {
+    @IBAction func setStringButtonPressed(_ sender: UIButton) {
         let attributes = CarnivalAttributes()
         
         attributes.setString("example_string", forKey: "example_string_key")
@@ -202,7 +190,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         }
     }
     
-    @IBAction func setFloatButtonPressed(sender: UIButton) {
+    @IBAction func setFloatButtonPressed(_ sender: UIButton) {
         let attributes = CarnivalAttributes()
         
         attributes.setFloat(1.1, forKey: "example_float_key")
@@ -212,7 +200,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         }
     }
     
-    @IBAction func setBooleanButtonPressed(sender: UIButton) {
+    @IBAction func setBooleanButtonPressed(_ sender: UIButton) {
         let attributes = CarnivalAttributes()
         
         attributes.setBool(true, forKey: "example_bool_key")
@@ -222,17 +210,17 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         }
     }
     
-    @IBAction func setDateButtonPressed(sender: UIButton) {
+    @IBAction func setDateButtonPressed(_ sender: UIButton) {
         let attributes = CarnivalAttributes()
         
-        attributes.setDate(NSDate(), forKey: "example_date_key")
+        attributes.setDate(Date(), forKey: "example_date_key")
         
         Carnival.setAttributes(attributes) { error in
             print("setAttributes returned with possible error: \(error)")
         }
     }
     
-    @IBAction func setIntegerButtonPressed(sender: UIButton) {
+    @IBAction func setIntegerButtonPressed(_ sender: UIButton) {
         let attributes = CarnivalAttributes()
         
         attributes.setInteger(123, forKey: "example_integer_key")
@@ -242,13 +230,13 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         }
     }
     
-    @IBAction func removeStringButtonPressed(sender: UIButton) {
-        Carnival.removeAttributeWithKey("example_string_key") { error in
+    @IBAction func removeStringButtonPressed(_ sender: UIButton) {
+        Carnival.removeAttribute(withKey: "example_string_key") { error in
             print("removeAttribute returned with possible error: \(error)")
         }
     }
     
-    @IBAction func setUserIDButtonPressed(sender: UIButton) {
+    @IBAction func setUserIDButtonPressed(_ sender: UIButton) {
         Carnival.setUserId("example_user_id") { error in
             print("setUserID returned with possible error: \(error)")
         }
