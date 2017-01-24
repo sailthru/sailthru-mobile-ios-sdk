@@ -119,25 +119,25 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     func willShowMessage(of messageType: CarnivalMessageType) {
         print("willShowMessageOfType: \(messageType)")
         
-        // You can use this method to mute audio during videos or fake phone calls
+        // You can use this method to mute audio during videos
     }
     
     func didShowMessage(of messageType: CarnivalMessageType) {
         print("didShowMessageOfType: \(messageType)")
         
-        // You can use this method to mute audio during videos or fake phone calls
+        // You can use this method to mute audio during videos
     }
     
     func willDismissMessage(of messageType: CarnivalMessageType) {
         print("willDismissMessageOfType: \(messageType)")
         
-        // You can use this method to unmute audio during videos or fake phone calls
+        // You can use this method to unmute audio during videos
     }
     
     func didDismissMessage(of messageType: CarnivalMessageType) {
         print("didDismissMessageOfType: \(messageType)")
         
-        // You can use this method to unmute audio during videos or fake phone calls
+        // You can use this method to unmute audio during videos
     }
     
     func willShowInAppNotification(for messageType: CarnivalMessageType) {
@@ -153,33 +153,6 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     }
     
     //MARK: pressed actions
-    @IBAction func getTagsButtonPressed(_ sender: UIButton) {
-        // Asyncronously gets the tags for this device.
-        Carnival.getTagsInBackground { (tags, error) in
-            print("getTagsInBackgroundWithResponse returned tags: \(tags)")
-        }
-    }
-    
-    @IBAction func addTagButtonPressed(_ sender: UIButton) {
-        // Asyncronously adds the tag for this device
-        // If the tag is already registered with Carnival, this method does not add the tag again.
-        Carnival.addTags(["CARNIVAL_ADD_TAG_EXAMPLE_TAG"]) { (tags, error) in
-            print("addTag:inBackgroundWithResponse: returned tags: \(tags)")
-        }
-    }
-    
-    @IBAction func setTagsButtonPressed(_ sender: UIButton) {
-        let exampleTags = ["CARNIVAL_SET_TAGS_EXAMPLE_TAG_1", "CARNIVAL_SET_TAGS_EXAMPLE_TAG_2"]
-        
-        // Asyncronously sets the tags for Carnival for this device
-        // Calling this method will overwrite any previously set tags for this device.
-        // Passing nil for the tags argument will clear the tags for this device
-        Carnival.setTagsInBackground(exampleTags) { (tags, error) in
-            print("setTagsInBackground:withResponse: returned tags: \(tags)");
-        }
-    }
-    
-    
     @IBAction func setStringButtonPressed(_ sender: UIButton) {
         let attributes = CarnivalAttributes()
         

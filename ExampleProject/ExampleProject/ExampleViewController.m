@@ -131,25 +131,25 @@
 - (void)willShowMessageOfType:(CarnivalMessageType)messageType {
     NSLog(@"willShowMessageOfType: %ld",(long)messageType);
     
-    // You can use this method to mute audio during videos or fake phone calls
+    // You can use this method to mute audio during videos
 }
 
 - (void)didShowMessageOfType:(CarnivalMessageType)messageType {
     NSLog(@"didShowMessageOfType: %li", (long)messageType);
     
-    // You can use this method to mute audio during videos or fake phone calls
+    // You can use this method to mute audio during videos
 }
 
 - (void)willDismissMessageOfType:(CarnivalMessageType)messageType {
     NSLog(@"willDismissMessageOfType: %li",(long)messageType);
     
-    // You can use this method to unmute audio during videos or fake phone calls
+    // You can use this method to unmute audio during videos
 }
 
 - (void)didDismissMessageOfType:(CarnivalMessageType)messageType {
     NSLog(@"didDismissMessageOfType: %li", (long)messageType);
     
-    // You can use this method to unmute audio during videos or fake phone calls
+    // You can use this method to unmute audio during videos
 }
 
 - (void)willShowInAppNotificationForMessageType:(CarnivalMessageType)messageType {
@@ -165,33 +165,6 @@
 }
 
 #pragma mark - pressed actions
-
-- (IBAction)getTagsButtonPressed:(UIButton *)sender {
-    // Asyncronously gets the tags for this device.
-    [Carnival getTagsInBackgroundWithResponse:^(NSArray *tags, NSError *error) {
-        NSLog(@"getTagsInBackgroundWithResponse returned tags: %@",tags);
-    }];
-}
-
-- (IBAction)addTagButtonPressed:(UIButton *)sender {
-    // Asyncronously adds the tag for this device
-    // If the tag is already registered with Carnival, this method does not add the tag again.
-    [Carnival addTags:@[@"CARNIVAL_ADD_TAG_EXAMPLE_TAG"] inBackgroundWithResponse:^(NSArray *tags, NSError *error) {
-        NSLog(@"addTag:inBackgroundWithResponse: returned tags: %@",tags);
-    }];
-}
-
-- (IBAction)setTagsButtonPressed:(UIButton *)sender {
-    NSArray *exampleTags = @[@"CARNIVAL_SET_TAGS_EXAMPLE_TAG_1", @"CARNIVAL_SET_TAGS_EXAMPLE_TAG_2"];
-    
-    // Asyncronously sets the tags for Carnival for this device
-    // Calling this method will overwrite any previously set tags for this device.
-    // Passing nil for the tags argument will clear the tags for this device
-    [Carnival setTagsInBackground:exampleTags withResponse:^(NSArray *tags, NSError *error) {
-        NSLog(@"setTagsInBackground:withResponse: returned tags: %@",tags);
-    }];
-}
-
 
 - (IBAction)logEventButtonPressed:(UIButton *)sender {
     [Carnival logEvent:@"example_event_name"];

@@ -24,8 +24,8 @@
 		75D77B2D19F0778300BD2319 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D77B2C19F0778300BD2319 /* CoreGraphics.framework */; };
 		75D77B2F19F0779600BD2319 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D77B2E19F0779600BD2319 /* CoreLocation.framework */; };
 		75D77B3119F077A500BD2319 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D77B3019F077A500BD2319 /* QuartzCore.framework */; };
-		8A2558A21E2EBF3A00573425 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A25589F1E2EBF3A00573425 /* Carnival.framework */; };
-		8A2558A31E2EBF3A00573425 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8A2558A11E2EBF3A00573425 /* CarnivalResources.bundle */; };
+		8A3C40B41E31A9090017AEBC /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3C40B11E31A9090017AEBC /* Carnival.framework */; };
+		8A3C40B51E31A9090017AEBC /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8A3C40B31E31A9090017AEBC /* CarnivalResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +51,8 @@
 		75D77B2C19F0778300BD2319 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		75D77B2E19F0779600BD2319 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		75D77B3019F077A500BD2319 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		8A25589F1E2EBF3A00573425 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
-		8A2558A11E2EBF3A00573425 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
+		8A3C40B11E31A9090017AEBC /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		8A3C40B31E31A9090017AEBC /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A2558A21E2EBF3A00573425 /* Carnival.framework in Frameworks */,
+				8A3C40B41E31A9090017AEBC /* Carnival.framework in Frameworks */,
 				22B325F41C6153A700A7056D /* Security.framework in Frameworks */,
 				75D77B3119F077A500BD2319 /* QuartzCore.framework in Frameworks */,
 				75D77B2F19F0779600BD2319 /* CoreLocation.framework in Frameworks */,
@@ -112,7 +112,7 @@
 		758E8D8E186367C900A8AFA4 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				8A25589E1E2EBF3A00573425 /* Carnival.embeddedframework */,
+				8A3C40B01E31A9090017AEBC /* Carnival.embeddedframework */,
 				758E8D97186367C900A8AFA4 /* ExampleAppDelegate.h */,
 				758E8D98186367C900A8AFA4 /* ExampleAppDelegate.m */,
 				758E8DA0186367C900A8AFA4 /* ExampleViewController.h */,
@@ -136,19 +136,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8A25589E1E2EBF3A00573425 /* Carnival.embeddedframework */ = {
+		8A3C40B01E31A9090017AEBC /* Carnival.embeddedframework */ = {
 			isa = PBXGroup;
 			children = (
-				8A25589F1E2EBF3A00573425 /* Carnival.framework */,
-				8A2558A01E2EBF3A00573425 /* Resources */,
+				8A3C40B11E31A9090017AEBC /* Carnival.framework */,
+				8A3C40B21E31A9090017AEBC /* Resources */,
 			);
 			path = Carnival.embeddedframework;
 			sourceTree = "<group>";
 		};
-		8A2558A01E2EBF3A00573425 /* Resources */ = {
+		8A3C40B21E31A9090017AEBC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8A2558A11E2EBF3A00573425 /* CarnivalResources.bundle */,
+				8A3C40B31E31A9090017AEBC /* CarnivalResources.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 				758E8D9F186367C900A8AFA4 /* Main_iPad.storyboard in Resources */,
 				758E8D9C186367C900A8AFA4 /* Main_iPhone.storyboard in Resources */,
 				758D6AF419AE915600F09C8D /* (null) in Resources */,
-				8A2558A31E2EBF3A00573425 /* CarnivalResources.bundle in Resources */,
+				8A3C40B51E31A9090017AEBC /* CarnivalResources.bundle in Resources */,
 				758E8DA4186367C900A8AFA4 /* Images.xcassets in Resources */,
 				758E8D93186367C900A8AFA4 /* InfoPlist.strings in Resources */,
 			);

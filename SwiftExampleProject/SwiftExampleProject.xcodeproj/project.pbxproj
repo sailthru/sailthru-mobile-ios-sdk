@@ -16,8 +16,8 @@
 		75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC1FD19C061C6007F4332 /* libz.dylib */; };
 		75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC20119C06256007F4332 /* CoreGraphics.framework */; };
 		75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC1FF19C0624F007F4332 /* CoreLocation.framework */; };
-		8A25589C1E2EBF0F00573425 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2558991E2EBF0F00573425 /* Carnival.framework */; };
-		8A25589D1E2EBF0F00573425 /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8A25589B1E2EBF0F00573425 /* CarnivalResources.bundle */; };
+		8A3C40B91E31A91F0017AEBC /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3C40B61E31A91F0017AEBC /* Carnival.framework */; };
+		8A3C40BA1E31A9200017AEBC /* CarnivalResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8A3C40B81E31A91F0017AEBC /* CarnivalResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		75DAC1FD19C061C6007F4332 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		75DAC1FF19C0624F007F4332 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		75DAC20119C06256007F4332 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8A2558991E2EBF0F00573425 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
-		8A25589B1E2EBF0F00573425 /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
+		8A3C40B61E31A91F0017AEBC /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		8A3C40B81E31A91F0017AEBC /* CarnivalResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarnivalResources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A25589C1E2EBF0F00573425 /* Carnival.framework in Frameworks */,
+				8A3C40B91E31A91F0017AEBC /* Carnival.framework in Frameworks */,
 				75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */,
 				75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */,
 				75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */,
@@ -137,17 +137,17 @@
 		7535426B19C05B4B00B7F2BD /* Carnival */ = {
 			isa = PBXGroup;
 			children = (
-				8A2558991E2EBF0F00573425 /* Carnival.framework */,
-				8A25589A1E2EBF0F00573425 /* Resources */,
+				8A3C40B61E31A91F0017AEBC /* Carnival.framework */,
+				8A3C40B71E31A91F0017AEBC /* Resources */,
 				7535426C19C05B4B00B7F2BD /* Carnival-Bridging-Header.h */,
 			);
 			path = Carnival;
 			sourceTree = "<group>";
 		};
-		8A25589A1E2EBF0F00573425 /* Resources */ = {
+		8A3C40B71E31A91F0017AEBC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8A25589B1E2EBF0F00573425 /* CarnivalResources.bundle */,
+				8A3C40B81E31A91F0017AEBC /* CarnivalResources.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A25589D1E2EBF0F00573425 /* CarnivalResources.bundle in Resources */,
+				8A3C40BA1E31A9200017AEBC /* CarnivalResources.bundle in Resources */,
 				753541C619C0462D00B7F2BD /* Main.storyboard in Resources */,
 				753541C819C0462D00B7F2BD /* Images.xcassets in Resources */,
 			);

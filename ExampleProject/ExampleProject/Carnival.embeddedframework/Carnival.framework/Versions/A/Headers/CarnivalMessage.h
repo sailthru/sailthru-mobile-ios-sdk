@@ -18,7 +18,6 @@ typedef NS_ENUM(NSInteger, CarnivalMessageType) {
     CarnivalMessageTypeImage,
     CarnivalMessageTypeLink,
     CarnivalMessageTypeVideo,
-    CarnivalMessageTypeFakeCall,
     CarnivalMessageTypeStandardPush,
     CarnivalMessageTypeOther
 };
