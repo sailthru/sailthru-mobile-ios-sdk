@@ -1,0 +1,6 @@
+framework module Carnival {
+  umbrella header "Carnival-umbrella.h"
+
+  export *
+  module * { export * }
+}
