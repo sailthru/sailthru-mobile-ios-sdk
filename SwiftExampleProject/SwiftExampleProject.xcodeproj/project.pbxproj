@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		227BFB821E5B739200AD6CE3 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227BFB811E5B739200AD6CE3 /* Carnival.framework */; };
+		221C3AA61EB96A3E00DB116C /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221C3AA41EB9688400DB116C /* Carnival.framework */; };
+		221C3AA71EB96A3E00DB116C /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 221C3AA41EB9688400DB116C /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		753541C119C0462D00B7F2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C019C0462D00B7F2BD /* AppDelegate.swift */; };
 		753541C319C0462D00B7F2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C219C0462D00B7F2BD /* ViewController.swift */; };
 		753541C619C0462D00B7F2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753541C419C0462D00B7F2BD /* Main.storyboard */; };
@@ -19,8 +20,22 @@
 		75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC1FF19C0624F007F4332 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		221C3AA81EB96A3E00DB116C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				221C3AA71EB96A3E00DB116C /* Carnival.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		227BFB811E5B739200AD6CE3 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		221C3AA41EB9688400DB116C /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
 		22B325F11C61524C00A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		753541BB19C0462D00B7F2BD /* SwiftExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		753541BF19C0462D00B7F2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227BFB821E5B739200AD6CE3 /* Carnival.framework in Frameworks */,
+				221C3AA61EB96A3E00DB116C /* Carnival.framework in Frameworks */,
 				75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */,
 				75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */,
 				75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */,
@@ -135,7 +150,7 @@
 		7535426B19C05B4B00B7F2BD /* Carnival */ = {
 			isa = PBXGroup;
 			children = (
-				227BFB811E5B739200AD6CE3 /* Carnival.framework */,
+				221C3AA41EB9688400DB116C /* Carnival.framework */,
 				7535426C19C05B4B00B7F2BD /* Carnival-Bridging-Header.h */,
 			);
 			path = Carnival;
@@ -151,6 +166,7 @@
 				753541B719C0462D00B7F2BD /* Sources */,
 				753541B819C0462D00B7F2BD /* Frameworks */,
 				753541B919C0462D00B7F2BD /* Resources */,
+				221C3AA81EB96A3E00DB116C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,7 +338,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Carnival-bgxlyhbbxuufrgdvzvwjlanfapkg/Build/Products/Debug-iphoneos/Carnival.embeddedframework",
 				);
 				INFOPLIST_FILE = SwiftExampleProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,7 +362,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Carnival-bgxlyhbbxuufrgdvzvwjlanfapkg/Build/Products/Debug-iphoneos/Carnival.embeddedframework",
 				);
 				INFOPLIST_FILE = SwiftExampleProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

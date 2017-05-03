@@ -9,7 +9,7 @@
 //
 
 import UIKit
-
+import Carnival
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Register with Carnival using the startEngine method using the app key for your app which you can get from http://app.carnivalmobile.com
         // Could instead use the startEngine methods to customize start up.
-        Carnival.startEngine(<#app key#>)
+        Carnival.startEngine("1234")
         return true
     }
 }

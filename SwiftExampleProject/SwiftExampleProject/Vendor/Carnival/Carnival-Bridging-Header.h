@@ -8,5 +8,5 @@
 //  For documentation see http://docs.carnivalmobile.com
 //
 
-#import <Carnival/Carnival.h>
-#import <Carnival/CarnivalMessageStream.h>
+//#import <Carnival/Carnival.h>
+//#import <Carnival/CarnivalMessageStream.h>

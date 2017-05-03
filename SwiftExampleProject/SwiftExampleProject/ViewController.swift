@@ -10,6 +10,7 @@
 
 import UIKit
 import AdSupport
+import Carnival
 
 class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocationManagerDelegate {
     var locationManager: CLLocationManager? = nil
