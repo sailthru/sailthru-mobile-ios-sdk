@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		221C3AA31EB9687300DB116C /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221C3AA21EB9687300DB116C /* Carnival.framework */; };
+		22587F931ED3ABF200AA28D0 /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 221C3AA21EB9687300DB116C /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		22587F981ED3ACF800AA28D0 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22587F971ED3ACF800AA28D0 /* Carnival.framework */; };
 		228702781CAA2B120087E877 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228702751CAA2B120087E877 /* Carnival.framework */; };
 		22B325F41C6153A700A7056D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B325F31C6153A700A7056D /* Security.framework */; };
 		758D6AF419AE915600F09C8D /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -27,8 +29,23 @@
 		75D77B3119F077A500BD2319 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D77B3019F077A500BD2319 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		22587F941ED3ABF200AA28D0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				22587F931ED3ABF200AA28D0 /* Carnival.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		221C3AA21EB9687300DB116C /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		221C3AA21EB9687300DB116C /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carnival.framework; path = "/Users/sam/Code/carnival-ios-sdk-source/ExampleProject/ExampleProject/Carnival.framework"; sourceTree = "<absolute>"; };
+		22587F971ED3ACF800AA28D0 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
 		228702751CAA2B120087E877 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
 		22B325F31C6153A700A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7566D52919F9B984007D5D27 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -68,6 +85,7 @@
 				228702781CAA2B120087E877 /* Carnival.framework in Frameworks */,
 				758E8D8D186367C900A8AFA4 /* UIKit.framework in Frameworks */,
 				758E8D89186367C900A8AFA4 /* Foundation.framework in Frameworks */,
+				22587F981ED3ACF800AA28D0 /* Carnival.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +128,7 @@
 		758E8D8E186367C900A8AFA4 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				221C3AA21EB9687300DB116C /* Carnival.framework */,
+				22587F971ED3ACF800AA28D0 /* Carnival.framework */,
 				758E8D97186367C900A8AFA4 /* ExampleAppDelegate.h */,
 				758E8D98186367C900A8AFA4 /* ExampleAppDelegate.m */,
 				758E8DA0186367C900A8AFA4 /* ExampleViewController.h */,
@@ -144,6 +162,7 @@
 				758E8D81186367C900A8AFA4 /* Sources */,
 				758E8D82186367C900A8AFA4 /* Frameworks */,
 				758E8D83186367C900A8AFA4 /* Resources */,
+				22587F941ED3ABF200AA28D0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,7 +183,8 @@
 				ORGANIZATIONNAME = "Carnival Labs";
 				TargetAttributes = {
 					758E8D84186367C900A8AFA4 = {
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 9ZEH62KRVF;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -325,7 +345,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = NO;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9ZEH62KRVF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExampleProject/Carnival.embeddedframework",
@@ -337,6 +358,7 @@
 				GCC_PREFIX_HEADER = "ExampleProject/ExampleProject-Prefix.pch";
 				INFOPLIST_FILE = "ExampleProject/ExampleProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carnivalmobile.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -351,7 +373,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = NO;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9ZEH62KRVF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExampleProject/Carnival.embeddedframework",
@@ -363,6 +386,7 @@
 				GCC_PREFIX_HEADER = "ExampleProject/ExampleProject-Prefix.pch";
 				INFOPLIST_FILE = "ExampleProject/ExampleProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carnivalmobile.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

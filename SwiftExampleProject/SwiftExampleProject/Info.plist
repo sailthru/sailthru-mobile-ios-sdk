@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.carnivalmobile.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -22,6 +22,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Always usage description</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Location usage description</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>When-in-use usage description</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -36,11 +42,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Always usage description</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>When-in-use usage description</string>
-	<key>NSLocationUsageDescription</key>
-	<string>Location usage description</string>
 </dict>
 </plist>

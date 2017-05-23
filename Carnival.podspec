@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name 				= 'Carnival'
-	s.version 			= '6.1.1'
+	s.version 			= '6.1.2'
 	s.summary 			= 'Carnival iOS SDK for integrating with http://carnival.io messaging and analytics service.'
 	s.author			= {
 		'Carnival Mobile' => 'support@sailthru.com'
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 	s.public_header_files = 'Carnival.framework/Headers/*.h'
 	s.vendored_frameworks = 'Carnival.framework'
 	s.preserve_paths 	= 'Carnival.framework' 
-	s.frameworks 		= 'UIKit', 'Foundation', 'CoreLocation', 'CoreGraphics', 'QuartzCore', 'Security'
+	s.frameworks 		= 'UIKit', 'Foundation', 'CoreLocation', 'CoreGraphics', 'QuartzCore'
 	s.license = {:type => 'commercial', :text =>'Please refer to our privacy policy and terms of service at http://carnival.io'}
 	s.requires_arc = true
 end
