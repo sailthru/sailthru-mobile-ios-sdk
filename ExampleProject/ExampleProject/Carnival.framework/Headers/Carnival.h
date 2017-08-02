@@ -15,7 +15,7 @@
 #import "CarnivalAttributes.h"
 #import "CarnivalLogger.h"
 
-#define CARNIVAL_VERSION @"6.1.1"
+#define CARNIVAL_VERSION @"6.1.3"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 

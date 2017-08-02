@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22587F961ED3ACF200AA28D0 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22587F951ED3ACF200AA28D0 /* Carnival.framework */; };
+		2255F68D1F31804A0005577A /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2255F68C1F317FD00005577A /* Carnival.framework */; };
+		2255F68E1F31804A0005577A /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2255F68C1F317FD00005577A /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		753541C119C0462D00B7F2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C019C0462D00B7F2BD /* AppDelegate.swift */; };
 		753541C319C0462D00B7F2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C219C0462D00B7F2BD /* ViewController.swift */; };
 		753541C619C0462D00B7F2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753541C419C0462D00B7F2BD /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2255F68E1F31804A0005577A /* Carnival.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		22587F951ED3ACF200AA28D0 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		2255F68C1F317FD00005577A /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carnival.framework; path = SwiftExampleProject/Carnival.framework; sourceTree = SOURCE_ROOT; };
 		22B325F11C61524C00A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		753541BB19C0462D00B7F2BD /* SwiftExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		753541BF19C0462D00B7F2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,8 +43,6 @@
 		753541C219C0462D00B7F2BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		753541C519C0462D00B7F2BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		753541C719C0462D00B7F2BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		753541D519C0462D00B7F2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		753541D619C0462D00B7F2BD /* SwiftExampleProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExampleProjectTests.swift; sourceTree = "<group>"; };
 		7535425719C04B9C00B7F2BD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7535425919C04BA300B7F2BD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		75DAC1FD19C061C6007F4332 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22587F961ED3ACF200AA28D0 /* Carnival.framework in Frameworks */,
+				2255F68D1F31804A0005577A /* Carnival.framework in Frameworks */,
 				75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */,
 				75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */,
 				75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */,
@@ -71,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				753541BD19C0462D00B7F2BD /* SwiftExampleProject */,
-				753541D319C0462D00B7F2BD /* SwiftExampleProjectTests */,
 				753541BC19C0462D00B7F2BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,23 +105,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		753541D319C0462D00B7F2BD /* SwiftExampleProjectTests */ = {
-			isa = PBXGroup;
-			children = (
-				753541D619C0462D00B7F2BD /* SwiftExampleProjectTests.swift */,
-				753541D419C0462D00B7F2BD /* Supporting Files */,
-			);
-			path = SwiftExampleProjectTests;
-			sourceTree = "<group>";
-		};
-		753541D419C0462D00B7F2BD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				753541D519C0462D00B7F2BD /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		7535425D19C04BC000B7F2BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +129,7 @@
 		7535426B19C05B4B00B7F2BD /* Carnival */ = {
 			isa = PBXGroup;
 			children = (
-				22587F951ED3ACF200AA28D0 /* Carnival.framework */,
+				2255F68C1F317FD00005577A /* Carnival.framework */,
 			);
 			path = Carnival;
 			sourceTree = "<group>";
@@ -180,7 +162,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Carnival Labs";
 				TargetAttributes = {
 					753541BA19C0462D00B7F2BD = {
@@ -252,14 +234,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -298,14 +286,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -340,6 +334,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftExampleProject/Vendor/Carnival",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Carnival-bgxlyhbbxuufrgdvzvwjlanfapkg/Build/Products/Debug-iphoneos/Carnival.embeddedframework",
+					"$(PROJECT_DIR)/SwiftExampleProject",
 				);
 				INFOPLIST_FILE = SwiftExampleProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -365,6 +360,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftExampleProject/Vendor/Carnival",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Carnival-bgxlyhbbxuufrgdvzvwjlanfapkg/Build/Products/Debug-iphoneos/Carnival.embeddedframework",
+					"$(PROJECT_DIR)/SwiftExampleProject",
 				);
 				INFOPLIST_FILE = SwiftExampleProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
