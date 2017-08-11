@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2255F6901F3180930005577A /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2255F68F1F31808C0005577A /* Carnival.framework */; };
-		2255F6911F3180930005577A /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2255F68F1F31808C0005577A /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2251B1171F3D2631004CEE85 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2251B1161F3D2630004CEE85 /* Carnival.framework */; };
+		2251B1181F3D2631004CEE85 /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2251B1161F3D2630004CEE85 /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22B325F41C6153A700A7056D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B325F31C6153A700A7056D /* Security.framework */; };
 		758D6AF419AE915600F09C8D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758D6AF519AE91E000F09C8D /* AVFoundation.framework */; };
@@ -28,13 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		22587F941ED3ABF200AA28D0 /* Embed Frameworks */ = {
+		2251B1191F3D2631004CEE85 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2255F6911F3180930005577A /* Carnival.framework in Embed Frameworks */,
+				2251B1181F3D2631004CEE85 /* Carnival.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2255F68F1F31808C0005577A /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		2251B1161F3D2630004CEE85 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
 		22B325F31C6153A700A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7566D52919F9B984007D5D27 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		758D6AF519AE91E000F09C8D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -77,7 +77,7 @@
 				75D77B2D19F0778300BD2319 /* CoreGraphics.framework in Frameworks */,
 				758D6AF819AE91E800F09C8D /* MediaPlayer.framework in Frameworks */,
 				758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */,
-				2255F6901F3180930005577A /* Carnival.framework in Frameworks */,
+				2251B1171F3D2631004CEE85 /* Carnival.framework in Frameworks */,
 				758E8D8D186367C900A8AFA4 /* UIKit.framework in Frameworks */,
 				758E8D89186367C900A8AFA4 /* Foundation.framework in Frameworks */,
 			);
@@ -122,7 +122,7 @@
 		758E8D8E186367C900A8AFA4 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				2255F68F1F31808C0005577A /* Carnival.framework */,
+				2251B1161F3D2630004CEE85 /* Carnival.framework */,
 				758E8D97186367C900A8AFA4 /* ExampleAppDelegate.h */,
 				758E8D98186367C900A8AFA4 /* ExampleAppDelegate.m */,
 				758E8DA0186367C900A8AFA4 /* ExampleViewController.h */,
@@ -156,7 +156,7 @@
 				758E8D81186367C900A8AFA4 /* Sources */,
 				758E8D82186367C900A8AFA4 /* Frameworks */,
 				758E8D83186367C900A8AFA4 /* Resources */,
-				22587F941ED3ABF200AA28D0 /* Embed Frameworks */,
+				2251B1191F3D2631004CEE85 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
