@@ -15,7 +15,7 @@
 #import "CarnivalAttributes.h"
 #import "CarnivalLogger.h"
 
-#define CARNIVAL_VERSION @"6.1.4"
+#define CARNIVAL_VERSION @"7.0.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -51,20 +51,6 @@ NS_ASSUME_NONNULL_END
  *  calling it later in the app lifecycle can have unintended consequences. No startEngine: calls (overrides included) must not be called more than once.
  */
 + (void)startEngine:(nonnull NSString *)appKey;
-
-/**
- *  Sets the Carnival appKey credentials for this app, and the UIUserNotificationType at the same time.
- *
- *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com .
- *  @param types The UIUserNotificationType attributes you wish to register this app for as defined in UIApplication.h
- *  see appledocs for more information. If targeting, iOS 7 users, please use UIUserNotificationType anyway.
- *  @discussion An exception will be raised if you do not set your appKey before you call any other methods.
- *  Make sure your app bundle identifier is the same as whatever it is on http://app.carnivalmobile.com .
- *
- *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
- *  calling it later in the app lifecycle can have unintended consequences. No startEngine: calls (overrides included) must not be called more than once.
- */
-+ (void)startEngine:(nonnull NSString *)appKey andNotificationTypes:(UIUserNotificationType)types;
 
 /**
  *  Sets the Carnival appKey credentials for this app and optionally registers for push notifications with the badge, alert and sound UIUserNotificationType's
