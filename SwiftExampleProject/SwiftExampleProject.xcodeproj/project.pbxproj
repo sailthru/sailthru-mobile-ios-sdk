@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22BF4BC11F94353000B861FC /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BF4BC01F94353000B861FC /* Carnival.framework */; };
-		22BF4BC31F94353400B861FC /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22BF4BC01F94353000B861FC /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		220763FA1FB13FD100B161C8 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220763F41FB13DC200B161C8 /* Carnival.framework */; };
+		220763FB1FB13FD100B161C8 /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 220763F41FB13DC200B161C8 /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		753541C119C0462D00B7F2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C019C0462D00B7F2BD /* AppDelegate.swift */; };
 		753541C319C0462D00B7F2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C219C0462D00B7F2BD /* ViewController.swift */; };
 		753541C619C0462D00B7F2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753541C419C0462D00B7F2BD /* Main.storyboard */; };
@@ -27,7 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				22BF4BC31F94353400B861FC /* Carnival.framework in Embed Frameworks */,
+				220763FB1FB13FD100B161C8 /* Carnival.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,9 +35,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		220763F41FB13DC200B161C8 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
 		2251B10D1F3D2491004CEE85 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
 		22B325F11C61524C00A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		22BF4BC01F94353000B861FC /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		22F7B8CB1FB13C1500C558C1 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		753541BB19C0462D00B7F2BD /* SwiftExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		753541BF19C0462D00B7F2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		753541C019C0462D00B7F2BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22BF4BC11F94353000B861FC /* Carnival.framework in Frameworks */,
+				220763FA1FB13FD100B161C8 /* Carnival.framework in Frameworks */,
 				75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */,
 				75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */,
 				75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */,
@@ -76,12 +77,21 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		22F7B8CA1FB13C1500C558C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22F7B8CB1FB13C1500C558C1 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		753541B219C0462D00B7F2BD = {
 			isa = PBXGroup;
 			children = (
 				753541BD19C0462D00B7F2BD /* SwiftExampleProject */,
 				753541BC19C0462D00B7F2BD /* Products */,
 				228F2AC01F3D263D00DD4F43 /* Recovered References */,
+				22F7B8CA1FB13C1500C558C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +106,7 @@
 		753541BD19C0462D00B7F2BD /* SwiftExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				22BF4BC01F94353000B861FC /* Carnival.framework */,
+				220763F41FB13DC200B161C8 /* Carnival.framework */,
 				753541C019C0462D00B7F2BD /* AppDelegate.swift */,
 				753541C219C0462D00B7F2BD /* ViewController.swift */,
 				753541C419C0462D00B7F2BD /* Main.storyboard */,

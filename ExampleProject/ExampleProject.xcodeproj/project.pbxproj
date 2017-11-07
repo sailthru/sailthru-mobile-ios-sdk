@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220763F81FB13E8400B161C8 /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220763F61FB13DC700B161C8 /* Carnival.framework */; };
+		220763F91FB13E8400B161C8 /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 220763F61FB13DC700B161C8 /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22B325F41C6153A700A7056D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B325F31C6153A700A7056D /* Security.framework */; };
-		22BF4BC61F94370A00B861FC /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BF4BC41F94370200B861FC /* Carnival.framework */; };
-		22BF4BC71F94370A00B861FC /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22BF4BC41F94370200B861FC /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		22F7B8CC1FB13C1C00C558C1 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F7B8C91FB13BF300C558C1 /* UserNotifications.framework */; };
 		758D6AF419AE915600F09C8D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758D6AF519AE91E000F09C8D /* AVFoundation.framework */; };
 		758D6AF819AE91E800F09C8D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 758D6AF719AE91E800F09C8D /* MediaPlayer.framework */; };
@@ -34,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				22BF4BC71F94370A00B861FC /* Carnival.framework in Embed Frameworks */,
+				220763F91FB13E8400B161C8 /* Carnival.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,8 +43,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		220763F61FB13DC700B161C8 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
 		22B325F31C6153A700A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		22BF4BC41F94370200B861FC /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
+		22F7B8C91FB13BF300C558C1 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		7566D52919F9B984007D5D27 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		758D6AF519AE91E000F09C8D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		758D6AF719AE91E800F09C8D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -71,15 +73,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F7B8CC1FB13C1C00C558C1 /* UserNotifications.framework in Frameworks */,
 				22B325F41C6153A700A7056D /* Security.framework in Frameworks */,
 				75D77B3119F077A500BD2319 /* QuartzCore.framework in Frameworks */,
 				75D77B2F19F0779600BD2319 /* CoreLocation.framework in Frameworks */,
 				75D77B2D19F0778300BD2319 /* CoreGraphics.framework in Frameworks */,
 				758D6AF819AE91E800F09C8D /* MediaPlayer.framework in Frameworks */,
 				758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */,
-				22BF4BC61F94370A00B861FC /* Carnival.framework in Frameworks */,
 				758E8D8D186367C900A8AFA4 /* UIKit.framework in Frameworks */,
 				758E8D89186367C900A8AFA4 /* Foundation.framework in Frameworks */,
+				220763F81FB13E8400B161C8 /* Carnival.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +109,7 @@
 		758E8D87186367C900A8AFA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22F7B8C91FB13BF300C558C1 /* UserNotifications.framework */,
 				22B325F31C6153A700A7056D /* Security.framework */,
 				7566D52919F9B984007D5D27 /* AdSupport.framework */,
 				75D77B3019F077A500BD2319 /* QuartzCore.framework */,
@@ -122,7 +126,7 @@
 		758E8D8E186367C900A8AFA4 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				22BF4BC41F94370200B861FC /* Carnival.framework */,
+				220763F61FB13DC700B161C8 /* Carnival.framework */,
 				758E8D97186367C900A8AFA4 /* ExampleAppDelegate.h */,
 				758E8D98186367C900A8AFA4 /* ExampleAppDelegate.m */,
 				758E8DA0186367C900A8AFA4 /* ExampleViewController.h */,
@@ -363,10 +367,8 @@
 				DEVELOPMENT_TEAM = 9ZEH62KRVF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ExampleProject/Carnival.embeddedframework",
 					"$(PROJECT_DIR)/ExampleProject",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Carnival-bgxlyhbbxuufrgdvzvwjlanfapkg/Build/Products/Debug-iphoneos/Carnival.embeddedframework",
-					"$(PROJECT_DIR)/Carnival.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleProject/ExampleProject-Prefix.pch";
@@ -390,10 +392,8 @@
 				DEVELOPMENT_TEAM = 9ZEH62KRVF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ExampleProject/Carnival.embeddedframework",
 					"$(PROJECT_DIR)/ExampleProject",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Carnival-bgxlyhbbxuufrgdvzvwjlanfapkg/Build/Products/Debug-iphoneos/Carnival.embeddedframework",
-					"$(PROJECT_DIR)/Carnival.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleProject/ExampleProject-Prefix.pch";

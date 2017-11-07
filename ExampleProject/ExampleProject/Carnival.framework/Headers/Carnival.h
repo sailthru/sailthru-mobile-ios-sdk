@@ -15,7 +15,7 @@
 #import "CarnivalAttributes.h"
 #import "CarnivalLogger.h"
 
-#define CARNIVAL_VERSION @"7.0.0"
+#define CARNIVAL_VERSION @"7.1.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_END
  
  *  @param logger An object implementing the CarnivalLogger protocol.
  */
-+ (void)setLogger:(nonnull id<CarnivalLogger>) logger;
++ (void)setLogger:(nonnull id<CarnivalLogger>)logger;
 
 /**
  * Enables AutoAnalytics tracking for a given array of event sources. This is opt-in as of Carnival 5.0.0.
