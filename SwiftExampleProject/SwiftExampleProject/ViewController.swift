@@ -36,7 +36,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         self.startLocationTrackingInBackground()
         
         Carnival.deviceID { deviceID, error in
-            print("deviceID for current device: \(deviceID), with possible error: \(error)")
+            print("deviceID for current device: \(deviceID ?? "(No ID)")), with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
@@ -159,8 +159,8 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         
         attributes.setString("example_string", forKey: "example_string_key")
         
-        Carnival.setAttributes(attributes) { error in
-            print("setAttributes returned with possible error: \(error)")
+        Carnival.setAttributes(attributes) { (error) in
+            print("setAttributes returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
@@ -170,7 +170,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         attributes.setFloat(1.1, forKey: "example_float_key")
         
         Carnival.setAttributes(attributes) { error in
-            print("setAttributes returned with possible error: \(error)")
+            print("setAttributes returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
@@ -180,7 +180,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         attributes.setBool(true, forKey: "example_bool_key")
         
         Carnival.setAttributes(attributes) { error in
-            print("setAttributes returned with possible error: \(error)")
+            print("setAttributes returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
@@ -190,7 +190,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         attributes.setDate(Date(), forKey: "example_date_key")
         
         Carnival.setAttributes(attributes) { error in
-            print("setAttributes returned with possible error: \(error)")
+            print("setAttributes returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
@@ -200,19 +200,20 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         attributes.setInteger(123, forKey: "example_integer_key")
         
         Carnival.setAttributes(attributes) { error in
-            print("setAttributes returned with possible error: \(error)")
+            print("setAttributes returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
     @IBAction func removeStringButtonPressed(_ sender: UIButton) {
         Carnival.removeAttribute(withKey: "example_string_key") { error in
-            print("removeAttribute returned with possible error: \(error)")
+            print("removeAttribute returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
+
         }
     }
     
     @IBAction func setUserIDButtonPressed(_ sender: UIButton) {
         Carnival.setUserId("example_user_id") { error in
-            print("setUserID returned with possible error: \(error)")
+            print("setUserID returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
 }
