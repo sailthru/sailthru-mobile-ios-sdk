@@ -2,8 +2,8 @@
 //  CarnivalLogger.h
 //  Carnival
 //
-//  Created by Carnival Mobile on 28/11/16.
-//  Copyright © 2016 Carnival Mobile . All rights reserved.
+//  Created by Carnival Mobile
+//  Copyright (c) 2017 Carnival.io. All rights reserved.
 //
 
 typedef NS_ENUM(NSInteger, CarnivalLogLevel) {
