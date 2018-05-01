@@ -16,7 +16,7 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"7.3.0-beta"
+#define CARNIVAL_VERSION @"7.3.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -176,8 +176,6 @@ NS_ASSUME_NONNULL_END
  *
  * @param url the Sailthru Link to be unrolled
  * @return the destination that the Sailthru link points to, or nil if the link isn't a valid Sailthru Link.
- 
- 
  */
 + (NSURL * _Nullable)handleSailthruLink:(NSURL * _Nonnull)url;
 
