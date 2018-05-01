@@ -16,7 +16,7 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"7.2.0-beta"
+#define CARNIVAL_VERSION @"7.3.0-beta"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -166,6 +166,20 @@ NS_ASSUME_NONNULL_END
  *  @param completion A block which gets called after the current device is fetched containing the current device's ID
  */
 + (void)deviceID:(nonnull void (^)(NSString *__nullable deviceID, NSError *__nullable error))completion;
+
+/** @name Sailthru Link Handling */
+
+/**
+ * If you're using Sailthru email combined with universal links, your application will open with an encoded Sailthru 'link' url.
+ * This method will decode the link URL and return its destination URL, as well as making sure that the clickthrough metrics for this link are correctly attributed in Sailthru.
+ * This method should be called from your AppDelegate's `application:continueUserActivity:restorationHandler:` method.
+ *
+ * @param url the Sailthru Link to be unrolled
+ * @return the destination that the Sailthru link points to, or nil if the link isn't a valid Sailthru Link.
+ 
+ 
+ */
++ (NSURL * _Nullable)handleSailthruLink:(NSURL * _Nonnull)url;
 
 /** @name Enabling/Disabling in-app notifications */
 
