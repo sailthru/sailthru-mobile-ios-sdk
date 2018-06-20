@@ -3,7 +3,7 @@
 //  Carnival
 //
 //  Created by Carnival Mobile
-//  Copyright (c) 2015 Carnival Mobile. All rights reserved.
+//  Copyright (c) 2017 Carnival.io. All rights reserved.
 //
 //  For documentation see http://docs.carnival.io
 //
@@ -14,8 +14,9 @@
 #import "CarnivalMessageStream.h"
 #import "CarnivalAttributes.h"
 #import "CarnivalLogger.h"
+#import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"7.1.1"
+#define CARNIVAL_VERSION @"7.3.1-beta"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -83,7 +84,7 @@ NS_ASSUME_NONNULL_END
  *  Asyncronously sets a CarnivalAttributes object with Carnival.
  *
  *  @param attributes A nonnull CarnivalAttributes object with the desired attributes set.
- *  @param block The block returned from the asyncronous call possibly containing an error.
+ *  @param block The block returned from the asynchronous call. May contain an error.
  */
 + (void)setAttributes:(nonnull CarnivalAttributes *)attributes withResponse:(nullable void(^)(NSError *__nullable error))block;
 
@@ -100,7 +101,7 @@ NS_ASSUME_NONNULL_END
  *  Asyncronously removes a value for a given key.
  *
  *  @param key The string value of the key.
- *  @param block The block returned from the asyncronous call possibly containing an error.
+ *  @param block The block returned from the asynchronous call. May contain an error.
  **/
 + (void)removeAttributeWithKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
 
@@ -119,7 +120,7 @@ NS_ASSUME_NONNULL_END
  *  Use this method to clear the device attributes after user logout.
  *
  *  @param types A bitwise OR collection of CarnivalDeviceDataType dictating which sets of data to clear.
- *  @param block The block returned from the asyncronous call possibly containing an error.
+ *  @param block The block returned from the asynchronous call. May contain an error.
  **/
 + (void)clearDeviceData:(CarnivalDeviceDataType)types withResponse:(nullable void(^)(NSError *__nullable error))block;
 
@@ -166,6 +167,18 @@ NS_ASSUME_NONNULL_END
  */
 + (void)deviceID:(nonnull void (^)(NSString *__nullable deviceID, NSError *__nullable error))completion;
 
+/** @name Sailthru Link Handling */
+
+/**
+ * If you're using Sailthru email combined with universal links, your application will open with an encoded Sailthru 'link' url.
+ * This method will decode the link URL and return its destination URL, as well as making sure that the clickthrough metrics for this link are correctly attributed in Sailthru.
+ * This method should be called from your AppDelegate's `application:continueUserActivity:restorationHandler:` method.
+ *
+ * @param url the Sailthru Link to be unrolled
+ * @return the destination that the Sailthru link points to, or nil if the link isn't a valid Sailthru Link.
+ */
++ (NSURL * _Nullable)handleSailthruLink:(NSURL * _Nonnull)url;
+
 /** @name Enabling/Disabling in-app notifications */
 
 /**
@@ -191,7 +204,7 @@ NS_ASSUME_NONNULL_END
  *
  *  @param userId The ID of the user to be set.
  *
- *  @param block The block returned from the asyncronous call possibly containing an error.
+ *  @param block The block returned from the asynchronous call. May contain an error.
  */
 + (void)setUserId:(nullable NSString *)userId withResponse:(nullable void(^)(NSError *__nullable error))block;
 
@@ -200,10 +213,64 @@ NS_ASSUME_NONNULL_END
  *
  *  @param userEmail The email of the user to be set.
  *
- *  @param block The block returned from the asyncronous call possibly containing an error.
+ *  @param block The block returned from the asynchronous call. May contain an error.
  */
 + (void)setUserEmail:(nullable NSString *)userEmail withResponse:(nullable void(^)(NSError *__nullable error))block;
 
+/**
+ *  Returns the output from a Site Personalisation Manager section, an array of recommendations for the given user.
+ *  It is suggested you use this in conjunction with setEmail: to identify the user to Sailthru.
+ *
+ *  @param sectionID An SPM section ID. The section must be set up to use JSON as the output format.
+ *  @param block A block which gets called with an array of CarnivalContentItem objects and a possible error. Cannot be NULL.
+ */
++ (void)recommendationsWithSection:(NSString *_Nonnull)sectionID withResponse:(nullable void(^)(NSArray * _Nullable contentItems, NSError *__nullable error))block;
+
+/**
+ *  Registers that the given pageview with Sailthru SPM.
+ *
+ *  @param url The URL of the content we're tracking a view of. Must be a valid URL with protocol http:// or https:// -
+ *          this generally should correspond to the web link of the content being tracked, and the stored URL in the Sailthru content collection
+ *  @param tags Tags for this content
+ *  @param block The block returned from the asynchronous call. May contain an error.
+ */
++ (void)trackPageviewWithUrl:(NSURL *_Nonnull)url andTags:(NSArray *_Nonnull)tags andResponse:(nullable void(^)(NSError *__nullable error))block;
+
+/**
+ *  Registers that the given pageview with Sailthru SPM.
+ *
+ *  @param url The URL of the content we're tracking a view of. Must be a valid URL with protocol http:// or https:// -
+ *              this generally should correspond to the web link of the content being tracked, and the stored URL in the Sailthru content collection
+ *  @param block The block returned from the asynchronous call. May contain an error.
+ */
++ (void)trackPageviewWithUrl:(NSURL *_Nonnull)url andResponse:(nullable void(^)(NSError *__nullable error))block;
+
+/**
+ *  Registers an impression - a reasonable expectation that a user has seen a piece of content - with Sailthru SPM.
+ *
+ *  @param sectionID the Section ID on Sailthru SPM corresponding to the section being viewed
+ *  @param urls a List of the URLs of the items contained within this section. Useful if multiple items
+ *             of content are contained within a section, otherwise just pass a single-item array.
+ *  @param block The block returned from the asynchronous call. May contain an error.
+ */
++ (void)trackImpressionWithSection:(NSString *_Nonnull)sectionID andUrls:(NSArray *_Nonnull)urls andResponse:(nullable void(^)(NSError *__nullable error))block;
+
+/**
+ *  Registers an impression - a reasonable expectation that a user has seen a piece of content - with Sailthru SPM.
+ *
+ *  @param sectionID the Section ID on Sailthru SPM corresponding to the section being viewed
+ *  @param block The block returned from the asynchronous call. May contain an error.
+ */
++ (void)trackImpressionWithSection:(NSString *_Nonnull)sectionID andResponse:(nullable void(^)(NSError *__nullable error))block;
+
+/**
+ *  Tracks with Sailthru SPM that a section has been tapped on, transitioning the user to a detail view
+ *
+ *  @param sectionID the Section ID on Sailthru SPM corresponding to the section being tapped
+ *  @param url the URL of the detail being transitioned to
+ *  @param block The block returned from the asynchronous call. May contain an error.
+ */
++ (void)trackClickWithSection:(NSString *_Nonnull)sectionID andUrl:(NSURL *_Nonnull)url andResponse:(nullable void(^)(NSError *__nullable error))block;
 
 /**
  *  Enabled location tracking based on IP Address. Tracking location tracking is enabled by default.

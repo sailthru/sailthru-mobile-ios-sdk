@@ -2,8 +2,8 @@
 //  CarnivalAttributes.h
 //  Carnival
 //
-//  Created by Sam Jarman on 4/21/16.
-//  Copyright © 2016 Carnival Labs . All rights reserved.
+//  Created by Carnival Mobile
+//  Copyright (c) 2017 Carnival.io. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

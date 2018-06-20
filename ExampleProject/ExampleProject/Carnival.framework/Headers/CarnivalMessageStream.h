@@ -3,7 +3,7 @@
 //  Carnival
 //
 //  Created by Carnival Mobile
-//  Copyright (c) 2015 Carnival Mobile. All rights reserved.
+//  Copyright (c) 2017 Carnival.io. All rights reserved.
 //
 //  For documentation see http://docs.carnival.io
 //
