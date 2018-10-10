@@ -16,7 +16,7 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"7.3.2"
+#define CARNIVAL_VERSION @"7.4.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_END
  * 
  * @param enableArray - An array of const strings beginning with CarnivalAutoAnalyticsSource.
  */
-+ (void)enableAutoAnalytics:(nonnull NSArray *)enableArray;
++ (void)enableAutoAnalytics:(nonnull NSArray<NSString *> *)enableArray;
 
 /** @name Custom Attributes */
 
@@ -224,7 +224,7 @@ NS_ASSUME_NONNULL_END
  *  @param sectionID An SPM section ID. The section must be set up to use JSON as the output format.
  *  @param block A block which gets called with an array of CarnivalContentItem objects and a possible error. Cannot be NULL.
  */
-+ (void)recommendationsWithSection:(NSString *_Nonnull)sectionID withResponse:(nullable void(^)(NSArray * _Nullable contentItems, NSError *__nullable error))block;
++ (void)recommendationsWithSection:(NSString *_Nonnull)sectionID withResponse:(nullable void(^)(NSArray<CarnivalContentItem *> * _Nullable contentItems, NSError *__nullable error))block;
 
 /**
  *  Registers that the given pageview with Sailthru SPM.
@@ -234,7 +234,7 @@ NS_ASSUME_NONNULL_END
  *  @param tags Tags for this content
  *  @param block The block returned from the asynchronous call. May contain an error.
  */
-+ (void)trackPageviewWithUrl:(NSURL *_Nonnull)url andTags:(NSArray *_Nonnull)tags andResponse:(nullable void(^)(NSError *__nullable error))block;
++ (void)trackPageviewWithUrl:(NSURL *_Nonnull)url andTags:(NSArray<NSString *> *_Nonnull)tags andResponse:(nullable void(^)(NSError *__nullable error))block;
 
 /**
  *  Registers that the given pageview with Sailthru SPM.
@@ -253,7 +253,7 @@ NS_ASSUME_NONNULL_END
  *             of content are contained within a section, otherwise just pass a single-item array.
  *  @param block The block returned from the asynchronous call. May contain an error.
  */
-+ (void)trackImpressionWithSection:(NSString *_Nonnull)sectionID andUrls:(NSArray *_Nonnull)urls andResponse:(nullable void(^)(NSError *__nullable error))block;
++ (void)trackImpressionWithSection:(NSString *_Nonnull)sectionID andUrls:(NSArray<NSURL *> *_Nonnull)urls andResponse:(nullable void(^)(NSError *__nullable error))block;
 
 /**
  *  Registers an impression - a reasonable expectation that a user has seen a piece of content - with Sailthru SPM.
@@ -271,6 +271,21 @@ NS_ASSUME_NONNULL_END
  *  @param block The block returned from the asynchronous call. May contain an error.
  */
 + (void)trackClickWithSection:(NSString *_Nonnull)sectionID andUrl:(NSURL *_Nonnull)url andResponse:(nullable void(^)(NSError *__nullable error))block;
+
+/**
+ *  Sets the profile vars on the server.
+ *
+ *  @param vars the vars to set on the server.
+ *  @param block the block returned from the asynchronous call. May contain an error.
+ */
++ (void)setProfileVars:(NSDictionary<NSString *, id> * _Nonnull)vars withResponse:(nullable void(^)(NSError * _Nullable))block;
+
+/**
+ *  Retrieves the profile vars from the server.
+ *
+ *  @param block the block returned from the asynchronous call. May contain an error.
+ */
++ (void)getProfileVarsWithResponse:(nullable void(^)(NSDictionary<NSString *, id> * _Nullable, NSError * _Nullable))block;
 
 /**
  *  Enabled location tracking based on IP Address. Tracking location tracking is enabled by default.

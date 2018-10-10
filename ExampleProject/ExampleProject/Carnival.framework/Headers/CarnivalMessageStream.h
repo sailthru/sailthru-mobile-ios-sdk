@@ -144,14 +144,14 @@ typedef NS_ENUM(NSInteger, CarnivalImpressionType) {
  *
  *  @param handler A block object which returns an error which will be non-nil if there was a problem marking the messages as read.
  */
-+ (void)markMessagesAsRead:(nonnull NSArray *)messages withResponse:(nullable void(^)(NSError *__nullable error))handler;
++ (void)markMessagesAsRead:(nonnull NSArray<CarnivalMessage *> *)messages withResponse:(nullable void(^)(NSError *__nullable error))handler;
 
 /**
  *  Returns an array of Carnival Messages for the device.
  *
  *  @param block A block which gets called with an array of CarnivalMessage objects and a possbile error. Cannot be NULL.
  */
-+ (void)messages:(nonnull void (^)(NSArray *__nullable messages, NSError *__nullable error))block;
++ (void)messages:(nonnull void (^)(NSArray<CarnivalMessage *> *__nullable messages, NSError *__nullable error))block;
 
 /**
  *  Removes the message with the given messageID from the Carnival Message Stream
