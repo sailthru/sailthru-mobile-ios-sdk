@@ -16,7 +16,7 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"7.4.0"
+#define CARNIVAL_VERSION @"7.5.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -89,12 +89,13 @@ NS_ASSUME_NONNULL_END
 + (void)setAttributes:(nonnull CarnivalAttributes *)attributes withResponse:(nullable void(^)(NSError *__nullable error))block;
 
 /**
+ *  @deprecated This method has been deprecated. Use `[Carnival setAttributes:withResponse:]`
  *  Syncronously sets a CarnivalAttributes object with Carnival.
  *
  *  @param attributes A nonnull CarnivalAttributes object with the desired attributes set.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  */
-+ (void)setAttributes:(nonnull CarnivalAttributes *)attributes error:(NSError  *__nullable *__nullable)error;
++ (void)setAttributes:(nonnull CarnivalAttributes *)attributes error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("Use - [Carnival setAttributes:withResponse:]")));
 
 
 /**
@@ -106,12 +107,13 @@ NS_ASSUME_NONNULL_END
 + (void)removeAttributeWithKey:(nonnull NSString *)key withResponse:(nullable void(^)(NSError *__nullable error))block;
 
 /**
+ *  @deprecated This method has been deprecated. Use `[Carnival removeAttributeWithKey:withResponse:]`
  *  Syncronously removes a value for a given key.
  *
  *  @param key The string value of the key.
  *  @param error A pointer to an error which will be non-nil if there is an error.
  **/
-+ (void)removeAttributeWithKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error;
++ (void)removeAttributeWithKey:(nonnull NSString *)key error:(NSError  *__nullable *__nullable)error __attribute__((deprecated("Use - [Carnival removeAttributeWithKey:withResponse:]")));
 
 
 
