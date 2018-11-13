@@ -16,7 +16,7 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"7.5.0"
+#define CARNIVAL_VERSION @"7.6.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -159,6 +159,11 @@ NS_ASSUME_NONNULL_END
  *  @param notificationDict The userInfo dictionary from the remote notification you want the Carnival SDK to handle. This dictionary is normally passed back to you from the application:didReceiveRemoteNotification: method.
  */
 + (void)handleNotification:(nonnull NSDictionary *)notificationDict;
+
+/**
+ * Tells the Carnival SDK that the notification settings have been updated and that it should synchronize the new settings with the Carnival platform. This method is only required if auto integration has been disabled. It should be called after either the requestAuthorizationWithOptions:completionHandler: or registerUserNotificationSettings: methods have been used to request push notifications authorization.
+ */
++ (void)syncNotificationSettings;
 
 /** @name Device details */
 
