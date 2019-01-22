@@ -14,7 +14,7 @@ import Carnival
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Register with Carnival using the startEngine method using the app key for your app which you can get from http://app.carnivalmobile.com
         // Could instead use the startEngine methods to customize start up.
         Carnival.startEngine("1234")
