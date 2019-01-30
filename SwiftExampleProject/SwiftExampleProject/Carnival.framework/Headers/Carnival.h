@@ -16,7 +16,7 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"8.0.0"
+#define CARNIVAL_VERSION @"8.1.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -182,6 +182,14 @@ NS_ASSUME_NONNULL_END
  *  @param name The name of the custom event to be logged.
  */
 + (void)logEvent:(nonnull NSString *)name;
+
+/**
+ *  Logs a custom event with the given name and associated vars.
+ *
+ *  @param name The name of the custom event to be logged.
+ *  @param vars The associated variables for the event.
+ */
++ (void)logEvent:(nonnull NSString *)name withVars:(NSDictionary<NSString *, id> *__nullable)vars;
 
 /** @name Users */
 
