@@ -16,7 +16,7 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"8.1.0"
+#define CARNIVAL_VERSION @"8.2.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -54,7 +54,11 @@ NS_ASSUME_NONNULL_END
 + (void)startEngine:(nonnull NSString *)appKey;
 
 /**
- *  Sets the Carnival appKey credentials for this app and optionally registers for push notifications with the badge, alert and sound UIUserNotificationType's
+ *  Sets the Carnival appKey credentials for this app and optionally registers for push notifications authorization with the badge, alert and sound UIUserNotificationTypes.
+ *  @note The device will be registered with the Apple Push Notification service and provided with a push notification token regardless of whether registerForPushNotifications is set to YES or NO. This step does not require a user prompt.
+ *
+ *  On devices running iOS 12+ provisional authorization will be requested if registerForPushNotifications is set to NO, allowing Quiet push notifications to
+ *  be sent to the device.
  *
  *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com .
  *  @param registerForPushNotifications when this parameter is YES the Carnival iOS SDK will automatically register for push notifications
