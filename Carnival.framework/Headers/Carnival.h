@@ -16,7 +16,7 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"8.2.0"
+#define CARNIVAL_VERSION @"8.2.1"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -70,14 +70,14 @@ NS_ASSUME_NONNULL_END
 
 /**
  *  Sets the logger used by Carnival for any internal informational or debugging logging.
- 
+
  *  @param logger An object implementing the CarnivalLogger protocol.
  */
 + (void)setLogger:(nonnull id<CarnivalLogger>)logger;
 
 /**
  * Enables AutoAnalytics tracking for a given array of event sources. This is opt-in as of Carnival 5.0.0.
- * 
+ *
  * @param enableArray - An array of const strings beginning with CarnivalAutoAnalyticsSource.
  */
 + (void)enableAutoAnalytics:(nonnull NSArray<NSString *> *)enableArray;
@@ -296,7 +296,7 @@ NS_ASSUME_NONNULL_END
 /**
  *  Enable crash tracking for recording sessions which end in a crash.
  *  Warning: This is for advanced uses where in some cases, crash handlers from Test Flight or Fabric (Crashlytics) interrupt Carnival crash detection.
- *  If you are not experiencing these issues, do not use this method. 
+ *  If you are not experiencing these issues, do not use this method.
  *
  *  @param enabled A boolean value indicating whether or not to install the crash handlers. Defaults to YES.
  */
