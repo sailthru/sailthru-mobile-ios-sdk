@@ -5,7 +5,7 @@
 //  Created by Carnival Mobile
 //  Copyright (c) 2017 Carnival.io. All rights reserved.
 //
-//  For documentation see http://docs.carnival.io
+//  For documentation see http://docs.mobile.sailthru.com
 //
 
 #import <Foundation/Foundation.h>
@@ -16,7 +16,7 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"8.2.3"
+#define CARNIVAL_VERSION @"8.3.0-beta"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -44,9 +44,9 @@ NS_ASSUME_NONNULL_END
 /**
  *  Sets the Carnival appKey credentials for this app.
  *
- *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com .
+ *  @param appKey The appKey you recieved when setting up your app at http://mobile.sailthru.com .
  *  @discussion An exception will be raised if you do not set your appKey before you call any other methods.
- *  Make sure your app bundle identifier is the same as whatever it is set to on http://app.carnivalmobile.com .
+ *  Make sure your app bundle identifier is the same as whatever it is set to on http://mobile.sailthru.com .
  *
  *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
  *  calling it later in the app lifecycle can have unintended consequences. No startEngine: calls (overrides included) must not be called more than once.
@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_END
  *  On devices running iOS 12+ provisional authorization will be requested if registerForPushNotifications is set to NO, allowing Quiet push notifications to
  *  be sent to the device.
  *
- *  @param appKey The appKey you recieved when setting up your app at http://app.carnivalmobile.com .
+ *  @param appKey The appKey you recieved when setting up your app at http://mobile.sailthru.com .
  *  @param registerForPushNotifications when this parameter is YES the Carnival iOS SDK will automatically register for push notifications
  *
  *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
@@ -309,5 +309,13 @@ NS_ASSUME_NONNULL_END
  *  @param enabled A boolean value indicating whether or not to swizzle notification related methods. Defaults to YES.
  */
 + (void)setAutoIntegrationEnabled:(BOOL)enabled;
+
+/**
+ * Registers group names that will be used with any Extensions. This allows the CarnivalExtensionFramework to share data with the main CarnivalFramework in order to allow
+ * events to be recorded in Extensions.
+ *
+ * @param groupNames Array of strings representing the app group names.
+ */
++ (void)registerExtensionGroups:(NSArray<NSString *> * _Nonnull)groupNames;
 
 @end
