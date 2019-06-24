@@ -16,7 +16,7 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 
-#define CARNIVAL_VERSION @"8.3.0-beta"
+#define CARNIVAL_VERSION @"8.3.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -292,6 +292,23 @@ NS_ASSUME_NONNULL_END
  *  @param enabled A boolean value indicating whether or not to disable location based on IP Address.
  */
 + (void)setGeoIPTrackingEnabled:(BOOL)enabled;
+
+/**
+ *  Enabled location tracking based on IP Address. Tracking location tracking is enabled by default.
+ *  Use this method for users who may not want to have their location tracked at all.
+ *
+ *  @param enabled A boolean value indicating whether or not to disable location based on IP Address.
+ *  @param block The block to handle the result of the call. May contain an error if the call failed.
+ */
++ (void)setGeoIPTrackingEnabled:(BOOL)enabled withResponse:(nullable void(^)(NSError *__nullable))block;
+
+/**
+ *  Set whether location tracking based on IP Address will be enabled or disabled by default when a device is created.
+ *  This method must be called before startEngine.
+ *
+ *  @param enabled A boolean value indicating whether or not location based on IP Address should be enabled by default.
+ */
++ (void)setGeoIPTrackingDefault:(BOOL)enabled;
 
 /**
  *  Enable crash tracking for recording sessions which end in a crash.
