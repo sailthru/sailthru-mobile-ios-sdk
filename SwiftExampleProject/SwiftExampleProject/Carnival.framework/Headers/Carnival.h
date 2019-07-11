@@ -15,8 +15,9 @@
 #import "CarnivalAttributes.h"
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
+#import "CarnivalPurchase.h"
 
-#define CARNIVAL_VERSION @"8.3.0"
+#define CARNIVAL_VERSION @"8.4.0-beta"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -334,5 +335,21 @@ NS_ASSUME_NONNULL_END
  * @param groupNames Array of strings representing the app group names.
  */
 + (void)registerExtensionGroups:(NSArray<NSString *> * _Nonnull)groupNames;
+
+/**
+ * Logs a purchase with Sailthru platform. This can be used for mobile purchase attribution.
+ *
+ * @param purchase The purchase to log with the platform.
+ * @param block The block to handle the result of the call. May contain an error if the call failed.
+ */
++ (void)logPurchase:(nonnull CarnivalPurchase *)purchase withResponse:(nullable void(^)(NSError * _Nullable))block;
+
+/**
+ * Logs a cart abandonment with the Sailthru platform. Use this to initiate cart abandoned flows.
+ *
+ * @param purchase The abandoned purchase to log with the platform.
+ * @param handler callback handler.
+ */
++ (void)logAbandonedCart:(nonnull CarnivalPurchase *)purchase withResponse:(nullable void(^)(NSError * _Nullable))block;
 
 @end
