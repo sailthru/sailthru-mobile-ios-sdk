@@ -17,7 +17,7 @@
 #import "CarnivalContentItem.h"
 #import "CarnivalPurchase.h"
 
-#define CARNIVAL_VERSION @"8.4.0-beta"
+#define CARNIVAL_VERSION @"8.4.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
