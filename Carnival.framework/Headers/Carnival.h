@@ -17,7 +17,7 @@
 #import "CarnivalContentItem.h"
 #import "CarnivalPurchase.h"
 
-#define CARNIVAL_VERSION @"8.4.0"
+#define CARNIVAL_VERSION @"8.5.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -25,6 +25,12 @@ typedef NS_OPTIONS(NSUInteger, CarnivalDeviceDataType) {
     CarnivalDeviceDataTypeAttributes     = 1 << 0,
     CarnivalDeviceDataTypeMessageStream  = 1 << 1,
     CarnivalDeviceDataTypeEvents         = 1 << 2
+};
+
+typedef NS_OPTIONS(NSUInteger, CarnivalPushAuthorizationOption) {
+    CarnivalPushAuthorizationOptionNoRequest,      // This option will not request any push authorization permissions for the device. Note that a push token will still be requested. No prompt is required.
+    CarnivalPushAuthorizationOptionProvisional,    // This option will request provisional push authorization, allowing push notifications to be sent to the notification center. No prompt is required. Available iOS 12+, defaults to CarnivalPushAuthorizationOptionNoRequest behaviour for earlier versions.
+    CarnivalPushAuthorizationOptionFull            // This option will request full push authorization for alerts, sounds and badges. Note that this will prompt the user for permission.
 };
 
 /* Constants for Auto-Analytics Tracking */
@@ -50,7 +56,7 @@ NS_ASSUME_NONNULL_END
  *  Make sure your app bundle identifier is the same as whatever it is set to on http://mobile.sailthru.com .
  *
  *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
- *  calling it later in the app lifecycle can have unintended consequences. No startEngine: calls (overrides included) must not be called more than once.
+ *  calling it later in the app lifecycle can have unintended consequences. Calls to startEngine: (overrides included) must not be made more than once.
  */
 + (void)startEngine:(nonnull NSString *)appKey;
 
@@ -59,15 +65,27 @@ NS_ASSUME_NONNULL_END
  *  @note The device will be registered with the Apple Push Notification service and provided with a push notification token regardless of whether registerForPushNotifications is set to YES or NO. This step does not require a user prompt.
  *
  *  On devices running iOS 12+ provisional authorization will be requested if registerForPushNotifications is set to NO, allowing Quiet push notifications to
- *  be sent to the device.
+ *  be sent to the device (equivalent to CarnivalPushRegistrationOptionProvisional).
  *
  *  @param appKey The appKey you recieved when setting up your app at http://mobile.sailthru.com .
  *  @param registerForPushNotifications when this parameter is YES the Carnival iOS SDK will automatically register for push notifications
  *
  *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
- *  calling it later in the app lifecycle can have unintended consequences. No startEngine: calls (overrides included) must not be called more than once.
+ *  calling it later in the app lifecycle can have unintended consequences. Calls to startEngine: (overrides included) must not be made more than once.
  */
-+ (void)startEngine:(nonnull NSString *)appKey registerForPushNotifications:(BOOL)registerForPushNotifications;
++ (void)startEngine:(nonnull NSString *)appKey registerForPushNotifications:(BOOL)registerForPushNotifications __attribute__((deprecated("use startEngine:withAuthorizationOption: instead.")));
+
+/**
+ *  Sets the Carnival appKey credentials for this app and optionally registers for push notifications authorization. Authorization request will be determined by the pushAuthorizationOption parameter
+ *  @note The device will be registered with the Apple Push Notification service and provided with a push notification token regardless of the CarnivalPushRegistrationOption supplied. This step does not require a user prompt.
+ *
+ *  @param appKey The appKey you recieved when setting up your app at http://mobile.sailthru.com .
+ *  @param pushAuthorizationOption The authorization option the SDK should use when requesting push notification authorization
+ *
+ *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
+ *  calling it later in the app lifecycle can have unintended consequences. Calls to startEngine: (overrides included) must not be made more than once.
+ */
++ (void)startEngine:(nonnull NSString *)appKey withAuthorizationOption:(CarnivalPushAuthorizationOption)pushAuthorizationOption;
 
 /**
  *  Sets the logger used by Carnival for any internal informational or debugging logging.
@@ -348,7 +366,7 @@ NS_ASSUME_NONNULL_END
  * Logs a cart abandonment with the Sailthru platform. Use this to initiate cart abandoned flows.
  *
  * @param purchase The abandoned purchase to log with the platform.
- * @param handler callback handler.
+ * @param block The block to handle the result of the call. May contain an error if the call failed.
  */
 + (void)logAbandonedCart:(nonnull CarnivalPurchase *)purchase withResponse:(nullable void(^)(NSError * _Nullable))block;
 
