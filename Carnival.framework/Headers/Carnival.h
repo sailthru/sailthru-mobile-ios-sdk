@@ -27,7 +27,7 @@ typedef NS_OPTIONS(NSUInteger, CarnivalDeviceDataType) {
     CarnivalDeviceDataTypeEvents         = 1 << 2
 };
 
-typedef NS_OPTIONS(NSUInteger, CarnivalPushAuthorizationOption) {
+typedef NS_ENUM(NSUInteger, CarnivalPushAuthorizationOption) {
     CarnivalPushAuthorizationOptionNoRequest,      // This option will not request any push authorization permissions for the device. Note that a push token will still be requested. No prompt is required.
     CarnivalPushAuthorizationOptionProvisional,    // This option will request provisional push authorization, allowing push notifications to be sent to the notification center. No prompt is required. Available iOS 12+, defaults to CarnivalPushAuthorizationOptionNoRequest behaviour for earlier versions.
     CarnivalPushAuthorizationOptionFull            // This option will request full push authorization for alerts, sounds and badges. Note that this will prompt the user for permission.
