@@ -11,13 +11,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <UserNotifications/UserNotifications.h>
 #import "CarnivalMessageStream.h"
 #import "CarnivalAttributes.h"
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 #import "CarnivalPurchase.h"
 
-#define CARNIVAL_VERSION @"8.5.1"
+#define CARNIVAL_VERSION @"8.6.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -160,7 +161,34 @@ NS_ASSUME_NONNULL_END
  *
  *  @param notificationDict The userInfo dictionary from the remote notification you want the Carnival SDK to handle. This dictionary is normally passed back to you from the application:didReceiveRemoteNotification: method.
  */
-+ (void)handleNotification:(nonnull NSDictionary *)notificationDict;
++ (void)handleNotification:(nonnull NSDictionary *)notificationDict __attribute__((deprecated("use handleNotificationResponse:, handlePresentNotification: and handleNotificationPayload: methods instead.")));
+
+/**
+ * Tells the SDK to handle the notification response.
+ *
+ * This method should be called in the userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler: method if auto integration has been disabled in order to allow the SDK to handle the notification response.
+ *
+ * @param notificationResponse The response object from the notification.
+ */
++ (void)handleNotificationResponse:(nonnull UNNotificationResponse *)notificationResponse API_AVAILABLE(ios(10.0));
+
+/**
+ * Tells the SDK to handle a notification received while the app was in the foreground.
+ *
+ * This method should be called in the userNotificationCenter:willPresentNotification:withCompletionHandler: method if auto integration has been disabled in order to allow the SDK to handle the notification.
+ *
+ * @param notification The notification object received.
+ */
++ (void)handlePresentNotification:(nonnull UNNotification *)notification API_AVAILABLE(ios(10.0));
+
+/**
+ * Tells the SDK to handle the data from a notification payload.
+ *
+ * This method should be called in the application:didReceiveRemoteNotification:fetchCompletionHandler: method if auto integration has been disabled in order to allow the SDK to handle the notification data. For iOS 8 & 9 this method will execute all the notification handling previously covered by the handleNotification: method. Should be used if auto integration has been disabled in order to allow the SDK to handle the notification payload.
+ *
+ * @param notificationDict The userInfo dictionary from the remote notification you want the Carnival SDK to handle.
+ */
++ (void)handleNotificationPayload:(nonnull NSDictionary *)notificationDict;
 
 /**
  * Tells the Carnival SDK that the notification settings have been updated and that it should synchronize the new settings with the Carnival platform. This method is only required if auto integration has been disabled. It should be called after either the requestAuthorizationWithOptions:completionHandler: or registerUserNotificationSettings: methods have been used to request push notifications authorization.

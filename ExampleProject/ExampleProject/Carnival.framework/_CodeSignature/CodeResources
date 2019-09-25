@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Carnival.h</key>
 		<data>
-		8L5JU1wNvVEEaKEa3vG5CAt+8Mc=
+		ZhTzkpvQQH5Tfho3F9/bm+jnsN8=
 		</data>
 		<key>Headers/CarnivalAttributes.h</key>
 		<data>
@@ -30,15 +30,15 @@
 		</data>
 		<key>Headers/CarnivalPurchase.h</key>
 		<data>
-		ovEmxOZokWA58oFZQIEVMH92XjY=
+		oqQF5aoWX3cnLtd5V6BbH8AJSGw=
 		</data>
 		<key>Headers/CarnivalPurchaseItem.h</key>
 		<data>
-		zLQnCfuWnFaeThd2BZ69nItRW9U=
+		W9vHO3UL9aJY2hKldH3pComg6dI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		aXr6TjZaAyOqETSCfvu8UpDYiQE=
+		QZefFUcQSC9rDzHjo+S+AsRSkXs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8L5JU1wNvVEEaKEa3vG5CAt+8Mc=
+			ZhTzkpvQQH5Tfho3F9/bm+jnsN8=
 			</data>
 			<key>hash2</key>
 			<data>
-			kWWR7k0wTEHe/Pw3RDxw6DpNhxJxPhOfGM6o1GZ0ASw=
+			fvVARMIoWvB4o0sdKuHyXi06QGE5CZQpQEPB9YGPCB0=
 			</data>
 		</dict>
 		<key>Headers/CarnivalAttributes.h</key>
@@ -194,22 +194,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ovEmxOZokWA58oFZQIEVMH92XjY=
+			oqQF5aoWX3cnLtd5V6BbH8AJSGw=
 			</data>
 			<key>hash2</key>
 			<data>
-			CqrzonGZ1pnanDj50+QCEoQ03abYD5xY5k8WN60mIp0=
+			hRyFTR5rosejC/3P8G34OM1bvyDmxvppBWZ6O353Jwg=
 			</data>
 		</dict>
 		<key>Headers/CarnivalPurchaseItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zLQnCfuWnFaeThd2BZ69nItRW9U=
+			W9vHO3UL9aJY2hKldH3pComg6dI=
 			</data>
 			<key>hash2</key>
 			<data>
-			jRO3DPJELHMImmq7VTYETLnEg0JAuVFk06x/ISSN/PY=
+			isLhO6VT8a7LhrhMoyIgdwY8OXz/bdbgsna2lhKbyj4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

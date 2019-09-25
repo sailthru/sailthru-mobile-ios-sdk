@@ -69,8 +69,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (strong, nonatomic, nullable) NSDictionary<NSString *, id> *images;
 
-- (nullable instancetype) init NS_UNAVAILABLE;
-+ (nullable instancetype) new NS_UNAVAILABLE;
+- (instancetype) init NS_UNAVAILABLE;
++ (instancetype) new NS_UNAVAILABLE;
 
 /**
  * Create a purchase item instance with the required fields.

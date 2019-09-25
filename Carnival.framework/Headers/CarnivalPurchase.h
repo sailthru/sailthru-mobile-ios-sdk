@@ -35,8 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (strong, nonatomic, nullable) NSString *messageId;
 
-- (nullable instancetype) init NS_UNAVAILABLE;
-+ (nullable instancetype) new NS_UNAVAILABLE;
+- (instancetype) init NS_UNAVAILABLE;
++ (instancetype) new NS_UNAVAILABLE;
 
 /**
  * Create a purchase instance with the required fields.
