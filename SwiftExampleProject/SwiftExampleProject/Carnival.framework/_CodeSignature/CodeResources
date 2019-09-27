@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Carnival.h</key>
 		<data>
-		ZhTzkpvQQH5Tfho3F9/bm+jnsN8=
+		v7RQwkeMLb9REI/tPMTp6WwWkfA=
 		</data>
 		<key>Headers/CarnivalAttributes.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QZefFUcQSC9rDzHjo+S+AsRSkXs=
+		0occwt03FG9kU7Ty90q3gsLAgu4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZhTzkpvQQH5Tfho3F9/bm+jnsN8=
+			v7RQwkeMLb9REI/tPMTp6WwWkfA=
 			</data>
 			<key>hash2</key>
 			<data>
-			fvVARMIoWvB4o0sdKuHyXi06QGE5CZQpQEPB9YGPCB0=
+			95dq7EXW3nY6DILCUxa5c3NkeJdFE1azkTCGLSXstkA=
 			</data>
 		</dict>
 		<key>Headers/CarnivalAttributes.h</key>
