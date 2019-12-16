@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Carnival.h</key>
 		<data>
-		v7RQwkeMLb9REI/tPMTp6WwWkfA=
+		w5sz0y8eWonauJVBUMjuWfR0xms=
 		</data>
 		<key>Headers/CarnivalAttributes.h</key>
 		<data>
@@ -26,7 +26,11 @@
 		</data>
 		<key>Headers/CarnivalMessageStream.h</key>
 		<data>
-		ODZowfKfOg1yEeNtwVB7lrlac3c=
+		uGEkRVe78DgZQLJ1xj0KtLRvlJo=
+		</data>
+		<key>Headers/CarnivalNotificationCategory.h</key>
+		<data>
+		6GvCbGhWmFNEEzZG6nZ1JxTwB6I=
 		</data>
 		<key>Headers/CarnivalPurchase.h</key>
 		<data>
@@ -38,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0occwt03FG9kU7Ty90q3gsLAgu4=
+		uY/bpAbk7CYtHroSMHw0en7Fa7g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -128,11 +132,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v7RQwkeMLb9REI/tPMTp6WwWkfA=
+			w5sz0y8eWonauJVBUMjuWfR0xms=
 			</data>
 			<key>hash2</key>
 			<data>
-			95dq7EXW3nY6DILCUxa5c3NkeJdFE1azkTCGLSXstkA=
+			0IVEybhWLOyp0aGyXPRmwZf2JaoJD/BldL9e4GtivEc=
 			</data>
 		</dict>
 		<key>Headers/CarnivalAttributes.h</key>
@@ -183,11 +187,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ODZowfKfOg1yEeNtwVB7lrlac3c=
+			uGEkRVe78DgZQLJ1xj0KtLRvlJo=
 			</data>
 			<key>hash2</key>
 			<data>
-			0Gm1WjNzqg4XkOkptY8W0HlZvVoCGEqD0AyUgJAlbTA=
+			hmA+t3RzDHrB9W5TzOTCnGbzoqwkoJQW0mrbwqszmcw=
+			</data>
+		</dict>
+		<key>Headers/CarnivalNotificationCategory.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6GvCbGhWmFNEEzZG6nZ1JxTwB6I=
+			</data>
+			<key>hash2</key>
+			<data>
+			XjokalwtRoc+ZR/g6cFhztMQkmxRUBifJMHNSMmDXzI=
 			</data>
 		</dict>
 		<key>Headers/CarnivalPurchase.h</key>

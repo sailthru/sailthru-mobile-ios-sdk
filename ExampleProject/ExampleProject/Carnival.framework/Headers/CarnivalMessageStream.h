@@ -170,15 +170,34 @@ typedef NS_ENUM(NSInteger, CarnivalImpressionType) {
 
 /**
  * Shows the message detail screen for a given message
+ * @note if you support multiple windows, use the presentMessageDetailForMessage:inWindow: method instead to specify the window to show the detail in.
  *
  * @param message The Message you wish to present.
  **/
 + (void)presentMessageDetailForMessage:(nonnull CarnivalMessage *)message;
 
 /**
- *  Dismisses the message detail screen
+ * Shows the message detail screen for a given message in the provided window.
+ *
+ * @param message The Message you wish to present.
+ * @param window The window to display the message detail in. Use in iOS 13+ if you utilitse multiple UIScenes to ensure the detail is displayed in the correct scene.
+ */
++ (void)presentMessageDetailForMessage:(nonnull CarnivalMessage *)message inWindow:(nonnull UIWindow *)window;
+
+/**
+ * Dismisses the message detail screen.
+ *
+ * This method will remove all displayed message details screens from the UI.
+ * @note If you are using multiple windows this will dismiss details screens from all windows. If you want to remove one at a time use the dismissMessageDetailForWindow: method.
  */
 + (void)dismissMessageDetail;
+
+/**
+ * Dismisses the message details screen from the specified window.
+ *
+ * @param window The window containing the message details.
+ */
++ (void)dismissMessageDetailForWindow:(nonnull UIWindow *)window;
 
 /**
  *  Creates an impression for a message for a given interaction type.

@@ -17,8 +17,9 @@
 #import "CarnivalLogger.h"
 #import "CarnivalContentItem.h"
 #import "CarnivalPurchase.h"
+#import "CarnivalNotificationCategory.h"
 
-#define CARNIVAL_VERSION @"8.6.1"
+#define CARNIVAL_VERSION @"9.0.0-beta"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -60,21 +61,6 @@ NS_ASSUME_NONNULL_END
  *  calling it later in the app lifecycle can have unintended consequences. Calls to startEngine: (overrides included) must not be made more than once.
  */
 + (void)startEngine:(nonnull NSString *)appKey;
-
-/**
- *  Sets the Carnival appKey credentials for this app and optionally registers for push notifications authorization with the badge, alert and sound UIUserNotificationTypes.
- *  @note The device will be registered with the Apple Push Notification service and provided with a push notification token regardless of whether registerForPushNotifications is set to YES or NO. This step does not require a user prompt.
- *
- *  On devices running iOS 12+ provisional authorization will be requested if registerForPushNotifications is set to NO, allowing Quiet push notifications to
- *  be sent to the device (equivalent to CarnivalPushRegistrationOptionProvisional).
- *
- *  @param appKey The appKey you recieved when setting up your app at http://mobile.sailthru.com .
- *  @param registerForPushNotifications when this parameter is YES the Carnival iOS SDK will automatically register for push notifications
- *
- *  @warning It is important that this method is called at the earliest possible opportunity (e.g. application:didFinishLaunchingWithOptions:),
- *  calling it later in the app lifecycle can have unintended consequences. Calls to startEngine: (overrides included) must not be made more than once.
- */
-+ (void)startEngine:(nonnull NSString *)appKey registerForPushNotifications:(BOOL)registerForPushNotifications __attribute__((deprecated("use startEngine:withAuthorizationOption: instead.")));
 
 /**
  *  Sets the Carnival appKey credentials for this app and optionally registers for push notifications authorization. Authorization request will be determined by the pushAuthorizationOption parameter
@@ -155,13 +141,6 @@ NS_ASSUME_NONNULL_END
  *  @param deviceToken The APNS token for the current device. This deviceToken is normally passed back by the application:didRegisterForRemoteNotificationsWithDeviceToken: method.
  */
 + (void)setDeviceTokenInBackground:(nonnull NSData *)deviceToken;
-
-/**
- *  Tells the Carnival SDK to handle the notification.
- *
- *  @param notificationDict The userInfo dictionary from the remote notification you want the Carnival SDK to handle. This dictionary is normally passed back to you from the application:didReceiveRemoteNotification: method.
- */
-+ (void)handleNotification:(nonnull NSDictionary *)notificationDict __attribute__((deprecated("use handleNotificationResponse:, handlePresentNotification: and handleNotificationPayload: methods instead.")));
 
 /**
  * Tells the SDK to handle the notification response.
