@@ -19,7 +19,7 @@
 #import "CarnivalPurchase.h"
 #import "CarnivalNotificationCategory.h"
 
-#define CARNIVAL_VERSION @"9.0.0"
+#define CARNIVAL_VERSION @"10.0.0"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
