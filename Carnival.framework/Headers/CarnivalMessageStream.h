@@ -39,6 +39,7 @@ typedef NS_ENUM(NSInteger, CarnivalImpressionType) {
     CarnivalImpressionTypeDetailView
 };
 
+__attribute__ ((deprecated("use STMMessageStreamDelegate class in SailthruMobile framework instead")))
 @protocol CarnivalMessageStreamDelegate <NSObject>
 
 @optional
@@ -119,6 +120,7 @@ typedef NS_ENUM(NSInteger, CarnivalImpressionType) {
 
 @end
 
+__attribute__ ((deprecated("use STMMessageStream class in Sailthru framework instead")))
 @interface CarnivalMessageStream : NSObject
 
 /** @name Message statistics */

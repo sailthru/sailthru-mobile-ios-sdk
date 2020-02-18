@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+__attribute__ ((deprecated("use STMContentItem class in SailthruMobile framework instead")))
 @interface CarnivalContentItem : NSObject
 
 /**

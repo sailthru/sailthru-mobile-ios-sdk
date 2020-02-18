@@ -12,6 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__ ((deprecated("use STMPurchase class in SailthruMobile framework instead")))
 @interface CarnivalPurchase : NSObject
 
 #pragma mark - Required fields

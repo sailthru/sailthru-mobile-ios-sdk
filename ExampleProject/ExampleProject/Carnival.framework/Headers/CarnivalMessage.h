@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, CarnivalMessageType) {
     CarnivalMessageTypeOther
 };
 
+__attribute__ ((deprecated("use STMMessage class in SailthruMobile framework instead")))
 @interface CarnivalMessage : NSObject
 
 /**

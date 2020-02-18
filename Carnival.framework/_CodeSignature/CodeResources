@@ -6,27 +6,27 @@
 	<dict>
 		<key>Headers/Carnival.h</key>
 		<data>
-		76CTa51phQB5cosYAD69I16itHw=
+		9yuViv27piU5rKet0DxdPYoOCBQ=
 		</data>
 		<key>Headers/CarnivalAttributes.h</key>
 		<data>
-		ifMLgSE6q10IutTrc0Eu2CcDlOU=
+		V32ENHUB9cBCVjci755aO1pV/oQ=
 		</data>
 		<key>Headers/CarnivalContentItem.h</key>
 		<data>
-		xGOMCmRzd87mMG7jHRX0F3yyKOI=
+		obe5sFqSiqNg7XiAlZdBwiNNG5Y=
 		</data>
 		<key>Headers/CarnivalLogger.h</key>
 		<data>
-		S6FJeMJhbfzkxDlBsu06uekC9VA=
+		VZ8eIh4KlaWsbzmzjZQ3K0A305Y=
 		</data>
 		<key>Headers/CarnivalMessage.h</key>
 		<data>
-		/czhU+nRDX1rhUtMKfpWQxqInnE=
+		L/3yzpDudwsRgVzvazKC2JdOql0=
 		</data>
 		<key>Headers/CarnivalMessageStream.h</key>
 		<data>
-		uGEkRVe78DgZQLJ1xj0KtLRvlJo=
+		OYVkYy+JjE8efWDoR2IC7HV/UKM=
 		</data>
 		<key>Headers/CarnivalNotificationCategory.h</key>
 		<data>
@@ -34,15 +34,15 @@
 		</data>
 		<key>Headers/CarnivalPurchase.h</key>
 		<data>
-		oqQF5aoWX3cnLtd5V6BbH8AJSGw=
+		3zXnp7hih+vU/WX/5IvsEiDscK4=
 		</data>
 		<key>Headers/CarnivalPurchaseItem.h</key>
 		<data>
-		W9vHO3UL9aJY2hKldH3pComg6dI=
+		FmxfcAopknsV4qE0KYrH2s+Lfu0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		F2aCJc+kMvPAX6d4HiEVIToBHyM=
+		SaRwEbJClnMOAoOXGyaOZof/GGk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -132,66 +132,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			76CTa51phQB5cosYAD69I16itHw=
+			9yuViv27piU5rKet0DxdPYoOCBQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			uK5sAS3u5cdcLFkikG3CGnR1KCoSSG0zxY0t6hvHGps=
+			jFJ+AvcHxh+GhJ3DlGMygDvQnpkf+rlJ2qYiSNMdAFo=
 			</data>
 		</dict>
 		<key>Headers/CarnivalAttributes.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ifMLgSE6q10IutTrc0Eu2CcDlOU=
+			V32ENHUB9cBCVjci755aO1pV/oQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			iwK7mlYpcyKhatd/mBB/jhgZOo6mVHc5YcRLzHtIxz0=
+			3ufK4lUiM28I4v0oOsYtwJxve8yehNWOWQvoMfARV08=
 			</data>
 		</dict>
 		<key>Headers/CarnivalContentItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xGOMCmRzd87mMG7jHRX0F3yyKOI=
+			obe5sFqSiqNg7XiAlZdBwiNNG5Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			3kmwmOJlnZW+WLykvO0NDV3u4duzSiHDzUspZLCi1Ew=
+			B3mlstDygmCWC/S63qSRWN8fODCyP3Ei3QpVxDi9myg=
 			</data>
 		</dict>
 		<key>Headers/CarnivalLogger.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			S6FJeMJhbfzkxDlBsu06uekC9VA=
+			VZ8eIh4KlaWsbzmzjZQ3K0A305Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ei1qvUvRla+URypz6vcfIxgHNc7cJHmRw502C88tC0s=
+			s93vwH0S6uNRo7vmm/mBEQgc6bcSWbAchr2ABjVV1SU=
 			</data>
 		</dict>
 		<key>Headers/CarnivalMessage.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/czhU+nRDX1rhUtMKfpWQxqInnE=
+			L/3yzpDudwsRgVzvazKC2JdOql0=
 			</data>
 			<key>hash2</key>
 			<data>
-			ubDL7sBSqy5DDOVE/TbA1nyE/MhjQqB0XK5u5b3aJT4=
+			amtrE+S17S6+gdDW8GxmL153c2RAPcjuDocvoTO48qM=
 			</data>
 		</dict>
 		<key>Headers/CarnivalMessageStream.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uGEkRVe78DgZQLJ1xj0KtLRvlJo=
+			OYVkYy+JjE8efWDoR2IC7HV/UKM=
 			</data>
 			<key>hash2</key>
 			<data>
-			hmA+t3RzDHrB9W5TzOTCnGbzoqwkoJQW0mrbwqszmcw=
+			V73djURGZT6Kc1ia/Y5A5kqLrW+vfdSKsydr7kO+a6U=
 			</data>
 		</dict>
 		<key>Headers/CarnivalNotificationCategory.h</key>
@@ -209,22 +209,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oqQF5aoWX3cnLtd5V6BbH8AJSGw=
+			3zXnp7hih+vU/WX/5IvsEiDscK4=
 			</data>
 			<key>hash2</key>
 			<data>
-			hRyFTR5rosejC/3P8G34OM1bvyDmxvppBWZ6O353Jwg=
+			mFA5FCO9jOFtSUWnIbHU6ku/6+n2MVA9lSjbXwCf83I=
 			</data>
 		</dict>
 		<key>Headers/CarnivalPurchaseItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			W9vHO3UL9aJY2hKldH3pComg6dI=
+			FmxfcAopknsV4qE0KYrH2s+Lfu0=
 			</data>
 			<key>hash2</key>
 			<data>
-			isLhO6VT8a7LhrhMoyIgdwY8OXz/bdbgsna2lhKbyj4=
+			Iq1KK9NzDVB3lerCqtdnfceVXwjQGXXPCLvR9Qy10g0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

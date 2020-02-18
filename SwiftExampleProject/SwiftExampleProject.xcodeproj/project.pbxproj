@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22860AB91FCE47F900B8809D /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22860AB51FCE46A600B8809D /* Carnival.framework */; };
-		22860ABA1FCE47F900B8809D /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22860AB51FCE46A600B8809D /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		753541C119C0462D00B7F2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C019C0462D00B7F2BD /* AppDelegate.swift */; };
 		753541C319C0462D00B7F2BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753541C219C0462D00B7F2BD /* ViewController.swift */; };
 		753541C619C0462D00B7F2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753541C419C0462D00B7F2BD /* Main.storyboard */; };
@@ -18,16 +16,18 @@
 		75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC1FD19C061C6007F4332 /* libz.dylib */; };
 		75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC20119C06256007F4332 /* CoreGraphics.framework */; };
 		75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC1FF19C0624F007F4332 /* CoreLocation.framework */; };
+		FABA931223AC17BC0010F09C /* SailthruMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABA931023AC178C0010F09C /* SailthruMobile.framework */; };
+		FABA931323AC17BC0010F09C /* SailthruMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FABA931023AC178C0010F09C /* SailthruMobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		228F2AC31F3D264E00DD4F43 /* Embed Frameworks */ = {
+		FABA931423AC17BC0010F09C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				22860ABA1FCE47F900B8809D /* Carnival.framework in Embed Frameworks */,
+				FABA931323AC17BC0010F09C /* SailthruMobile.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		2251B10D1F3D2491004CEE85 /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
-		22860AB51FCE46A600B8809D /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
 		22B325F11C61524C00A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		22F7B8CB1FB13C1500C558C1 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		753541BB19C0462D00B7F2BD /* SwiftExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +49,8 @@
 		75DAC1FD19C061C6007F4332 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		75DAC1FF19C0624F007F4332 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		75DAC20119C06256007F4332 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FABA930C23AC16CF0010F09C /* SailthruMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SailthruMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABA931023AC178C0010F09C /* SailthruMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SailthruMobile.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22860AB91FCE47F900B8809D /* Carnival.framework in Frameworks */,
+				FABA931223AC17BC0010F09C /* SailthruMobile.framework in Frameworks */,
 				75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */,
 				75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */,
 				75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */,
@@ -80,6 +81,7 @@
 		22F7B8CA1FB13C1500C558C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FABA930C23AC16CF0010F09C /* SailthruMobile.framework */,
 				22F7B8CB1FB13C1500C558C1 /* UserNotifications.framework */,
 			);
 			name = Frameworks;
@@ -106,7 +108,7 @@
 		753541BD19C0462D00B7F2BD /* SwiftExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				22860AB51FCE46A600B8809D /* Carnival.framework */,
+				FABA931023AC178C0010F09C /* SailthruMobile.framework */,
 				753541C019C0462D00B7F2BD /* AppDelegate.swift */,
 				753541C219C0462D00B7F2BD /* ViewController.swift */,
 				753541C419C0462D00B7F2BD /* Main.storyboard */,
@@ -148,7 +150,7 @@
 				753541B719C0462D00B7F2BD /* Sources */,
 				753541B819C0462D00B7F2BD /* Frameworks */,
 				753541B919C0462D00B7F2BD /* Resources */,
-				228F2AC31F3D264E00DD4F43 /* Embed Frameworks */,
+				FABA931423AC17BC0010F09C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

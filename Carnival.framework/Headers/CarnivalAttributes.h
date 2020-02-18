@@ -19,6 +19,7 @@ typedef NS_ENUM(NSInteger, CarnivalAttributesMergeRule) {
  *  Null values will remove the value for the given key.
  *  To completly clear all values, set a newly instantiated CarnivalAttributes object with the merge sule set to CarnivalAttributesMergeRuleReplace.
  */
+__attribute__ ((deprecated("use STMAttributes class in SailthruMobile framework instead")))
 @interface CarnivalAttributes : NSObject
 
 /**

@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, CarnivalLogLevel) {
     CarnivalLogLevelFault
 };
 
+__attribute__ ((deprecated("use STMLogger protocol in SailthruMobile framework instead")))
 @protocol CarnivalLogger  <NSObject>
 
 - (void)logWithLevel:(CarnivalLogLevel)level message:(NSString *)message;

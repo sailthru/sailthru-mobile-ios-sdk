@@ -10,10 +10,11 @@
 
 import UIKit
 import AdSupport
-import Carnival
+import SailthruMobile
 
-class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController, STMMessageStreamDelegate, CLLocationManagerDelegate {
     var locationManager: CLLocationManager? = nil
+    let sailthruMobile = SailthruMobile()
     
     //MARK: view lifecycle
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         
         self.setupLocationManager()
         
-        CarnivalMessageStream.setDelegate(self)
+        STMMessageStream().setDelegate(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +36,7 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
         
         self.startLocationTrackingInBackground()
         
-        Carnival.deviceID { deviceID, error in
+        sailthruMobile.deviceID { deviceID, error in
             print("deviceID for current device: \(deviceID ?? "(No ID)")), with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
@@ -112,42 +113,42 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // Send the last location object as that is the most recent one always
         if let lastLocation = locations.last {
-            Carnival.update(lastLocation)
+            sailthruMobile.update(lastLocation)
         }
     }
     
     //MARK: CarnivalMessageStreamDelegate
-    func willShowMessage(of messageType: CarnivalMessageType) {
+    func willShowMessage(of messageType: STMMessageType) {
         print("willShowMessageOfType: \(messageType)")
         
         // You can use this method to mute audio during videos
     }
     
-    func didShowMessage(of messageType: CarnivalMessageType) {
+    func didShowMessage(of messageType: STMMessageType) {
         print("didShowMessageOfType: \(messageType)")
         
         // You can use this method to mute audio during videos
     }
     
-    func willDismissMessage(of messageType: CarnivalMessageType) {
+    func willDismissMessage(of messageType: STMMessageType) {
         print("willDismissMessageOfType: \(messageType)")
         
         // You can use this method to unmute audio during videos
     }
     
-    func didDismissMessage(of messageType: CarnivalMessageType) {
+    func didDismissMessage(of messageType: STMMessageType) {
         print("didDismissMessageOfType: \(messageType)")
         
         // You can use this method to unmute audio during videos
     }
     
-    func willShowInAppNotification(for messageType: CarnivalMessageType) {
+    func willShowInAppNotification(for messageType: STMMessageType) {
         print("willShowInAppNotificationForMessageType: \(messageType)")
         
         // You can use this method to do something when an in-app notification is shown
     }
     
-    func didShowInAppNotification(for messageType: CarnivalMessageType) {
+    func didShowInAppNotification(for messageType: STMMessageType) {
         print("didShowInAppNotificationForMessageType: \(messageType)")
         
         // You can use this method to do something when an in-app notification is shown
@@ -155,64 +156,64 @@ class ViewController: UIViewController, CarnivalMessageStreamDelegate, CLLocatio
     
     //MARK: pressed actions
     @IBAction func setStringButtonPressed(_ sender: UIButton) {
-        let attributes = CarnivalAttributes()
+        let attributes = STMAttributes()
         
         attributes.setString("example_string", forKey: "example_string_key")
         
-        Carnival.setAttributes(attributes) { (error) in
+        sailthruMobile.setAttributes(attributes) { (error) in
             print("setAttributes returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
     @IBAction func setFloatButtonPressed(_ sender: UIButton) {
-        let attributes = CarnivalAttributes()
+        let attributes = STMAttributes()
         
         attributes.setFloat(1.1, forKey: "example_float_key")
         
-        Carnival.setAttributes(attributes) { error in
+        sailthruMobile.setAttributes(attributes) { error in
             print("setAttributes returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
     @IBAction func setBooleanButtonPressed(_ sender: UIButton) {
-        let attributes = CarnivalAttributes()
+        let attributes = STMAttributes()
         
         attributes.setBool(true, forKey: "example_bool_key")
         
-        Carnival.setAttributes(attributes) { error in
+        sailthruMobile.setAttributes(attributes) { error in
             print("setAttributes returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
     @IBAction func setDateButtonPressed(_ sender: UIButton) {
-        let attributes = CarnivalAttributes()
+        let attributes = STMAttributes()
         
         attributes.setDate(Date(), forKey: "example_date_key")
         
-        Carnival.setAttributes(attributes) { error in
+        sailthruMobile.setAttributes(attributes) { error in
             print("setAttributes returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
     @IBAction func setIntegerButtonPressed(_ sender: UIButton) {
-        let attributes = CarnivalAttributes()
+        let attributes = STMAttributes()
         
         attributes.setInteger(123, forKey: "example_integer_key")
         
-        Carnival.setAttributes(attributes) { error in
+        sailthruMobile.setAttributes(attributes) { error in
             print("setAttributes returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }
     
     @IBAction func removeStringButtonPressed(_ sender: UIButton) {
-        Carnival.removeAttribute(withKey: "example_string_key") { error in
+        sailthruMobile.removeAttribute(withKey: "example_string_key") { error in
             print("removeAttribute returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
 
         }
     }
     
     @IBAction func setUserIDButtonPressed(_ sender: UIButton) {
-        Carnival.setUserId("example_user_id") { error in
+        sailthruMobile.setUserId("example_user_id") { error in
             print("setUserID returned with possible error: \(error?.localizedDescription ?? "(No Error)")")
         }
     }

@@ -19,7 +19,7 @@
 #import "CarnivalPurchase.h"
 #import "CarnivalNotificationCategory.h"
 
-#define CARNIVAL_VERSION @"10.0.0"
+#define CARNIVAL_VERSION @"10.1.0-beta"
 FOUNDATION_EXPORT double CarnivalSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CarnivalSDKVersionString[];
 
@@ -46,6 +46,7 @@ extern NSString * const CarnivalAutoAnalyticsSourceAmplitude;
 extern NSString * const CarnivalAutoAnalyticsSourceAll;
 NS_ASSUME_NONNULL_END
 
+__attribute__ ((deprecated("use SailthruMobile class in SailthruMobile framework instead")))
 @interface Carnival : NSObject
 
 /** @name Setting up Carnival */

@@ -9,7 +9,7 @@
 //
 
 import UIKit
-import Carnival
+import SailthruMobile
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Register with Carnival using the startEngine method using the app key for your app which you can get from http://app.carnivalmobile.com
         // Could instead use the startEngine methods to customize start up.
-        Carnival.startEngine("1234")
+        SailthruMobile().startEngine("1234")
         return true
     }
 }
