@@ -2,10 +2,10 @@
 //  ViewController.h
 //  ExampleProject
 //
-//  Created by Carnival Mobile
-//  Copyright (c) 2015 Carnival Mobile. All rights reserved.
+//  Created by Sailthru Mobile
+//  Copyright (c) 2015 Sailthru Mobile. All rights reserved.
 //
-//  For documentation see http://docs.carnivalmobile.com
+//  For documentation see https://docs.mobile.sailthru.com
 //
 
 #import <UIKit/UIKit.h>

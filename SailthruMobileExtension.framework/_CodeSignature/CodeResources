@@ -4,29 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/CarnivalExtension.h</key>
-		<data>
-		kab8euvkgEdZPptmoWVcG6bktBw=
-		</data>
-		<key>Headers/CarnivalExtensionFramework.h</key>
-		<data>
-		D1ySYmo646Xu6w00zhlU/SH7ViE=
-		</data>
-		<key>Headers/CarnivalNotificationServiceExtension.h</key>
-		<data>
-		scT0R3c3MV5FM+rslyp9eZV86G4=
-		</data>
 		<key>Headers/STMNotificationServiceExtension.h</key>
 		<data>
-		HF991DQ3aPqOdgaO6daRVo9t/gA=
+		W3F2KiC5E3PLpLeI7vRU1/6qclU=
 		</data>
 		<key>Headers/SailthruMobileExtension.h</key>
 		<data>
-		mNV7MKCvrbb+ExhNaWsh6r3gjrg=
+		rlm+oi6LzKy8u02NA7A49zAb/sc=
 		</data>
 		<key>Headers/SailthruMobileExtensionFramework.h</key>
 		<data>
-		PlOZ2QOOKZhizOz+8/MTljDEGec=
+		Y/QMP/EIsJdzKhmuwmuIoD/fsgc=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -39,70 +27,37 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/CarnivalExtension.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kab8euvkgEdZPptmoWVcG6bktBw=
-			</data>
-			<key>hash2</key>
-			<data>
-			nygM5TBQxZrt2N8Ji21/5EeMn3s0lOB1Q7BmZdwu+eQ=
-			</data>
-		</dict>
-		<key>Headers/CarnivalExtensionFramework.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			D1ySYmo646Xu6w00zhlU/SH7ViE=
-			</data>
-			<key>hash2</key>
-			<data>
-			B6NEzNv5dNK0GcaHFhRy2o6WbTSPq1N8D860SwB8E8k=
-			</data>
-		</dict>
-		<key>Headers/CarnivalNotificationServiceExtension.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			scT0R3c3MV5FM+rslyp9eZV86G4=
-			</data>
-			<key>hash2</key>
-			<data>
-			XRLXtZ5flYUrC8jrh626wkZwLX71xcdvpQpHusPObE4=
-			</data>
-		</dict>
 		<key>Headers/STMNotificationServiceExtension.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HF991DQ3aPqOdgaO6daRVo9t/gA=
+			W3F2KiC5E3PLpLeI7vRU1/6qclU=
 			</data>
 			<key>hash2</key>
 			<data>
-			BDTiS5DGzIeQzo1V82mNZWwzYFAkgz0+46yvMr//1H4=
+			gLZY4giEjGYeUsq/0Jf5OEG8L2zUZTMmOTJyfDVAiKQ=
 			</data>
 		</dict>
 		<key>Headers/SailthruMobileExtension.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mNV7MKCvrbb+ExhNaWsh6r3gjrg=
+			rlm+oi6LzKy8u02NA7A49zAb/sc=
 			</data>
 			<key>hash2</key>
 			<data>
-			YAmNGBowEF/iutsMpTMCH/lzriqm6CdpM9FYyufPxT0=
+			hrptS3JHUpdaungixc5faJrD3+lyqmy6tpLMUDeawFI=
 			</data>
 		</dict>
 		<key>Headers/SailthruMobileExtensionFramework.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PlOZ2QOOKZhizOz+8/MTljDEGec=
+			Y/QMP/EIsJdzKhmuwmuIoD/fsgc=
 			</data>
 			<key>hash2</key>
 			<data>
-			fyhx6zlwGxbTipp0JSilZ+Yl5qyFXgiE/bCTEG+/ApM=
+			8/+mka57vOFJPB/2vSTcYHIjtPAvAwk6hIy8UPmEio8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

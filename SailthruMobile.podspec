@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name 				    = 'SailthruMobile'
-    s.version 			    = '10.1.0'
+    s.version 			    = '11.0.0-beta'
 	s.summary 			    = 'Sailthru Mobile iOS SDK for integrating with https://mobile.sailthru.com messaging and analytics service.'
 	s.author			    = {
 		'Sailthru Mobile' => 'support@sailthru.com'
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 	}
 	s.platform              = :ios
 	s.ios.deployment_target = '8.0'
-	s.license               = {:type => 'commercial', :text =>'Please refer to our privacy policy and terms of service at http://carnival.io'}
+	s.license               = {:type => 'commercial', :text =>'Please refer to our privacy policy and terms of service at https://www.sailthru.com/legal'}
 	s.requires_arc          = true
     s.source_files          = 'SailthruMobile.framework/Headers/*.h'
     s.resources             = 'SailthruMobile.framework/*.png'

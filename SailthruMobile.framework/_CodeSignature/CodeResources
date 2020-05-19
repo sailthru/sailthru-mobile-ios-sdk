@@ -4,81 +4,45 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/Carnival.h</key>
-		<data>
-		IhvHULf87SNK9ReadRQWPl7RNIs=
-		</data>
-		<key>Headers/CarnivalAttributes.h</key>
-		<data>
-		V32ENHUB9cBCVjci755aO1pV/oQ=
-		</data>
-		<key>Headers/CarnivalContentItem.h</key>
-		<data>
-		obe5sFqSiqNg7XiAlZdBwiNNG5Y=
-		</data>
-		<key>Headers/CarnivalLogger.h</key>
-		<data>
-		VZ8eIh4KlaWsbzmzjZQ3K0A305Y=
-		</data>
-		<key>Headers/CarnivalMessage.h</key>
-		<data>
-		L/3yzpDudwsRgVzvazKC2JdOql0=
-		</data>
-		<key>Headers/CarnivalMessageStream.h</key>
-		<data>
-		OYVkYy+JjE8efWDoR2IC7HV/UKM=
-		</data>
-		<key>Headers/CarnivalNotificationCategory.h</key>
-		<data>
-		6GvCbGhWmFNEEzZG6nZ1JxTwB6I=
-		</data>
-		<key>Headers/CarnivalPurchase.h</key>
-		<data>
-		3zXnp7hih+vU/WX/5IvsEiDscK4=
-		</data>
-		<key>Headers/CarnivalPurchaseItem.h</key>
-		<data>
-		FmxfcAopknsV4qE0KYrH2s+Lfu0=
-		</data>
 		<key>Headers/STMAttributes.h</key>
 		<data>
-		XT6A2KygT93msmCTg4GQ4bH3R8Y=
+		VZSaEJar5fp9xXWjqfJmJs9e3sg=
 		</data>
 		<key>Headers/STMContentItem.h</key>
 		<data>
-		fRxbTJ4+Pfjg99urJWzBIaNegRc=
+		6ksDYIbW3nYxLOmCcyEJyxokgtI=
 		</data>
 		<key>Headers/STMLogger.h</key>
 		<data>
-		pdj6RzwJOzt5e5fx4Sf6RU5BGqU=
+		RgkxOta3WAQAIu7LrWkCfiyohao=
 		</data>
 		<key>Headers/STMMessage.h</key>
 		<data>
-		xYA5tiRFgJ55FZKMhvkA5HkYt50=
+		tPzQdX/TZocHgbM17kti+j8RHDc=
 		</data>
 		<key>Headers/STMMessageStream.h</key>
 		<data>
-		cpdrZrVpk5nuq35T9yTM3SwzIX4=
+		S7IZka8tqDQg1MddNr87ChpsDEE=
 		</data>
 		<key>Headers/STMNotificationCategory.h</key>
 		<data>
-		h0C7tI/HlnbERbMDd/0njGab2Eo=
+		rMMD2QmDYHmwyClg3mcmYuwALmI=
 		</data>
 		<key>Headers/STMPurchase.h</key>
 		<data>
-		Cc4bgdwRQ3C/uXrelh5K9OcL830=
+		F7LMol6HzQWEv1RfL8uT/xDGerM=
 		</data>
 		<key>Headers/STMPurchaseItem.h</key>
 		<data>
-		ZNVnu80UGuWLK/8sjHutQ80CG1I=
+		iSPU8p43hTEiUaTFgwXOsyZtsvo=
 		</data>
 		<key>Headers/SailthruMobile.h</key>
 		<data>
-		HfttDTD4CfWef5hLRQe2qB4T5SE=
+		w08Lv6QDGFOfolsvsiinZ4pzjUg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gsgIRJC9QmJEh3hldFheGGKFCv0=
+		Gtn7Xy2dK18p/QP8oi9IMbFma7k=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -164,202 +128,103 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/Carnival.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			IhvHULf87SNK9ReadRQWPl7RNIs=
-			</data>
-			<key>hash2</key>
-			<data>
-			qSX1/hvqr1/BacGEYe7C6FWmWg6MaXKk84HfhpelmIU=
-			</data>
-		</dict>
-		<key>Headers/CarnivalAttributes.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			V32ENHUB9cBCVjci755aO1pV/oQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			3ufK4lUiM28I4v0oOsYtwJxve8yehNWOWQvoMfARV08=
-			</data>
-		</dict>
-		<key>Headers/CarnivalContentItem.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			obe5sFqSiqNg7XiAlZdBwiNNG5Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			B3mlstDygmCWC/S63qSRWN8fODCyP3Ei3QpVxDi9myg=
-			</data>
-		</dict>
-		<key>Headers/CarnivalLogger.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VZ8eIh4KlaWsbzmzjZQ3K0A305Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			s93vwH0S6uNRo7vmm/mBEQgc6bcSWbAchr2ABjVV1SU=
-			</data>
-		</dict>
-		<key>Headers/CarnivalMessage.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			L/3yzpDudwsRgVzvazKC2JdOql0=
-			</data>
-			<key>hash2</key>
-			<data>
-			amtrE+S17S6+gdDW8GxmL153c2RAPcjuDocvoTO48qM=
-			</data>
-		</dict>
-		<key>Headers/CarnivalMessageStream.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OYVkYy+JjE8efWDoR2IC7HV/UKM=
-			</data>
-			<key>hash2</key>
-			<data>
-			V73djURGZT6Kc1ia/Y5A5kqLrW+vfdSKsydr7kO+a6U=
-			</data>
-		</dict>
-		<key>Headers/CarnivalNotificationCategory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			6GvCbGhWmFNEEzZG6nZ1JxTwB6I=
-			</data>
-			<key>hash2</key>
-			<data>
-			XjokalwtRoc+ZR/g6cFhztMQkmxRUBifJMHNSMmDXzI=
-			</data>
-		</dict>
-		<key>Headers/CarnivalPurchase.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3zXnp7hih+vU/WX/5IvsEiDscK4=
-			</data>
-			<key>hash2</key>
-			<data>
-			mFA5FCO9jOFtSUWnIbHU6ku/6+n2MVA9lSjbXwCf83I=
-			</data>
-		</dict>
-		<key>Headers/CarnivalPurchaseItem.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			FmxfcAopknsV4qE0KYrH2s+Lfu0=
-			</data>
-			<key>hash2</key>
-			<data>
-			Iq1KK9NzDVB3lerCqtdnfceVXwjQGXXPCLvR9Qy10g0=
-			</data>
-		</dict>
 		<key>Headers/STMAttributes.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XT6A2KygT93msmCTg4GQ4bH3R8Y=
+			VZSaEJar5fp9xXWjqfJmJs9e3sg=
 			</data>
 			<key>hash2</key>
 			<data>
-			4DZlVeJG9hNi8M1jhyAK/qpJbIjqMxSwKPvMtCa7Gr0=
+			80ks8kJwHLjAT+SCvFZ31JFo406zjJFyIYWNBTZhOzg=
 			</data>
 		</dict>
 		<key>Headers/STMContentItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fRxbTJ4+Pfjg99urJWzBIaNegRc=
+			6ksDYIbW3nYxLOmCcyEJyxokgtI=
 			</data>
 			<key>hash2</key>
 			<data>
-			+2rwv5jvjNuLq90oouJIR+x32p4b6dMIKlDJYK9rqnQ=
+			YFYIoWnLrTfIW23NQSNd/ffr0ixObWY1dkwyh9o3ySM=
 			</data>
 		</dict>
 		<key>Headers/STMLogger.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pdj6RzwJOzt5e5fx4Sf6RU5BGqU=
+			RgkxOta3WAQAIu7LrWkCfiyohao=
 			</data>
 			<key>hash2</key>
 			<data>
-			CtQUaYqEFkkBIdsP85XbihOcxYdLNd+/r69Yl84j4WU=
+			bbvo799gMoZePNq+LMOhQhVkSL+wWfvKipA2IwCtqCo=
 			</data>
 		</dict>
 		<key>Headers/STMMessage.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xYA5tiRFgJ55FZKMhvkA5HkYt50=
+			tPzQdX/TZocHgbM17kti+j8RHDc=
 			</data>
 			<key>hash2</key>
 			<data>
-			XtZrglu0pVJkeTniXOQpAPOjS8RczLhNn7CrDq/UXFk=
+			hkIP46avIkVMz7FW2N1uBi0P/MHBUeuXwHK0D53RaB0=
 			</data>
 		</dict>
 		<key>Headers/STMMessageStream.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cpdrZrVpk5nuq35T9yTM3SwzIX4=
+			S7IZka8tqDQg1MddNr87ChpsDEE=
 			</data>
 			<key>hash2</key>
 			<data>
-			SNmbUY9KFMqzxBdgogmM6MpLNg1QkHXbOgbvGo0v7VI=
+			mRluDnKV2/mvGU+HJwG2Z1glqPdYnyoR3Nl4t4UWC7k=
 			</data>
 		</dict>
 		<key>Headers/STMNotificationCategory.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h0C7tI/HlnbERbMDd/0njGab2Eo=
+			rMMD2QmDYHmwyClg3mcmYuwALmI=
 			</data>
 			<key>hash2</key>
 			<data>
-			f3JbUVQ7pejsAqNuKqsBkMSQmc0O7H1ka6DkExn7lgA=
+			aNN1fGnUD2PoNQlQISaULiAQnAVbQPxCydARQpqVfIA=
 			</data>
 		</dict>
 		<key>Headers/STMPurchase.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cc4bgdwRQ3C/uXrelh5K9OcL830=
+			F7LMol6HzQWEv1RfL8uT/xDGerM=
 			</data>
 			<key>hash2</key>
 			<data>
-			7egpmb+wH5TmMDyt7m0XJyNnZRkMYoIkD8d0bBqEydw=
+			GiC2KmNot7EhCraUclW7Jo3ihnhyFb7IairmQkpdE5I=
 			</data>
 		</dict>
 		<key>Headers/STMPurchaseItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZNVnu80UGuWLK/8sjHutQ80CG1I=
+			iSPU8p43hTEiUaTFgwXOsyZtsvo=
 			</data>
 			<key>hash2</key>
 			<data>
-			PStaDvljq2WZKS1kf1dm/8K3hjbjgDiWNLg2qKxqHGw=
+			n8HhKbgB+GaGIUapwhAu6MDF8zmQgHj35P0RnyCI20Y=
 			</data>
 		</dict>
 		<key>Headers/SailthruMobile.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HfttDTD4CfWef5hLRQe2qB4T5SE=
+			w08Lv6QDGFOfolsvsiinZ4pzjUg=
 			</data>
 			<key>hash2</key>
 			<data>
-			VSfy6jPwgbv+lwAqYFAJWcff/uEUBzU/pNKUQOftLuo=
+			YoVpmipex7gUtemBmf6UQkMacz6XmVgQg3UcC1/f/WQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

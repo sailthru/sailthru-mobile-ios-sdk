@@ -6,8 +6,6 @@
 //  Copyright © 2019 Sailthru. All rights reserved.
 //
 
-#import "CarnivalLogger.h"
-
 typedef NS_ENUM(NSInteger, STMLogLevel) {
     STMLogLevelDefault,
     STMLogLevelInfo,
@@ -16,10 +14,7 @@ typedef NS_ENUM(NSInteger, STMLogLevel) {
     STMLogLevelFault
 };
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-@protocol STMLogger <CarnivalLogger>
-#pragma clang diagnostic pop
+@protocol STMLogger <NSObject>
 
 - (void)logWithLevel:(STMLogLevel)level message:(NSString *)message;
 

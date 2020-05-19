@@ -2,18 +2,19 @@
 //  ViewController.m
 //  ExampleProject
 //
-//  Created by Carnival Mobile
-//  Copyright (c) 2015 Carnival Mobile. All rights reserved.
+//  Created by Sailthru Mobile
+//  Copyright (c) 2015 Sailthru Mobile. All rights reserved.
 //
-//  For documentation see http://docs.carnivalmobile.com
+//  For documentation see https://docs.mobile.sailthru.com
 //
 
 #import "ExampleViewController.h"
-#import <Carnival/Carnival.h>
+#import <SailthruMobile/SailthruMobile.h>
 
-@interface ExampleViewController () <CarnivalMessageStreamDelegate, CLLocationManagerDelegate>
+@interface ExampleViewController () <STMMessageStreamDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) SailthruMobile *sailthruMobile;
 
 @end
 
@@ -26,8 +27,10 @@
     
     [self setupLocationManager];
     
-    // Set this viewcontroller as the CarnivalMessageStream's delegate
-    [CarnivalMessageStream setDelegate:self];
+    self.sailthruMobile = [SailthruMobile new];
+    
+    // Set this viewcontroller as the STMMessageStream's delegate
+    [[STMMessageStream new] setDelegate:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -41,7 +44,7 @@
     
     [self startLocationTrackingInBackground];
     
-    [Carnival deviceID:^(NSString *deviceID, NSError *error) {
+    [self.sailthruMobile deviceID:^(NSString *deviceID, NSError *error) {
         NSLog(@"DeviceID of current device: %@, with possible error: %@",deviceID, error);
     }];
 }
@@ -123,42 +126,42 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     // Send the last location object as that is the most recent one always
-    [Carnival updateLocation:[locations lastObject]];
+    [self.sailthruMobile updateLocation:[locations lastObject]];
 }
 
-#pragma mark - CarnivalMessageStreamDelegate
+#pragma mark - STMMessageStreamDelegate
 
-- (void)willShowMessageOfType:(CarnivalMessageType)messageType {
+- (void)willShowMessageOfType:(STMMessageType)messageType {
     NSLog(@"willShowMessageOfType: %ld",(long)messageType);
     
     // You can use this method to mute audio during videos
 }
 
-- (void)didShowMessageOfType:(CarnivalMessageType)messageType {
+- (void)didShowMessageOfType:(STMMessageType)messageType {
     NSLog(@"didShowMessageOfType: %li", (long)messageType);
     
     // You can use this method to mute audio during videos
 }
 
-- (void)willDismissMessageOfType:(CarnivalMessageType)messageType {
+- (void)willDismissMessageOfType:(STMMessageType)messageType {
     NSLog(@"willDismissMessageOfType: %li",(long)messageType);
     
     // You can use this method to unmute audio during videos
 }
 
-- (void)didDismissMessageOfType:(CarnivalMessageType)messageType {
+- (void)didDismissMessageOfType:(STMMessageType)messageType {
     NSLog(@"didDismissMessageOfType: %li", (long)messageType);
     
     // You can use this method to unmute audio during videos
 }
 
-- (void)willShowInAppNotificationForMessageType:(CarnivalMessageType)messageType {
+- (void)willShowInAppNotificationForMessageType:(STMMessageType)messageType {
     NSLog(@"willShowInAppNotificationForMessageType: %li", (long)messageType);
     
     // You can use this method to do something when an in-app notification is shown
 }
 
-- (void)didShowInAppNotificationForMessageType:(CarnivalMessageType)messageType {
+- (void)didShowInAppNotificationForMessageType:(STMMessageType)messageType {
     NSLog(@"didShowInAppNotificationForMessageType: %li", (long)messageType);
     
     // You can use this method to do something when an in-app notification is shown
@@ -167,67 +170,67 @@
 #pragma mark - pressed actions
 
 - (IBAction)logEventButtonPressed:(UIButton *)sender {
-    [Carnival logEvent:@"example_event_name"];
+    [self.sailthruMobile logEvent:@"example_event_name"];
 }
 
 - (IBAction)setStringButtonPressed:(UIButton *)sender {
-    CarnivalAttributes *attributes  = [[CarnivalAttributes alloc] init];
+    STMAttributes *attributes  = [[STMAttributes alloc] init];
     
     [attributes setString:@"example_string" forKey:@"example_string_key"];
     
-    [Carnival setAttributes:attributes withResponse:^(NSError * _Nullable error) {
+    [self.sailthruMobile setAttributes:attributes withResponse:^(NSError * _Nullable error) {
         NSLog(@"setAttributes returned with possible error: %@",error);
     }];
 }
 
 - (IBAction)setFloatButtonPressed:(UIButton *)sender {
-    CarnivalAttributes *attributes  = [[CarnivalAttributes alloc] init];
+    STMAttributes *attributes  = [[STMAttributes alloc] init];
     
     [attributes setFloat:1.1 forKey:@"example_float_key"];
     
-    [Carnival setAttributes:attributes withResponse:^(NSError * _Nullable error) {
+    [self.sailthruMobile setAttributes:attributes withResponse:^(NSError * _Nullable error) {
         NSLog(@"setAttributes returned with possible error: %@",error);
     }];
 }
 
 - (IBAction)setIntegerButtonPressed:(UIButton *)sender {
-    CarnivalAttributes *attributes  = [[CarnivalAttributes alloc] init];
+    STMAttributes *attributes  = [[STMAttributes alloc] init];
 
     [attributes setInteger:123 forKey:@"example_integer_key"];
     
-    [Carnival setAttributes:attributes withResponse:^(NSError * _Nullable error) {
+    [self.sailthruMobile setAttributes:attributes withResponse:^(NSError * _Nullable error) {
         NSLog(@"setAttributes returned with possible error: %@",error);
     }];
 }
 
 - (IBAction)setDateButtonPressed:(UIButton *)sender {
-    CarnivalAttributes *attributes  = [[CarnivalAttributes alloc] init];
+    STMAttributes *attributes  = [[STMAttributes alloc] init];
     
     [attributes setDate:[NSDate date] forKey:@"example_date_key"];
     
-    [Carnival setAttributes:attributes withResponse:^(NSError * _Nullable error) {
+    [self.sailthruMobile setAttributes:attributes withResponse:^(NSError * _Nullable error) {
         NSLog(@"setAttributes returned with possible error: %@",error);
     }];
 }
 
 - (IBAction)setBooleanButtonPressed:(UIButton *)sender {
-    CarnivalAttributes *attributes  = [[CarnivalAttributes alloc] init];
+    STMAttributes *attributes  = [[STMAttributes alloc] init];
     
     [attributes setBool:YES forKey:@"example_boolean_key"];
     
-    [Carnival setAttributes:attributes withResponse:^(NSError * _Nullable error) {
+    [self.sailthruMobile setAttributes:attributes withResponse:^(NSError * _Nullable error) {
         NSLog(@"setAttributes returned with possible error: %@",error);
     }];
 }
 
 - (IBAction)removeStringButtonPressed:(UIButton *)sender {
-    [Carnival removeAttributeWithKey:@"example_string_key" withResponse:^(NSError *error) {
+    [self.sailthruMobile removeAttributeWithKey:@"example_string_key" withResponse:^(NSError *error) {
         NSLog(@"removeAttributeWithKey: returned with possible error: %@",error);
     }];
 }
 
 - (IBAction)setUserIDButtonPressed:(UIButton *)sender {
-    [Carnival setUserId:@"example_user_id" withResponse:^(NSError *error) {
+    [self.sailthruMobile setUserId:@"example_user_id" withResponse:^(NSError *error) {
         NSLog(@"setUserID returned with possible error: %@",error);
     }];
 }

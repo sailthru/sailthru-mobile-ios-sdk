@@ -6,7 +6,6 @@
 //  Copyright © 2019 Sailthru. All rights reserved.
 //
 
-#import "CarnivalMessageStream.h"
 #import "STMMessage.h"
 
 NS_ASSUME_NONNULL_BEGIN

@@ -3,7 +3,7 @@
 //  ExampleProject
 //
 //  Created by Blair McArthur on 19/12/13.
-//  Copyright (c) 2013 Carnival Labs. All rights reserved.
+//  Copyright (c) 2013 Sailthru Mobile. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

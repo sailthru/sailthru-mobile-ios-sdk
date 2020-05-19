@@ -16,11 +16,10 @@
 #import "STMContentItem.h"
 #import "STMPurchase.h"
 #import "STMNotificationCategory.h"
-#import "Carnival.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define STM_VERSION @"10.1.0"
+#define STM_VERSION @"11.0.0-beta"
 FOUNDATION_EXPORT double STMSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char STMSDKVersionString[];
 

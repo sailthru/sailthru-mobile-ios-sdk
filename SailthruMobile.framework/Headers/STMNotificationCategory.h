@@ -6,7 +6,7 @@
 //  Copyright © 2019 Sailthru. All rights reserved.
 //
 
-#import "CarnivalNotificationCategory.h"
+#import "STMNotificationCategory.h"
 /**
  * Action identifers that will be returned to the app by the UNNotificationResponse actionIdentifier field when it is returned in the didReceiveNotificationResponse:withCompletionHandler method after an action is selected.
  */

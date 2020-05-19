@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22860AB71FCE47EB00B8809D /* Carnival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22860AB31FCE469100B8809D /* Carnival.framework */; };
-		22860AB81FCE47EB00B8809D /* Carnival.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22860AB31FCE469100B8809D /* Carnival.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22B325F41C6153A700A7056D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B325F31C6153A700A7056D /* Security.framework */; };
 		22F7B8CC1FB13C1C00C558C1 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F7B8C91FB13BF300C558C1 /* UserNotifications.framework */; };
 		758D6AF419AE915600F09C8D /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -26,6 +24,7 @@
 		75D77B2D19F0778300BD2319 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D77B2C19F0778300BD2319 /* CoreGraphics.framework */; };
 		75D77B2F19F0779600BD2319 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D77B2E19F0779600BD2319 /* CoreLocation.framework */; };
 		75D77B3119F077A500BD2319 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D77B3019F077A500BD2319 /* QuartzCore.framework */; };
+		B9ADEB61241F0B530070EE3F /* SailthruMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ADEB60241F0B530070EE3F /* SailthruMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				22860AB81FCE47EB00B8809D /* Carnival.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,7 +41,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		22860AB31FCE469100B8809D /* Carnival.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Carnival.framework; sourceTree = "<group>"; };
 		22B325F31C6153A700A7056D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		22F7B8C91FB13BF300C558C1 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		7566D52919F9B984007D5D27 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -66,6 +63,7 @@
 		75D77B2C19F0778300BD2319 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		75D77B2E19F0779600BD2319 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		75D77B3019F077A500BD2319 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B9ADEB60241F0B530070EE3F /* SailthruMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SailthruMobile.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +75,12 @@
 				22B325F41C6153A700A7056D /* Security.framework in Frameworks */,
 				75D77B3119F077A500BD2319 /* QuartzCore.framework in Frameworks */,
 				75D77B2F19F0779600BD2319 /* CoreLocation.framework in Frameworks */,
+				B9ADEB61241F0B530070EE3F /* SailthruMobile.framework in Frameworks */,
 				75D77B2D19F0778300BD2319 /* CoreGraphics.framework in Frameworks */,
 				758D6AF819AE91E800F09C8D /* MediaPlayer.framework in Frameworks */,
 				758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */,
 				758E8D8D186367C900A8AFA4 /* UIKit.framework in Frameworks */,
 				758E8D89186367C900A8AFA4 /* Foundation.framework in Frameworks */,
-				22860AB71FCE47EB00B8809D /* Carnival.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +124,7 @@
 		758E8D8E186367C900A8AFA4 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				22860AB31FCE469100B8809D /* Carnival.framework */,
+				B9ADEB60241F0B530070EE3F /* SailthruMobile.framework */,
 				758E8D97186367C900A8AFA4 /* ExampleAppDelegate.h */,
 				758E8D98186367C900A8AFA4 /* ExampleAppDelegate.m */,
 				758E8DA0186367C900A8AFA4 /* ExampleViewController.h */,
@@ -191,6 +189,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
