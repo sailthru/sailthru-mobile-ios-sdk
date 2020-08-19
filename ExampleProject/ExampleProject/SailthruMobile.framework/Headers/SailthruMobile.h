@@ -19,7 +19,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define STM_VERSION @"11.0.0"
+#define STM_VERSION @"11.0.1"
 FOUNDATION_EXPORT double STMSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char STMSDKVersionString[];
 
