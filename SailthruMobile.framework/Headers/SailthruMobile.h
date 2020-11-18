@@ -19,7 +19,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define STM_VERSION @"11.0.1"
+#define STM_VERSION @"11.1.0"
 FOUNDATION_EXPORT double STMSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char STMSDKVersionString[];
 
@@ -165,7 +165,7 @@ extern NSString * const STMAutoAnalyticsSourceAll;
  *
  * @param notificationDict The userInfo dictionary from the remote notification you want the Sailthru Mobile SDK to handle.
  */
-- (void)handleNotificationPayload:(NSDictionary *)notificationDict;
+- (void)handleNotificationPayload:(NSDictionary *)notificationDict __attribute__((deprecated("Will be removed when support for iOS 8 & 9 is dropped. Replaced by handleNotificationResponse: and handlePresentNotification: for iOS 10+")));
 
 /**
  * Tells the Sailthru Mobile SDK that the notification settings have been updated and that it should synchronize the new settings with the Sailthru Mobile platform. This method is only required if auto integration has been disabled. It should be called after either the requestAuthorizationWithOptions:completionHandler: or registerUserNotificationSettings: methods have been used to request push notifications authorization.
