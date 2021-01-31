@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,7 +24,8 @@
 		75D77B2D19F0778300BD2319 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D77B2C19F0778300BD2319 /* CoreGraphics.framework */; };
 		75D77B2F19F0779600BD2319 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D77B2E19F0779600BD2319 /* CoreLocation.framework */; };
 		75D77B3119F077A500BD2319 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D77B3019F077A500BD2319 /* QuartzCore.framework */; };
-		B9ADEB61241F0B530070EE3F /* SailthruMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ADEB60241F0B530070EE3F /* SailthruMobile.framework */; };
+		B911582825B1189400CFF5CB /* SailthruMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B911582725B1189400CFF5CB /* SailthruMobile.xcframework */; };
+		B911582925B1189400CFF5CB /* SailthruMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B911582725B1189400CFF5CB /* SailthruMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B911582925B1189400CFF5CB /* SailthruMobile.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +65,7 @@
 		75D77B2C19F0778300BD2319 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		75D77B2E19F0779600BD2319 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		75D77B3019F077A500BD2319 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B911582725B1189400CFF5CB /* SailthruMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SailthruMobile.xcframework; path = ExampleProject/SailthruMobile.xcframework; sourceTree = "<group>"; };
 		B9ADEB60241F0B530070EE3F /* SailthruMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SailthruMobile.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,8 +77,8 @@
 				22F7B8CC1FB13C1C00C558C1 /* UserNotifications.framework in Frameworks */,
 				22B325F41C6153A700A7056D /* Security.framework in Frameworks */,
 				75D77B3119F077A500BD2319 /* QuartzCore.framework in Frameworks */,
+				B911582825B1189400CFF5CB /* SailthruMobile.xcframework in Frameworks */,
 				75D77B2F19F0779600BD2319 /* CoreLocation.framework in Frameworks */,
-				B9ADEB61241F0B530070EE3F /* SailthruMobile.framework in Frameworks */,
 				75D77B2D19F0778300BD2319 /* CoreGraphics.framework in Frameworks */,
 				758D6AF819AE91E800F09C8D /* MediaPlayer.framework in Frameworks */,
 				758D6AF619AE91E000F09C8D /* AVFoundation.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		758E8D87186367C900A8AFA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B911582725B1189400CFF5CB /* SailthruMobile.xcframework */,
 				22F7B8C91FB13BF300C558C1 /* UserNotifications.framework */,
 				22B325F31C6153A700A7056D /* Security.framework */,
 				7566D52919F9B984007D5D27 /* AdSupport.framework */,
@@ -307,7 +311,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s arm64 i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -352,7 +355,6 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s arm64 i386 x86_64";
 			};
 			name = Release;
 		};
@@ -372,8 +374,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleProject/ExampleProject-Prefix.pch";
 				INFOPLIST_FILE = "ExampleProject/ExampleProject-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.carnivalmobile.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -397,8 +402,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleProject/ExampleProject-Prefix.pch";
 				INFOPLIST_FILE = "ExampleProject/ExampleProject-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.carnivalmobile.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

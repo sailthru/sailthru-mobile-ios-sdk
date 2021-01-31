@@ -1,0 +1,6 @@
+framework module SailthruMobileExtension {
+    umbrella header "SailthruMobileExtensionFramework.h"
+    
+    export *
+    module * { export * }
+}

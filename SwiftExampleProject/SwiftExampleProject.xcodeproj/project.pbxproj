@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,18 +16,18 @@
 		75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC1FD19C061C6007F4332 /* libz.dylib */; };
 		75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC20119C06256007F4332 /* CoreGraphics.framework */; };
 		75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DAC1FF19C0624F007F4332 /* CoreLocation.framework */; };
-		FABA931223AC17BC0010F09C /* SailthruMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABA931023AC178C0010F09C /* SailthruMobile.framework */; };
-		FABA931323AC17BC0010F09C /* SailthruMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FABA931023AC178C0010F09C /* SailthruMobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B911582425B1184600CFF5CB /* SailthruMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91157BA25B104B300CFF5CB /* SailthruMobile.xcframework */; };
+		B911582525B1184600CFF5CB /* SailthruMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B91157BA25B104B300CFF5CB /* SailthruMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FABA931423AC17BC0010F09C /* Embed Frameworks */ = {
+		B911582625B1184600CFF5CB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FABA931323AC17BC0010F09C /* SailthruMobile.framework in Embed Frameworks */,
+				B911582525B1184600CFF5CB /* SailthruMobile.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +49,7 @@
 		75DAC1FD19C061C6007F4332 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		75DAC1FF19C0624F007F4332 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		75DAC20119C06256007F4332 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B91157BA25B104B300CFF5CB /* SailthruMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SailthruMobile.xcframework; path = ../Carnival/build/SailthruMobile.xcframework; sourceTree = "<group>"; };
 		FABA930C23AC16CF0010F09C /* SailthruMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SailthruMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABA931023AC178C0010F09C /* SailthruMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SailthruMobile.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,12 +59,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FABA931223AC17BC0010F09C /* SailthruMobile.framework in Frameworks */,
 				75DAC1FE19C061C6007F4332 /* libz.dylib in Frameworks */,
 				75DAC20319C0626F007F4332 /* CoreGraphics.framework in Frameworks */,
 				75DAC20419C0626F007F4332 /* CoreLocation.framework in Frameworks */,
 				7535425E19C04BDD00B7F2BD /* MediaPlayer.framework in Frameworks */,
 				7535425F19C04BDD00B7F2BD /* AVFoundation.framework in Frameworks */,
+				B911582425B1184600CFF5CB /* SailthruMobile.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +82,7 @@
 		22F7B8CA1FB13C1500C558C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B91157BA25B104B300CFF5CB /* SailthruMobile.xcframework */,
 				FABA930C23AC16CF0010F09C /* SailthruMobile.framework */,
 				22F7B8CB1FB13C1500C558C1 /* UserNotifications.framework */,
 			);
@@ -150,7 +152,7 @@
 				753541B719C0462D00B7F2BD /* Sources */,
 				753541B819C0462D00B7F2BD /* Frameworks */,
 				753541B919C0462D00B7F2BD /* Resources */,
-				FABA931423AC17BC0010F09C /* Embed Frameworks */,
+				B911582625B1184600CFF5CB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,7 +328,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -346,15 +349,17 @@
 					"$(PROJECT_DIR)/SwiftExampleProject",
 				);
 				INFOPLIST_FILE = SwiftExampleProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.carnivalmobile.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Debug;
 		};
@@ -372,15 +377,17 @@
 					"$(PROJECT_DIR)/SwiftExampleProject",
 				);
 				INFOPLIST_FILE = SwiftExampleProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.carnivalmobile.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Release;
 		};
