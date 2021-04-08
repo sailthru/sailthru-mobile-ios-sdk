@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "STMPurchaseItem.h"
+#import "STMPurchaseAdjustment.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 #pragma mark - Optional fields
+
+/**
+ * An array of the adjustments (positive or negative) that should be applied to the total order value. Title and price (in cents) are required.
+ */
+@property (strong, nonatomic, readonly) NSMutableArray<STMPurchaseAdjustment *> *purchaseAdjustments;
 
 /**
  * Any number of custom variables to attach to the order. These are commonly used with the Audience Builder “Purchase Order Var Is” query. For example, you could specify the shipping address, estimated delivery date given, credit card type used, whether a deal was used, the promo code used, etc.Note that a vars object may also exist at the item level. See the example code, and the items definition in this table.You may use any custom order variable name(s). Note that the following variable name is reserved at the order level, for a particular purpose:
@@ -61,6 +67,21 @@ NS_ASSUME_NONNULL_BEGIN
  * @param value the custom value
  */
 - (void)addVarWithKey:(NSString *)key value:(id)value;
+
+/**
+ * Add a purchase adjustment to the purchase.
+ *
+ * @param purchaseAdjustment The purchase adjustment (eg. discounts, shipping costs) being added to the purchase.
+ */
+- (void)addPurchaseAdjustment:(STMPurchaseAdjustment *)purchaseAdjustment;
+
+/**
+ * Set purchase adjustments for the purchase.
+ * @note This will override any previously added purchase adjustments with the new array.
+ *
+ * @param purchaseAdjustments The purchase adjustments (eg. discounts, shipping costs) being applied to the purchase.
+ */
+- (void)setAllPurchaseAdjustments:(NSArray<STMPurchaseAdjustment *>*)purchaseAdjustments;
 
 @end
 

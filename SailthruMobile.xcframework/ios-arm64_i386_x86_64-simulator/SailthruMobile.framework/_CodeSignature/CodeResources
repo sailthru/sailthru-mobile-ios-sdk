@@ -30,7 +30,11 @@
 		</data>
 		<key>Headers/STMPurchase.h</key>
 		<data>
-		F7LMol6HzQWEv1RfL8uT/xDGerM=
+		6MAsfgLovqUom03KuucCKhKVPsQ=
+		</data>
+		<key>Headers/STMPurchaseAdjustment.h</key>
+		<data>
+		/ggLader3hk0Ndvvj7sRckIWjqg=
 		</data>
 		<key>Headers/STMPurchaseItem.h</key>
 		<data>
@@ -38,11 +42,11 @@
 		</data>
 		<key>Headers/SailthruMobile.h</key>
 		<data>
-		ymw3/ZpDuTX0jzolYbWheE6J0sY=
+		lQXcQ5ta02CqilGttDh5FJhQ+aM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ew4gPXUWhABnAIyH16wDdbO7Kho=
+		tXYSatoEEOWJ/hyrxp6MlG4u/vs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -198,11 +202,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			F7LMol6HzQWEv1RfL8uT/xDGerM=
+			6MAsfgLovqUom03KuucCKhKVPsQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			GiC2KmNot7EhCraUclW7Jo3ihnhyFb7IairmQkpdE5I=
+			hg5LZH6mn+vQJ1EwUCjKD+gyaAznldxffb/wt65aLRI=
+			</data>
+		</dict>
+		<key>Headers/STMPurchaseAdjustment.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/ggLader3hk0Ndvvj7sRckIWjqg=
+			</data>
+			<key>hash2</key>
+			<data>
+			D9/G3OxGAiaUb9DKoO4dOwTC0euOrUqBgiNdZkgBM9I=
 			</data>
 		</dict>
 		<key>Headers/STMPurchaseItem.h</key>
@@ -220,11 +235,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ymw3/ZpDuTX0jzolYbWheE6J0sY=
+			lQXcQ5ta02CqilGttDh5FJhQ+aM=
 			</data>
 			<key>hash2</key>
 			<data>
-			ddhcLJ+IyydOZMH7qN9oQPc+Gq/ViGqhDubXqbrz7QU=
+			zGkKLlW5JhIYIoMWcedWhFtWBp9w+fMTn3nucMvavY0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
