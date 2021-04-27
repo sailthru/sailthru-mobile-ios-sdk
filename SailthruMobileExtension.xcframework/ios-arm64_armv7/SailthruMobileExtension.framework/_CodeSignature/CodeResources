@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/SailthruMobileExtension.h</key>
 		<data>
-		rlm+oi6LzKy8u02NA7A49zAb/sc=
+		V1+BHT0WOh5SINiF6TwDoJXy6yU=
 		</data>
 		<key>Headers/SailthruMobileExtensionFramework.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZUqN7u08PC4+w6e8hHj9BVllbIM=
+		qEAG1YW8pq8OL3r7zG++2udRKDo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -42,11 +42,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rlm+oi6LzKy8u02NA7A49zAb/sc=
+			V1+BHT0WOh5SINiF6TwDoJXy6yU=
 			</data>
 			<key>hash2</key>
 			<data>
-			hrptS3JHUpdaungixc5faJrD3+lyqmy6tpLMUDeawFI=
+			NKUFNowOUBbPF0LzjSltItkacKfl1twT2pxhqHOz1e4=
 			</data>
 		</dict>
 		<key>Headers/SailthruMobileExtensionFramework.h</key>
