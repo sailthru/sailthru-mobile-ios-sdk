@@ -19,7 +19,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define STM_VERSION @"12.1.1"
+#define STM_VERSION @"12.2.0"
 FOUNDATION_EXPORT double STMSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char STMSDKVersionString[];
 
@@ -365,6 +365,15 @@ extern NSString * const STMAutoAnalyticsSourceAll;
  * @param block The block to handle the result of the call. May contain an error if the call failed.
  */
 - (void)logAbandonedCart:(STMPurchase *)purchase withResponse:(nullable void(^)(NSError * _Nullable))block;
+
+#ifdef DEBUG
+/**
+ * Marks this device as a development device on the platform. This will instruct the platform to send push notifications to the development APNS server for this device.
+ * @warning This method should not be called in builds that will point to the APNS production environment, use only in debug or test builds.
+ * @param block The block to handle the result of the call. May contain an error if the call failed.
+ */
+- (void)setDevelopmentDeviceWithResponse:(nullable void(^)(NSError * _Nullable))block;
+#endif
 
 @end
 

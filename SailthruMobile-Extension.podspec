@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = 'SailthruMobile-Extension'
-  s.version                 = '12.1.1'
+  s.version                 = '12.2.0'
   s.summary                 = 'Sailthru Mobile iOS SDK for integrating with https://mobile.sailthru.com messaging and analytics service.'
   s.author                  = {
     'Sailthru Mobile' => 'support@sailthru.com'
