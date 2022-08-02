@@ -46,35 +46,35 @@
 		</data>
 		<key>Headers/SailthruMobile.h</key>
 		<data>
-		/L7pdddOm5tTdZgJAtT0Jah+L1I=
+		RxGAH4s0ipgHHd8ZEBYMHQ/MiFY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0LlecE230dBXz+22mGc3HdmOBFk=
+		P5Syn588agjtnrPVzf1ohu1hEn0=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		/T63VYCsd8eM4ObYqTyaLdEHUb4=
+		75xa8fgQojU7FFA/2HAJtieAAKE=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		/T63VYCsd8eM4ObYqTyaLdEHUb4=
+		75xa8fgQojU7FFA/2HAJtieAAKE=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/Project/i386-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		7CuyH56aNdZhgMr13EEIg679Zow=
+		Xh/bsUEHu8ODjCnXJTmX2a3Z9Y4=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/Project/i386.swiftsourceinfo</key>
 		<data>
-		7CuyH56aNdZhgMr13EEIg679Zow=
+		Xh/bsUEHu8ODjCnXJTmX2a3Z9Y4=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		XVwPLJPtF3QT9Qa+T6IbDL5sBls=
+		xRF1H/xqCpDqHq+Mw2asI5Q5aak=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		XVwPLJPtF3QT9Qa+T6IbDL5sBls=
+		xRF1H/xqCpDqHq+Mw2asI5Q5aak=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		seWBgSUwJz9jcAdWui7zIZMOkXE=
+		3j2SzmGHzZAi6TgZOtFSqRIVoSM=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		seWBgSUwJz9jcAdWui7zIZMOkXE=
+		3j2SzmGHzZAi6TgZOtFSqRIVoSM=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		5q0K+lxozB1SmsrUbaNEpYRDbmM=
+		ZQlgni3xQJ4qzoRL3f2jyVUxr9I=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/i386.swiftmodule</key>
 		<data>
-		5q0K+lxozB1SmsrUbaNEpYRDbmM=
+		ZQlgni3xQJ4qzoRL3f2jyVUxr9I=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		QAKr/ShBPm9z+ruYuJvxZcwb340=
+		Io2WrmxIYxg7v4BvD57n++Ezh/8=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -146,7 +146,7 @@
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		QAKr/ShBPm9z+ruYuJvxZcwb340=
+		Io2WrmxIYxg7v4BvD57n++Ezh/8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -226,7 +226,7 @@
 		</data>
 		<key>STModel.momd/STModel 1.0.omo</key>
 		<data>
-		VoUg9HpgPDiy7g7oymRLLsfn8zk=
+		hiIvVUp+OL368/7QN0ahevT/EHs=
 		</data>
 		<key>STModel.momd/VersionInfo.plist</key>
 		<data>
@@ -426,77 +426,77 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/L7pdddOm5tTdZgJAtT0Jah+L1I=
+			RxGAH4s0ipgHHd8ZEBYMHQ/MiFY=
 			</data>
 			<key>hash2</key>
 			<data>
-			aXZHd6ulHu23TN/lWORROQ7sgVuu95hg+MJ0f2qhrtQ=
+			z/NaTRKACkeJ/Xu4Cs/uZ1Eo5PJ5RgO25vvvhhW7NoY=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/T63VYCsd8eM4ObYqTyaLdEHUb4=
+			75xa8fgQojU7FFA/2HAJtieAAKE=
 			</data>
 			<key>hash2</key>
 			<data>
-			RhJIYntfqy/dwtslKA+XnfhpXlJucLZUQ5eCucI84Mc=
+			sPoRETx11iIdL2mNGYLxpCvfCvsfirzhOZ0K//CdlQw=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/T63VYCsd8eM4ObYqTyaLdEHUb4=
+			75xa8fgQojU7FFA/2HAJtieAAKE=
 			</data>
 			<key>hash2</key>
 			<data>
-			RhJIYntfqy/dwtslKA+XnfhpXlJucLZUQ5eCucI84Mc=
+			sPoRETx11iIdL2mNGYLxpCvfCvsfirzhOZ0K//CdlQw=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/Project/i386-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7CuyH56aNdZhgMr13EEIg679Zow=
+			Xh/bsUEHu8ODjCnXJTmX2a3Z9Y4=
 			</data>
 			<key>hash2</key>
 			<data>
-			uJ5L6CQIy2erVJJzAly7mNGnp4GgxP9TGMjMkP97YNU=
+			qpZRcM4jraiCFpN5dsA+fxqL/vBA9u9FwSW3rRY3QJo=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/Project/i386.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7CuyH56aNdZhgMr13EEIg679Zow=
+			Xh/bsUEHu8ODjCnXJTmX2a3Z9Y4=
 			</data>
 			<key>hash2</key>
 			<data>
-			uJ5L6CQIy2erVJJzAly7mNGnp4GgxP9TGMjMkP97YNU=
+			qpZRcM4jraiCFpN5dsA+fxqL/vBA9u9FwSW3rRY3QJo=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XVwPLJPtF3QT9Qa+T6IbDL5sBls=
+			xRF1H/xqCpDqHq+Mw2asI5Q5aak=
 			</data>
 			<key>hash2</key>
 			<data>
-			11L0XjdJCGLLypnZNRuHKDnq/YRyQvPCtGRbhKSg4Ro=
+			hwUFjmF/AmB3SJ3MPpE+4ocqydeW7i/lWWVXo6t1HPw=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XVwPLJPtF3QT9Qa+T6IbDL5sBls=
+			xRF1H/xqCpDqHq+Mw2asI5Q5aak=
 			</data>
 			<key>hash2</key>
 			<data>
-			11L0XjdJCGLLypnZNRuHKDnq/YRyQvPCtGRbhKSg4Ro=
+			hwUFjmF/AmB3SJ3MPpE+4ocqydeW7i/lWWVXo6t1HPw=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -525,11 +525,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			seWBgSUwJz9jcAdWui7zIZMOkXE=
+			3j2SzmGHzZAi6TgZOtFSqRIVoSM=
 			</data>
 			<key>hash2</key>
 			<data>
-			9wcPHHyInMC4wLvA3yYTIA+MtjQ2qUmXaI6l8+jNt6s=
+			seSKVrsBV7VfF/eB2qYc2Se0Qe0M8SMq0tQru1GGnVM=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/arm64.swiftdoc</key>
@@ -558,11 +558,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			seWBgSUwJz9jcAdWui7zIZMOkXE=
+			3j2SzmGHzZAi6TgZOtFSqRIVoSM=
 			</data>
 			<key>hash2</key>
 			<data>
-			9wcPHHyInMC4wLvA3yYTIA+MtjQ2qUmXaI6l8+jNt6s=
+			seSKVrsBV7VfF/eB2qYc2Se0Qe0M8SMq0tQru1GGnVM=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -591,11 +591,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5q0K+lxozB1SmsrUbaNEpYRDbmM=
+			ZQlgni3xQJ4qzoRL3f2jyVUxr9I=
 			</data>
 			<key>hash2</key>
 			<data>
-			7EFcOP73fQPkf2VhxqwKOEKt8Vvx4L4L+3n/0mHF7Gk=
+			TtL1tXxuC3YNtq04nWGUa0c1KKw3RCUGCiR6+PZ2r10=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/i386.swiftdoc</key>
@@ -624,11 +624,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5q0K+lxozB1SmsrUbaNEpYRDbmM=
+			ZQlgni3xQJ4qzoRL3f2jyVUxr9I=
 			</data>
 			<key>hash2</key>
 			<data>
-			7EFcOP73fQPkf2VhxqwKOEKt8Vvx4L4L+3n/0mHF7Gk=
+			TtL1tXxuC3YNtq04nWGUa0c1KKw3RCUGCiR6+PZ2r10=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -657,11 +657,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QAKr/ShBPm9z+ruYuJvxZcwb340=
+			Io2WrmxIYxg7v4BvD57n++Ezh/8=
 			</data>
 			<key>hash2</key>
 			<data>
-			VJF047qGB6ZGPEO7evDRntGPwGc42/fggjQmUiBjiPs=
+			iLrNz+4FSzlw6CB3bRuW5cNAGMlFF1rO67cNjqb3Q1A=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/x86_64.swiftdoc</key>
@@ -690,11 +690,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QAKr/ShBPm9z+ruYuJvxZcwb340=
+			Io2WrmxIYxg7v4BvD57n++Ezh/8=
 			</data>
 			<key>hash2</key>
 			<data>
-			VJF047qGB6ZGPEO7evDRntGPwGc42/fggjQmUiBjiPs=
+			iLrNz+4FSzlw6CB3bRuW5cNAGMlFF1rO67cNjqb3Q1A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -910,11 +910,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VoUg9HpgPDiy7g7oymRLLsfn8zk=
+			hiIvVUp+OL368/7QN0ahevT/EHs=
 			</data>
 			<key>hash2</key>
 			<data>
-			7pSbkIKCEEl7n2Wuf9oeFjFhvgZVNb3NxtOZoONTSYg=
+			4ykaLX+T5hQ+S/pkXNW+R11xlA5AAImVbKddqg1Bee4=
 			</data>
 		</dict>
 		<key>STModel.momd/VersionInfo.plist</key>
