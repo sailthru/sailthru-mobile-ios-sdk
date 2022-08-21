@@ -42,47 +42,47 @@
 		</data>
 		<key>Headers/SailthruMobile-Swift.h</key>
 		<data>
-		/vzcQ+3h4WKGNetcFUXj/qExHa8=
+		3msoBEtGAsqel/02Uhe4P248mQc=
 		</data>
 		<key>Headers/SailthruMobile.h</key>
 		<data>
-		RxGAH4s0ipgHHd8ZEBYMHQ/MiFY=
+		alc7o4hwe3Nb0OXUrwqLu5BcL6Y=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Jbv4LeG0tMJEK2NwZypifRzVHEs=
+		gVvr8T+t8HGz3eDwMMmDLvxUsHw=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		6+H86fSkHClwVQo7fJSrSGB+z58=
+		yq7INc/Y9VZGS21WtSxTUnrTunQ=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/Project/armv7-apple-ios.swiftsourceinfo</key>
 		<data>
-		7wApQtf+3ElgH+DyQJNykDN+6L4=
+		LvosLnUcZz48l9Zl5XKsaDsKguc=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		qhd/ZRXj7sBrmFFMikRPxXX++m0=
+		wh1QSMxVidOyP84/RuIgZ/3HsEw=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		xPfpfXq/VyOAbm0XhNuGUNIs770=
+		ZudEtdUdSFslxbu2cETH6tgKXzk=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		/z7a26YQ8cYTOFQc6IZwwSJu6lk=
+		75ymmBpIlnffXVp3KaqgK0yfViA=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
-		8oXPaWzJiBHblpeLdZQyl2l7Amo=
+		i9jjuWTLIorGG/TV4zVxRMkUwco=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		2J8ccW13HwFaD013EHGgGXrvyHE=
+		CBSxKeqlkN0eolY6m0Cj3kasf4Y=
 		</data>
 		<key>Modules/SailthruMobile.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		9evFkVapzgIDb0WuhUD1MN9dPLw=
+		nkRAT4lRYpsFpFOLdzrPRRHa0iY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -351,110 +351,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/vzcQ+3h4WKGNetcFUXj/qExHa8=
+			3msoBEtGAsqel/02Uhe4P248mQc=
 			</data>
 			<key>hash2</key>
 			<data>
-			bVKOd/7Ptd70AjasHfWxrPPTPLD6MOvz7tjIF5o30R4=
+			Nlr3XmkHJHh1IrhtI6OspDFpmrc5YhBP2CrZdcjL+LM=
 			</data>
 		</dict>
 		<key>Headers/SailthruMobile.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RxGAH4s0ipgHHd8ZEBYMHQ/MiFY=
+			alc7o4hwe3Nb0OXUrwqLu5BcL6Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			z/NaTRKACkeJ/Xu4Cs/uZ1Eo5PJ5RgO25vvvhhW7NoY=
+			+egGOtxjq9Nw/jZVMpltPEFRLSC1LwzuEtOr4eM5oBo=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6+H86fSkHClwVQo7fJSrSGB+z58=
+			yq7INc/Y9VZGS21WtSxTUnrTunQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			A5tNBHr4Kjqp2QQsogGHCTJEfNr9jK8rfXcpLSZOMiw=
+			jBID8jBP3kR17KnNM35miLaWZ549EGNBdJTfuapBlRM=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/Project/armv7-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7wApQtf+3ElgH+DyQJNykDN+6L4=
+			LvosLnUcZz48l9Zl5XKsaDsKguc=
 			</data>
 			<key>hash2</key>
 			<data>
-			psnD0ADsv61Ev7o6Ia7g76gMAm43I7djD7FQp25Oqaw=
+			yPcv3jXl/LtMBKCXTb0qJUsUHW7SHBQ0EWt4XvrYZMQ=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qhd/ZRXj7sBrmFFMikRPxXX++m0=
+			wh1QSMxVidOyP84/RuIgZ/3HsEw=
 			</data>
 			<key>hash2</key>
 			<data>
-			ootMhbOF+DDslOsFiIF71qhEefWVwQay+MSJ3Jqn+Qk=
+			jfeVeT5VqPXnTWxsn614Vn0J3XHvsHGBkbgCXbBTvL0=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xPfpfXq/VyOAbm0XhNuGUNIs770=
+			ZudEtdUdSFslxbu2cETH6tgKXzk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q4v3R87ZWauEvuEyoLv0I0h3iKxEv5kDUQnc+UySvUk=
+			9aPQ+eC8lu94t/kgJ7tJEnWk8xLigF9aVSGdIMM1Gbw=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/z7a26YQ8cYTOFQc6IZwwSJu6lk=
+			75ymmBpIlnffXVp3KaqgK0yfViA=
 			</data>
 			<key>hash2</key>
 			<data>
-			TUjmW8x/4P3TyXs5J8+LHmfBzb3KEHMTjJEwsHHrtfs=
+			3Cv5jvYxTUvFACl0iT7kgD1pUrZQoyk1ofvXt3ZoT48=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8oXPaWzJiBHblpeLdZQyl2l7Amo=
+			i9jjuWTLIorGG/TV4zVxRMkUwco=
 			</data>
 			<key>hash2</key>
 			<data>
-			zfNeD3OU5lNOlZ3VJOTGfKToMwTNoG7di3U9AuPDwow=
+			TLdOtSQIpgIvUZ9MNRiSrFRRyqa8KRknPE4s+iREYFY=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2J8ccW13HwFaD013EHGgGXrvyHE=
+			CBSxKeqlkN0eolY6m0Cj3kasf4Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			bFDRFxtP7iar00q6kjiHTyHSP9Oy7f0NnEKDydWM2rw=
+			sU28g1480H6OYL25AELX068oBwV691Lb3YBgw/3A71A=
 			</data>
 		</dict>
 		<key>Modules/SailthruMobile.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9evFkVapzgIDb0WuhUD1MN9dPLw=
+			nkRAT4lRYpsFpFOLdzrPRRHa0iY=
 			</data>
 			<key>hash2</key>
 			<data>
-			dC6jlkZxc4kbzrs/zMUes+lbVqTMzBwf15/jtmPLUog=
+			XF4stOiy4zIhxngNLyrDZPOt6kRxL2uW1F2s+wctaXU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
