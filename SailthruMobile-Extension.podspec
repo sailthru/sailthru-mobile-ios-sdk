@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = 'SailthruMobile-Extension'
-  s.version                 = '13.0.3'
+  s.version                 = '14.0.0'
   s.summary                 = 'Sailthru Mobile iOS SDK for integrating with https://mobile.sailthru.com messaging and analytics service.'
   s.author                  = {
     'Sailthru Mobile' => 'support@sailthru.com'
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/SailthruMobileExtension/**"'
   }
   s.platform                = :ios
-  s.ios.deployment_target   = '10.0'
+  s.ios.deployment_target   = '12.0'
   s.license                 = {:type => 'commercial', :text =>'Please refer to our privacy policy and terms of service at https://www.sailthru.com/legal'}
   s.requires_arc            = true
   s.module_name             = 'SailthruMobileExtension'
