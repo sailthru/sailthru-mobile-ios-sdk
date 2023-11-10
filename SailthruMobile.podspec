@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name                    = 'SailthruMobile'
-  s.version                 = '14.0.0'
+  s.version                 = '14.1.0'
   s.summary                 = 'Sailthru Mobile iOS SDK for integrating with https://mobile.sailthru.com messaging and analytics service.'
   s.author                  = {
     'Sailthru Mobile' => 'support@sailthru.com'
   }
   s.homepage                = 'http://docs.mobile.sailthru.com/'
   s.source                  = {
-    :git => 'https://github.com/carnivalmobile/carnival-ios-sdk.git',
+    :git => 'https://github.com/sailthru/sailthru-mobile-ios-sdk.git',
     :tag => s.version.to_s
   }
   s.xcconfig                = {

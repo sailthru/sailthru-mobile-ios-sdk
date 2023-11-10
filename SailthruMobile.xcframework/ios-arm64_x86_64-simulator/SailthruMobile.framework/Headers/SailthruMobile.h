@@ -19,7 +19,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define STM_VERSION @"14.0.0"
+#define STM_VERSION @"14.1.0"
 FOUNDATION_EXPORT double STMSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char STMSDKVersionString[];
 
@@ -237,7 +237,7 @@ extern NSString * const STMAutoAnalyticsSourceAll;
  *  @param sectionID An SPM section ID. The section must be set up to use JSON as the output format.
  *  @param block A block which gets called with an array of STMContentItem objects and a possible error. Cannot be NULL.
  */
-- (void)recommendationsWithSection:(NSString *)sectionID withResponse:(nullable void(^)(NSArray<STMContentItem *> * _Nullable contentItems, NSError *__nullable error))block;
+- (void)recommendationsWithSection:(NSString *)sectionID withResponse:(nullable void(^)(NSArray<STMContentItem *> * _Nullable contentItems, NSError *__nullable error))block __deprecated;
 
 /**
  *  Registers that the given pageview with Sailthru SPM.

@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param contentItems The content items being purchased. Can not be nil. Must be populated with fields required for purchase.
  * @return STMPurchase instance. Will return nil if purchase items array is nil.
  */
-- (nullable instancetype)initWithContentItems:(NSArray<STMContentItem *> *)contentItems;
+- (nullable instancetype)initWithContentItems:(NSArray<STMContentItem *> *)contentItems __deprecated;
 
 /**
  * Add a custom key value pair to the purchase.

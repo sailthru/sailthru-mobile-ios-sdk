@@ -94,7 +94,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param contentItem The content item representing the item being purchased.
  * @return STMPurchaseItem instance. Will return nil if nil parameters are passed.
  */
-- (nullable instancetype)initWithContentItem:(STMContentItem *)contentItem;
+- (nullable instancetype)initWithContentItem:(STMContentItem *)contentItem __deprecated;
 
 /**
  * Add a tag to the purchase item.
