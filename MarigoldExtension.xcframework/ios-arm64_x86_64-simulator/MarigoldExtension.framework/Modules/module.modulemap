@@ -1,0 +1,6 @@
+framework module MarigoldExtension {
+    umbrella header "MarigoldExtensionFramework.h"
+    
+    export *
+    module * { export * }
+}

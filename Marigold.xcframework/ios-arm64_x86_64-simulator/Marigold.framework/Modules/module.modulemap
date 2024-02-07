@@ -1,0 +1,6 @@
+framework module Marigold {
+    umbrella header "Marigold.h"
+    
+    export *
+    module * { export * }
+}
