@@ -157,6 +157,12 @@ typedef NS_ENUM(NSInteger, MARImpressionType) {
 - (void)removeMessage:(MARMessage *)message withResponse:(nullable void (^)(NSError *__nullable error))handler;
 
 /**
+ * Clear the Message Stream for the device.
+ * @param handler A block object which returns an error which will be non-nil if there was a problem clearing the message stream.
+ */
+- (void)clearMessagesWithResponse:(nullable void(^)(NSError *__nullable error))handler;
+
+/**
  *  Sets the delegate for the MARMessageStream.
  *
  *  @param delegate the object you wish to be the delegate of the MARMessageStream.

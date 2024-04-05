@@ -85,6 +85,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)logEvent:(NSString *)name withVars:(NSDictionary<NSString *, id> *__nullable)vars;
 
+/**
+ * Clear the custom events from the device data.
+ * @param block The block returned from the asynchronous call. May contain an error.
+ */
+- (void)clearEventsWithResponse:(nullable void(^)(NSError *__nullable error))block;
+
 /** @name Users */
 
 /**

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/EngageBySailthru.h</key>
 		<data>
-		PIbgDZzEwcDfnkC0T63iOiFe2SA=
+		95DsDb4obFLDG0yQiiDXkYU4stg=
 		</data>
 		<key>Headers/MARAttributes.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/MARMessageStream.h</key>
 		<data>
-		4qEkEJHd2EkIZJ0rI28aN+aSWlk=
+		hxnNyxk9lYcSgSOus580xQod64M=
 		</data>
 		<key>Headers/MARNotificationCategory.h</key>
 		<data>
@@ -42,31 +42,31 @@
 		</data>
 		<key>Headers/Marigold-Swift.h</key>
 		<data>
-		gnoTvCjexHf6FhFIj8m+zOJPKQI=
+		Kvt2aTPdOd5hpkxCkgVoglmBr40=
 		</data>
 		<key>Headers/Marigold.h</key>
 		<data>
-		dRHWzqH5nL+zIL0+DbuLkDqL6yY=
+		6eWFx6oVBJKDfkm36agHXzseCuw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SZk5xJQqDmxypq9p3vo1oh1gvTA=
+		pbjO3ZS+JFOtCjVG4JK8403o9Lc=
 		</data>
 		<key>Modules/Marigold.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		FwwjeChWh5nM5wr2kyKTLA2X8go=
+		o42TQNAVWnfdp8eDB+cOtGvWXW4=
 		</data>
 		<key>Modules/Marigold.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		RCtzHIr9+gjoMkpJfgU+Jf2nVX0=
+		i8nait7BqMn5FfG2dk64cDveoTU=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		VgONxG+84B3funVKnJAGl6Fx9u0=
+		pEw7o1gVCewKz7QhOYLccdzx09M=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		1xT04juCj4gEkbea7tTgMePUQ9o=
+		oM22Pr9Q+X1septQJIG6rGVuo3w=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -74,19 +74,19 @@
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		1xT04juCj4gEkbea7tTgMePUQ9o=
+		oM22Pr9Q+X1septQJIG6rGVuo3w=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iUbuyoAvEwGTSGpGYKMgVgut9nE=
+		JmqC8udFWrtnn57tNNK2K/2Ws7o=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		VgONxG+84B3funVKnJAGl6Fx9u0=
+		pEw7o1gVCewKz7QhOYLccdzx09M=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		+F5wRx+V0t/IWIL7/RqDqyx6BQI=
+		KhK3f9b0cLutSONCENjhD/Ctyc4=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -94,11 +94,11 @@
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		+F5wRx+V0t/IWIL7/RqDqyx6BQI=
+		KhK3f9b0cLutSONCENjhD/Ctyc4=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		7wRLABfthz6EaFp6oMA8xhKy/6s=
+		wLbsSVqrodagJS+ByGc0LLhdekc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -210,7 +210,7 @@
 		</data>
 		<key>STModel.momd/STModel 2.0.omo</key>
 		<data>
-		FqvFVgjZ15Gfef+bdesCXikIENU=
+		yZ84Ptq/YaRNIPk+MWjs/81vcaY=
 		</data>
 		<key>STModel.momd/VersionInfo.plist</key>
 		<data>
@@ -300,7 +300,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3nRe2xI5oNouskOCMCqXn8t4jlnvLa0B4LJeePjcSMs=
+			0zJ1aO+X+Q7S6ai+cPFVxmqK+sUUVX7kRJd8P6jvI/g=
 			</data>
 		</dict>
 		<key>Headers/MARAttributes.h</key>
@@ -328,7 +328,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4chwk130mNDmSOKalcVzGL/rc9sjXLMovWnc4tTgO3Y=
+			QyLpRqFhGX9TMLSl7iQK+qBJHxAJx1b3FfQp7B+18fU=
 			</data>
 		</dict>
 		<key>Headers/MARNotificationCategory.h</key>
@@ -363,42 +363,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yArFK6LSeFEZ3rVyrN3M8r6MucdHSalXRG9fAlw7sOM=
+			Asi+iYkg+Llkbp6eciu8No2/6sL3LiSjK5OogLfdS7Q=
 			</data>
 		</dict>
 		<key>Headers/Marigold.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			19XRMzq9pR2nu9bsHSt5SGdGWX+AupHDllIEB7u2jpU=
+			16XUGeqDPF1P+B8dw7m1lcD7Cf6DRRFPOTqO3ZQ6ARM=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8uHu7n6LFz76SMxVLuprEna2zO/quzQWk2F+Pfhbsq0=
+			S7FOO1jyLpPH4Snx4E4TeI0cX3X5DU998n5Aep8Oevc=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3hVINokAZuqGKmr9Inyvnx7TIO9lNBmPz0LTjLk9Bbo=
+			0fTppsviBBDB6WVyoyJkhVl3YwaFqAXfMA1A1nhMt/A=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yveck+xUE7omFy9HnfXZ9A072Fq2V02ET9i1r9I+GKM=
+			fzrtNUVlomWp60+AxasbrpzCg2Hc2wqFzR4ubme28Js=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cmwORvt9o0LAmiClpMUxCAD5MzalZL15KblAtJOnpGo=
+			rkRLyb4k9hr6jJVitErAh5THzy93ElKp8vbTQGaPK7M=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -412,28 +412,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cmwORvt9o0LAmiClpMUxCAD5MzalZL15KblAtJOnpGo=
+			rkRLyb4k9hr6jJVitErAh5THzy93ElKp8vbTQGaPK7M=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7aRfAmevjSkoLY/BlOH3Yhc9k9B35Z3BO2q7ulsnEIs=
+			LoTynH9mk4vNKApIKc5LlE5t2ozQy8QpTuCxRBBlK+w=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yveck+xUE7omFy9HnfXZ9A072Fq2V02ET9i1r9I+GKM=
+			fzrtNUVlomWp60+AxasbrpzCg2Hc2wqFzR4ubme28Js=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Waec7Z6AlIdS0GwGLaRLAN2PTP9k+yGyscLIOmINeVg=
+			L40fTmtCxgRpsqdishMBUkpt7LP0CpB+WF7q5FNjXp4=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -447,14 +447,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Waec7Z6AlIdS0GwGLaRLAN2PTP9k+yGyscLIOmINeVg=
+			L40fTmtCxgRpsqdishMBUkpt7LP0CpB+WF7q5FNjXp4=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eXl5OF2sCy2B+BBFn86l2eqawXxjE/cfJnSxk66ld6w=
+			mWuaVHeWSUjNKkfjFRgtrvX79yjH6Q4aewflFqW1Cfw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -650,7 +650,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZhDNU947tzo1LDi2RSYh87TaoBsnMJtPsCXEkZHk0rw=
+			aoZRNrS4PHuju4fBx9mc2tAQSIH01tEblyJuRb+Nc78=
 			</data>
 		</dict>
 		<key>STModel.momd/VersionInfo.plist</key>

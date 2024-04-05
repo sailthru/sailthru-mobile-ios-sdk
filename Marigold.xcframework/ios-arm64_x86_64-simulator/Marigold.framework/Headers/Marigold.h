@@ -19,7 +19,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define MAR_VERSION @"15.0.0"
+#define MAR_VERSION @"15.1.0"
 FOUNDATION_EXPORT double MARSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char MARSDKVersionString[];
 
@@ -87,13 +87,13 @@ extern NSString * const MARAutoAnalyticsSourceAll;
 /** @name Custom Attributes */
 
 /**
- *  Asyncronously clears any of the Attribute, Message Stream, or Event data from the device.
+ *  Asyncronously clears any of the Message Stream or Event data from the device.
  *  Use this method to clear the device attributes after user logout.
  *
  *  @param types A bitwise OR collection of MARDeviceDataType dictating which sets of data to clear.
  *  @param block The block returned from the asynchronous call. May contain an error.
  **/
-- (void)clearDeviceData:(MARDeviceDataType)types withResponse:(nullable void(^)(NSError *__nullable error))block;
+- (void)clearDeviceData:(MARDeviceDataType)types withResponse:(nullable void(^)(NSError *__nullable error))block __deprecated_msg("use EngageBySailthru clearEventsWithResponse: or MARMessageStream clearMessagesWithResponse: instead");
 
 /** @name Badges */
 
