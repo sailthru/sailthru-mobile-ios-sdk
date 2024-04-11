@@ -19,7 +19,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define MAR_VERSION @"15.1.0"
+#define MAR_VERSION @"15.2.0"
 FOUNDATION_EXPORT double MARSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char MARSDKVersionString[];
 
