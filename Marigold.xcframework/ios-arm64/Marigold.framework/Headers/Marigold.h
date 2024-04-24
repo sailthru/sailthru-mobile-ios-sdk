@@ -11,7 +11,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import <UserNotifications/UserNotifications.h>
 #import "MARMessageStream.h"
-#import "MARAttributes.h"
 #import "MARLogger.h"
 #import "MARPurchase.h"
 #import "MARNotificationCategory.h"
@@ -19,14 +18,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define MAR_VERSION @"15.2.0"
+#define MAR_VERSION @"16.0.0"
 FOUNDATION_EXPORT double MARSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char MARSDKVersionString[];
-
-typedef NS_OPTIONS(NSUInteger, MARDeviceDataType) {
-    MARDeviceDataTypeMessageStream  = 1 << 1,
-    MARDeviceDataTypeEvents         = 1 << 2
-};
 
 typedef NS_ENUM(NSUInteger, MARPushAuthorizationOption) {
     MARPushAuthorizationOptionNoRequest,      // This option will not request any push authorization permissions for the device. Note that a push token will still be requested. No prompt is required.
@@ -83,17 +77,6 @@ extern NSString * const MARAutoAnalyticsSourceAll;
  *  @param logger An object implementing the MARLogger protocol.
  */
 - (void)setLogger:(id<MARLogger>)logger;
-
-/** @name Custom Attributes */
-
-/**
- *  Asyncronously clears any of the Message Stream or Event data from the device.
- *  Use this method to clear the device attributes after user logout.
- *
- *  @param types A bitwise OR collection of MARDeviceDataType dictating which sets of data to clear.
- *  @param block The block returned from the asynchronous call. May contain an error.
- **/
-- (void)clearDeviceData:(MARDeviceDataType)types withResponse:(nullable void(^)(NSError *__nullable error))block __deprecated_msg("use EngageBySailthru clearEventsWithResponse: or MARMessageStream clearMessagesWithResponse: instead");
 
 /** @name Badges */
 
