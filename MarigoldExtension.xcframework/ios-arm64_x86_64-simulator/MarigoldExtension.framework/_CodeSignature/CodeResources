@@ -22,15 +22,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Drxm9AOHCrLuSzS6Ko9f4RebM9o=
+		Hu2qZdwCcOGVqSh3Q+ZeF9kHr3M=
 		</data>
 		<key>Modules/MarigoldExtension.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		FbTQt1+hMKn4XX4oo2tjMtmXr2k=
+		QwRWkMXcffR56Ssn2ZIv1Ukbmtk=
 		</data>
 		<key>Modules/MarigoldExtension.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		DnAOsHWAuf79Euuldqv2KatY/eY=
+		oZd2RO6tdDClrPySCQQGkEwrzgc=
 		</data>
 		<key>Modules/MarigoldExtension.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		j9VGKRe8w1NLTOQggvpdbSnU648=
+		/iWepcs8ZJhaMS+Hhoy2O9aVyjY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -115,14 +115,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bgNnMtzO3UZrYfxVqkc2Xl+O75rfPouDU8N8Tj9iEsw=
+			Z+HXkdugZkCdVo2s/CVajDsLCMzby4IgpteXQczVwOI=
 			</data>
 		</dict>
 		<key>Modules/MarigoldExtension.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8+90o7ylA5KLVIZqNdwB5Yny24XWmpzaccldF5QeOFE=
+			Ft/u9pGu5Yu+Ey9FkClL4/7mpW+VHEaq55hPel99PXQ=
 			</data>
 		</dict>
 		<key>Modules/MarigoldExtension.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -206,7 +206,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			odc5Ri7xhJB1sFyrkDPqMJxmcSfwx4hYQntbzDb3pBM=
+			ArtprTQo/apWalMXX0/q5o6TDo1kn8xxux05dfkjsWc=
 			</data>
 		</dict>
 	</dict>

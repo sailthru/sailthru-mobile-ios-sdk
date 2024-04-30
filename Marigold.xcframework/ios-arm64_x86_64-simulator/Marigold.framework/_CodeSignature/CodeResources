@@ -42,19 +42,19 @@
 		</data>
 		<key>Headers/Marigold.h</key>
 		<data>
-		96mtrgJhbp/W8Mw25dwkwJqR5nw=
+		WYZr26DR6p1HYZngj+BfPfjdICQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sy8cAaIoWwZ4qbcpILr+Syr8PGg=
+		r9xgCUbA0aH5rIbTXBCguU3PGdk=
 		</data>
 		<key>Modules/Marigold.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		U9zyTpNWSllvwf3MT7uVxZZg9uw=
+		0T5W1TCcHLmVqJpLtElJpLbPNpQ=
 		</data>
 		<key>Modules/Marigold.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		tllQQgpblKRP1oGWGeOF/P0v4dA=
+		Ljm1cRrwkmjMOXjfamSzFxlG2Vs=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		j9VGKRe8w1NLTOQggvpdbSnU648=
+		/iWepcs8ZJhaMS+Hhoy2O9aVyjY=
 		</data>
 		<key>PrivateHeaders/CPAPIClient.h</key>
 		<data>
@@ -359,21 +359,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gWkrmlpgLuE0fPSy1QmOs2jywGZXmWx8vdlHYz6CZlw=
+			xstPCthyCwLcfYxQs45jqJv1tfY35TDFENHEj8uvDEI=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dg8SPFVtfNgcxOnkB95FUum2m0yngoWpc7Rqy6JOBSo=
+			Kt+CWxKVW19PT6jtJxna83SM5D1WOTLLfo2fR7SyCtc=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F3fsMx+fbGieUZt+w2AzQEYEO7312AncvfmOKwIv/vY=
+			9qPKijttNt/vNfOuggEwlo+WEjOKo2RTfgXmG8U1lSs=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -464,7 +464,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			odc5Ri7xhJB1sFyrkDPqMJxmcSfwx4hYQntbzDb3pBM=
+			ArtprTQo/apWalMXX0/q5o6TDo1kn8xxux05dfkjsWc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CPAPIClient.h</key>
