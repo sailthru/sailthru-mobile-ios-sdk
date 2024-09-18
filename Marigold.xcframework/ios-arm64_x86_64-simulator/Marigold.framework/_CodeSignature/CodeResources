@@ -38,63 +38,63 @@
 		</data>
 		<key>Headers/Marigold-Swift.h</key>
 		<data>
-		PLo2CXuvrhBhZYuZk4G/k0ynUCY=
+		VZ+HXx+Cf3WXPu3pMfN/o6tReEk=
 		</data>
 		<key>Headers/Marigold.h</key>
 		<data>
-		nof/kWEMzQmRk3KxINiZi2CfX3E=
+		16bb8lpw+QVfEXA9Yr81Dnj7Bno=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		W78t2MpUiq6TaauwU2YpCod2uPM=
+		HJ4uZyHCZ8R9CshJQmEnG6vFyfE=
 		</data>
 		<key>Modules/Marigold.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		y4XxI6AbCmfNTh8xhlbV8zlXfg0=
+		SSV5Pb99Ys8UUtBB2cZ95Mgeidc=
 		</data>
 		<key>Modules/Marigold.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		PIu89DLoat+EGZhnxcwbK1JVQcU=
+		qJ3M6nKd4EZNSfpLYE0HXsITi3w=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		BCd100HxoiWJ+Qkk5nqHzSt6d5o=
+		me/yeAPADGAq7fyBPCvuk9qCGpc=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		E84dDlTrJnOBjkAE0BaW5EDFNIM=
+		bhITSEsexv281lYuZA/YeVEe3g4=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ZY838N1/9n4oQWM5BZIHNKShHTQ=
+		pvRzB+tr2Wxeh4uArAn8pijnfDM=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		E84dDlTrJnOBjkAE0BaW5EDFNIM=
+		bhITSEsexv281lYuZA/YeVEe3g4=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Z+vcp8UDfNyzo4+y77mW6al5CoI=
+		CMHfGFhW3EqdOWDWpI6/tv5DevE=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		BCd100HxoiWJ+Qkk5nqHzSt6d5o=
+		me/yeAPADGAq7fyBPCvuk9qCGpc=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		7HipF7UOEXeoTjwh+pmphIuZHfo=
+		a2mXMXRlBgld9Dhnc0ifwJ7YD7w=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		5bXARghXKRHhrxEjZcwyr8Gi7kw=
+		h4c4t1KzkzdJw3aPx7j4u45psgU=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		7HipF7UOEXeoTjwh+pmphIuZHfo=
+		a2mXMXRlBgld9Dhnc0ifwJ7YD7w=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		x3/U0IcJDVc9nMngLAErHqRG4VU=
+		+u1RthoK8NuqQCniJ+wnc8q3C8c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>PrivateHeaders/CPAPIClient.h</key>
 		<data>
-		XEin8yqj98cmCRCiWf5okN0AuUw=
+		P4GPjb+OrK3Dh4phNMqT4JocbIk=
 		</data>
 		<key>PrivateHeaders/CPDebuggerChecker.h</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>PrivateHeaders/CPStateHandler.h</key>
 		<data>
-		t1hAKvSmquJpkhxesLipiSCvWYI=
+		cO/2Sbt9lkbKA3J0wP6xkwAc8Vk=
 		</data>
 		<key>PrivateHeaders/CPStreamStateHandler.h</key>
 		<data>
@@ -218,23 +218,23 @@
 		</data>
 		<key>STModel.momd/STModel 1.0.mom</key>
 		<data>
-		3ECFBvqkPIJMvyIoVK7uAuDwJf0=
+		pyLBjCL8c6taK1NqBzgHm5fxIDY=
 		</data>
 		<key>STModel.momd/STModel 2.0.mom</key>
 		<data>
-		tZTmKoWhl3943tcxDj8AbbxMrSE=
+		QT6YTW3EGDr2SB/x5t1d+vonvts=
 		</data>
 		<key>STModel.momd/STModel 3.0.mom</key>
 		<data>
-		mbGFihpD1A5fSj47jJlFTotsd0o=
+		MpjA4mW9WbVHxLxTYA3F/BQjWZE=
 		</data>
 		<key>STModel.momd/STModel 3.0.omo</key>
 		<data>
-		oT0XvD2s3Dp7tUVjhZUmkKauUgg=
+		la8ndanzbV250SfiTGRmfubH+cw=
 		</data>
 		<key>STModel.momd/VersionInfo.plist</key>
 		<data>
-		ocfuRwRvNR2dnjfDymFwS8RxcB8=
+		3O37Fohnnw8k0eRHiemg8CvYtF4=
 		</data>
 		<key>cp_close_button@2x.png</key>
 		<data>
@@ -376,98 +376,98 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lbgFI2DFlH+YTLMeIt1S+G9KSHRbItwVHvJMkM55Ryc=
+			htS/GS0ODUkAkzembnMARsaod7voBb/utY5Zs7Y1G3E=
 			</data>
 		</dict>
 		<key>Headers/Marigold.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7ldcAzqWxaLeNX++FOkMdRL02B+PTRrqwEZVAsSTaEU=
+			HR+MeF+ARVEUHwk77F/13wkC3UBhMfeoHlRKC+eaqqg=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pXkaUXn7Z8nT0fXzc8J+N8zspWJfIqRI4qxuRX8Zi5k=
+			Hsk9SxWSBrFpl5RsfX67PeZQhR34cNbuCV4ySTZJzcA=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I4YY9rNzDEVOKgxG+iESrkKZGM4eq6E02DxWGvy0JG0=
+			LI0aneMatcK25pILS21EKYkaXJSTUVgb6Sv3VsVPlrw=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1/kR7pLCumr7Xg1feJhqCpwUwzNEb59DyO7q54RPqkM=
+			Z4Vo5mjOVInXVpUaeBDlOqTw7z61aPslYGhgpHZ061I=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e/DjoqTwJwM3oaC/XcOQermiPUjQa3mm0tQnYfAAltk=
+			eooHRHBDV4qZDmye33F5mDmJyq2P97Mrtfm3rL/RkIw=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6D5I7+f9vRuwQnFr2mKCYU0dof0T6aE/CRnsqrF8d5E=
+			ObQK7zZIy9gTlQTosj12XACDObCBOHfamq/Kp61Hlns=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e/DjoqTwJwM3oaC/XcOQermiPUjQa3mm0tQnYfAAltk=
+			eooHRHBDV4qZDmye33F5mDmJyq2P97Mrtfm3rL/RkIw=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sWewKN86bqEf3CEeG3rPOjBb2aBhCYIsn8NdQiWppdY=
+			vko7I6AodxoH6AlmAzZOZMTcpYdooFOF35x6fGZCn3U=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1/kR7pLCumr7Xg1feJhqCpwUwzNEb59DyO7q54RPqkM=
+			Z4Vo5mjOVInXVpUaeBDlOqTw7z61aPslYGhgpHZ061I=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kr0u3OnJdsK9CqOVHbyOkA5CYjwS5KIgXHpqD2YTUsw=
+			q+bR/QqWGypKYAabwnA91/ymEmZMXRuKeTfnZlcfs2c=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oiZW0H8N40yHocziFgt1lyj1ZqW+1W525vSwdobG3rE=
+			XRPhq3La8n6c5GGEeLjOWiAODVdOI5EH8FmwFS+nCIM=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kr0u3OnJdsK9CqOVHbyOkA5CYjwS5KIgXHpqD2YTUsw=
+			q+bR/QqWGypKYAabwnA91/ymEmZMXRuKeTfnZlcfs2c=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZW/5PuZPbn8e1roQwLbETp/KKtDOqoGTKAW9Wapbcpw=
+			+922jM/XFNXe6DaXe6yE7xEUmCu8trhSGZw2EZBpVCY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -495,7 +495,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oa31atPIawfZhv/6ggOqC2pDSPsjDq2JBFiih3y21TQ=
+			LAAcT0VhALr3CQdhQwwqjtpFwpkizOzxDmbldbq4pro=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CPDebuggerChecker.h</key>
@@ -593,7 +593,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g28pRlVdacDUGPw5QFk3WeVzOs/+tg0uxpu0eSbdLfE=
+			RUOKFEYiI+uHHYOGJesi0QPwRqtKURqLV3vwzgghqy0=
 			</data>
 		</dict>
 		<key>PrivateHeaders/CPStreamStateHandler.h</key>
@@ -684,35 +684,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w0C6hOaKQCchNXZoaEuB8RSdSi+LlqFSHyO35tzxOM8=
+			DSw9ZOLn6/bdQIBVSUYMF1X6JisWqNAWu5aE5MbrPOo=
 			</data>
 		</dict>
 		<key>STModel.momd/STModel 2.0.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5j8f+UKtpGSfuFzMZVN1B8EcVzg6XVm8ZjLj1q/xlCY=
+			WxF7ZpfRlIiPQdBxS1api3v0OopXF0I8QTLRdi57VsY=
 			</data>
 		</dict>
 		<key>STModel.momd/STModel 3.0.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6FD8xtwKWaB2UyTC8rNZZquYDPPpnWctbJXwMqqaetQ=
+			KiHwCGUw1OZMbUBkP2NQI6tpAUp9Q9a3Ne7vYfJpN68=
 			</data>
 		</dict>
 		<key>STModel.momd/STModel 3.0.omo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G1r1wlyqL0wiRq38LTNPPG3xBBWtLOlGezlh8zDBsxI=
+			OwI8+dxnrZ+urU07MK4Vxvf9/AgwI/DjU026ZPjtfJk=
 			</data>
 		</dict>
 		<key>STModel.momd/VersionInfo.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yNlUIsnbWakxpLjDi/+g/NGCcdtgVAOC+sJv97Gl1S4=
+			XOA1vjv819NTV+Wf1M/nLypg3SCUFKhiuOTCPIwNt0w=
 			</data>
 		</dict>
 		<key>cp_close_button@2x.png</key>

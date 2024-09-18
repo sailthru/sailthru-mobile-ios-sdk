@@ -1,10 +1,10 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
     name: "Marigold",
     platforms: [
-        .iOS(.v12)
+        .iOS("15.6")
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
