@@ -29,6 +29,33 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)enableAutoAnalytics:(NSArray<NSString *> *)enableArray;
 
+/** @name Custom Attributes */
+
+/**
+ *  Asyncronously sets a MARAttributes object with Sailthru Mobile.
+ *
+ *  @param attributes A nonnull MARAttributes object with the desired attributes set.
+ *  @param block The block returned from the asynchronous call. May contain an error.
+ */
+- (void)setAttributes:(MARAttributes *)attributes withCompletion:(nullable void(^)(NSError *__nullable error))block;
+
+/**
+ *  Asyncronously removes a value for a given key.
+ *
+ *  @param key The string value of the key.
+ *  @param block The block returned from the asynchronous call. May contain an error.
+ **/
+- (void)removeAttributeWithKey:(NSString *)key withCompletion:(nullable void(^)(NSError *__nullable error))block;
+
+/**
+ *  Asyncronously clears the Attribute data from the device.
+ *  Use this method to clear the device attributes after user logout.
+ *
+ *  @param block The block returned from the asynchronous call. May contain an error.
+ **/
+
+- (void)clearAttributesWithCompletion:(nullable void(^)(NSError *__nullable error))block;
+
 /** @name Sailthru Link Handling */
 
 /**

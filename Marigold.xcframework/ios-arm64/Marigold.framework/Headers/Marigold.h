@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <UserNotifications/UserNotifications.h>
 #import "MARMessageStream.h"
+#import "MARAttributes.h"
 #import "MARLogger.h"
 #import "MARPurchase.h"
 #import "MARNotificationCategory.h"
@@ -18,7 +19,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define MAR_VERSION @"18.0.0"
+#define MAR_VERSION @"18.1.0"
 FOUNDATION_EXPORT double MARSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char MARSDKVersionString[];
 
