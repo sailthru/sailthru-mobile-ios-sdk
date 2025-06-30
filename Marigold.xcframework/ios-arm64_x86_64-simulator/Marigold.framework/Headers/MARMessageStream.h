@@ -142,6 +142,14 @@ typedef NS_ENUM(NSInteger, MARImpressionType) {
 - (void)markMessagesAsRead:(NSArray<MARMessage *> *)messages withResponse:(nullable void(^)(NSError *__nullable error))handler;
 
 /**
+ *  Returns the message associated with the provided messageId.
+ *
+ *  @param messageId The ID of the message to retrieve.
+ *  @param block A block which gets called with the MARMessage object and a possbile error. Cannot be NULL.
+ */
+- (void)messageFor:(NSString *)messageId withCompletion:(void (^)(MARMessage *__nullable message, NSError *__nullable error))block;
+
+/**
  *  Returns an array of MARMessages for the device.
  *
  *  @param block A block which gets called with an array of MARMessage objects and a possbile error. Cannot be NULL.

@@ -22,6 +22,16 @@ API_AVAILABLE(ios(10.0))
  */
 - (instancetype)initWithAppKey:(NSString *)appKey andGroupName:(NSString *)groupName;
 
+/**
+ * Determines the appropriate file extension for a downloaded attachment based on the URL and HTTP response.
+ *
+ * @param url The original URL of the attachment.
+ * @param response The HTTP response from downloading the attachment.
+ * @return A file extension string (including the dot, e.g., ".gif", ".jpg", ".png") to use for the downloaded file.
+ * @discussion This method prioritizes Content-Type headers for dynamic URLs, then falls back to URL path extensions, and finally provides sensible defaults. Supports common image formats (.gif, .jpg, .png, .webp) and video formats (.mp4, .mov). For unknown content types, defaults to .jpg.
+ */
+- (NSString *)fileExtensionForURL:(NSURL *)url response:(NSURLResponse *)response;
+
 @end
 
 NS_ASSUME_NONNULL_END

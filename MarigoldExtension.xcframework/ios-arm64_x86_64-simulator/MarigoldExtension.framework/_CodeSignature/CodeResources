@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MARNotificationServiceExtension.h</key>
 		<data>
-		lYQatOxUvSg7nlWV9GzTv0o+Mjg=
+		LJgzizO/6KZgurElERGIp8JfGOE=
 		</data>
 		<key>Headers/MarigoldExtension-Swift.h</key>
 		<data>
@@ -22,15 +22,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Av1wrVpqdy2ItF5k/p79w/mmF84=
+		3UbgggeOm4uVI01FzYboM7i1RSY=
 		</data>
 		<key>Modules/MarigoldExtension.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		uw+3n0KC5eDn7lbWi0zPG76XkVQ=
+		0g5tMp7fy8wzzjpjbGK1exUwWG8=
 		</data>
 		<key>Modules/MarigoldExtension.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		Zyuw+ABCdWRygy5KKTvugtUXoqw=
+		cosc4iYtwsfn/m9mks6TK+EFX1I=
 		</data>
 		<key>Modules/MarigoldExtension.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -87,7 +87,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oNm6ow3XuTQ0THTmOIbN3PCPSLh4H+AuqE5yiLxUGkg=
+			vPS4BUUFHDl0WXRD86y0Tti+1xvYb4TDiK2B7sHZ9as=
 			</data>
 		</dict>
 		<key>Headers/MarigoldExtension-Swift.h</key>
@@ -115,14 +115,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DohbzcIsE+4xpuAb6RfmN9RfonWHHUzZcTQOFbAq1kM=
+			UHJ4fS+piLezG15t4/AIn1gSNcvgm21V9wnSj75TeG0=
 			</data>
 		</dict>
 		<key>Modules/MarigoldExtension.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JLclH6rRj6NSVYSGaSkDG6F63w0EGivO+wYkljrHL8s=
+			JU8qCA3rOIwzeQpBUPLgOJRYXQtrrlENYNvJv7wh6ds=
 			</data>
 		</dict>
 		<key>Modules/MarigoldExtension.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
