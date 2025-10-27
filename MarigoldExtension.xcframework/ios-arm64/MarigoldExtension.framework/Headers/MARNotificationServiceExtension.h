@@ -10,7 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-API_AVAILABLE(ios(10.0))
 @interface MARNotificationServiceExtension : UNNotificationServiceExtension
 
 /**
@@ -30,7 +29,7 @@ API_AVAILABLE(ios(10.0))
  * @return A file extension string (including the dot, e.g., ".gif", ".jpg", ".png") to use for the downloaded file.
  * @discussion This method prioritizes Content-Type headers for dynamic URLs, then falls back to URL path extensions, and finally provides sensible defaults. Supports common image formats (.gif, .jpg, .png, .webp) and video formats (.mp4, .mov). For unknown content types, defaults to .jpg.
  */
-- (NSString *)fileExtensionForURL:(NSURL *)url response:(NSURLResponse *)response;
+- (NSString *)fileExtensionForURL:(NSURL * _Nullable)url response:(NSURLResponse * _Nullable)response;
 
 @end
 

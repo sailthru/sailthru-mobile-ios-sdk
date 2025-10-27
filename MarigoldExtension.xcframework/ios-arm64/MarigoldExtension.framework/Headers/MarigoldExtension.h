@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param notificationRequest The notification request that was passed to the extension.
  * @discussion This method should be called in the UNNotificationServiceExtension didReceiveNotificationRequest:withContentHandler: method. The notification request needs to be handled to ensure events are logged against the correct notification. This should be called before any logEvent calls are made.
  */
-- (void)handleNotificationRequest:(UNNotificationRequest *)notificationRequest API_AVAILABLE(ios(10.0));
+- (void)handleNotificationRequest:(UNNotificationRequest *)notificationRequest;
 
 /**
  * Handles the notification that caused the extension to be executed.
@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param notification The notification that was passed to the extension.
  * @discussion This method should be called in the UNNotificationContentExtension didReceiveNotification: method. The notification needs to be handled to ensure events are logged against the correct notification. This should be called before any logEvent calls are made.
  */
-- (void)handleNotification:(UNNotification *)notification API_AVAILABLE(ios(10.0));
+- (void)handleNotification:(UNNotification *)notification;
 
 /**
  * Log an extension event.
