@@ -22,15 +22,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4BmTB5UuqUeWM25Uo3HkhTS9wdA=
+		kk3sX2GyWFKE7jS09W4gdD3PVes=
 		</data>
 		<key>Modules/MarigoldExtension.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		YvyS0XdYu+egmyiuMtcRgMSZacE=
+		x3uyiMTrHJvvZeBWc1649OK8LKY=
 		</data>
 		<key>Modules/MarigoldExtension.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		avhYy8qFKnc6qLoXyhT7B3f8nC8=
+		sGwcNLaY1WgJsWK8JI38LaCKtA4=
 		</data>
 		<key>Modules/MarigoldExtension.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -115,14 +115,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			099AMGsM9tEdNImdAgJRI9QdFx66oZDIbOzrqh9dPGA=
+			jrexoz7IJkvF53l3JWnkD3MpvnKKmMe2dk9mTsbR4sE=
 			</data>
 		</dict>
 		<key>Modules/MarigoldExtension.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qYOr3CBDSPjgbvVuWQcaWRMLUuGQUmzJ8A+M42hdgHI=
+			ezMYVVBd8KNcQT+XbNvFzGwnnCcGAt0gsfE4ZzIjaPk=
 			</data>
 		</dict>
 		<key>Modules/MarigoldExtension.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
