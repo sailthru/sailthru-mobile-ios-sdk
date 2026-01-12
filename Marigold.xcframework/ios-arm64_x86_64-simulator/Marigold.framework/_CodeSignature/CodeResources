@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/EngageBySailthru.h</key>
 		<data>
-		xzInKAZkU8aED1XsXEQE7C3ordw=
+		uiWEK9Kog3IQGJBUiqGiaAW6A1k=
 		</data>
 		<key>Headers/MARAttributes.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/MARMessageStream.h</key>
 		<data>
-		wdsrs7ySlYtWCs1U3LMB8LbrkEE=
+		0FNA5cgrgY9UXpmFxD/HJYdrh3c=
 		</data>
 		<key>Headers/MARNotificationCategory.h</key>
 		<data>
@@ -46,19 +46,19 @@
 		</data>
 		<key>Headers/Marigold.h</key>
 		<data>
-		/QA9IZUmfVmPqp7DkJMqWe7aftY=
+		Z4oqRGrugFLdEeTM8OvaNTKBxcc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		k3ER4F0rQPIsA1aOnOR1nZ0vf+k=
+		b+s9F5nre8xzzHZmFkcQHxydTUw=
 		</data>
 		<key>Modules/Marigold.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		pE5TOl5ifXYuaEV5vQNNkBNE0Jc=
+		lAO0daN1JjP0ycXPlCZ08EGPdG4=
 		</data>
 		<key>Modules/Marigold.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		jvgEvodByWDfB3nO5RILQQfPd1E=
+		IIitB1wDTPx9ro2c0/6uk1CY2xI=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -156,10 +156,6 @@
 		<data>
 		oxR4rmWrZ8gvdorDGjBo/+00rT0=
 		</data>
-		<key>PrivateHeaders/CPMessageList.h</key>
-		<data>
-		1vw1et/FXWa7SNgz2VXM5wDx/QE=
-		</data>
 		<key>PrivateHeaders/CPNSExceptionCrashHandler.h</key>
 		<data>
 		rMdDzqa/h7WE6mgftz6+OO9wbPY=
@@ -214,7 +210,7 @@
 		</data>
 		<key>PrivateHeaders/Marigold_Private.h</key>
 		<data>
-		Bu2zaerU9I+1FgqiYmlmZYojB40=
+		GyUEh4s/HcSX/2Tbl+zU+9OXDws=
 		</data>
 		<key>PrivateHeaders/NSDate+CPAdditions.h</key>
 		<data>
@@ -238,7 +234,7 @@
 		</data>
 		<key>STModel.momd/STModel 3.0.omo</key>
 		<data>
-		AdTUCyclVzF2ZxVXDj/t/pFM8as=
+		oT0XvD2s3Dp7tUVjhZUmkKauUgg=
 		</data>
 		<key>STModel.momd/VersionInfo.plist</key>
 		<data>
@@ -328,7 +324,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			34aFtTzXZ+AjUNajz+8MjY1MQn0eHOzy5E+u0pmeMk4=
+			b5A6TenAB0SkUitvDHKtHPM4ICk+zZKqXHjrPQ4xd1s=
 			</data>
 		</dict>
 		<key>Headers/MARAttributes.h</key>
@@ -356,7 +352,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oOx1cjmghco0ley7UKA22z6r2HfmgF70DB1zzgTkChM=
+			1qFeO4U01mcgcmjVFlIykUtcSmARRiZFxMiyqNELWWI=
 			</data>
 		</dict>
 		<key>Headers/MARNotificationCategory.h</key>
@@ -398,21 +394,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/FZ6b7v3/AmNLEyKs1DSKNRWLpRMh23p6JOPyrOydZI=
+			pS+F+V12oxbo48BSNWnP2prIYi7FcjhV+9/gQoyGeJ4=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QzPTQDkwfZ0AI9mkH44MXkX0b7Q//ff3vYk0cRcBK8o=
+			SMnuJrTeuJWuketoK5LSvCTPJPW5o9Lrs8M/h6yX5Ww=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+D28Ga2fj4CZ42UO9yxiR34jE21utYmRqhCzip1zZOA=
+			NI2aZOPjbshlkgYSLrzByxvAmJFXs91VBjtCeKi4uvE=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -583,13 +579,6 @@
 			cN73ulQ0qk45+wfaLsELMaR/6a+6WpArH2WJYKxD7Vg=
 			</data>
 		</dict>
-		<key>PrivateHeaders/CPMessageList.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ZjUZxNIyC4F51BpdNYWSFEQKQjr0aiNmPkT7dDxKLy0=
-			</data>
-		</dict>
 		<key>PrivateHeaders/CPNSExceptionCrashHandler.h</key>
 		<dict>
 			<key>hash2</key>
@@ -685,7 +674,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hwTxl526IAsgaWT1D08/x8CysWU+Vcb8u0cNWcVrUA4=
+			5V3+rqf4V58MlOor5Zg4bRndumVbZae4h2+jfVu7PJ8=
 			</data>
 		</dict>
 		<key>PrivateHeaders/NSDate+CPAdditions.h</key>
@@ -727,7 +716,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L8yuPJGNqPjcPkM6K7MDXXkKxlxC7we/sI/CDbzqBGg=
+			G1r1wlyqL0wiRq38LTNPPG3xBBWtLOlGezlh8zDBsxI=
 			</data>
 		</dict>
 		<key>STModel.momd/VersionInfo.plist</key>

@@ -125,21 +125,21 @@ typedef NS_ENUM(NSInteger, MARImpressionType) {
  *
  *  @warning This method does nothing if the handler block is NULL.
  */
-- (void)unreadCount:(void (^)(NSUInteger unreadCount, NSError *__nullable error))handler;
+- (void)unreadCount:(void (^)(NSUInteger unreadCount, NSError *__nullable error))completionBlock;
 
 /**
  *  Asynchronously marks a given message as read.
  *
  *  @param handler A block object which returns an error which will be non-nil if there was a problem marking the message as read.
  */
-- (void)markMessageAsRead:(MARMessage *)message withResponse:(nullable void(^)(NSError *__nullable error))handler;
+- (void)markMessageAsRead:(MARMessage *)message withResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /**
  *  Asynchronously marks a given array of messages as read.
  *
  *  @param handler A block object which returns an error which will be non-nil if there was a problem marking the messages as read.
  */
-- (void)markMessagesAsRead:(NSArray<MARMessage *> *)messages withResponse:(nullable void(^)(NSError *__nullable error))handler;
+- (void)markMessagesAsRead:(NSArray<MARMessage *> *)messages withResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /**
  *  Returns the message associated with the provided messageId.
@@ -154,7 +154,7 @@ typedef NS_ENUM(NSInteger, MARImpressionType) {
  *
  *  @param block A block which gets called with an array of MARMessage objects and a possbile error. Cannot be NULL.
  */
-- (void)messages:(void (^)(NSArray<MARMessage *> *__nullable messages, NSError *__nullable error))block;
+- (void)messages:(void (^)(NSArray<MARMessage *> *__nullable messages, NSError *__nullable error))completionBlock;
 
 /**
  *  Removes the message with the given messageID from the Message Stream
@@ -162,13 +162,13 @@ typedef NS_ENUM(NSInteger, MARImpressionType) {
  *  @param message The message to be removed.
  *  @param handler A block object which returns an error which will be non-nil if there was a problem removing the message.
  */
-- (void)removeMessage:(MARMessage *)message withResponse:(nullable void (^)(NSError *__nullable error))handler;
+- (void)removeMessage:(MARMessage *)message withResponse:(nullable void (^)(NSError *__nullable error))completionBlock;
 
 /**
  * Clear the Message Stream for the device.
  * @param handler A block object which returns an error which will be non-nil if there was a problem clearing the message stream.
  */
-- (void)clearMessagesWithResponse:(nullable void(^)(NSError *__nullable error))handler;
+- (void)clearMessagesWithResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /**
  *  Sets the delegate for the MARMessageStream.

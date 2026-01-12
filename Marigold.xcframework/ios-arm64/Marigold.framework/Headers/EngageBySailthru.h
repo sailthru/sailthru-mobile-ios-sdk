@@ -89,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Clear the custom events from the device data.
  * @param block The block returned from the asynchronous call. May contain an error.
  */
-- (void)clearEventsWithResponse:(nullable void(^)(NSError *__nullable error))block;
+- (void)clearEventsWithResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /** @name Users */
 
@@ -100,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param block The block returned from the asynchronous call. May contain an error.
  */
-- (void)setUserEmail:(nullable NSString *)userEmail withResponse:(nullable void(^)(NSError *__nullable error))block;
+- (void)setUserEmail:(nullable NSString *)userEmail withResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /**
  *  Sets a user ID for the device.
@@ -109,7 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param block The block returned from the asynchronous call. May contain an error.
  */
-- (void)setUserId:(nullable NSString *)userId withResponse:(nullable void(^)(NSError *__nullable error))block;
+- (void)setUserId:(nullable NSString *)userId withResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /** @name Tracking */
 
@@ -121,7 +121,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param tags Tags for this content
  *  @param block The block returned from the asynchronous call. May contain an error.
  */
-- (void)trackPageviewWithUrl:(NSURL *)url andTags:(NSArray<NSString *> *)tags andResponse:(nullable void(^)(NSError *__nullable error))block;
+- (void)trackPageviewWithUrl:(NSURL *)url andTags:(NSArray<NSString *> *)tags andResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /**
  *  Registers that the given pageview with Sailthru SPM.
@@ -130,7 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
  *              this generally should correspond to the web link of the content being tracked, and the stored URL in the Sailthru content collection
  *  @param block The block returned from the asynchronous call. May contain an error.
  */
-- (void)trackPageviewWithUrl:(NSURL *)url andResponse:(nullable void(^)(NSError *__nullable error))block;
+- (void)trackPageviewWithUrl:(NSURL *)url andResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /**
  *  Registers an impression - a reasonable expectation that a user has seen a piece of content - with Sailthru SPM.
@@ -140,7 +140,7 @@ NS_ASSUME_NONNULL_BEGIN
  *             of content are contained within a section, otherwise just pass a single-item array.
  *  @param block The block returned from the asynchronous call. May contain an error.
  */
-- (void)trackImpressionWithSection:(NSString *)sectionID andUrls:(NSArray<NSURL *> *)urls andResponse:(nullable void(^)(NSError *__nullable error))block;
+- (void)trackImpressionWithSection:(NSString *)sectionID andUrls:(NSArray<NSURL *> *)urls andResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /**
  *  Registers an impression - a reasonable expectation that a user has seen a piece of content - with Sailthru SPM.
@@ -148,7 +148,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param sectionID the Section ID on Sailthru SPM corresponding to the section being viewed
  *  @param block The block returned from the asynchronous call. May contain an error.
  */
-- (void)trackImpressionWithSection:(NSString *)sectionID andResponse:(nullable void(^)(NSError *__nullable error))block;
+- (void)trackImpressionWithSection:(NSString *)sectionID andResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /**
  *  Tracks with Sailthru SPM that a section has been tapped on, transitioning the user to a detail view
@@ -157,7 +157,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param url the URL of the detail being transitioned to
  *  @param block The block returned from the asynchronous call. May contain an error.
  */
-- (void)trackClickWithSection:(NSString *)sectionID andUrl:(NSURL *)url andResponse:(nullable void(^)(NSError *__nullable error))block;
+- (void)trackClickWithSection:(NSString *)sectionID andUrl:(NSURL *)url andResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /** @name Profile Vars*/
 
@@ -167,14 +167,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param vars the vars to set on the server.
  *  @param block the block returned from the asynchronous call. May contain an error.
  */
-- (void)setProfileVars:(NSDictionary<NSString *, id> *)vars withResponse:(nullable void(^)(NSError * _Nullable))block;
+- (void)setProfileVars:(NSDictionary<NSString *, id> *)vars withResponse:(nullable void(^)(NSError * _Nullable))completionBlock;
 
 /**
  *  Retrieves the profile vars from the server.
  *
  *  @param block the block returned from the asynchronous call. May contain an error.
  */
-- (void)getProfileVarsWithResponse:(nullable void(^)(NSDictionary<NSString *, id> * _Nullable, NSError * _Nullable))block;
+- (void)getProfileVarsWithResponse:(nullable void(^)(NSDictionary<NSString *, id> * _Nullable, NSError * _Nullable))completionBlock;
 
 /** @name Purchases*/
 
@@ -184,7 +184,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param purchase The purchase to log with the platform.
  * @param block The block to handle the result of the call. May contain an error if the call failed.
  */
-- (void)logPurchase:(MARPurchase *)purchase withResponse:(nullable void(^)(NSError * _Nullable))block;
+- (void)logPurchase:(MARPurchase *)purchase withResponse:(nullable void(^)(NSError * _Nullable))completionBlock;
 
 /**
  * Logs a cart abandonment with the Sailthru platform. Use this to initiate cart abandoned flows.
@@ -192,7 +192,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param purchase The abandoned purchase to log with the platform.
  * @param block The block to handle the result of the call. May contain an error if the call failed.
  */
-- (void)logAbandonedCart:(MARPurchase *)purchase withResponse:(nullable void(^)(NSError * _Nullable))block;
+- (void)logAbandonedCart:(MARPurchase *)purchase withResponse:(nullable void(^)(NSError * _Nullable))completionBlock;
 
 @end
 

@@ -19,7 +19,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define MAR_VERSION @"18.2.2"
+#define MAR_VERSION @"18.3.0"
 FOUNDATION_EXPORT double MARSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char MARSDKVersionString[];
 
@@ -161,7 +161,7 @@ extern NSString * const MARAutoAnalyticsSourceAll;
  *  @param enabled A boolean value indicating whether or not to disable location based on IP Address.
  *  @param block The block to handle the result of the call. May contain an error if the call failed.
  */
-- (void)setGeoIPTrackingEnabled:(BOOL)enabled withResponse:(nullable void(^)(NSError *__nullable))block;
+- (void)setGeoIPTrackingEnabled:(BOOL)enabled withResponse:(nullable void(^)(NSError *__nullable))completionBlock;
 
 /**
  *  Set whether location tracking based on IP Address will be enabled or disabled by default when a device is created.
@@ -210,7 +210,7 @@ extern NSString * const MARAutoAnalyticsSourceAll;
  * @warning This method should not be called in builds that will point to the APNS production environment, use only in debug or test builds.
  * @param block The block to handle the result of the call. May contain an error if the call failed.
  */
-- (void)setDevelopmentDeviceWithResponse:(nullable void(^)(NSError * _Nullable))block;
+- (void)setDevelopmentDeviceWithResponse:(nullable void(^)(NSError * _Nullable))completionBlock;
 #endif
 
 @end
