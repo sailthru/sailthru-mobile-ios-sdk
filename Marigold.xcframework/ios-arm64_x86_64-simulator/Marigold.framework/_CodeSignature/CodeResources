@@ -42,63 +42,63 @@
 		</data>
 		<key>Headers/Marigold-Swift.h</key>
 		<data>
-		dld4T03mQEOk0U4Ji2oL9spqea0=
+		winDiDh1Ke92rGeT+Q8aVP11Law=
 		</data>
 		<key>Headers/Marigold.h</key>
 		<data>
-		Z4oqRGrugFLdEeTM8OvaNTKBxcc=
+		sEiUjhQFLbN+dLgKLZYJ8UidgrA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		b+s9F5nre8xzzHZmFkcQHxydTUw=
+		Kf+0KoLKug7Via7iCXCiSj7JQPs=
 		</data>
 		<key>Modules/Marigold.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		lAO0daN1JjP0ycXPlCZ08EGPdG4=
+		vbf7QQ7uFB77a7yfIgTCS0RJdGI=
 		</data>
 		<key>Modules/Marigold.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		IIitB1wDTPx9ro2c0/6uk1CY2xI=
+		f2AI3BTyvrFd/rMY8IwHnWGGI+4=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		h1caBTOrfRFbcCFzpFgFMQIdA08=
+		nosP4TlvhCYqHMpgkoU1OMg2pwg=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Mz920w5LY6NDqgj573Ke3aQkcek=
+		X90gsUd3NN5iK6Jt8p9d2oFNvts=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Loizmbcxp2jhvCCUBGbFx1KxluI=
+		GkEwxw5OMfKzat0gnCGp6wmzWcA=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Mz920w5LY6NDqgj573Ke3aQkcek=
+		X90gsUd3NN5iK6Jt8p9d2oFNvts=
 		</data>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4jr4wbQnpxUTCGqpLi97jaUolzU=
+		oi16F6A5ut8QnO2Z/jXfdxFXLB8=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		h1caBTOrfRFbcCFzpFgFMQIdA08=
+		nosP4TlvhCYqHMpgkoU1OMg2pwg=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		+QcOCEKwbCCP43iQ3u/MvVVEIFY=
+		jBGuR0yJHgz/AHTZOA+WeLV7zj8=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		P29a83dZLaj4UKe+lna1jcSqA5c=
+		NHVrhz/E0vfvKUd9gRHyKKixFv8=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		+QcOCEKwbCCP43iQ3u/MvVVEIFY=
+		jBGuR0yJHgz/AHTZOA+WeLV7zj8=
 		</data>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		HhzhPlP+BSxJQgTsKGa+JMgW8RQ=
+		JGp2Ox5mqnDvKa3Ih7b2toCSEN0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -234,7 +234,7 @@
 		</data>
 		<key>STModel.momd/STModel 3.0.omo</key>
 		<data>
-		oT0XvD2s3Dp7tUVjhZUmkKauUgg=
+		la8ndanzbV250SfiTGRmfubH+cw=
 		</data>
 		<key>STModel.momd/VersionInfo.plist</key>
 		<data>
@@ -387,98 +387,98 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YAB9QEON+ZiyvCR3PUjR4glTanI3k8ul4Zrt5CaH8I4=
+			NfzmbZrxJvb4ORUt9+s5iP5cXwQleN/eHRG/zYL+4y0=
 			</data>
 		</dict>
 		<key>Headers/Marigold.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pS+F+V12oxbo48BSNWnP2prIYi7FcjhV+9/gQoyGeJ4=
+			QE1+HeQeYrBnKfSIQ+ZO7S2WgyGSulf+FJ8BWHaA6Kk=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SMnuJrTeuJWuketoK5LSvCTPJPW5o9Lrs8M/h6yX5Ww=
+			uLK697qVSnQxK5KFq5//7GZoD/IRpf3bsDgvujfbMpM=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NI2aZOPjbshlkgYSLrzByxvAmJFXs91VBjtCeKi4uvE=
+			0+QBLQ0J31V3tme6E7Mpvjf6L0nuGUPvUFqsAZ9y8HU=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A4+N9VkzY+7UceJAF44ebDLhtLNsWgRR/PTI38AurQQ=
+			le/vHkKy/AikJYC/LHJdD4nAyPAJKvbXJGR/a0YMcJc=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7p1z6Pg72R5s1QXg6BK6N9Q+L6AN7/Sv5VXoW4JcHYU=
+			MLRjoJawr9Jm54OGjsTsTk7lE5e/HgMpoM3aTSxv4AQ=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MTHF4Dg4vH5gNDY/o4RQW+qrqgvX1sBJUbMiPb0Zscw=
+			J/9fAdi4R75Ak6dplsSfUsSnc+ZTGmYIAbJgdfVMDDo=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7p1z6Pg72R5s1QXg6BK6N9Q+L6AN7/Sv5VXoW4JcHYU=
+			MLRjoJawr9Jm54OGjsTsTk7lE5e/HgMpoM3aTSxv4AQ=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lbfrC7QlFRbFZbzr/Bq0ITEUmOChfiZAaBtVd/tbqJA=
+			lEMjKQV2KPmA43w6gsZBU5yL0pRDEestpDI2flZoW5s=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A4+N9VkzY+7UceJAF44ebDLhtLNsWgRR/PTI38AurQQ=
+			le/vHkKy/AikJYC/LHJdD4nAyPAJKvbXJGR/a0YMcJc=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZiKRsAeoTYJs72wCC4K4h+pAebV2xciPgwAUVk1axOc=
+			K2LFwzkXL+cMNwM9pZ2clZabd+UE0YZC98dtG9E+GcE=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zvuxQ9w5F/lUlUkT98sUZMhassB9+Fp4PtTNgtp32Ls=
+			1ZGRixPgoHyHKAHeOfhenvDlRZj1f8Xc9cH8qUpFWds=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZiKRsAeoTYJs72wCC4K4h+pAebV2xciPgwAUVk1axOc=
+			K2LFwzkXL+cMNwM9pZ2clZabd+UE0YZC98dtG9E+GcE=
 			</data>
 		</dict>
 		<key>Modules/Marigold.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2tthvZsuKZ8vyx0KGXltKKdUrJCJUnK5iWJ78LeKzUA=
+			FDsj5Ftmu+483+Htnlj3MOJzG7Q6u6bnfV+du7oUMWs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -716,7 +716,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G1r1wlyqL0wiRq38LTNPPG3xBBWtLOlGezlh8zDBsxI=
+			OwI8+dxnrZ+urU07MK4Vxvf9/AgwI/DjU026ZPjtfJk=
 			</data>
 		</dict>
 		<key>STModel.momd/VersionInfo.plist</key>
