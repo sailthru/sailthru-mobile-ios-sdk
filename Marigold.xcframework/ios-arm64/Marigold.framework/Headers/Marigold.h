@@ -10,16 +10,17 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <UserNotifications/UserNotifications.h>
-#import "MARMessageStream.h"
-#import "MARAttributes.h"
-#import "MARLogger.h"
-#import "MARPurchase.h"
-#import "MARNotificationCategory.h"
-#import "EngageBySailthru.h"
+#import <Marigold/MARMessageStream.h>
+#import <Marigold/MARAttributes.h>
+#import <Marigold/MARLogger.h>
+#import <Marigold/MARPurchase.h>
+#import <Marigold/MARNotificationCategory.h>
+#import <Marigold/EngageBySailthru.h>
+#import <Marigold/MARCheetah.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define MAR_VERSION @"18.3.1"
+#define MAR_VERSION @"18.4.0"
 FOUNDATION_EXPORT double MARSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char MARSDKVersionString[];
 
@@ -177,7 +178,7 @@ extern NSString * const MARAutoAnalyticsSourceAll;
  *
  * @param userId The ID of the user signing in, or null for sign-out.
  */
-- (void)logRegistrationEvent:(NSString * _Nullable)userId;
+- (void)logRegistrationEvent:(NSString * _Nullable)userId __attribute__((deprecated("Use MARCheetah logRegistrationEvent:withResponse: instead")));
 
 /**
  *  Enable crash tracking for recording sessions which end in a crash.

@@ -6,9 +6,10 @@
 //  Copyright © 2019 Sailthru. All rights reserved.
 //
 
-#import "MARNotificationCategory.h"
+#import <Foundation/Foundation.h>
+
 /**
- * Action identifers that will be returned to the app by the UNNotificationResponse actionIdentifier field when it is returned in the didReceiveNotificationResponse:withCompletionHandler method after an action is selected.
+ * Action identifiers that will be returned to the app by the UNNotificationResponse actionIdentifier field when it is returned in the didReceiveNotificationResponse:withCompletionHandler method after an action is selected.
  */
 extern NSString * const MARNotificationActionYes;
 extern NSString * const MARNotificationActionNo;

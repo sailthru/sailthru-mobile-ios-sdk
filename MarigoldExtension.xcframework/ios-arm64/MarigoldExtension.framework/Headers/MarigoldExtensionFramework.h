@@ -1,2 +1,2 @@
-#import "MarigoldExtension.h"
-#import "MARNotificationServiceExtension.h"
+#import <MarigoldExtension/MarigoldExtension.h>
+#import <MarigoldExtension/MARNotificationServiceExtension.h>

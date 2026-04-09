@@ -6,7 +6,7 @@
 //  Copyright © 2019 Sailthru. All rights reserved.
 //
 
-#import "MARMessage.h"
+#import <Marigold/MARMessage.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

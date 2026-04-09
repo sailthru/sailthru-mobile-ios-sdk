@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MARPurchaseItem.h"
-#import "MARPurchaseAdjustment.h"
+#import <Marigold/MARPurchaseItem.h>
+#import <Marigold/MARPurchaseAdjustment.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

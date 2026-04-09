@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = 'Marigold-Extension'
-  s.version                 = '18.3.1'
+  s.version                 = '18.4.0'
   s.summary                 = 'Marigold iOS SDK for integrating with https://mobile.sailthru.com messaging and analytics service.'
   s.author                  = {
     'Marigold' => 'support@sailthru.com'
