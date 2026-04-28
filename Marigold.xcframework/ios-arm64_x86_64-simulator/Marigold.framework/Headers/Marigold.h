@@ -20,7 +20,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define MAR_VERSION @"18.4.0"
+#define MAR_VERSION @"19.0.0"
 FOUNDATION_EXPORT double MARSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char MARSDKVersionString[];
 
@@ -160,7 +160,7 @@ extern NSString * const MARAutoAnalyticsSourceAll;
  *  Use this method for users who may not want to have their location tracked at all.
  *
  *  @param enabled A boolean value indicating whether or not to disable location based on IP Address.
- *  @param block The block to handle the result of the call. May contain an error if the call failed.
+ *  @param completionBlock The block to handle the result of the call. May contain an error if the call failed.
  */
 - (void)setGeoIPTrackingEnabled:(BOOL)enabled withResponse:(nullable void(^)(NSError *__nullable))completionBlock;
 
@@ -172,13 +172,6 @@ extern NSString * const MARAutoAnalyticsSourceAll;
  */
 - (void)setGeoIPTrackingDefault:(BOOL)enabled;
 
-/**
- * Log a registration event with Marigold. This is used to log users signing in and out of the app.
- * Pass the ID you wish to use for the sign-in or null for a sign-out.
- *
- * @param userId The ID of the user signing in, or null for sign-out.
- */
-- (void)logRegistrationEvent:(NSString * _Nullable)userId __attribute__((deprecated("Use MARCheetah logRegistrationEvent:withResponse: instead")));
 
 /**
  *  Enable crash tracking for recording sessions which end in a crash.
@@ -209,7 +202,7 @@ extern NSString * const MARAutoAnalyticsSourceAll;
 /**
  * Marks this device as a development device on the platform. This will instruct the platform to send push notifications to the development APNS server for this device.
  * @warning This method should not be called in builds that will point to the APNS production environment, use only in debug or test builds.
- * @param block The block to handle the result of the call. May contain an error if the call failed.
+ * @param completionBlock The block to handle the result of the call. May contain an error if the call failed.
  */
 - (void)setDevelopmentDeviceWithResponse:(nullable void(^)(NSError * _Nullable))completionBlock;
 #endif

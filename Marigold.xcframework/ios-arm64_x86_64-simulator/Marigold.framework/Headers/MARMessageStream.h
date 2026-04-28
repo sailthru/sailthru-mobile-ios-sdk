@@ -121,23 +121,23 @@ typedef NS_ENUM(NSInteger, MARImpressionType) {
 /**
  *  Asynchronously returns the total number of unread messages in the message stream.
  *
- *  @param handler A block object which returns the number of unread messages when there is no error.  The error will be non-nil if there was a problem retrieving the message count.
+ *  @param completionBlock A block object which returns the number of unread messages when there is no error.  The error will be non-nil if there was a problem retrieving the message count.
  *
- *  @warning This method does nothing if the handler block is NULL.
+ *  @warning This method does nothing if the completionBlock is NULL.
  */
 - (void)unreadCount:(void (^)(NSUInteger unreadCount, NSError *__nullable error))completionBlock;
 
 /**
  *  Asynchronously marks a given message as read.
  *
- *  @param handler A block object which returns an error which will be non-nil if there was a problem marking the message as read.
+ *  @param completionBlock A block object which returns an error which will be non-nil if there was a problem marking the message as read.
  */
 - (void)markMessageAsRead:(MARMessage *)message withResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
 /**
  *  Asynchronously marks a given array of messages as read.
  *
- *  @param handler A block object which returns an error which will be non-nil if there was a problem marking the messages as read.
+ *  @param completionBlock A block object which returns an error which will be non-nil if there was a problem marking the messages as read.
  */
 - (void)markMessagesAsRead:(NSArray<MARMessage *> *)messages withResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
@@ -145,14 +145,14 @@ typedef NS_ENUM(NSInteger, MARImpressionType) {
  *  Returns the message associated with the provided messageId.
  *
  *  @param messageId The ID of the message to retrieve.
- *  @param block A block which gets called with the MARMessage object and a possbile error. Cannot be NULL.
+ *  @param block A block which gets called with the MARMessage object and a possible error. Cannot be NULL.
  */
 - (void)messageFor:(NSString *)messageId withCompletion:(void (^)(MARMessage *__nullable message, NSError *__nullable error))block;
 
 /**
  *  Returns an array of MARMessages for the device.
  *
- *  @param block A block which gets called with an array of MARMessage objects and a possbile error. Cannot be NULL.
+ *  @param completionBlock A block which gets called with an array of MARMessage objects and a possbile error. Cannot be NULL.
  */
 - (void)messages:(void (^)(NSArray<MARMessage *> *__nullable messages, NSError *__nullable error))completionBlock;
 
@@ -160,13 +160,13 @@ typedef NS_ENUM(NSInteger, MARImpressionType) {
  *  Removes the message with the given messageID from the Message Stream
  *
  *  @param message The message to be removed.
- *  @param handler A block object which returns an error which will be non-nil if there was a problem removing the message.
+ *  @param completionBlock A block object which returns an error which will be non-nil if there was a problem removing the message.
  */
 - (void)removeMessage:(MARMessage *)message withResponse:(nullable void (^)(NSError *__nullable error))completionBlock;
 
 /**
  * Clear the Message Stream for the device.
- * @param handler A block object which returns an error which will be non-nil if there was a problem clearing the message stream.
+ * @param completionBlock A block object which returns an error which will be non-nil if there was a problem clearing the message stream.
  */
 - (void)clearMessagesWithResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 

@@ -87,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Clear the custom events from the device data.
- * @param block The block returned from the asynchronous call. May contain an error.
+ * @param completionBlock The block returned from the asynchronous call. May contain an error.
  */
 - (void)clearEventsWithResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
@@ -98,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param userEmail The email of the user to be set.
  *
- *  @param block The block returned from the asynchronous call. May contain an error.
+ *  @param completionBlock The block returned from the asynchronous call. May contain an error.
  */
 - (void)setUserEmail:(nullable NSString *)userEmail withResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
@@ -107,7 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param userId The ID of the user to be set.
  *
- *  @param block The block returned from the asynchronous call. May contain an error.
+ *  @param completionBlock The block returned from the asynchronous call. May contain an error.
  */
 - (void)setUserId:(nullable NSString *)userId withResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
@@ -119,7 +119,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param url The URL of the content we're tracking a view of. Must be a valid URL with protocol http:// or https:// -
  *          this generally should correspond to the web link of the content being tracked, and the stored URL in the Sailthru content collection
  *  @param tags Tags for this content
- *  @param block The block returned from the asynchronous call. May contain an error.
+ *  @param completionBlock The block returned from the asynchronous call. May contain an error.
  */
 - (void)trackPageviewWithUrl:(NSURL *)url andTags:(NSArray<NSString *> *)tags andResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
@@ -128,7 +128,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param url The URL of the content we're tracking a view of. Must be a valid URL with protocol http:// or https:// -
  *              this generally should correspond to the web link of the content being tracked, and the stored URL in the Sailthru content collection
- *  @param block The block returned from the asynchronous call. May contain an error.
+ *  @param completionBlock The block returned from the asynchronous call. May contain an error.
  */
 - (void)trackPageviewWithUrl:(NSURL *)url andResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
@@ -138,7 +138,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param sectionID the Section ID on Sailthru SPM corresponding to the section being viewed
  *  @param urls a List of the URLs of the items contained within this section. Useful if multiple items
  *             of content are contained within a section, otherwise just pass a single-item array.
- *  @param block The block returned from the asynchronous call. May contain an error.
+ *  @param completionBlock The block returned from the asynchronous call. May contain an error.
  */
 - (void)trackImpressionWithSection:(NSString *)sectionID andUrls:(NSArray<NSURL *> *)urls andResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
@@ -146,7 +146,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Registers an impression - a reasonable expectation that a user has seen a piece of content - with Sailthru SPM.
  *
  *  @param sectionID the Section ID on Sailthru SPM corresponding to the section being viewed
- *  @param block The block returned from the asynchronous call. May contain an error.
+ *  @param completionBlock The block returned from the asynchronous call. May contain an error.
  */
 - (void)trackImpressionWithSection:(NSString *)sectionID andResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
@@ -155,7 +155,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param sectionID the Section ID on Sailthru SPM corresponding to the section being tapped
  *  @param url the URL of the detail being transitioned to
- *  @param block The block returned from the asynchronous call. May contain an error.
+ *  @param completionBlock The block returned from the asynchronous call. May contain an error.
  */
 - (void)trackClickWithSection:(NSString *)sectionID andUrl:(NSURL *)url andResponse:(nullable void(^)(NSError *__nullable error))completionBlock;
 
@@ -165,14 +165,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  Sets the profile vars on the server.
  *
  *  @param vars the vars to set on the server.
- *  @param block the block returned from the asynchronous call. May contain an error.
+ *  @param completionBlock the block returned from the asynchronous call. May contain an error.
  */
 - (void)setProfileVars:(NSDictionary<NSString *, id> *)vars withResponse:(nullable void(^)(NSError * _Nullable))completionBlock;
 
 /**
  *  Retrieves the profile vars from the server.
  *
- *  @param block the block returned from the asynchronous call. May contain an error.
+ *  @param completionBlock the block returned from the asynchronous call. May contain an error.
  */
 - (void)getProfileVarsWithResponse:(nullable void(^)(NSDictionary<NSString *, id> * _Nullable, NSError * _Nullable))completionBlock;
 
@@ -182,7 +182,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Logs a purchase with Sailthru platform. This can be used for mobile purchase attribution.
  *
  * @param purchase The purchase to log with the platform.
- * @param block The block to handle the result of the call. May contain an error if the call failed.
+ * @param completionBlock The block to handle the result of the call. May contain an error if the call failed.
  */
 - (void)logPurchase:(MARPurchase *)purchase withResponse:(nullable void(^)(NSError * _Nullable))completionBlock;
 
@@ -190,7 +190,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Logs a cart abandonment with the Sailthru platform. Use this to initiate cart abandoned flows.
  *
  * @param purchase The abandoned purchase to log with the platform.
- * @param block The block to handle the result of the call. May contain an error if the call failed.
+ * @param completionBlock The block to handle the result of the call. May contain an error if the call failed.
  */
 - (void)logAbandonedCart:(MARPurchase *)purchase withResponse:(nullable void(^)(NSError * _Nullable))completionBlock;
 
