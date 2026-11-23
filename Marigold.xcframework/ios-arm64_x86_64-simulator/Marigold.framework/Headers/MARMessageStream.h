@@ -7,6 +7,7 @@
 //
 
 #import <Marigold/MARMessage.h>
+#import <Marigold/MARInAppPresentationDecision.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -97,24 +98,97 @@ typedef NS_ENUM(NSInteger, MARImpressionType) {
 /**
  *  Asks the delegate whether to show the In App notification for a given message.
  *
+ *  @deprecated Use prepareInAppNotificationForMessage:requestID:completion: instead.
+ *  Complete immediately for a synchronous decision. This callback remains the fallback
+ *  when the replacement is not implemented.
+ *
  *  @param message The message that SDK wishes to present an In App notification for.
  *
  *  @return A boolean of whether or not the notification should be presented internally by the Sailthru Mobile SDK. Override and return NO if the host app would like to handle the rendering and presentation of in-app notifications.
  */
-- (BOOL)shouldPresentInAppNotificationForMessage:(MARMessage *)message;
+- (BOOL)shouldPresentInAppNotificationForMessage:(MARMessage *)message
+    DEPRECATED_MSG_ATTRIBUTE("Use prepareInAppNotificationForMessage:requestID:completion: instead; complete immediately for synchronous decisions.");
+
+/**
+ * Asks the delegate to prepare an in-app notification without blocking the UI thread.
+ * Replaces shouldPresentInAppNotificationForMessage: for synchronous or asynchronous
+ * decisions. This method takes precedence when implemented.
+ *
+ * Called on the main thread once for an eligible presentation target. requestID uniquely
+ * identifies this attempt (including repeated attempts for the same message). Return a
+ * decision through completion immediately or later, from any thread. Only the first
+ * response is accepted. Responses after cancellation or the deadline are ignored.
+ *
+ * The deadline is two seconds. If no decision arrives, the SDK displays its default UI.
+ * Return suppress or handled within the deadline to prevent default presentation.
+ * No impression is recorded by the SDK for either of those decisions; a custom renderer
+ * owns its own impression registration. Showing and dismissal lifecycle events remain
+ * notifications and do not wait for a response.
+ *
+ * The application must retain its delegate. Setting the delegate to nil, disabling
+ * notifications, hiding the target window, or deactivating its scene cancels pending work.
+ */
+- (void)prepareInAppNotificationForMessage:(MARMessage *)message
+                               requestID:(NSString *)requestID
+                              completion:(void (^)(MARInAppPresentationDecision *decision))completion
+    NS_SWIFT_NAME(prepareInAppNotification(for:requestID:completion:));
 
 /**
  *  Asks the delegate whether to show the Full Screen Message Detail screen for a given message.
+ *
+ *  @deprecated Use prepareMessageDetailForMessage:requestID:completion: instead.
+ *  Complete immediately for a synchronous decision. This callback remains the fallback
+ *  when the replacement is not implemented.
  *
  *  @param message The message that SDK wishes to present an In App notification for.
  *
  *  @return A boolean of whether or not the Full Screen Message Detail screen should be presented internally by the Sailthru Mobile SDK. Override and return NO if the host app would like to handle the rendering and presentation of full screen messages.
  */
-- (BOOL)shouldPresentMessageDetailForMessage:(MARMessage *)message;
+- (BOOL)shouldPresentMessageDetailForMessage:(MARMessage *)message
+    DEPRECATED_MSG_ATTRIBUTE("Use prepareMessageDetailForMessage:requestID:completion: instead; complete immediately for synchronous decisions.");
+
+/**
+ * Prepares a full-screen message detail presentation without blocking the UI thread.
+ * Replaces shouldPresentMessageDetailForMessage: for synchronous or asynchronous
+ * decisions and takes precedence when implemented.
+ * Called on the main thread; complete immediately or later, from any thread, using
+ * display (optionally with local configuration), suppress, or handled.
+ *
+ * requestID uniquely identifies this attempt. Only the first response is accepted.
+ * The deadline is two seconds; an unanswered request uses the default presentation and app defaults.
+ * Late replies are ignored after the deadline, delegate replacement/removal, dismissal,
+ * window hiding, scene deactivation, backgrounding, or a newer request in the same window.
+ * Suppressed/app-handled attempts create no SDK detail view or detail impression.
+ * A custom renderer owns its impression registration. Retain the delegate yourself.
+ *
+ * Manual detail presentation remains available when automatic in-app notifications
+ * are disabled. Per-message configuration styles the native frame and controls;
+ * campaign HTML keeps its own styling. Lifecycle events are delivered as notifications.
+ */
+- (void)prepareMessageDetailForMessage:(MARMessage *)message
+                           requestID:(NSString *)requestID
+                          completion:(void (^)(MARInAppPresentationDecision *decision))completion
+    NS_SWIFT_NAME(prepareMessageDetail(for:requestID:completion:));
 
 @end
 
 @interface MARMessageStream : NSObject
+
+/**
+ * App-wide local UI defaults, shared by all MARMessageStream instances. Both setting
+ * and reading take a deep copy; nil resets to SDK defaults. Per-message configuration
+ * in a display decision overrides these defaults field by field. Configure at SDK setup.
+ */
+@property (nullable, nonatomic, copy) MARInAppPresentationDefaults *presentationDefaults;
+
+/**
+ * App-wide font aliases for message title and body font names. Register at app startup.
+ * Values are base UIFonts; each message can specify its font size and an optional weight.
+ * Registered aliases take priority over installed font names. Blank names are ignored.
+ * The dictionary is copied on input/access. Replacements affect future presentations only.
+ * Fonts are never downloaded or injected into campaign HTML. Nil/empty clears the aliases.
+ */
+@property (nullable, nonatomic, copy) NSDictionary<NSString *, UIFont *> *presentationFonts;
 
 /** @name Message statistics */
 
@@ -175,7 +249,10 @@ typedef NS_ENUM(NSInteger, MARImpressionType) {
  *
  *  @param delegate the object you wish to be the delegate of the MARMessageStream.
  */
-- (void)setDelegate:(id<MARMessageStreamDelegate>)delegate;
+- (void)setDelegate:(nullable id<MARMessageStreamDelegate>)delegate;
+
+/** Clears the delegate only if it is still the registered delegate. */
+- (void)removeDelegateIfCurrent:(id<MARMessageStreamDelegate>)delegate;
 
 /**
  * Shows the message detail screen for a given message

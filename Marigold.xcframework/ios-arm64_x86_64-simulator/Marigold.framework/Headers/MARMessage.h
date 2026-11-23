@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class MARInAppPresentationConfiguration;
+
 /**
  * Declares which type the MARMessage is. Types are defined at time of authoring.
  **/
@@ -23,6 +25,12 @@ typedef NS_ENUM(NSInteger, MARMessageType) {
 };
 
 @interface MARMessage : NSObject
+
+/** Message-specific popup settings, or nil if no supported settings were supplied. Each access returns an independent configuration. */
+@property (nonatomic, readonly, nullable) MARInAppPresentationConfiguration *notificationPresentationConfiguration;
+
+/** Message-specific full-screen settings, or nil if no supported settings were supplied. Each access returns an independent configuration. */
+@property (nonatomic, readonly, nullable) MARInAppPresentationConfiguration *fullScreenPresentationConfiguration;
 
 /**
  * The time at which the message was created.
